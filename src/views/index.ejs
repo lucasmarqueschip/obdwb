@@ -5,10 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Workbook</title>
+
+    <link rel="stylesheet" href="/css/index/index.css">
+    <script src="/js/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-    <ul>
-        <li><a href="#">Carga OBD0001</a></li>
-    </ul>
+    <div class="container">
+        <aside class="menuItens">
+            <span>Selecione o equipamento</span>
+            <a class="menuItem" href="#" onclick="loadManual()">Obdmap One</a>
+            <a class="menuItem" href="#">Obdmap Service</a>
+            <a class="menuItem" href="#">Obdmap Connect</a>
+        </aside>
+        <div class="manual" id="manual">
+            
+        </div>
+    </div>
+
 </body>
+<script>
+    function loadManual() {
+        event.preventDefault();
+        $.get('./html/1_pt.html', html => {
+            $('#manual').html(html)
+        });
+    }
+
+</script>
+
 </html>

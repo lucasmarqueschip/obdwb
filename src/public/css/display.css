@@ -1,0 +1,94 @@
+.screenHead {
+  display: flex;
+  align-items: center;
+}
+
+.screen {
+  background-color: blue;
+  color: white;
+  height: auto;
+  min-width: 190px;
+  width: 190px;
+  height: auto;
+  border: 2px solid black;
+}
+
+.screenIn {
+  color: white;
+  line-height: 1;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.colScreen {
+  max-width: 292px;
+}
+
+.step {
+  max-width: 100px;
+}
+
+.screenCon {
+  background-color: #eee;
+  max-width: 340px;
+  min-width: 340px;
+  min-height: 80px;
+  height: auto;
+  border: 2px solid black;
+  background-color: #dbdbdb;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.screenConMenu {
+  background-color: #eee;
+  max-width: 340px;
+  min-width: 340px;
+  min-height: 80px;
+  height: auto;
+  border: 2px solid black;
+  background-color: #dbdbdb;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.screenInCon {
+  color: black;
+  line-height: 1;
+  font: 12px "Myriad", "Courier New";
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.screenInConMenu {
+  color: black;
+  line-height: 1;
+  font: 12px "Myriad", "Courier New";
+  font-weight: normal;
+  padding: 0.25rem;
+}
+
+.activeMenu {
+  color: white;
+  background-color: #4646f5;
+}
+
+@media (max-width: 515px) {
+  .screenCon {
+    margin-left: 3%;
+  }
+
+  .screenConMenu {
+    margin-left: 3%;
+  }
+}
+
+/*# sourceMappingURL=display.css.map */
