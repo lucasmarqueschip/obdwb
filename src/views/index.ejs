@@ -10,12 +10,12 @@
     <script src="/js/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container-menu">
         <aside class="menuItens">
             <span>Selecione o equipamento</span>
-            <a class="menuItem" href="#" onclick="loadManual()">Obdmap One</a>
-            <a class="menuItem" href="#">Obdmap Service</a>
-            <a class="menuItem" href="#">Obdmap Connect</a>
+            <a class="menuItem" href="#" onclick="loadHTML('_obdmap.html')">Obdmap One</a>
+            <a class="menuItem" href="#" onclick="loadHTML('_service.html')">Obdmap Service</a>
+            <a class="menuItem" href="#" onclick="loadHTML('_connect.html')">Obdmap Connect</a>
         </aside>
         <div class="manual" id="manual">
             
@@ -24,10 +24,10 @@
 
 </body>
 <script>
-    function loadManual() {
-        event.preventDefault();
-        $.get('./html/1_pt.html', html => {
-            $('#manual').html(html)
+    function loadHTML(fileName) {
+        event.preventDefault();        
+        $.get(`./html/${fileName}`, html => {
+            $('#manual').html(html);            
         });
     }
 

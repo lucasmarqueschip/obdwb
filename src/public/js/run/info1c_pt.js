@@ -3,7 +3,7 @@ const nomeCarga = "Leitura de Senha e Programação de Chaves VW Gol, Saveiro e 
 const revCarga = "Rev. 4";
 const dataManual = "Julho 2017";
 const imgTopPath = "/images/obd.png";
-const imgObdPath = "/images/obdEquip.png";
+const imgObdPath = "/images/conEquip.png";
 const imgChipPath = "/images/chip.png";
 
 // introdução
@@ -74,7 +74,7 @@ image: "/images/Acessórios/Pinça SOIC8.jpg"},
 
 {title: "", 
 description: "", 
-ballon: "Utilize o cabo Universal + adaptador A1.", 
+ballon: "<br />Utilize o cabo universal Connect", 
 image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
 
 {title: "", 
@@ -158,37 +158,47 @@ ballon: "",
 image: "/images/Tomada de Diagnostico/Carro/A4.jpg"},
 ];
 const instruction = [];
-const obdmap = true;
-const services = [{title: `Realizando Leitura da senha da ECU IAW 4GV:`,
+const obdmap = false;
+const services = [
+{title: `Realizando Leitura da senha da ECU IAW 4GV:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Pinca`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>IAW 4GV.GR`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`IAW 4GV.GR`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`VW`], help: `Tecle OK`, menu: 1000},
+{lines: [`Gol`], help: `Tecle OK`, menu: 1000},
+{lines: [`Chaves`], help: `Tecle OK`, menu: 1000},
+{lines: [`Imob 4`], help: `Tecle OK`, menu: 1000},
+{lines: [`Marelli IAW 4GV`], help: `Tecle OK`, menu: 1000},
+{lines: [`Leitura de senha`], help: `Tecle OK`, menu: 1000},
 
 ]},{title: `Realizando leitura da senha da ECU ME7.5.10/20/30`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Pinca`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>ME7.5.10/20/30`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`ME7.5.10/20/30`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`VW`], help: `Tecle OK`, menu: 1000},
+{lines: [`Gol`], help: `Tecle OK`, menu: 1000},
+{lines: [`Chaves`], help: `Tecle OK`, menu: 1000},
+{lines: [`Imob 4`], help: `Tecle OK`, menu: 1000},
+{lines: [`Bosch ME7.5.30`], help: `Tecle OK`, menu: 1000},
+{lines: [`Leitura de senha`], help: `Tecle OK`, menu: 1000},
 
 ]},{title: `Realizando a programação de chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Gol G5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Gol G5`, `>Nova chave?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`VW`], help: `Tecle OK`, menu: 1000},
+{lines: [`Gol`], help: `Tecle OK`, menu: 1000},
+{lines: [`Chaves`], help: `Tecle OK`, menu: 1000},
+{lines: [`Imob 4`], help: `Tecle OK`, menu: 1000},
+{lines: [`Apagar e Programar chaves`], help: `Tecle OK`, menu: 1000},
 
 ]},{title: `Realizando a adição de novas chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Gol G5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Gol G5`, `>Add chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`VW`], help: `Tecle OK`, menu: 1000},
+{lines: [`Gol`], help: `Tecle OK`, menu: 1000},
+{lines: [`Chaves`], help: `Tecle OK`, menu: 1000},
+{lines: [`Imob 4`], help: `Tecle OK`, menu: 1000},
+{lines: [`Apagar e Programar chaves`], help: `Tecle OK`, menu: 1000},
 
-]},
-];
+]},];
 //Outras mensagens
 const othersMessageTitle = `Outras Mensagens`;
 const othersMessage = [{
