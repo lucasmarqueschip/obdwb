@@ -3,9 +3,6 @@ let nav2 = '';
 lblOtherMessageTitle.innerHTML = othersMessageTitle;
 othersMessage.forEach((message, i) => {
     nav2 += `<a class="dropdown-item" href="#errors${i}">${message.label}</a>`;
-
-
-
     s += `<section class="newPage"><br />`
     if (obdmap) {
         s += `<div class="screen p-1 ml-2" id="errors${i}">`

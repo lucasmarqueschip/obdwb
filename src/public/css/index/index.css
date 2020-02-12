@@ -3,6 +3,11 @@ body {
   margin: 0;
 }
 
+div {
+  font-family: "Calibri";
+  color: #1f497d;
+}
+
 aside.menuItens {
   width: 150pt;
   height: 100%;

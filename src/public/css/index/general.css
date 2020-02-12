@@ -3,4 +3,9 @@ body {
   margin: 0;
 }
 
+div {
+  font-family: "Calibri";
+  color: #1f497d;
+}
+
 /*# sourceMappingURL=general.css.map */

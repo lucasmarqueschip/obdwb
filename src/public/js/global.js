@@ -1,39 +1,40 @@
-const navSumary = document.getElementById('navSumary');
-const navErrors = document.getElementById('navErrors');
+navSumary = document.getElementById('navSumary');
+navErrors = document.getElementById('navErrors');
 
-const lblNomeCarga = document.getElementById('lblNomeCarga');
-const lblRevCarga = document.getElementById('lblRevCarga');
-const lbldataManual = document.getElementById('lblDataManual');
-const imgTop = document.getElementById('imgTop');
-const imgObd = document.getElementById('imgObd');
-const imgChip = document.getElementById('imgChip');
+lblNomeCarga = document.getElementById('lblNomeCarga');
+lblRevCarga = document.getElementById('lblRevCarga');
+lbldataManual = document.getElementById('lblDataManual');
+imgTop = document.getElementById('imgTop');
+imgObd = document.getElementById('imgObd');
+imgChip = document.getElementById('imgChip');
 
-const lblIntro = document.getElementById('lblIntro');
-const ulListFunc = document.getElementById('lstFunc');
-const divIntroObs = document.getElementById('divIntroObs');
+lblIntro = document.getElementById('lblIntro');
+ulListFunc = document.getElementById('lstFunc');
+divIntroObs = document.getElementById('divIntroObs');
 
-const lblApplicationTitle = document.getElementById('lblApplicationTitle');
-const trApplicationTable = document.getElementById('trApplicationTable');
-const tbCars = document.getElementById('tbCars');
-const divApplicationObs = document.getElementById('divApplicationObs');
+lblApplicationTitle = document.getElementById('lblApplicationTitle');
+trApplicationTable = document.getElementById('trApplicationTable');
+tbCars = document.getElementById('tbCars');
+divApplicationObs = document.getElementById('divApplicationObs');
 
-const divResources = document.getElementById('divResources');
+divResources = document.getElementById('divResources');
 
-const lblLocalTitle = document.getElementById('lblLocalTitle');
-const divLocalDesc = document.getElementById('divLocalDesc');
-const imgLocalImage = document.getElementById('imgLocalImage');
+lblLocalTitle = document.getElementById('lblLocalTitle');
+divLocalDesc = document.getElementById('divLocalDesc');
+imgLocalImage = document.getElementById('imgLocalImage');
 
-const divInstruction = document.getElementById('divInstruction');
+divInstruction = document.getElementById('divInstruction');
 
-const divServices = document.getElementById('divServices');
+divServices = document.getElementById('divServices');
 
-const divOthersMessage = document.getElementById('divOthersMessage');
-const lblOtherMessageTitle = document.getElementById('lblOtherMessageTitle');
+divOthersMessage = document.getElementById('divOthersMessage');
+lblOtherMessageTitle = document.getElementById('lblOtherMessageTitle');
 
-const divLastMsg = document.getElementById('divLastMsg');
+divLastMsg = document.getElementById('divLastMsg');
 
-let s = ''; //usado para auxialiar as ancoras
-let nav; //usado na navegação pelas ancoras
+
+s = ''; //usado para auxialiar as ancoras
+nav; //usado na navegação pelas ancoras
 
 $(function () {
     $('a[href*="#"]:not([href="#"])').click(function () {

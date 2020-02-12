@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,28 +9,73 @@
 
     <link rel="stylesheet" href="/css/index/index.css">
     <script src="/js/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"></script>
 </head>
-<body>
+
+<body class="dragscroll">
     <div class="container-menu">
         <aside class="menuItens">
-            <span>Selecione o equipamento</span>
+            <div>Selecione o equipamento</div>
             <a class="menuItem" href="#" onclick="loadHTML('_obdmap.html')">Obdmap One</a>
             <a class="menuItem" href="#" onclick="loadHTML('_service.html')">Obdmap Service</a>
             <a class="menuItem" href="#" onclick="loadHTML('_connect.html')">Obdmap Connect</a>
         </aside>
         <div class="manual" id="manual">
-            
+
         </div>
     </div>
 
 </body>
-<script>
+
+<script src="/js/axios/axios.min.js"></script>
+<script class="myscript">
+
+    let navSumary;
+    let navErrors;
+    let lblNomeCarga;
+    let lblRevCarga;
+    let lbldataManual;
+    let imgTop;
+    let imgObd;
+    let imgChip;
+    let lblIntro;
+    let ulListFunc;
+    let divIntroObs;
+    let lblApplicationTitle;
+    let trApplicationTable;
+    let tbCars;
+    let divApplicationObs;
+    let divResources;
+    let lblLocalTitle;
+    let divLocalDesc;
+    let imgLocalImage;
+    let divInstruction;
+    let divServices;
+    let divOthersMessage;
+    let lblOtherMessageTitle;
+    let divLastMsg;
+    let s = ''; //usado para auxialiar as ancoras
+    let nav; //usado na navegação pelas ancoras
+
+
     function loadHTML(fileName) {
-        event.preventDefault();        
-        $.get(`./html/${fileName}`, html => {
-            $('#manual').html(html);            
+        event.preventDefault();
+        $.ajax({
+            url: `./html/${fileName}`,
+            async: true,
+            cache: false,
+            beforeSend: () => {
+                $('#manual').html('loading...');
+                $('#manual').animate({ 'opacity': '0' }, 0)
+            },
+            success: (html => {
+                $('#manual').html(html);
+                $('#manual').show(500);
+                $('#manual').animate({ 'opacity': '1' }, 1000)
+            })
         });
     }
+
 
 </script>
 
