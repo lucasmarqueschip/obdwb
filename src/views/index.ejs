@@ -69,7 +69,11 @@
     }
 
     function loadHTML(fileName) {
-        event.preventDefault();
+        try{
+            event.preventDefault();
+        } catch {
+            console.log('event não suportado!');
+        }
 
 
         $('#manual').html('loading...');
