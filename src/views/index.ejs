@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="/css/index/index.css">
     <script src="/js/jquery/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragscroll/0.0.8/dragscroll.min.js"></script>
+    <script src="/js/dragscroll/dragscroll.min.js"></script>
 </head>
 
 <body class="dragscroll">
@@ -27,7 +27,6 @@
 
 </body>
 
-<script src="/js/axios/axios.min.js"></script>
 <script class="myscript">
 
     let navSumary;
@@ -58,22 +57,41 @@
     let nav; //usado na navegação pelas ancoras
 
 
+    function handler() {
+        if (this.readyState === 4 & this.status == 200) {
+            if (this.status === 200){
+                $('#manual').html(this.responseText);
+                $('#manual').animate({ 'opacity': '1' }, 1000)
+            } else return false
+        } else if (this.readyState == 4 & this.status != 200) {
+            return false //página não encontrada ou erro na conexão
+        }
+    }
+
     function loadHTML(fileName) {
         event.preventDefault();
-        $.ajax({
-            url: `./html/${fileName}`,
-            async: true,
-            cache: false,
-            beforeSend: () => {
-                $('#manual').html('loading...');
-                $('#manual').animate({ 'opacity': '0' }, 0)
-            },
-            success: (html => {
-                $('#manual').html(html);
-                $('#manual').show(500);
-                $('#manual').animate({ 'opacity': '1' }, 1000)
-            })
-        });
+
+
+        $('#manual').html('loading...');
+        $('#manual').animate({ 'opacity': '0' }, 0)        
+        const xml = new XMLHttpRequest();
+        xml.onreadystatechange = handler;
+        xml.open('GET', `./html/${fileName}`, false);
+        xml.send();
+
+        // $.ajax({
+        //     url: `./html/${fileName}`,
+        //     cache: false,
+        //     beforeSend: () => {
+        //         $('#manual').html('loading...');
+        //         $('#manual').animate({ 'opacity': '0' }, 0)
+        //     },
+        //     success: (html => {
+        //         $('#manual').html(html);
+        //         $('#manual').show(500);
+        //         $('#manual').animate({ 'opacity': '1' }, 1000)
+        //     })
+        // });
     }
 
 
