@@ -1,3 +1,7 @@
+* {
+  cursor: pointer;
+}
+
 body {
   height: 100vh;
   margin: 0;

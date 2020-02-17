@@ -1,5 +1,13 @@
 div.manual {
-  width: auto;
+  width: 100%;
+}
+
+a.cargaItem {
+  width: 100%;
+  font-size: 14pt;
+  text-decoration: none;
+  color: #44f;
+  display: block;
 }
 
 /*# sourceMappingURL=manual.css.map */
