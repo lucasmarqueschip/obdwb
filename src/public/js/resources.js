@@ -16,8 +16,12 @@ resources.forEach((res, i) => {
     }
     if (res.image !== ''){
         s += `<div class="col">`;
-        s += `<img src="${res.image}" alt="Recursos"`;
-        s += `class="imgShad mt-1">`;
+        // s += `<img src="${res.image}" alt="Recursos"`;
+
+        s += `<a id="single_image" href="${res.image}"><img src="${res.image}" alt=""`;
+        
+
+        s += `class="imgShad mt-1"></a>`;
         s += `</div>`;
     }
     s += `</div>`;
@@ -26,3 +30,24 @@ resources.forEach((res, i) => {
     if (res.title) nav += `<a class="dropdown-item" href="#resource${i}">${res.title}</a>`;
 });
 divResources.innerHTML = s;
+
+    /* This is basic - uses default settings */
+    $("a#single_image").fancybox();
+
+    // /* Using custom settings */
+
+    // $("a#inline").fancybox({
+    //     'hideOnContentClick': true
+    // });
+
+    // /* Apply fancybox to multiple items */
+
+    // $("a.group").fancybox({
+    //     'transitionIn': 'elastic',
+    //     'transitionOut': 'elastic',
+    //     'speedIn': 600,
+    //     'speedOut': 200,
+    //     'overlayShow': false
+    // });
+
+// });
