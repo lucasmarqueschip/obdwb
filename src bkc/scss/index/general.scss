@@ -1,0 +1,22 @@
+
+
+* {
+    cursor: pointer;
+}
+
+@media (width: 800px){
+    * {
+        cursor: none;
+    }
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+}
+
+div {
+    font-family: 'Calibri';
+    color: rgb(31, 73, 125);
+
+}

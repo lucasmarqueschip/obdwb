@@ -1,0 +1,85 @@
+$borderShadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.25);
+
+aside.menuItens {
+    max-width: 160pt;
+    min-width: 160pt;
+    width: 160pt;
+    height: 100%;
+    background-color: #eee;
+    padding: 20px 5px 0px 20px;
+    display: block;
+}
+
+a.menuItem {
+        // border-radius: 20px;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+        // width: auto;
+        font-size: 14pt;
+        text-decoration: none;
+        // background-color: #ddd;
+        color: #44f;
+        display: block;
+        // -webkit-box-shadow: $borderShadow;
+        // -moz-box-shadow: $borderShadow;
+        // box-shadow: $borderShadow;
+    }
+a.menuItem:hover {
+    background-color: skyblue;
+    color: black;
+    text-decoration: none;
+}
+
+
+#toggle {
+    border-radius: 10px;
+    background-color: gray;
+    position: fixed;
+    left: 10px;
+    width: 50px;
+    top: 10px;
+    height: 50px;
+    z-index: 10;
+    opacity: 60%;
+    display: none;
+}
+
+
+.my-nav2 {
+    z-index: 1;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    left: 0px;
+    top: 0px;    
+    width: 400px;
+    display: none;
+}
+
+.tree1-item {
+    text-decoration: none;
+    padding: 3px;
+    color: black;
+    background-color: lightgrey;
+}
+
+.tree2-item {
+    text-decoration: none;
+    width: 100%;
+    padding: 3px;
+    padding-left: 20px; 
+    color: black;
+    background-color: white;
+}
+
+.tree1-item:hover {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
+
+.tree2-item:hover {
+    background-color: skyblue;
+    color: navy;
+    text-decoration: none;
+}

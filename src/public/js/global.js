@@ -1,5 +1,11 @@
-navSumary = document.getElementById('navSumary');
-navErrors = document.getElementById('navErrors');
+// navSumary = document.getElementById('navSumary');
+// navErrors = document.getElementById('navErrors');
+navSumary = document.getElementById('collapse1');
+navErrors = document.getElementById('collapse2');
+
+
+
+
 
 lblNomeCarga = document.getElementById('lblNomeCarga');
 lblRevCarga = document.getElementById('lblRevCarga');

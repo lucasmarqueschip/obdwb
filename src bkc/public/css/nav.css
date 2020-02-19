@@ -1,0 +1,54 @@
+.my-nav {
+  z-index: 1;
+  height: 100%;
+  background-color: #333;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.nav-link {
+  font-size: 13pt;
+}
+
+.my-nav-control {
+  z-index: 99;
+  height: 100%;
+  background-color: #333;
+  width: 5%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
+.card {
+  width: 100%;
+  max-width: 100vh;
+}
+
+.card-header, .card-body {
+  padding: 0px;
+}
+
+.btn-nav {
+  width: 100%;
+}
+
+.t-50 {
+  position: relative;
+  top: 50%;
+  font-size: 2rem;
+}
+
+#my-modal {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
+/*# sourceMappingURL=nav.css.map */

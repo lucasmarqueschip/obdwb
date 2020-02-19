@@ -1,15 +1,15 @@
 //Capa
-const nomeCarga = "Leitura de Senha e Programação de Chaves VW Gol, Saveiro e Voyage 2009-2012";
-const revCarga = "Rev. 4";
-const dataManual = "Julho 2017";
-const imgTopPath = "/images/obd.png";
-const imgObdPath = "/images/conEquip.png";
-const imgChipPath = "/images/chip.png";
+nomeCarga = "Leitura de Senha e Programação de Chaves VW Gol, Saveiro e Voyage 2009-2012";
+revCarga = "Rev. 4";
+dataManual = "Julho 2017";
+imgTopPath = "/images/obd.png";
+imgObdPath = "/images/conEquip.png";
+imgChipPath = "/images/chip.png";
 
 // introdução
-const introTitle = `Introdução`;
-const introSubtitle = `Esta carga realiza as seguintes funções:`;
-const lstFunc = [
+introTitle = `Introdução`;
+introSubtitle = `Esta carga realiza as seguintes funções:`;
+lstFunc = [
 `Leitura de senha nas centrais: IAW 4GV e ME7.5.30.`,
 `Programação de até 8 chaves: É necessário ter em mãos todas as chaves a serem programadas, inclusive as que já estavam programadas. Caso as chaves que já funcionavam no veículo não sejam programadas, elas não funcionarão mais, necessitando fazer a programação novamente.`,
 `Adição de novas chaves: Adiciona novas chaves sem apagar as que já estão programadas no veículo.`,
@@ -19,13 +19,13 @@ const lstFunc = [
 `- ECU ME7.5.30 são utilizadas nos veículos que vem equipado com o motor 1.6.`,
 
 ];
-const introObs = createObs();
+introObs = createObs();
 
 
 // aplicação 
-const applicationTitle = "Aplicação";
-const applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
-const models = [
+applicationTitle = "Aplicação";
+applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+models = [
 {
 manufacturer: "VW",
 model: "Gol 1.0",
@@ -57,11 +57,11 @@ model: "Voyage 1.6",
 years: "2009 a 2012"
 },
 ];
-const applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = createObs(undefined, undefined, undefined)
 
 
 
-const resources = [
+resources = [
 {title: "Acessórios utilizados:", 
 description: "", 
 ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
@@ -69,12 +69,12 @@ image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
 
 {title: "", 
 description: "", 
-ballon: "Pinça soic 8, para conectar a memória ao OBDMap", 
+ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
 image: "/images/Acessórios/Pinça SOIC8.jpg"},
 
 {title: "", 
 description: "", 
-ballon: "<br />Utilize o cabo universal Connect", 
+ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
 image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
 
 {title: "", 
@@ -157,9 +157,10 @@ description: "A tomada de diagnóstico dos veículos está localizada na posiç�
 ballon: "", 
 image: "/images/Tomada de Diagnostico/Carro/A4.jpg"},
 ];
-const instruction = [];
-const obdmap = false;
-const services = [
+instruction = [];
+obdmap = false;
+services = 
+[
 {title: `Realizando Leitura da senha da ECU IAW 4GV:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
@@ -200,40 +201,72 @@ screens: [
 
 ]},];
 //Outras mensagens
-const othersMessageTitle = `Outras Mensagens`;
-const othersMessage = [{
-	label: 'Acesso Negado',
-	screen: `
-		Acesso Negado!<br />
-		     **<br />
-		<br />
-		Tecle (OK)`,
-	cause: `
-		<li>BCM não compatível com a aplicação, </li>
-		<li>OBDMAP desatualizado</li>`,
-	solution: `
-		<li>Verificar aplicação (isso implica nos modelos, anos, sistemas e hardware)</li>
-		<li>Verificar com suporte técnico uma possível atualização</li>`
+othersMessageTitle = `Outras Mensagens`;
+othersMessage = [{ label: `Erro na leitura!`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;na`,
+`&nbsp;&nbsp;leitura!`,
+`<br />`,
+],
+causes: [
+`Mau contato da pinça com a memória,`,`Mau contato da pinça ou cabo MCU com o OBDMap,`,`ECU com problema,`,`A pinça foi conectada em outro componente, (se existir outro componente SOIC8 na placa)`,`Os terminais da memória ou da própria pinça podem estar com resina ou sujeira.`,``,],
+solutions: [
+`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir a correta soldagem do cabo MCU,`,`Conferir se os parafusos que prendem a pinça ou o cabo MCU no OBDMap estão bem fixos,`,`Conferir bom estado do módulo,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,]
 },
-{
-	label: 'Erro de comunicação',
-	screen: `
-		Erro comunicacao <br/> 
-		ou veiculo <br/> 
-		incompativel! <br/>
-		Tecle (OK) <br/>
-		Tecle (OK) <br/>
-		Tecle (OK) <br/>
-		Tecle (OK)`,
-	cause: `
-		<li>Defeito no veículo, parte elétrica, </li>
-		<li>Software do OBDMap desatualizado</li>`,
-	solution: `
-		<li>Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,
-</li>
-		<li>Conferir parte elétrica do veículo, fusíveis, etc,</li>
-		<li>Caso não esteja, fique atento as próximas atualizações </li>`
-}
+
+{ label: `Pinca invertida! Verifique...`,
+screens: [
+`&nbsp;`,
+`Pinca&nbsp;invertida!`,
+`Verifique...`,
+`<br />`,
+],
+causes: [
+`A pinça realmente foi conectada invertida na memória,`,`A pinça foi conectada em outro componente,`,`Memória, ECU ou painel está com problema.`,],
+solutions: [
+`Conferir a correta posição da pinça na memória.`,]
+},
+
+{ label: `Curto! Verifique...`,
+screens: [
+`&nbsp;`,
+`Curto!`,
+`Verifique...`,
+`<br />`,
+],
+causes: [
+`Os fios do cabo MCU foram soldados em outros pontos do painel,`,`A pinça foi conectada de forma incorreta,`,`Cabo MCU, pinça ECU ou painel está com problema.`,],
+solutions: [
+`Verificar a correta posição dos fios ou pinça no painel ou ECU,`,`Verificar se a pinça ou cabo MCU apresenta algum defeito visível, na dúvida consulte o suporte técnico.`,]
+},
+
+{ label: `Erro de Comunicacao!`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;de&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Comunicacao!`,
+`<br />`,
+],
+causes: [
+`Defeito no veículo, parte elétrica,`,`Software do OBDMap desatualizado,`,`Má conexão dos acessórios.`,],
+solutions: [
+`Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
+},
+
+{ label: `Senha Incorreta!`,
+screens: [
+`&nbsp;`,
+`Senha&nbsp;`,
+`&nbsp;&nbsp;Incorreta!`,
+`<br />`,
+],
+causes: [
+`A senha inserida está incorreta.`,],
+solutions: [
+`Insira a senha correta.`,]
+},
+
 ];
 //Last Message
-const lastMsg = `Se persistirem os erros acima, ou para outras mensagens consulte o suporte técnico.`;
+lastMsg = `Se persistirem os erros acima, ou para outras mensagens consulte o suporte técnico.`;

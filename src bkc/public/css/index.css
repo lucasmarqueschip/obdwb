@@ -1,0 +1,416 @@
+@font-face {
+  font-family: "Myriad";
+  src: url("../fonts/Myriad Pro Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+.borda {
+  border: 4px solid navy;
+  max-width: 711px;
+  width: auto;
+  margin: 5%;
+}
+
+@media (max-width: 430px) {
+  .borda {
+    border: 4px none navy;
+    max-width: 711px;
+    width: auto;
+    margin: 5%;
+  }
+
+  .container-fluid {
+    padding: 0%;
+  }
+}
+.fz-18 {
+  font-size: 18pt;
+}
+
+.fz-14 {
+  font-size: 14pt;
+}
+
+.fz-13 {
+  font-size: 13pt;
+}
+
+.fz-12 {
+  font-size: 12pt;
+}
+
+.fz-11_5 {
+  font-size: 11.5pt;
+}
+
+.under {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#divLastMsg {
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.1;
+}
+
+a:hover {
+  background-color: silver !important;
+}
+
+.info {
+  background-color: #cae1ff;
+  border: 2px solid black;
+  font-size: 13pt;
+  color: black;
+  margin: auto 10px auto 10px;
+}
+
+ul {
+  margin: 0px;
+}
+
+.ai-left {
+  align-items: center;
+  justify-content: flex-start !important;
+}
+
+.screenHead {
+  display: flex;
+  align-items: center;
+}
+
+.screen {
+  background-color: blue;
+  color: white;
+  height: auto;
+  min-width: 190px;
+  width: 190px;
+  height: auto;
+  border: 2px solid black;
+}
+
+.screenIn {
+  color: white;
+  line-height: 1;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.colScreen {
+  max-width: 292px;
+}
+
+.step {
+  max-width: 100px;
+}
+
+.screenCon {
+  background-color: #eee;
+  max-width: 340px;
+  min-width: 340px;
+  min-height: 80px;
+  height: auto;
+  border: 2px solid black;
+  background-color: #dbdbdb;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.screenConMenu {
+  background-color: #eee;
+  max-width: 340px;
+  min-width: 340px;
+  min-height: 80px;
+  height: auto;
+  border: 2px solid black;
+  background-color: #dbdbdb;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.screenInCon {
+  color: black;
+  line-height: 1;
+  font: 12px "Myriad", "Courier New";
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.screenInConMenu {
+  color: black;
+  line-height: 1;
+  font: 12px "Myriad", "Courier New";
+  font-weight: normal;
+  padding: 0.25rem;
+}
+
+.activeMenu {
+  color: white;
+  background-color: #4646f5;
+}
+
+@media (max-width: 515px) {
+  .screenCon {
+    margin-left: 3%;
+  }
+
+  .screenConMenu {
+    margin-left: 3%;
+  }
+}
+.ballon {
+  background-color: silver;
+  font-size: 11pt;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  line-height: 1.1;
+}
+
+.ballon-small {
+  height: 25px;
+  min-width: 75px;
+  width: 75px;
+  text-align: center;
+}
+
+.ballon-auto {
+  padding: 2px 5px;
+  min-width: 70px;
+  text-align: left;
+  width: fit-content;
+}
+
+.ballonCon-auto {
+  padding: 2px 5px;
+  min-width: 70px;
+  text-align: left;
+  width: fit-content;
+}
+
+@media (max-width: 424px) {
+  .ballon-auto {
+    float: right;
+  }
+}
+@media (max-width: 630px) {
+  .ballonCon-auto {
+    float: right;
+  }
+}
+table {
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+th {
+  background-color: silver;
+  color: black;
+}
+
+table,
+th,
+td {
+  border: 2px solid black;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 0px 20px;
+}
+
+.obs {
+  color: red;
+  text-decoration: underline;
+}
+
+img,
+#imgTop,
+#imgChip {
+  width: 100%;
+  max-width: 100%;
+  min-width: 240px;
+}
+
+#imgObd {
+  width: 50%;
+}
+
+.imgShad {
+  border: 2px solid black;
+  -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+body {
+  -webkit-print-color-adjust: exact;
+}
+
+@page {
+  margin-top: 0.75cm;
+  margin-left: 0.75cm;
+  margin-right: 0.75cm;
+  margin-bottom: 0.75cm;
+  size: A4;
+}
+@media print {
+  nav {
+    display: none;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .borda {
+    border: 4px solid navy;
+    border: none;
+    max-width: 100% !important;
+    margin: 1.7cm;
+    width: calc(100% - 3.4cm);
+  }
+
+  #pageborder {
+    position: fixed;
+    left: 0cm;
+    right: 0cm;
+    top: 0cm;
+    bottom: 0cm;
+    border: 4px solid navy;
+  }
+
+  .fz-18 {
+    font-size: 1.8rem;
+  }
+
+  .fz-14 {
+    font-size: 1.4rem;
+  }
+
+  .fz-13 {
+    font-size: 1.3rem;
+  }
+
+  .fz-12 {
+    font-size: 1.2rem;
+  }
+
+  .fz-11_5 {
+    font-size: 1.15rem;
+  }
+
+  .screenInCon {
+    font-size: 1.2rem;
+  }
+
+  .imgShad {
+    border: 2px solid black;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75) !important;
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75) !important;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75) !important;
+  }
+
+  .screenCon {
+    border: 2px solid black;
+    background-color: #dbdbdb;
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75) !important;
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75) !important;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75) !important;
+  }
+
+  .screenConMenu {
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75) !important;
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75) !important;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75) !important;
+  }
+
+  .newPage {
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  .newPageForce {
+    page-break-before: always;
+  }
+}
+.my-nav {
+  z-index: 1;
+  height: 100%;
+  background-color: #333;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 400px;
+}
+
+.nav-link {
+  font-size: 13pt;
+}
+
+.my-nav-control {
+  z-index: 99;
+  height: 100%;
+  background-color: #333;
+  width: 5%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
+.card {
+  width: 100%;
+  max-width: 100vh;
+}
+
+.card-header, .card-body {
+  padding: 0px;
+}
+
+.btn-nav {
+  width: 100%;
+}
+
+.t-50 {
+  position: relative;
+  top: 50%;
+  font-size: 2rem;
+}
+
+#my-modal {
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+}
+
+/*# sourceMappingURL=index.css.map */

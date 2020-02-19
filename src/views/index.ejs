@@ -17,8 +17,8 @@
     <script type="text/javascript" src="/js/fancybox/jquery.fancybox.min.js"></script>
 </head>
 
-<body class="dragscroll">
-
+<!-- <body class="dragscroll"> -->
+<body>
 
     <div id="loader">
         <img class="loader" src="/images/loader2.gif" alt="load">
@@ -31,7 +31,7 @@
 
 
     <nav class="overflow-auto my-nav2">
-        <div class="fz-13" id="home">
+        <div class="fz-13 py-2" id="home">
             <a href="#" onclick="home()">Home</a>
         </div>
         <div class="accordion h-100" id="aDad">
@@ -39,14 +39,14 @@
                 data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Sumario</a>
 
             <div class="collapse hide" id="collapse1" aria-labelledby="chSumario" data-parent="#aDad">
-                <a class="tree2-item w-100 d-block fz-12" href="#intro" onclick="changeMenu(true)">Introdução</a>
+                <!-- <a class="tree2-item w-100 d-block fz-12" href="#intro" onclick="changeMenu(true)">Introdução</a> -->
             </div>
 
 
             <a class="tree1-item w-100 d-block fz-13" href="#" id="chError" data-toggle="collapse"
                 data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">Mensagens de erros</a>
             <div class="collapse hide" id="collapse2" aria-labelledby="chError" data-parent="#aDad">
-                <a class="tree2-item w-100 d-block fz-12" href="#intro" onclick="changeMenu(true)">Acesso Negado</a>
+                <!-- <a class="tree2-item w-100 d-block fz-12" href="#intro" onclick="changeMenu(true)">Acesso Negado</a> -->
             </div>
 
     </nav>
@@ -59,14 +59,13 @@
         </aside>
 
         <div class="manual" id="manual" onclick="changeMenu(true)">
-            <!-- <a id="single_image" href="/images/conEquip.png"><img src="/images/conEquipMini.png" alt="" /></a> -->
+
         </div>
     </div>
 
 </body>
 
 <script class="myscript">
-
     let navSumary;
     let navErrors;
     let lblNomeCarga;
@@ -93,7 +92,29 @@
     let divLastMsg;
     let s = ''; //usado para auxialiar as ancoras
     let nav; //usado na navegação pelas ancoras
+    let nav2;
 
+    let nomeCarga;
+    let revCarga;
+    let dataManual;
+    let imgTopPath;
+    let imgObdPath;
+    let imgChipPath;
+    let introTitle;
+    let introSubtitle;
+    let lstFunc;
+    let introObs;
+    let applicationTitle;
+    let applicationTable;
+    let models;
+    let applicationObs;
+    let resources;
+    let instruction;
+    let obdmap;
+    let services;
+    let othersMessageTitle;
+    let othersMessage;
+    let lastMsg;
 
     function loadHTML(fileName) {
         try {
@@ -115,7 +136,6 @@
                     .animate({ 'opacity': '1' }, 1000);
             }),
             complete: (s => {
-                console.log(s);
                 $('#loader').css('display', 'none');
             })
 

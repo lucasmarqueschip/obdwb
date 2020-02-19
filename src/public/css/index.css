@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Myriad";
-  src: url("../fonts/Myriad Pro Regular.ttf");
+  src: url("/fonts/Myriad Pro Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -118,13 +118,12 @@ ul {
 }
 
 .screenCon {
-  background-color: #eee;
+  background-color: #e8e8e8;
   max-width: 340px;
   min-width: 340px;
   min-height: 80px;
   height: auto;
   border: 2px solid black;
-  background-color: #dbdbdb;
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
@@ -133,13 +132,12 @@ ul {
 }
 
 .screenConMenu {
-  background-color: #eee;
+  background-color: #e8e8e8;
   max-width: 340px;
   min-width: 340px;
   min-height: 80px;
   height: auto;
   border: 2px solid black;
-  background-color: #dbdbdb;
   -webkit-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
@@ -150,7 +148,7 @@ ul {
 .screenInCon {
   color: black;
   line-height: 1;
-  font: 12px "Myriad", "Courier New";
+  font: 14px "Myriad", "Courier New";
   font-weight: normal;
   display: flex;
   align-items: center;
@@ -161,7 +159,7 @@ ul {
 .screenInConMenu {
   color: black;
   line-height: 1;
-  font: 12px "Myriad", "Courier New";
+  font: 14px "Myriad", "Courier New";
   font-weight: normal;
   padding: 0.25rem;
 }

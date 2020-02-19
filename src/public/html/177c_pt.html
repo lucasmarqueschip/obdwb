@@ -1,0 +1,145 @@
+
+    <link rel="stylesheet" href="css/index/index.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <div class="" id="pageborder">
+        <header></header>
+    </div>
+
+
+    <nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top d-none">
+        <a class="navbar-brand" href="#">Inicio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a href="#d" class="nav-link dropdown-toggle" id="navbarDrop" role="button" data-toggle="dropdown">
+                        Sumário
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="navSumary">
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#d" class="nav-link dropdown-toggle" id="navbarDrop" role="button" data-toggle="dropdown">
+                        Mensagens de Erros
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" id="navErrors">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="borda">
+        <div class="container-fluid">
+            <div class="capa">
+                <div class="row">
+                    <div class="col">
+                        <img class="p-5" id="imgTop" alt="obdmap">
+                    </div>
+                </div>
+                <div class="row text-center fz-18">
+                    <div class="col">
+                        <div id="lblNomeCarga">1</div>
+                    </div>
+                </div>
+                <div class="row text-center fz-18">
+                    <div class="col">
+                        <div id="lblRevCarga">2</div>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col">
+                        <img id="imgObd" alt="obdmap">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <img class="px-5" id="imgChip" alt="obdmap">
+                    </div>
+                </div>
+                <div class="row text-center fz-14">
+                    <div class="col">
+                        <div id="lblDataManual">3</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro mt-5 newPageForce" id="intro">
+                <div class="row text-center under fz-14 font-weight-bold">
+                    <div class="col" id="lblIntroTitle"> </div>
+                </div>
+                <div class="row under font-weight-bold fz-13 mt-5">
+                    <div class="col" id="lblIntroSubtitle"></div>
+                </div>
+                <div class="row fz-11_5 pl-2 mt-4">
+                    <ul id="lstFunc"></ul>
+                </div>
+                <div id="divIntroObs"></div>
+            </div>
+
+            <div class="application mt-5">
+                <div class="row under bold fz-13">
+                    <div class="col" id="lblApplicationTitle"></div>
+                </div>
+                <div class="row fz-12 pt-3 newPage">
+                    <div class="col">
+                        <table>
+                            <thead class="fz-13 bold">
+                                <tr id='trApplicationTable'>
+                                </tr>
+                            </thead>
+                            <tbody class="fz-12" id="tbCars">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="divApplicationObs"></div>
+            </div>
+
+
+            <div class="newPage" id="divResources">
+            </div>
+
+            <div class="instruction pt-5 newPageForce" id="divInstruction"> </div>
+
+
+            <div id="divServices"> </div>
+
+            <div class="otherMessage newPageForce">
+                <div class="row under text-center fz-14 bold mt-5 mb-2">
+                    <div class="col" id="lblOtherMessageTitle"></div>
+                </div>
+                <div id="divOthersMessage" class="fz-12">
+                </div>
+            </div>
+
+            <div class="m-5" id="divLastMsg">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+<script class="myscript" src="./js/global.js"></script>
+<script class="myscript" src="./js/run/info177c_pt.js"></script>
+<script class="myscript" src="./js/capa.js"></script>
+<script class="myscript" src="./js/intro.js"></script>
+<script class="myscript" src="./js/application.js"></script>
+<script class="myscript" src="./js/resources.js"></script>
+<script class="myscript" src="./js/instruction.js"></script>
+<script class="myscript" src="./js/services.js"></script>
+<script class="myscript" src="./js/otherMessages.js"></script>
+
+
+<script>
+    navSumary.innerHTML = nav;
+    navErrors.innerHTML = nav2;
+</script>
+
+
+</html>
