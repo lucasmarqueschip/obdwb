@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "HSFI 2010 - Leitura de Senha e Gravação do Chassi";
-revCarga = "Rev. 2";
-dataManual = "Junho 2014";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0068<br />HSFI 2010 - Leitura de Senha e Gravação do Chassi`;
+revCarga = `Rev. 2`;
+dataManual = `Junho 2014`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -20,51 +20,59 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Celta 1.0",
-years: "2010 a 2013"
+manufacturer: `GM`,
+model: `Celta 1.0`,
+years: `2010 a 2013`
 },
 {
-manufacturer: "GM",
-model: "Prisma 1.4",
-years: "2010 a 2012"
+manufacturer: `GM`,
+model: `Prisma 1.4`,
+years: `2010 a 2012`
 },
 {
-manufacturer: "GM",
-model: "Meriva 1.4",
-years: "2010 a 2013"
+manufacturer: `GM`,
+model: `Meriva 1.4`,
+years: `2010 a 2013`
 },
 {
-manufacturer: "GM",
-model: "Classic 1.0",
-years: "2010 a 2013"
+manufacturer: `GM`,
+model: `Classic 1.0`,
+years: `2010 a 2013`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "<br />Utilize o cabo universal Connect", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `<br />Utilize o cabo universal Connect`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Connect/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico do Celta, do Classic e do Prisma fica localizada na área A5.<br />A tomada de diagnóstico da Meriva fica localizada na área F9.<br /><br /><br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A5 - F9.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico do Celta, do Classic e do Prisma fica localizada na área A5.<br />A tomada de diagnóstico da Meriva fica localizada na área F9.<br /><br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5 - F9.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -78,8 +86,32 @@ screens: [
 {lines: [`Delphi HSFI com BCM`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 2`], help: `Tecle OK`, menu: 1000},
 {lines: [`Leitura de senha`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Realizando a Gravação de Chassi`,
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Senha&nbsp;1:&nbsp;****`,
+`Chassi.:&nbsp;*******`,
+`**********`,
+`<br />`,
+],
+help: `Anote a senha. Com ela é possível programar chaves e fazer o reset da ECU, utilizando a carga OPEL2.`
+},
+]
+}, {title: `Realizando a Gravação de Chassi`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
 {lines: [`GM`], help: `Tecle OK`, menu: 1000},
@@ -88,15 +120,66 @@ screens: [
 {lines: [`Opel 2`], help: `Tecle OK`, menu: 1000},
 {lines: [`Delphi HSFI com BCM`], help: `Tecle OK`, menu: 1000},
 {lines: [`Programação do chassi`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`&nbsp;`,
+`Confirma?`,
+`<br />`,
+`<br />`,
+],
+help: `Certifique-se de que o
+chassi correto foi inserido
+e então Tecle OK, ou
+tecle VOLTA para corrigir.`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Digite:`,
+`<br />`,
+`<br />`,
+],
+help: `Utilize as teclas para cima e para baixo para inserir o chassi que será gravado no veiculo.`
+},
+{lines: [
+`&nbsp;`,
+`Confirma&nbsp;Chassi?`,
+`<br />`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Chassi`,
+`Programado!`,
+`<br />`,
+],
+help: ``
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro de Comunicacao!`,
+othersMessage = [
+{ label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
-`Erro&nbsp;de&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Comunicacao!`,
+`Erro&nbsp;de&nbsp;Comunicação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [

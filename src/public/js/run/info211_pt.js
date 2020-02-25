@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Leitura de senha ECU GM Delco E83 via OBD";
-revCarga = "Rev. 2";
-dataManual = "Agosto 2018";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0211<br />Leitura de senha ECU GM Delco E83 via OBD`;
+revCarga = `Rev. 2`;
+dataManual = `Agosto 2018`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -17,47 +17,55 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Agile 1.4",
-years: "2009 a 2014"
+manufacturer: `GM`,
+model: `Agile 1.4`,
+years: `2009 a 2014`
 },
 {
-manufacturer: "GM",
-model: "Montana 1.4",
-years: "2011 a 2018"
+manufacturer: `GM`,
+model: `Montana 1.4`,
+years: `2011 a 2018`
 },
 ];
-applicationObs = createObs("Atenção!", "Existem outros veículos que utilizam essa ECU, porem não será possível realizar a leitura da senha com esta carga.", undefined)
+applicationObs = ``;
+applicationObs += createObs(`Atenção!`, `Existem outros veículos que utilizam essa ECU, porem não será possível realizar a leitura da senha com esta carga.`, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a leitura da senha:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>E83 (Agile)`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`E83 (Agile)`, `>Ler senha`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -86,14 +94,6 @@ help: `Nesse passo em alguns casos o OBDMap pode indicar “Desligue a Chave e t
 ],
 help: `Anote a senha`
 },
-{lines: [
-`&nbsp;`,
-`ECU&nbsp;Invalida!`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
 ]}
 ];
 //Outras mensagens
@@ -110,7 +110,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A3,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico, talvez esta carga tenha tido alterações.`,]
 },
-
 { label: `Erro no acesso!`,
 screens: [
 `&nbsp;`,
@@ -120,6 +119,18 @@ screens: [
 ],
 causes: [
 `Não foi possível acessar o modo de leitura da ECU.`,``,],
+solutions: [
+`Verificar aplicação.`,`Contate suporte técnico.`,]
+},
+{ label: `ECU Invalida!`,
+screens: [
+`&nbsp;`,
+`&nbsp;ECU&nbsp;Invalida!`,
+`<br />`,
+`<br />`,
+],
+causes: [
+`O veículo não corresponde a aplicação.`,],
 solutions: [
 `Verificar aplicação.`,`Contate suporte técnico.`,]
 },

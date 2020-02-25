@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "OBD0284 - Leitura de senha e programação de chaves de presença Kia Hyundai keyless2 (Sportage Santa Fé)	";
-revCarga = "Rev. 1";
-dataManual = "Novembro 2019";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0284<br />OBD0284 - Leitura de senha e programação de chaves de presença Kia Hyundai keyless2 (Sportage Santa Fé)	`;
+revCarga = `Rev. 1`;
+dataManual = `Novembro 2019`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,46 +18,54 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Kia",
-model: "Sportage 2.0",
-years: "2015 a 2016"
+manufacturer: `Kia`,
+model: `Sportage 2.0`,
+years: `2015 a 2016`
 },
 {
-manufacturer: "Hyundai",
-model: "Santa Fe 3.3",
-years: "2014 a 2015"
+manufacturer: `Hyundai`,
+model: `Santa Fe 3.3`,
+years: `2014 a 2015`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Chave de presença utilizada", 
-description: "", 
-ballon: "Utilize a chave de<br />presença original<br />Hyundai/KIA", 
-image: "/images/Chaves e Telecomandos/chave-presenca-hyundai-santa-fe-azera-codificaco-gratis-sp-D_NQ_NP_937744-MLB27893848344_082018-F.jpg"},
+{title: `Chave de presença utilizada`, 
+description: ``, 
+ballon: `Utilize a chave de<br />presença original<br />Hyundai/KIA`, 
+image: `/images/Chaves e Telecomandos/chave-presenca-hyundai-santa-fe-azera-codificaco-gratis-sp-D_NQ_NP_937744-MLB27893848344_082018-F.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{lines: [
@@ -205,7 +213,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Passar um scaner de diagnóstico no veículo`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,`Caso o veículo esteja nos anos de aplicação, contate o suporte`,`Caso não esteja, fique atento as próximas atualizações `,]
 },
-
 { label: `Falha na rede CAN!!! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Falha&nbsp;na`,
@@ -218,7 +225,6 @@ causes: [
 solutions: [
 `Verificar instalação elétrica;`,`Verificar se os módulos não estão com defeito.`,]
 },
-
 { label: `Senha Incorreta! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senha`,
@@ -231,7 +237,6 @@ causes: [
 solutions: [
 `Conferir a senha digitada,`,`Aguardar x tempo com a ignição ligada e tentar novamente com a senha correta. (dependendo do sistema)`,]
 },
-
 { label: `Tempo Excedido!`,
 screens: [
 `&nbsp;`,
@@ -244,7 +249,6 @@ causes: [
 solutions: [
 `Pressionar o telecomando no momento indicado pelo OBDMap.`,]
 },
-
 { label: `Senha nao Encontrada! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;Senha&nbsp;nao`,
@@ -257,7 +261,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Transponder Incorreto!`,
 screens: [
 `&nbsp;`,
@@ -270,7 +273,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Veiculo incompativel! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Veiculo`,
@@ -283,7 +285,6 @@ causes: [
 solutions: [
 `Caso o veículo esteja nos anos de aplicação, contate o suporte`,`Caso não esteja, fique atento as próximas atualizações `,]
 },
-
 { label: `Use o cabo CAN ou adap. A3 CAN!`,
 screens: [
 `&nbsp;`,

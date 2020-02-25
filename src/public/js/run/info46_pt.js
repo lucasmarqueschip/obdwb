@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Leitura de Senha e Programação de Chaves via OBD VW Immo 1";
-revCarga = "Rev. 5";
-dataManual = "Dezembro 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0046<br />Leitura de Senha e Programação de Chaves via OBD VW Immo 1`;
+revCarga = `Rev. 5`;
+dataManual = `Dezembro 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -20,102 +20,110 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "VW",
-model: "Fox 1.0",
-years: "2002 a 2009"
+manufacturer: `VW`,
+model: `Fox 1.0`,
+years: `2002 a 2009`
 },
 {
-manufacturer: "VW",
-model: "Crossfox 1.6",
-years: "2002 a 2009"
+manufacturer: `VW`,
+model: `Crossfox 1.6`,
+years: `2002 a 2009`
 },
 {
-manufacturer: "VW",
-model: "Spacefox 1.6",
-years: "2002 a 2009"
+manufacturer: `VW`,
+model: `Spacefox 1.6`,
+years: `2002 a 2009`
 },
 {
-manufacturer: "VW",
-model: "Gol 1.0",
-years: "1999 a 2003"
+manufacturer: `VW`,
+model: `Gol 1.0`,
+years: `1999 a 2003`
 },
 {
-manufacturer: "VW",
-model: "Gol 1.0 Flex",
-years: "2005 a 2007"
+manufacturer: `VW`,
+model: `Gol 1.0 Flex`,
+years: `2005 a 2007`
 },
 {
-manufacturer: "VW",
-model: "Kombi",
-years: "1999 a 2004"
+manufacturer: `VW`,
+model: `Kombi`,
+years: `1999 a 2004`
 },
 {
-manufacturer: "VW",
-model: "Parati 1.6",
-years: "2000 a 2009"
+manufacturer: `VW`,
+model: `Parati 1.6`,
+years: `2000 a 2009`
 },
 {
-manufacturer: "VW",
-model: "Parati 1.8",
-years: "2000 a 2009"
+manufacturer: `VW`,
+model: `Parati 1.8`,
+years: `2000 a 2009`
 },
 {
-manufacturer: "VW",
-model: "Santana 2.0",
-years: "1998 a 2005"
+manufacturer: `VW`,
+model: `Santana 2.0`,
+years: `1998 a 2005`
 },
 {
-manufacturer: "VW",
-model: "Saveiro 1.6",
-years: "2002 a 2009"
+manufacturer: `VW`,
+model: `Saveiro 1.6`,
+years: `2002 a 2009`
 },
 {
-manufacturer: "VW",
-model: "Saveiro 1.8",
-years: "2002 a 2009"
+manufacturer: `VW`,
+model: `Saveiro 1.8`,
+years: `2002 a 2009`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Utilize o transponder Megamos ID48 NOVO! <br />Se não for utilizado um<br />transponder novo o<br />procedimento pode não ser<br />bem sucedido!", 
-image: "/images/Transponders/ID 48 NOVO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o transponder Megamos ID48 virgem! <br />Se não for utilizado um transponder novo o procedimento pode não ser bem sucedido!`, 
+image: `/images/Transponders/ID 48 NOVO.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Conecte o cabo universal junto ao adaptador A1.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Cabo universal + adaptador A1.<br />Para realizar o emparelhamento<br />da BSI.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos Gol 1.0, Polo 1.6, Polo 2.0 e Saveiro 1.6 e 1.8 está localizada na posição A4.<br />A tomada de diagnóstico dos veículos Fox 1.0 e 1.6, Gol 1.0 flex e Polo 1.6 flex está localizada na posição B5.<br />A tomada de diagnóstico do veículo Kombi está localizada na área Q da segunda imagem.<br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4-B5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos Gol 1.0, Polo 1.6, Polo 2.0 e Saveiro 1.6 e 1.8 está localizada na posição A4.<br />A tomada de diagnóstico dos veículos Fox 1.0 e 1.6, Gol 1.0 flex e Polo 1.6 flex está localizada na posição B5.<br />A tomada de diagnóstico do veículo Kombi está localizada na área Q da segunda imagem.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4-B5.jpg`},
 
-{title: "", 
-description: "A tomada de diagnóstico dos veículos Gol 1.0, Polo 1.6, Polo 2.0 e Saveiro 1.6 e 1.8 está localizada na posição A4.<br />A tomada de diagnóstico dos veículos Fox 1.0 e 1.6, Gol 1.0 flex e Polo 1.6 flex está localizada na posição B5.<br />A tomada de diagnóstico do veículo Kombi está localizada na área Q da segunda imagem.<br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/image_3H.jpg"},
+{title: ``, 
+description: `A tomada de diagnóstico dos veículos Gol 1.0, Polo 1.6, Polo 2.0 e Saveiro 1.6 e 1.8 está localizada na posição A4.<br />A tomada de diagnóstico dos veículos Fox 1.0 e 1.6, Gol 1.0 flex e Polo 1.6 flex está localizada na posição B5.<br />A tomada de diagnóstico do veículo Kombi está localizada na área Q da segunda imagem.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/image_3H.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a leitura de senha`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`VW`, `>Imob 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob 1`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -148,7 +156,7 @@ help: `Exibe a senha de 4 dígitos e a identificação do imobilizador: Megamos 
 }, {title: `Realizando a programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`VW`, `>Imob 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob 1`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -189,7 +197,7 @@ help: `Tecle OK!`
 }, {title: `Realizando a adaptação da ECU`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`VW`, `>Imob 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob 1`, `>Adaptar ECU?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},

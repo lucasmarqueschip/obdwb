@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de Telecomando MITSUBISHI Alarme 1";
-revCarga = "Rev. 4";
-dataManual = "Outubro 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0208<br />Programação de Telecomando MITSUBISHI Alarme 1`;
+revCarga = `Rev. 4`;
+dataManual = `Outubro 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -17,67 +17,75 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Mitsubishi",
-model: "L200 Triton 2.4",
-years: "2013 a 2017"
+manufacturer: `Mitsubishi`,
+model: `L200 Triton 2.4`,
+years: `2013 a 2017`
 },
 {
-manufacturer: "Mitsubishi",
-model: "L200 Triton  3.2",
-years: "2008 a 2017"
+manufacturer: `Mitsubishi`,
+model: `L200 Triton  3.2`,
+years: `2008 a 2017`
 },
 {
-manufacturer: "Mitsubishi",
-model: "L200 Triton 3.5",
-years: "2008 a 2017"
+manufacturer: `Mitsubishi`,
+model: `L200 Triton 3.5`,
+years: `2008 a 2017`
 },
 {
-manufacturer: "Mitsubishi",
-model: "Pajero Dakar 3.2",
-years: "2013 a 2013"
+manufacturer: `Mitsubishi`,
+model: `Pajero Dakar 3.2`,
+years: `2013 a 2013`
 },
 ];
-applicationObs = createObs("Observação: Esta carga não funciona para veículos com partida START/STOP.", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação: Esta carga não funciona para veículos com partida START/STOP.`, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Telecomando utilizado:", 
-description: "", 
-ballon: "", 
-image: "/images/Chaves e Telecomandos/tlcmd mit.jpg"},
+{title: `Telecomando utilizado:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Chaves e Telecomandos/tlcmd mit.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte o cabo universal ao adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Conecte o cabo universal ao adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos está localizada na área D6.<br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/D6.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos está localizada na área D6.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/D6.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a programação de telecomandos`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Mitsubishi`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Mitsubishi`, `>Alarme1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Alarme1`, `>Prog. telecmd?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},

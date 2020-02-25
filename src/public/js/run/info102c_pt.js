@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Leitura de Senha ME7.9.9 (Astra,Vectra e Zafira 2011 a 2012) via OBD";
-revCarga = "Rev. 3";
-dataManual = "Janeiro 2020";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0102<br />Leitura de Senha ME7.9.9 (Astra,Vectra e Zafira 2011 a 2012) via OBD`;
+revCarga = `Rev. 3`;
+dataManual = `Janeiro 2020`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -20,51 +20,64 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Astra 2.0 (Flex)",
-years: "2011 a 2012"
+manufacturer: `GM`,
+model: `Astra 2.0 (Flex)`,
+years: `2011 a 2012`
 },
 {
-manufacturer: "GM",
-model: "Vectra C 2.0",
-years: "2011 a 2012"
+manufacturer: `GM`,
+model: `Vectra C 2.0`,
+years: `2011 a 2012`
 },
 {
-manufacturer: "GM",
-model: "Vectra C 2.4",
-years: "2011 a 2012"
+manufacturer: `GM`,
+model: `Vectra C 2.4`,
+years: `2011 a 2012`
 },
 {
-manufacturer: "GM",
-model: "Zafira 2.0 (Flex)",
-years: "2011 a 2012"
+manufacturer: `GM`,
+model: `Zafira 2.0 (Flex)`,
+years: `2011 a 2012`
 },
 ];
-applicationObs = createObs("Observação: Esta carga realiza o procedimento apenas nos veículos que possuem o ano de fabricação 2011 e 2012 (não é confiável ver a numeração do chassi pelo vidro do veículo).", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação: Esta carga realiza o procedimento apenas nos veículos que possuem o ano de fabricação 2011 e 2012 (não é confiável ver a numeração do chassi pelo vidro do veículo).`, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "<br />Utilize o cabo universal Connect", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `<br />Utilize o cabo universal Connect`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `<br />Utilize o cabo universal Connect`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos Astra e Zafira está localizada na área F9.<br />A tomada de diagnóstico do veículo Vectra está localizada na área A5.<br /><br /><br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A5 - F9.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Connect/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
+
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos Astra e Zafira está localizada na área F9.<br />A tomada de diagnóstico do veículo Vectra está localizada na área A5.<br /><br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5 - F9.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -78,8 +91,40 @@ screens: [
 {lines: [`Bosch Me7.9.9`], help: `Tecle OK`, menu: 1000},
 {lines: [`Leitura de senha`], help: `Tecle OK`, menu: 1000},
 {lines: [`Versão 6 - Vectra 2011`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Realizando a Gravação de chassi`,
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Senha:`,
+`****`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Chassi:`,
+`<br />`,
+`<br />`,
+],
+help: `Chassi lido da ECU.`
+},
+]
+}, {title: `Realizando a Gravação de chassi`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
 {lines: [`GM`], help: `Tecle OK`, menu: 1000},
@@ -88,15 +133,55 @@ screens: [
 {lines: [`Opel 2`], help: `Tecle OK`, menu: 1000},
 {lines: [`Bosch Me7.9.9`], help: `Tecle OK`, menu: 1000},
 {lines: [`Programação do chassi`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Digite:`,
+`<br />`,
+`<br />`,
+],
+help: `Utilize as teclas para cima e para baixo para inserir o chassi que será gravado no veículo.`
+},
+{lines: [
+`&nbsp;`,
+`Confirma?`,
+`<br />`,
+`<br />`,
+],
+help: `Certifique-se de que o chassi correto foi inserido e então Tecle OK, ou tecle VOLTA para corrigir.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Chassi`,
+`Programado!`,
+`<br />`,
+],
+help: ``
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro de Comunicacao!`,
+othersMessage = [
+{ label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
-`Erro&nbsp;de&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Comunicacao!`,
+`Erro&nbsp;de&nbsp;Comunicação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [

@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83";
-revCarga = "Rev. 1";
-dataManual = "Fevereiro 2019";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0275<br />Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83`;
+revCarga = `Rev. 1`;
+dataManual = `Fevereiro 2019`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -30,212 +30,220 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Agile 1.4",
-years: "2010 a 2014"
+manufacturer: `GM`,
+model: `Agile 1.4`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "GM",
-model: "Montana 1.4",
-years: "2011 a 2015"
+manufacturer: `GM`,
+model: `Montana 1.4`,
+years: `2011 a 2015`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Programador JTAG01. Necessário para realizar a<br />leitura e gravação do arquivo<br />na ECU", 
-image: "/images/Acessórios/Jtag.JPG"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Programador JTAG01. Necessário para realizar a<br />leitura e gravação do arquivo<br />na ECU`, 
+image: `/images/Acessórios/Jtag.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.", 
-image: "/images/Acessórios/Cabo MCU.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.`, 
+image: `/images/Acessórios/Cabo MCU.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Adaptador HW0067 será conectado no cabo MCU e depois no OBDMap para<br />realizar o procedimento.", 
-image: "/images/Acessórios/Adaptador HW0067.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: ``},
 
-{title: "", 
-description: "", 
-ballon: "Adaptador HW0067<br />conectado no cabo MCU<br />e no OBDMap.", 
-image: "/images/Acessórios/Adaptador HW0067 conectado no cabo MCU e no OBDMap.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: ``},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Todos os acessórios conectados.jpg`},
 
-{title: "Identificando a Central", 
-description: "", 
-ballon: "Identificando na<br />etiqueta que a ECU<br />é uma E83 ACDelco", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/ECU Delco E83 costas.jpg"},
+{title: `Identificando a Central`, 
+description: ``, 
+ballon: `Identificando na<br />etiqueta que a ECU<br />é uma E83 ACDelco`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/ECU Delco E83 costas.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/ECU Delco E83 frente.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/ECU Delco E83 frente.jpg`},
 
-{title: "Localizando os pontos de soldagem do cabo MCU:", 
-description: "", 
-ballon: "Região A<br />Região B<br />Região C", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Placa ECU Delco E83.jpg"},
+{title: `Localizando os pontos de soldagem do cabo MCU:`, 
+description: ``, 
+ballon: `Região A<br />Região B<br />Região C`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Placa ECU Delco E83.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Solde os fios do Programador JTAG01 na ordem indicada na Região A", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de Soldagem A - ECU Delco E83.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Solde os fios do Programador JTAG01 na ordem indicada na Região A`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de Soldagem A - ECU Delco E83.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Solde os fios do Programador JTAG01 na ordem indicada na Região B", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de Soldagem B - ECU Delco E83.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Solde os fios do Programador JTAG01 na ordem indicada na Região B`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de Soldagem B - ECU Delco E83.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Solde os fios do Programador JTAG01 na ordem indicada na Região C", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de Soldagem C - ECU Delco E83.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Solde os fios do Programador JTAG01 na ordem indicada na Região C`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de Soldagem C - ECU Delco E83.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Todos os fios soldados.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Todos os fios soldados.jpg`},
 
-{title: "Passos para remover o painel do veículo:", 
-description: "", 
-ballon: "Passo 1: Remova os 3<br />parafusos que prendem a<br />capa protetora da coluna de<br />direção.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 1.jpg"},
+{title: `Passos para remover o painel do veículo:`, 
+description: ``, 
+ballon: `Passo 1: Remova os 3<br />parafusos que prendem a<br />capa protetora da coluna de<br />direção.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 2: Desprenda as<br />travas da capa de proteção.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 2: Desprenda as<br />travas da capa de proteção.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 3: Remova a parte<br />superior da capa protetora.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 3: Remova a parte<br />superior da capa protetora.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 3.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 4: Remova o<br />acabamento do miolo de<br />ignição.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 4.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 4: Remova o<br />acabamento do miolo de<br />ignição.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 4.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 5: Remova a parte<br />inferior da capa de<br />proteção.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 5.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 5: Remova a parte<br />inferior da capa de<br />proteção.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 5.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 6: Para facilitar a remoção dos<br />próximos parafusos, pressione as<br />duas travas simultaneamente até<br />que a chave do limpador se<br />desprenda<br /><obs><br />Observação: Siga este exemplo<br />para remover a chave de seta do<br />lado esquerdo do volante.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 6.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 6: Para facilitar a remoção dos<br />próximos parafusos, pressione as<br />duas travas simultaneamente até<br />que a chave do limpador se<br />desprenda<br /><obs><br />Observação: Siga este exemplo<br />para remover a chave de seta do<br />lado esquerdo do volante.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 6.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 7: Remova o<br />parafuso do lado<br />esquerdo do volante.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 7.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 7: Remova o<br />parafuso do lado<br />esquerdo do volante.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 7.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 8: Remova o parafuso<br />do lado direito do volante.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 8: Remova o parafuso<br />do lado direito do volante.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 8.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 9: Utilize uma chave<br />Allen para remover o<br />parafuso que fica na<br />moldura do painel.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 9.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 9: Utilize uma chave<br />Allen para remover o<br />parafuso que fica na<br />moldura do painel.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 9.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 10: Remova a<br />moldura do painel.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 10.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 10: Remova a<br />moldura do painel.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 10.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 11: Remova os dois<br />parafusos superiores que<br />prendem o painel.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 11.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 11: Remova os dois<br />parafusos superiores que<br />prendem o painel.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 11.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 12: Remova o<br />parafuso inferior que<br />prende o painel.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 12.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 12: Remova o<br />parafuso inferior que<br />prende o painel.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 12.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 13: Levante o painel<br />e remova os conectores<br />que o prendem.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 13.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 13: Levante o painel<br />e remova os conectores<br />que o prendem.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 13.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 14: Utilize um alicate<br />de corte pra cortar a presilha<br />plástica que prende o<br />conector 1.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 14.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 14: Utilize um alicate<br />de corte pra cortar a presilha<br />plástica que prende o<br />conector 1.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 14.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 15: Use uma chave<br />de fenda para soltar a<br />trava do conector 1.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 15.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 15: Use uma chave<br />de fenda para soltar a<br />trava do conector 1.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 15.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 16: Solte a trava do conector 2 do painel.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 16.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 16: Solte a trava do conector 2 do painel.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Passo 16.jpg`},
 
-{title: "Identificando e desmontando o painel:", 
-description: "Retire o painel do veículo e leve-o para bancada.<br />", 
-ballon: "Painel retirado do veículo.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Painel retirado do veículo.jpg"},
+{title: `Identificando e desmontando o painel:`, 
+description: `Retire o painel do veículo e leve-o para bancada.<br />`, 
+ballon: `Painel retirado do veículo.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Painel retirado do veículo.jpg`},
 
-{title: "", 
-description: "Retire o painel do veículo e leve-o para bancada.<br />", 
-ballon: "Localizando as 8 travas que prendem a tampa do painel.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Localizando travas do painel.jpg"},
+{title: ``, 
+description: `Retire o painel do veículo e leve-o para bancada.<br />`, 
+ballon: `Localizando as 8 travas que prendem a tampa do painel.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Localizando travas do painel.jpg`},
 
-{title: "", 
-description: "Retire o painel do veículo e leve-o para bancada.<br />", 
-ballon: "Com o auxílio de uma chave de fenda, solte as travas do painel.", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Soltando travas do painel.jpg"},
+{title: ``, 
+description: `Retire o painel do veículo e leve-o para bancada.<br />`, 
+ballon: `Com o auxílio de uma chave de fenda, solte as travas do painel.`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Soltando travas do painel.jpg`},
 
-{title: "Localizando os pontos de soldagem do cabo MCU Modelo A:", 
-description: "", 
-ballon: "Identificando os<br />pontos a serem<br />soldado os fios do<br />cabo MCU:<br />1=> Fio Vermelho<br />2=> Fio Amarelo<br />3=> Fio Azul<br />4=> Fio Verde<br />5=> Fio Cinza<br />6=> Fio Preto<br />7=> Fio Roxo", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de soldagem do painel modelo A.jpg"},
+{title: `Localizando os pontos de soldagem do cabo MCU Modelo A:`, 
+description: ``, 
+ballon: `Identificando os<br />pontos a serem<br />soldado os fios do<br />cabo MCU:<br />1=> Fio Vermelho<br />2=> Fio Amarelo<br />3=> Fio Azul<br />4=> Fio Verde<br />5=> Fio Cinza<br />6=> Fio Preto<br />7=> Fio Roxo`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de soldagem do painel modelo A.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os fios do cabo MCU soldados, coloque para atrás os fios não utilizados para evitar problemas", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Fios do cabo MCU soldados no painel modelo A.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os fios do cabo MCU soldados, coloque para atrás os fios não utilizados para evitar problemas`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Fios do cabo MCU soldados no painel modelo A.jpg`},
 
-{title: "Localizando os pontos de soldagem do cabo MCU Modelo B:", 
-description: "", 
-ballon: "Identificando os<br />pontos a serem<br />soldado os fios do<br />cabo MCU:<br />1=> Fio Vermelho<br />2=> Fio Amarelo<br />3=> Fio Azul<br />4=> Fio Verde<br />5=> Fio Cinza<br />6=> Fio Preto<br />7=> Fio Roxo", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de soldagem do painel modelo B.jpg"},
+{title: `Localizando os pontos de soldagem do cabo MCU Modelo B:`, 
+description: ``, 
+ballon: `Identificando os<br />pontos a serem<br />soldado os fios do<br />cabo MCU:<br />1=> Fio Vermelho<br />2=> Fio Amarelo<br />3=> Fio Azul<br />4=> Fio Verde<br />5=> Fio Cinza<br />6=> Fio Preto<br />7=> Fio Roxo`, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Pontos de soldagem do painel modelo B.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Fios do cabo MCU soldados no painel modelo B.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0275 - Adaptação Painel Imob4 (Agile e Montana) com ECU GM Delco E83/Fios do cabo MCU soldados no painel modelo B.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a adaptação do painel`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>Immob 4 Agile`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Immob 4 Agile`, `>Delco E83`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -359,7 +367,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `A adaptacao do Painel verifica e modifica apenas algumas regioes do arquivo. Caso informacoes nao relacionadas com o procedim. estejam incorretas o veiculo NAO ira funcionar!`,
 screens: [
 `&nbsp;A&nbsp;adaptacao&nbsp;do&nbsp;`,
@@ -381,7 +388,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -394,7 +400,6 @@ causes: [
 solutions: [
 `• Conferir correta ligação do cabo MCU.`,`• Conferir correta ligação do programador JTAG01.`,]
 },
-
 { label: `Erro leit. ECU! <OK> p/ repetir`,
 screens: [
 `&nbsp;`,
@@ -407,7 +412,6 @@ causes: [
 solutions: [
 `• Conferir correta ligação do programador JTAG01;`,`• Conferir se o programador JTAG01 está bem conectado ao OBDMAP`,``,]
 },
-
 { label: `Arquivo do painel Invalido! <OK>`,
 screens: [
 `&nbsp;&nbsp;&nbsp;Arquivo&nbsp;do`,
@@ -420,7 +424,6 @@ causes: [
 solutions: [
 `• Verificar se o modelo do Painel é compatível com o apresentado neste manual.`,]
 },
-
 { label: `Erro leit Painel <OK> p/ repetir`,
 screens: [
 `&nbsp;`,
@@ -433,7 +436,6 @@ causes: [
 solutions: [
 `• Conferir correta ligação do cabo MCU;`,`• Conferir conexão entre cabo MCU, HW0067e OBDMAP.`,]
 },
-
 { label: `Erro grav Painel <OK> p/ repetir`,
 screens: [
 `&nbsp;`,

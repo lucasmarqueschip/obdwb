@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Renault Scénic mudança de caixas e reset do imobilizador";
-revCarga = "Rev. 2";
-dataManual = "Maio 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0076<br />Renault Scénic mudança de caixas e reset do imobilizador`;
+revCarga = `Rev. 2`;
+dataManual = `Maio 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -24,51 +24,59 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Renault",
-model: "Scenic 1.6",
-years: "1999 a 2008"
+manufacturer: `Renault`,
+model: `Scenic 1.6`,
+years: `1999 a 2008`
 },
 {
-manufacturer: "Renault",
-model: "Scenic 2.0",
-years: "1999 a 2008"
+manufacturer: `Renault`,
+model: `Scenic 2.0`,
+years: `1999 a 2008`
 },
 ];
-applicationObs = createObs("Observação:", "Está carga faz somente as funções troca de caixas e reset, para realizar a leitura e a programação de chaves é necessário usar a carga Mégane Scénic Leitura e programação de chaves.", undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação:`, `Está carga faz somente as funções troca de caixas e reset, para realizar a leitura e a programação de chaves é necessário usar a carga Mégane Scénic Leitura e programação de chaves.`, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `<br />Utilize o cabo universal Connect`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico do veículo:", 
-description: "", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico do veículo:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 
-{title: "Instruções de como retirar o fusível B 5 amperes:", 
-description: "", 
-ballon: "Abra a tampa da caixa de fusíveis e use a pinça para retirar o fusível B5.", 
-image: "/images/Funções Específicas/OBD0076 - Renault Scénic mudança de caixas e reset do imobilizador/Como retirar o fusível 1.jpg"},
+{title: `Instruções de como retirar o fusível B 5 amperes:`, 
+description: ``, 
+ballon: `Abra a tampa da caixa de fusíveis e use a pinça para retirar o fusível B5.`, 
+image: `/images/Funções Específicas/OBD0076 - Renault Scénic mudança de caixas e reset do imobilizador/Como retirar o fusível 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Fusível B 5 amperes identificado.", 
-image: "/images/Funções Específicas/OBD0076 - Renault Scénic mudança de caixas e reset do imobilizador/Como retirar o fusível 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Fusível B 5 amperes identificado.`, 
+image: `/images/Funções Específicas/OBD0076 - Renault Scénic mudança de caixas e reset do imobilizador/Como retirar o fusível 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte a pinça no fusível B 5. E puxe o fusível para fora da caixa.", 
-image: "/images/Funções Específicas/OBD0076 - Renault Scénic mudança de caixas e reset do imobilizador/Como retirar o fusível 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Conecte a pinça no fusível B 5. E puxe o fusível para fora da caixa.`, 
+image: `/images/Funções Específicas/OBD0076 - Renault Scénic mudança de caixas e reset do imobilizador/Como retirar o fusível 3.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -81,8 +89,32 @@ screens: [
 {lines: [`UCH-1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 3`], help: `Tecle OK`, menu: 1000},
 {lines: [`Mudança para caixa 1`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Mudança para caixa 2:`,
+{lines: [
+`<br />`,
+`<br />`,
+`<br />`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`CONCLUIDO!`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+]
+}, {title: `Mudança para caixa 2:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
 {lines: [`Renault`], help: `Tecle OK`, menu: 1000},
@@ -91,8 +123,40 @@ screens: [
 {lines: [`UCH-1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 3`], help: `Tecle OK`, menu: 1000},
 {lines: [`Mudança para caixa 2`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Reset do imobilizador:`,
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;ignição`,
+`e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`CONCLUIDO!`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+]
+}, {title: `Reset do imobilizador:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
 {lines: [`Renault`], help: `Tecle OK`, menu: 1000},
@@ -101,15 +165,104 @@ screens: [
 {lines: [`UCH-1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 3`], help: `Tecle OK`, menu: 1000},
 {lines: [`Reset da ECU`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`CUIDADO!&nbsp;Leia&nbsp;a`,
+`senha&nbsp;e&nbsp;anote`,
+`antes&nbsp;do&nbsp;reset`,
+`senão&nbsp;a&nbsp;UCH`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`será&nbsp;perdida!!!`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`<br />`,
+`<br />`,
+`<br />`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Faça&nbsp;o`,
+`Procedimento!`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`com&nbsp;a&nbsp;chave`,
+`desligada!`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Retire&nbsp;o&nbsp;fusível`,
+`B&nbsp;5&nbsp;amperes!`,
+`<br />`,
+],
+help: `Para informações de como retirar o fusível B 5 consulte a pag. 5.`
+},
+{lines: [
+`<br />`,
+`<br />`,
+`<br />`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Insira&nbsp;o&nbsp;fusível`,
+`dentro&nbsp;de&nbsp;30&nbsp;segundos`,
+`<br />`,
+],
+help: `Caso ultrapasse o tempo de 30s poderá
+aparecer à mensagem “Erro de comunicação”.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`CONCLUIDO!`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro de Comunicacao!`,
+othersMessage = [
+{ label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
-`Erro&nbsp;de&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Comunicacao!`,
+`Erro&nbsp;de&nbsp;Comunicação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [

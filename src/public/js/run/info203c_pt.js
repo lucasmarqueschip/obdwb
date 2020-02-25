@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Reset da ECU Nissan Denso (Frontier 13-15)";
-revCarga = "Rev. 1";
-dataManual = "Julho 2015";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0203<br />Reset da ECU Nissan Denso (Frontier 13-15)`;
+revCarga = `Rev. 1`;
+dataManual = `Julho 2015`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -19,46 +19,54 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Nissan",
-model: "Frontier 2.5",
-years: "2013 a 2015"
+manufacturer: `Nissan`,
+model: `Frontier 2.5`,
+years: `2013 a 2015`
 },
 ];
-applicationObs = createObs("Atenção!", "O hardware da ECU deve ser identico ao mostrado na pág XX", undefined)
+applicationObs = ``;
+applicationObs += createObs(`Atenção!`, `O hardware da ECU deve ser identico ao mostrado na pág 16`, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "Identificando a ECU.", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0203 Reset da ECU Nissan Denso (Frontier 2014)/denso.jpg"},
+{title: `Identificando a ECU.`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0203 Reset da ECU Nissan Denso (Frontier 2014)/denso.jpg`},
 
-{title: "Identificando a memória S93A86", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0203 Reset da ECU Nissan Denso (Frontier 2014)/S93A86.JPG"},
+{title: `Identificando a memória S93A86`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0203 Reset da ECU Nissan Denso (Frontier 2014)/ECU Denso.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0203 Reset da ECU Nissan Denso (Frontier 2014)/ECU Denso.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0203 Reset da ECU Nissan Denso (Frontier 2014)/S93A86.JPG`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -70,15 +78,39 @@ screens: [
 {lines: [`Emparelhamento`], help: `Tecle OK`, menu: 1000},
 {lines: [`Denso`], help: `Tecle OK`, menu: 1000},
 {lines: [`Reset da ECU`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`Conecte&nbsp;a&nbsp;pinça`,
+`na&nbsp;memória`,
+`S93A86&nbsp;segundo`,
+`manual&nbsp;&lt;OK&gt;`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Operação`,
+`Concluida!`,
+`<br />`,
+],
+help: `Operação concluída com sucesso.`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro na Gravacao!`,
+othersMessage = [
+{ label: `Erro na Gravacao!`,
 screens: [
 `&nbsp;`,
 `Erro&nbsp;na`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Gravacao!`,
+`Gravação!`,
 `<br />`,
 ],
 causes: [
@@ -86,12 +118,11 @@ causes: [
 solutions: [
 `·	Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`·	Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`·	Conferir bom estado da ECU,`,``,]
 },
-
 { label: `Pinca invertida! Verifique...`,
 screens: [
 `&nbsp;`,
-`Pinca&nbsp;invertida!`,
-`&nbsp;&nbsp;Verifique...`,
+`Pinça&nbsp;invertida!`,
+`Verifique...`,
 `<br />`,
 ],
 causes: [
@@ -99,12 +130,11 @@ causes: [
 solutions: [
 `·	Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`·	Conferir bom estado da ECU.`,``,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
 `Curto!`,
-`&nbsp;&nbsp;Verifique...`,
+`Verifique...`,
 `<br />`,
 ],
 causes: [

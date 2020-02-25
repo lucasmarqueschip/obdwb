@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Reset da 5NR (Clio, Kango, Twingo - 01 a 05)";
-revCarga = "Rev. 3";
-dataManual = "Julho 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0112<br />Reset da 5NR (Clio, Kango, Twingo - 01 a 05)`;
+revCarga = `Rev. 3`;
+dataManual = `Julho 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,82 +18,90 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Renault",
-model: "Clio 1.0 16V",
-years: "2001 a 2004"
+manufacturer: `Renault`,
+model: `Clio 1.0 16V`,
+years: `2001 a 2004`
 },
 {
-manufacturer: "Renault",
-model: "Clio Sedan 1.0 16V",
-years: "2001 a 2004"
+manufacturer: `Renault`,
+model: `Clio Sedan 1.0 16V`,
+years: `2001 a 2004`
 },
 {
-manufacturer: "Renault",
-model: "Kangoo 1.0 16V",
-years: "2003 a 2005"
+manufacturer: `Renault`,
+model: `Kangoo 1.0 16V`,
+years: `2003 a 2005`
 },
 {
-manufacturer: "Renault",
-model: "Twingo 1.0 16V",
-years: "2002 a 2002"
+manufacturer: `Renault`,
+model: `Twingo 1.0 16V`,
+years: `2002 a 2002`
 },
 ];
-applicationObs = createObs("Observação: Nem todos os veículos relacionados aos anos citados acima possuem a ECU IAW 5NR. Verifique a etiqueta da ECU para identificá-la.", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação: Nem todos os veículos relacionados aos anos citados acima possuem a ECU IAW 5NR. Verifique a etiqueta da ECU para identificá-la.`, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo C1. Conecta a pinça ao OBDMap.", 
-image: "/images/Acessórios/Cabo C1.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Cabo C1. Conecta a pinça ao OBDMap.`, 
+image: `/images/Acessórios/Cabo C1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "Identificando a ECU IAW 5NR:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Identificando ECU 1.jpg"},
+{title: `Identificando a ECU IAW 5NR:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Identificando ECU 1.jpg`},
 
-{title: "Localizando e conectando a pinça na memória 95160:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Localizando a memória.jpg"},
+{title: `Localizando e conectando a pinça na memória 95160:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Localizando a memória.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O pino 1 da pinça deve coincidir com o pino 1 da memória.", 
-image: "/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Conectando a pinça.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O pino 1 da pinça deve coincidir com o pino 1 da memória.`, 
+image: `/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Conectando a pinça.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Atenção: Apoie o dedo na pinça como mostra a foto, pois a memória fica localizada entre outros componentes que dificultam o encaixe da pinça na", 
-image: "/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Pinça conectada.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Atenção: Apoie o dedo na pinça como mostra a foto, pois a memória fica localizada entre outros componentes que dificultam o encaixe da pinça na`, 
+image: `/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Pinça conectada.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "Não inverter a pinça, conecte a pinça com cuidado para não causar danos à mesma e nem a ECU.<br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: `Não inverter a pinça, conecte a pinça com cuidado para não causar danos à mesma e nem a ECU.<br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0112 Reset da 5NR (Clio, Kango, Twingo - 01 a 05)/Todos os acessórios conectados.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Reset da ECU 5NR:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>Renault`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Renault`, `>IAW 5NR`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`IAW 5NR`, `>Resetar?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -154,7 +162,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos.`,]
 },
-
 { label: `Pinca invertida!`,
 screens: [
 `&nbsp;`,
@@ -167,7 +174,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória.`,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,

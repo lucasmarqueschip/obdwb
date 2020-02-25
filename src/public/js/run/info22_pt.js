@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Módulo de transponder - Carga básica";
-revCarga = "Rev. 6";
-dataManual = "Fevereiro 2020";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Módulo de transponder - Carga básica`;
+revCarga = `Rev. 6`;
+dataManual = `Fevereiro 2020`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -32,214 +32,226 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Megamos",
-model: "ID13",
-years: " a 2020"
+manufacturer: `Megamos`,
+model: `ID13`,
+years: ` a 2020`
 },
 {
-manufacturer: "Megamos",
-model: "ID48 - MAGIC 1",
-years: " a 2020"
+manufacturer: `Megamos`,
+model: `ID48 - MAGIC 1`,
+years: ` a 2020`
 },
 {
-manufacturer: "Megamos",
-model: "ID48 - MAGIC 2",
-years: " a 2020"
+manufacturer: `Megamos`,
+model: `ID48 - MAGIC 2`,
+years: ` a 2020`
 },
 {
-manufacturer: "Sokymat / Nova",
-model: "T5 COMO ID13",
-years: " a 2020"
+manufacturer: `Sokymat / Nova`,
+model: `T5 COMO ID13`,
+years: ` a 2020`
 },
 {
-manufacturer: "Sokymat / Nova",
-model: "T5 COMO ID11",
-years: " a 2020"
+manufacturer: `Sokymat / Nova`,
+model: `T5 COMO ID11`,
+years: ` a 2020`
 },
 {
-manufacturer: "Sokymat / Nova",
-model: "T5 COMO ID12",
-years: " a 2020"
+manufacturer: `Sokymat / Nova`,
+model: `T5 COMO ID12`,
+years: ` a 2020`
 },
 {
-manufacturer: "Temic",
-model: "ID12",
-years: " a 2020"
+manufacturer: `Temic`,
+model: `ID12`,
+years: ` a 2020`
 },
 {
-manufacturer: "Temic",
-model: "ID11",
-years: " a 2020"
+manufacturer: `Temic`,
+model: `ID11`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF ID33",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF ID33`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "T5 COMO ID33",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `T5 COMO ID33`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7935",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7935`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7936",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7936`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7939M",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7939M`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7937",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7937`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7941",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7941`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7942",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7942`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7943",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7943`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7945",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7945`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7946",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7946`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7947",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7947`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7952",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7952`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7953",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7953`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "PCF7961",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `PCF7961`,
+years: ` a 2020`
 },
 {
-manufacturer: "NXP",
-model: "HITAG AES",
-years: " a 2020"
+manufacturer: `NXP`,
+model: `HITAG AES`,
+years: ` a 2020`
 },
 {
-manufacturer: "Texas",
-model: "ID4C",
-years: " a 2020"
+manufacturer: `Texas`,
+model: `ID4C`,
+years: ` a 2020`
 },
 {
-manufacturer: "Texas",
-model: "ID4D",
-years: " a 2020"
+manufacturer: `Texas`,
+model: `ID4D`,
+years: ` a 2020`
 },
 {
-manufacturer: "Texas",
-model: "ID4D DST+",
-years: " a 2020"
+manufacturer: `Texas`,
+model: `ID4D DST+`,
+years: ` a 2020`
 },
 {
-manufacturer: "Texas",
-model: "ID4D-63 ESPECIAL",
-years: " a 2020"
+manufacturer: `Texas`,
+model: `ID4D-63 ESPECIAL`,
+years: ` a 2020`
 },
 {
-manufacturer: "Texas",
-model: "ID4E",
-years: " a 2020"
+manufacturer: `Texas`,
+model: `ID4E`,
+years: ` a 2020`
 },
 {
-manufacturer: "JMA",
-model: "TPX1",
-years: " a 2020"
+manufacturer: `JMA`,
+model: `TPX1`,
+years: ` a 2020`
 },
 {
-manufacturer: "JMA",
-model: "TPX2",
-years: " a 2020"
+manufacturer: `JMA`,
+model: `TPX2`,
+years: ` a 2020`
 },
 {
-manufacturer: "CN",
-model: "CN3",
-years: " a 2020"
+manufacturer: `CN`,
+model: `CN3`,
+years: ` a 2020`
 },
 ];
-applicationObs = createObs("Observação sobre o transponders T5:", "Transponders T5 do tipo ilustrado abaixo, normalmente funcionam muito bem com o Módulo de transponders do Obdmap.", "../../")createObs("", "Transponders T5 do tipo ilustrado abaixo, podem exigir algumas repetições até que a gravação tenha sucesso.", "../../")createObs("", "Transponders T5 do tipo ilustrado abaixo (sem nenhuma inscrição), podem não funcionar com o Módulo de Transponders do Obdmap.", "../../")createObs("", "Transponders T5 (vidro) do tipo ilustrado abaixo (sem nenhuma inscrição), podem não funcionar no veículo.", "../../")
+applicationObs = ``;
+applicationObs += createObs(`Observação sobre o transponders T5:`, `Transponders T5 do tipo ilustrado abaixo, normalmente funcionam muito bem com o Módulo de transponders do Obdmap.`, `../../`);
+applicationObs += createObs(``, `Transponders T5 do tipo ilustrado abaixo, podem exigir algumas repetições até que a gravação tenha sucesso.`, `../../`);
+applicationObs += createObs(``, `Transponders T5 do tipo ilustrado abaixo (sem nenhuma inscrição), podem não funcionar com o Módulo de Transponders do Obdmap.`, `../../`);
+applicationObs += createObs(``, `Transponders T5 (vidro) do tipo ilustrado abaixo (sem nenhuma inscrição), podem não funcionar no veículo.`, `../../`);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
-image: "/images/Acessórios/Modulo de Transponder.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.`, 
+image: `/images/Acessórios/Modulo de Transponder.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "", 
-image: "/images/Acessórios/OBDMap+Modulo de transponder+Fonte de alimentação.JPG"},
+<<<<<<< .mine
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Acessórios/OBDMap+Modulo de transponder+Fonte de alimentação.JPG`},
+=======
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: ``, 
+image: ``},
+>>>>>>> .r6553
 
-{title: "Posicionamento do transponder no módulo de transponder:", 
-description: "", 
-ballon: "Se a chave já estiver montada com o transponder, ela deve ser posicionada como mostra a foto ao lado.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Chave GM.jpg"},
+{title: `Posicionamento do transponder no módulo de transponder:`, 
+description: ``, 
+ballon: `Se a chave já estiver montada com o transponder, ela deve ser posicionada como mostra a foto ao lado.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Chave GM.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Vidro CERTO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Vidro CERTO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Vidro ERRADO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Vidro ERRADO.jpg`},
 ];
 instruction = [];
 obdmap = true;

@@ -7,8 +7,8 @@
   background-color: blue;
   color: white;
   height: auto;
-  min-width: 190px;
-  width: 190px;
+  min-width: 200px;
+  width: 200px;
   height: auto;
   border: 2px solid black;
 }
@@ -20,11 +20,11 @@
 }
 
 .colScreen {
-  max-width: 292px;
+  max-width: 302px;
 }
 
 .step {
-  max-width: 100px;
+  max-width: 100px !important;
 }
 
 .screenCon {

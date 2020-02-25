@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de Telecomandos Ssangyong Alarme 1 (Actyon 07-13)";
-revCarga = "Rev. 1";
-dataManual = "Julho 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0226<br />Programação de Telecomandos Ssangyong Alarme 1 (Actyon 07-13)`;
+revCarga = `Rev. 1`;
+dataManual = `Julho 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -17,57 +17,65 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ssangyong",
-model: "Actyon 2.0",
-years: "2007 a 2013"
+manufacturer: `Ssangyong`,
+model: `Actyon 2.0`,
+years: `2007 a 2013`
 },
 {
-manufacturer: "Ssangyong",
-model: "Actyon 2.3",
-years: "2007 a 2011"
+manufacturer: `Ssangyong`,
+model: `Actyon 2.3`,
+years: `2007 a 2011`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Telecomando referente aos veículos da aplicação.", 
-image: "/images/Chaves e Telecomandos/chave actyon.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Telecomando referente aos veículos da aplicação.`, 
+image: `/images/Chaves e Telecomandos/chave actyon.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo Universal + adaptador A1.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte o cabo universal junto ao adaptador A1.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Cabo universal + adaptador A1.<br />Para realizar o emparelhamento<br />da BSI.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos está localizada na área C5.<br /><br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/C5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos está localizada na área C5.<br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/C5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a programação do telecomando`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ssangyong`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ssangyong`, `>Telecomando 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Telecomando 1`, `>Prog. telecmd?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -168,7 +176,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
 { label: `Telecomando ja Habilitado!`,
 screens: [
 `&nbsp;`,

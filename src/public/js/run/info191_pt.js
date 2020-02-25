@@ -56,6 +56,11 @@ description: "",
 ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
 image: "/images/Acessórios/Modulo de Transponder.jpg"},
 
+{title: "", 
+description: "", 
+ballon: "Todos os acessórios conectados.", 
+image: "/images/Funções Específicas/OBD0191 Programação de chaves VW Imob 5 VDO e Marelli via OBD (fox 2013)/todos os acessórios conectados.jpg"},
+
 {title: "Posicionamento do transponder no módulo de transponder:", 
 description: "", 
 ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
@@ -90,6 +95,24 @@ screens: [
 ],
 help: `Tecle OK!`
 },
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Painel&nbsp;Marelli`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VW&nbsp;Imob5`,
+`<br />`,
+],
+help: `É exibido a identificação do painel:
+Painel VDO VW Imob5 ou
+Painel Marelli VW Imob5`
+},
 ]
 }, {title: `Realizando a programação de chaves painel VDO`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
@@ -108,6 +131,71 @@ screens: [
 ],
 help: `Cuidado, se a bateria estiver fraca pode causar problemas no painel. Tecle OK.`
 },
+{lines: [
+`&nbsp;`,
+`Use&nbsp;Transponder`,
+`TP23&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Todas&nbsp;as&nbsp;chaves`,
+`serao&nbsp;perdidas!`,
+`<br />`,
+],
+help: `As chaves já programadas serão apagadas.`
+},
+{lines: [
+`&nbsp;`,
+`Numero&nbsp;de&nbsp;Chaves`,
+`Prog.:&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Digite o número de chaves que serão
+programadas e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Se for a última chave a ser gravada, tecle OK e vá para o Passo 14.`
+},
+{lines: [
+`&nbsp;`,
+`&nbsp;Insira&nbsp;e&nbsp;ligue`,
+`prox.&nbsp;chave&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Insira e ligue a próxima chave, tecle OK e volte ao Passo 12.`
+},
+{lines: [
+`&nbsp;`,
+`Programacao`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concluida!`,
+`<br />`,
+],
+help: `Programação concluída com sucesso.`
+},
 ]
 }, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
@@ -122,6 +210,79 @@ screens: [
 `&nbsp;Adaptador&nbsp;A1&nbsp;+`,
 `&nbsp;&nbsp;&nbsp;Modulo&nbsp;de`,
 `Transponder&nbsp;&lt;OK&gt;`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Lendo&nbsp;Painel...`,
+`&nbsp;&nbsp;&nbsp;Aguarde...`,
+`<br />`,
+],
+help: `Esta operação pode demorar alguns minutos.`
+},
+{lines: [
+`&nbsp;`,
+`Senha:`,
+`*****`,
+`<br />`,
+],
+help: `Anote a senha, ela é utilizada na programação de chaves.`
+},
+{lines: [
+`&nbsp;`,
+`&nbsp;Preparar&nbsp;Chave?`,
+`(X)NAO&nbsp;/&nbsp;(OK)SIM`,
+`<br />`,
+],
+help: `Tecle (OK) para preparar o transponder para o veículo, ou tecle (X) e vá ao passo
+14.`
+},
+{lines: [
+`&nbsp;`,
+`Posicione&nbsp;transp`,
+`&nbsp;&nbsp;&nbsp;TP23&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Insira o transponder no Módulo de Transponder e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;&nbsp;&nbsp;Tranponder`,
+`&nbsp;&nbsp;&nbsp;Preparado!`,
+`Preparar&nbsp;prox.?`,
+`&lt;X&gt;Nao&nbsp;&nbsp;&nbsp;&lt;OK&gt;Sim`,
+],
+help: `Para preparar próximo tecle <OK> e volte ao Passo 11, ou tecle <X> e vá ao Passo 14.`
+},
+{lines: [
+`&nbsp;`,
+`Procedimento`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concluido!`,
+`<br />`,
 ],
 help: `Tecle OK!`
 },
@@ -143,68 +304,6 @@ screens: [
 ],
 help: ``
 },
-]
-}, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Outros`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Fox Imob5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fox Imob5`, `>Marelli OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-]
-}, {title: `Realizando a Identificação do Painel`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Identificar?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-]
-}, {title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 VDO`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 VDO`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Use&nbsp;Transponder`,
-`TP23&nbsp;e&nbsp;tecle&nbsp;OK!`,
-`<br />`,
-],
-help: `Tecle OK`
-},
-]
-}, {title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 MM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 MM`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;Use&nbsp;transponder`,
 `&nbsp;TP23&nbsp;preparado`,
@@ -213,70 +312,6 @@ screens: [
 ],
 help: `Tecle OK!`
 },
-]
-}, {title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 VDO`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 VDO`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-]
-}, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Outros`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Fox Imob5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fox Imob5`, `>Marelli OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-]
-}, {title: `Realizando a Identificação do Painel`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Identificar?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Painel&nbsp;Marelli`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VW&nbsp;Imob5`,
-`<br />`,
-],
-help: `É exibido a identificação do painel:
-Painel VDO VW Imob5 ou
-Painel Marelli VW Imob5`
-},
-]
-}, {title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 MM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 MM`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `Senha:`,
@@ -286,51 +321,6 @@ screens: [
 help: `Digite a senha lida no procedimento de
 Leitura da Senha.`
 },
-]
-}, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Outros`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Fox Imob5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fox Imob5`, `>Marelli OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Lendo&nbsp;Painel...`,
-`&nbsp;&nbsp;&nbsp;Aguarde...`,
-`<br />`,
-],
-help: `Esta operação pode demorar alguns minutos.`
-},
-]
-}, {title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 VDO`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 VDO`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Todas&nbsp;as&nbsp;chaves`,
-`serao&nbsp;perdidas!`,
-`<br />`,
-],
-help: `As chaves já programadas serão apagadas.`
-},
-]
-}, {title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 MM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 MM`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `Numero&nbsp;de&nbsp;Chaves`,
@@ -340,52 +330,6 @@ screens: [
 help: `Selecione o número de chaves que serão
 programadas.`
 },
-]
-}, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Outros`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Fox Imob5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fox Imob5`, `>Marelli OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Senha:`,
-`*****`,
-`<br />`,
-],
-help: `Anote a senha, ela é utilizada na programação de chaves.`
-},
-]
-}, {title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 VDO`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 VDO`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Numero&nbsp;de&nbsp;Chaves`,
-`Prog.:&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
-`<br />`,
-],
-help: `Digite o número de chaves que serão
-programadas e tecle OK.`
-},
-]
-}, {title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 MM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 MM`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `Ligue&nbsp;a&nbsp;chave`,
@@ -394,16 +338,6 @@ screens: [
 ],
 help: `Tecle OK!`
 },
-]
-}, {title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 VDO`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 VDO`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `Aguarde...`,
@@ -412,87 +346,6 @@ screens: [
 ],
 help: ``
 },
-]
-}, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Outros`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Fox Imob5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fox Imob5`, `>Marelli OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`&nbsp;Preparar&nbsp;Chave?`,
-`(X)NAO&nbsp;/&nbsp;(OK)SIM`,
-`<br />`,
-],
-help: `Tecle (OK) para preparar o transponder para o veículo, ou tecle (X) e vá ao passo
-14.`
-},
-]
-}, {title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 MM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 MM`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-]
-}, {title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 VDO`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 VDO`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Desligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
-`<br />`,
-],
-help: `Se for a última chave a ser gravada, tecle OK e vá para o Passo 14.`
-},
-]
-}, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Outros`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Fox Imob5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fox Imob5`, `>Marelli OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Posicione&nbsp;transp`,
-`&nbsp;&nbsp;&nbsp;TP23&nbsp;&lt;OK&gt;`,
-`<br />`,
-],
-help: `Insira o transponder no Módulo de Transponder e tecle OK.`
-},
-]
-}, {title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 MM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 MM`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `Aguarde&nbsp;6&nbsp;MIN.`,
@@ -501,51 +354,6 @@ screens: [
 ],
 help: `Se for utilizada uma chave valida não será necessário aguardar 6 minutos.`
 },
-]
-}, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Outros`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Fox Imob5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fox Imob5`, `>Marelli OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-]
-}, {title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 VDO`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 VDO`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`&nbsp;Insira&nbsp;e&nbsp;ligue`,
-`prox.&nbsp;chave&nbsp;&lt;OK&gt;`,
-`<br />`,
-],
-help: `Insira e ligue a próxima chave, tecle OK e volte ao Passo 12.`
-},
-]
-}, {title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 MM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 MM`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `Chaves&nbsp;prog:&nbsp;*-*`,
 `Insira&nbsp;a&nbsp;proxima`,
@@ -554,51 +362,6 @@ screens: [
 ],
 help: `Insira a próxima chave se tiver mais de 1 a ser programada. Tecle OK!`
 },
-]
-}, {title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 VDO`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 VDO`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Programacao`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concluida!`,
-`<br />`,
-],
-help: `Programação concluída com sucesso.`
-},
-]
-}, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Outros`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Fox Imob5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fox Imob5`, `>Marelli OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;&nbsp;&nbsp;Tranponder`,
-`&nbsp;&nbsp;&nbsp;Preparado!`,
-`Preparar&nbsp;prox.?`,
-`&lt;X&gt;Nao&nbsp;&nbsp;&nbsp;&lt;OK&gt;Sim`,
-],
-help: `Para preparar próximo tecle <OK> e volte ao Passo 11, ou tecle <X> e vá ao Passo 14.`
-},
-]
-}, {title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 MM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 MM`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `Aguarde...`,
@@ -607,33 +370,6 @@ screens: [
 ],
 help: ``
 },
-]
-}, {title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Outros`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Fox Imob5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fox Imob5`, `>Marelli OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Procedimento`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concluido!`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-]
-}, {title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`VW`, `>Painel Fox`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Painel Fox`, `>Imob5 MM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Imob5 MM`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `&nbsp;&nbsp;&nbsp;CONCLUIDO!`,
@@ -641,14 +377,6 @@ screens: [
 `<br />`,
 ],
 help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Painel`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Invalido!!!`,
-`<br />`,
-],
-help: ``
 },
 ]}
 ];

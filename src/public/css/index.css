@@ -52,7 +52,7 @@ body {
   font-size: 11.5pt;
 }
 
-.under {
+a, .under {
   text-decoration: underline;
 }
 
@@ -97,8 +97,8 @@ ul {
   background-color: blue;
   color: white;
   height: auto;
-  min-width: 190px;
-  width: 190px;
+  min-width: 200px;
+  width: 200px;
   height: auto;
   border: 2px solid black;
 }
@@ -110,11 +110,11 @@ ul {
 }
 
 .colScreen {
-  max-width: 292px;
+  max-width: 302px;
 }
 
 .step {
-  max-width: 100px;
+  max-width: 100px !important;
 }
 
 .screenCon {
@@ -266,6 +266,16 @@ img,
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+.imgCarac {
+  min-height: 12px;
+  height: 12px;
+  min-width: 9px;
+  width: 9px;
+  margin-top: -3px;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
 body {
   -webkit-print-color-adjust: exact;
 }
@@ -359,7 +369,7 @@ body {
   }
 }
 .my-nav {
-  z-index: 1;
+  z-index: 101;
   height: 100%;
   background-color: #333;
   position: fixed;
@@ -373,7 +383,7 @@ body {
 }
 
 .my-nav-control {
-  z-index: 99;
+  z-index: 101;
   height: 100%;
   background-color: #333;
   width: 5%;
@@ -402,13 +412,46 @@ body {
 }
 
 #my-modal {
-  z-index: 1;
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
   position: fixed;
   left: 0px;
   top: 0px;
+}
+
+#lang-pt img, #lang-en img, #lang-es img {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+}
+
+#lang-pt {
+  position: fixed;
+  top: 8px;
+  left: calc(100% - (3 * 32px) - (3 * 8px));
+  width: 32px;
+  height: 32px;
+  z-index: 20;
+}
+
+#lang-en {
+  position: fixed;
+  top: 8px;
+  left: calc(100% - (2 * 32px) - (2 * 8px));
+  width: 32px;
+  height: 32px;
+  z-index: 20;
+}
+
+#lang-es {
+  position: fixed;
+  top: 8px;
+  left: calc(100% - 32px - (1 * 8px));
+  width: 32px;
+  height: 32px;
+  z-index: 20;
 }
 
 /*# sourceMappingURL=index.css.map */

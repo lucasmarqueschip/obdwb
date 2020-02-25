@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Ford Ranger 2.3 Gasolina (chaves e casamento)";
-revCarga = "Rev. 3";
-dataManual = "Junho 2014";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0060<br />Ford Ranger 2.3 Gasolina (chaves e casamento)`;
+revCarga = `Rev. 3`;
+dataManual = `Junho 2014`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -23,47 +23,55 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ford",
-model: "RANGER 2.3 GASOLINA",
-years: "2008 a 2010"
+manufacturer: `Ford`,
+model: `RANGER 2.3 GASOLINA`,
+years: `2008 a 2010`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Utilize um transponder ID 4D63 especial (40 bits).", 
-image: "/images/Transponders/ID 4D63 T32 especial.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize um transponder ID 4D63 especial (40 bits).`, 
+image: `/images/Transponders/ID 4D63 T32 especial.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos fica localizada na área C5.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/C5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos fica localizada na área C5.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/C5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o apagamento das chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 3`, `>RANGER G 08-10`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -177,7 +185,7 @@ help: `Tecle OK!`
 }, {title: `Realizando o procedimento para adicionar chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 3`, `>RANGER G 08-10`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -276,7 +284,7 @@ help: `Tecle OK!`
 }, {title: `Realizando o sincronismo entre a ECU e o painel`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 3`, `>RANGER G 08-10`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -354,7 +362,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico, talvez esta carga tenha tido alterações.`,]
 },
-
 { label: `Erro de Tempo Excedido!`,
 screens: [
 `&nbsp;`,
@@ -367,7 +374,6 @@ causes: [
 solutions: [
 `Verificar aplicação.`,`Desconecte a báteria e faça o procedimento novamente`,]
 },
-
 { label: `Erro na Programacao!`,
 screens: [
 `&nbsp;`,

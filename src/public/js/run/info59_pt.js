@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "FORD Pats Ranger Diesel (chaves e casamento)";
-revCarga = "Rev. 4";
-dataManual = "Dezembro 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0059<br />FORD Pats Ranger Diesel (chaves e casamento)`;
+revCarga = `Rev. 4`;
+dataManual = `Dezembro 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -24,47 +24,55 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ford",
-model: "RANGER 3.0 ELETRONIC DIESEL",
-years: "2005 a 2011"
+manufacturer: `Ford`,
+model: `RANGER 3.0 ELETRONIC DIESEL`,
+years: `2005 a 2011`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Utilize um transponder ID 4D63 especial (40 bits).", 
-image: "/images/Transponders/ID 4D63 T32 especial.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize um transponder ID 4D63 especial (40 bits).`, 
+image: `/images/Transponders/ID 4D63 T32 especial.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Conecte o cabo universal ao adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Conecte o cabo universal ao adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos fica localizada na área C5.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/C5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos fica localizada na área C5.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/C5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o apagamento de todas as chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 3`, `>RANGER D 07-09`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -116,7 +124,7 @@ veículo estão apagadas.`
 }, {title: `Realizando a programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 3`, `>RANGER D 07-09`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -316,7 +324,7 @@ de diagnose.`
 }, {title: `Realizando o sincronismo entre a ECU e o painel`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 3`, `>RANGER D 07-09`, `<br /><br />`], help: `Tecle OK`, menu: 1000},

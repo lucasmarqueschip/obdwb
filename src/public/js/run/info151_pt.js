@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder";
-revCarga = "Rev. 1";
-dataManual = "Julho 2013";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder`;
+revCarga = `Rev. 1`;
+dataManual = `Julho 2013`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -19,119 +19,121 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Chrysler",
-model: "Caravan 3.3",
-years: "2000 a 2002"
+manufacturer: `Chrysler`,
+model: `Caravan 3.3`,
+years: `2000 a 2002`
 },
 {
-manufacturer: "Jeep",
-model: "Cherokee 4.0",
-years: "1997 a 1998"
+manufacturer: `Jeep`,
+model: `Cherokee 4.0`,
+years: `1997 a 1998`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Utilize transponder ID4E-64 virgem.", 
-image: "/images/Transponders/4E64.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize transponder ID4E-64 virgem.`, 
+image: `/images/Transponders/4E64.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
-image: "/images/Acessórios/Modulo de Transponder.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.`, 
+image: `/images/Acessórios/Modulo de Transponder.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Ferro de solda.", 
-image: "/images/Acessórios/ferro_de_Solda2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Ferro de solda.`, 
+image: `/images/Acessórios/ferro_de_Solda2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Sugador de solda. Será necessário para remoção de excesso de solda.", 
-image: "/images/Acessórios/sugador de solda.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Sugador de solda. Será necessário para remoção de excesso de solda.`, 
+image: `/images/Acessórios/sugador de solda.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Estilete. Utilizado para limpar a resina sobre os pinos da memória.", 
-image: "/images/Acessórios/Estilete.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Estilete. Utilizado para limpar a resina sobre os pinos da memória.`, 
+image: `/images/Acessórios/Estilete.jpg`},
 
-{title: "Posicionamento do transponder no módulo de transponder:", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg"},
+{title: `Posicionamento do transponder no módulo de transponder:`, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg`},
 
-{title: "Localizando o imobilizador no veículo:", 
-description: "O imobilizador dos veículos Cherokee e Caravan estão localizadas na área D4 da imagem.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/D4.jpg"},
+{title: `Localizando o imobilizador no veículo:`, 
+description: `O imobilizador dos veículos Cherokee e Caravan estão localizadas na área D4 da imagem.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/D4.jpg`},
 
-{title: "Identificando o imobilizador:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando o imobilizador.jpg"},
+{title: `Identificando o imobilizador:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando o imobilizador.jpg`},
 
-{title: "Retirando a placa da antena:", 
-description: "", 
-ballon: "Utilize uma chave de fenda para abrir a caixa do imobilizador.", 
-image: "/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Retirando a placa da antena 1.jpg"},
+{title: `Retirando a placa da antena:`, 
+description: ``, 
+ballon: `Utilize uma chave de fenda para abrir a caixa do imobilizador.`, 
+image: `/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Retirando a placa da antena 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Apoie o imobilizador para facilitar o procedimento (na foto foi utilizada uma 3ª mão). Derreta a solda utilizando o<br />ferro de solda e com o auxílio do sugador remova a solda dos terminais da antena.", 
-image: "/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Retirando a placa da antena 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Apoie o imobilizador para facilitar o procedimento (na foto foi utilizada uma 3ª mão). Derreta a solda utilizando o<br />ferro de solda e com o auxílio do sugador remova a solda dos terminais da antena.`, 
+image: `/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Retirando a placa da antena 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Após retirar a solda dos dois pontos da antena, retire a placa do imobilizador.", 
-image: "/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Retirando a placa da antena 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Após retirar a solda dos dois pontos da antena, retire a placa do imobilizador.`, 
+image: `/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Retirando a placa da antena 3.jpg`},
 
-{title: "Identificando e conectando a pinça na memória 24LC02:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando a memória 24LC02 1.jpg"},
+{title: `Identificando e conectando a pinça na memória 24LC02:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando a memória 24LC02 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Utilize o estilete para remover a resina que está sobre os pinos da memória.", 
-image: "/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando a memória 24LC02 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o estilete para remover a resina que está sobre os pinos da memória.`, 
+image: `/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando a memória 24LC02 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Identificando o pino 1 da memória 24LC02.", 
-image: "/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando a memória 24LC02 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Identificando o pino 1 da memória 24LC02.`, 
+image: `/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando a memória 24LC02 3.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O pino 1 da pinça deve coincidir com o pino 1 da memória.", 
-image: "/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando a memória 24LC02 4.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O pino 1 da pinça deve coincidir com o pino 1 da memória.`, 
+image: `/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Identificando a memória 24LC02 4.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0151 Geração de transponder Chrysler e Jeep SKIM 1 via pinça e módulo de transponder/Todos os acessórios conectados.jpg`},
 ];
 instruction = [];
 obdmap = true;

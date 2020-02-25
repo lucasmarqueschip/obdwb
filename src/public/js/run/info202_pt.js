@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de chaves Ford Pats 5 (Ranger 13-15)";
-revCarga = "Rev. 5";
-dataManual = "Outubro 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0202<br />Programação de chaves Ford Pats 5 (Ranger 13-15)`;
+revCarga = `Rev. 5`;
+dataManual = `Outubro 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,57 +18,65 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ford",
-model: "Ranger 2.2",
-years: "2013 a 2013"
+manufacturer: `Ford`,
+model: `Ranger 2.2`,
+years: `2013 a 2013`
 },
 {
-manufacturer: "Ford",
-model: "Ranger 2.5",
-years: "2013 a 2016"
+manufacturer: `Ford`,
+model: `Ranger 2.5`,
+years: `2013 a 2016`
 },
 {
-manufacturer: "Ford",
-model: "Ranger 3.2",
-years: "2013 a 2015"
+manufacturer: `Ford`,
+model: `Ranger 3.2`,
+years: `2013 a 2015`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "Utilize um transponder ID 4D63 DST+ dedicado para Ford.", 
-image: "/images/Transponders/ID 4D63 DST Dedicado para Ford.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Utilize um transponder ID 4D63 DST+ dedicado para Ford.`, 
+image: `/images/Transponders/ID 4D63 DST Dedicado para Ford.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico fica localizada na posição A4.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico fica localizada na posição A4.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a programação de chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 5`, `>RANGER 13-15`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -206,7 +214,7 @@ help: `Aguarde 10 segundos e retorne ao passo
 }, {title: `Realizando a adição de novas chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 5`, `>RANGER 13-15`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -299,19 +307,23 @@ help: `Tecle OK!`
 help: `Aguarde 10 segundos e retorne ao passo
 8.`
 },
-{lines: [
+]}
+];
+//Outras mensagens
+othersMessageTitle = `Outras Mensagens`;
+othersMessage = [{ label: `Incode: ****** Outcode:`,
+screens: [
 `&nbsp;`,
 `Incode:&nbsp;******&nbsp;`,
 `Outcode:`,
 `<br />`,
 ],
-help: ``
+causes: [
+`As tentativas de acesso ao veículo falharam.`,],
+solutions: [
+`É necessário contato com o suporte para obter o Outcode. OBS: Não se deve desligar a ignição nesse processo, pois o código será alterado.`,]
 },
-]}
-];
-//Outras mensagens
-othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro de Comunicacao!`,
+{ label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
 `Erro&nbsp;de&nbsp;`,
@@ -323,7 +335,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
 { label: `Erro no acesso!`,
 screens: [
 `&nbsp;`,
@@ -336,7 +347,6 @@ causes: [
 solutions: [
 ` Repita o procedimento.`,]
 },
-
 { label: `Acesso Negado Aguarde 5:00 min Para Repetir`,
 screens: [
 `Acesso&nbsp;Negado`,
@@ -345,11 +355,10 @@ screens: [
 `<br />`,
 ],
 causes: [
-`Não foi possível acessar o modo de programação do veículo.`,],
+` `,],
 solutions: [
-`Aguarde 5 minutos e repita o procedimento.`,``,]
+` `,]
 },
-
 { label: `Desconecte o OBDMap!!`,
 screens: [
 `&nbsp;`,
@@ -362,7 +371,6 @@ causes: [
 solutions: [
 `Aguarde 5 minutos e repita o procedimento.`,]
 },
-
 { label: `Veiculo fora da Aplicacao!`,
 screens: [
 `&nbsp;`,
@@ -375,7 +383,6 @@ causes: [
 solutions: [
 `Verificar aplicação.`,]
 },
-
 { label: `Erro na Programacao!`,
 screens: [
 `&nbsp;`,
@@ -388,7 +395,6 @@ causes: [
 solutions: [
 `Utilize um transponder compatível com o veículo.`,]
 },
-
 { label: `Erro no Transponder!`,
 screens: [
 `&nbsp;`,

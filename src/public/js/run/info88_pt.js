@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Leitura de Senha e Programação de Chaves do Audi Painel 932M Crypto";
-revCarga = "Rev. 3";
-dataManual = "Janeiro 2020";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0088<br />Leitura de Senha e Programação de Chaves do Audi Painel 932M Crypto`;
+revCarga = `Rev. 3`;
+dataManual = `Janeiro 2020`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -21,62 +21,70 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Audi",
-model: "A3 1.6",
-years: "2002 a 2004"
+manufacturer: `Audi`,
+model: `A3 1.6`,
+years: `2002 a 2004`
 },
 {
-manufacturer: "Audi",
-model: "A3 1.8",
-years: "2002 a 2004"
+manufacturer: `Audi`,
+model: `A3 1.8`,
+years: `2002 a 2004`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Utilize o transponder ID48 (T42) crypto.", 
-image: "/images/Funções Específicas/OBD0088 - Leitura de senha e programação de chaves do Audi painel 932M crypto/Transponder ID48.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o transponder ID48 (T42) crypto.`, 
+image: `/images/Funções Específicas/OBD0088 - Leitura de senha e programação de chaves do Audi painel 932M crypto/Transponder ID48.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Conecte o cabo universal junto ao adaptador A1.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Cabo universal + adaptador A1.<br />Para realizar o emparelhamento<br />da BSI.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico do veículo:", 
-description: "A tomada de diagnóstico do veículo está localizada na posição A5.", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico do veículo:`, 
+description: `A tomada de diagnóstico do veículo está localizada na posição A5.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 1: Remova o pólo negativo da bateria por 10 segundos.", 
-image: "/images/Funções Específicas/OBD0088 - Leitura de senha e programação de chaves do Audi painel 932M crypto/Solução erro na leitura 1.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 1: Remova o pólo negativo da bateria por 10 segundos.`, 
+image: `/images/Funções Específicas/OBD0088 - Leitura de senha e programação de chaves do Audi painel 932M crypto/Solução erro na leitura 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Passo 2: Volte o pólo negativo da bateria e repita a função de leitura de senha.", 
-image: "/images/Funções Específicas/OBD0088 - Leitura de senha e programação de chaves do Audi painel 932M crypto/Solução erro na leitura 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Passo 2: Volte o pólo negativo da bateria e repita a função de leitura de senha.`, 
+image: `/images/Funções Específicas/OBD0088 - Leitura de senha e programação de chaves do Audi painel 932M crypto/Solução erro na leitura 2.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Identificando o modelo de painel:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`VW`, `>ID. Painel VDO`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
@@ -108,7 +116,7 @@ help: `Painel identificado.`
 }, {title: `Realizando a Leitura de Senha:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Audi`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Audi`, `>Pain. VDO 932M`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pain. VDO 932M`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -165,7 +173,7 @@ help: `Tecle OK para realizar a leitura de senha ou tecle VOLTA para voltar para
 }, {title: `Realizando a Programação de Chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Audi`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Audi`, `>Pain. VDO 932M`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pain. VDO 932M`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -259,7 +267,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
 { label: `Erro na leitura!`,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
@@ -272,7 +279,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Desligue e ligue a bateria!`,
 screens: [
 `&nbsp;`,
@@ -285,7 +291,6 @@ causes: [
 solutions: [
 `ACRESCENTAR DUAS ÚLTIMAS IMAGENS (PASSO 1 E PASSO 2) BATERIA.`,]
 },
-
 { label: `Painel Invalido!`,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
@@ -298,7 +303,6 @@ causes: [
 solutions: [
 ` `,]
 },
-
 { label: `OK - Continuar VOLTA - Sair`,
 screens: [
 `&nbsp;`,

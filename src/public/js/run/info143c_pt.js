@@ -1,120 +1,163 @@
 //Capa
-nomeCarga = "Reset e Descodificação Fiat ME7.3H4 Final 941 via OBD (Boot)";
-revCarga = "Rev. 1";
-dataManual = "Maio 2013";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+<<<<<<< .mine
+nomeCarga = `Reset e Descodificação Fiat ME7.3H4 Final 941 via OBD (Boot)`;
+revCarga = `Rev. 1`;
+dataManual = `Maio 2013`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
+=======
+nomeCarga = `Manual Carga -  OBD0143<br />Reset e Descodificação Fiat ME7.3H4 Final 941 via OBD (Boot)`;
+revCarga = `Rev. 1`;
+dataManual = `Maio 2013`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
+>>>>>>> .r6579
 
 // introdução
 introTitle = `Introdução`;
 introSubtitle = `Esta carga realiza as seguintes funções:`;
 lstFunc = [
 `Reset da ECU Fiat híbrida 0261 206 94: deixando a mesma virgem, pronta para se codificar com um novo veículo.`,
-`Descodificação da ECU Fiat híbrida 0 261 206 941: A descodificação da ECU consiste em desabilitar o seu sistema de imobilizador interno, de forma que a mesma funcione sem a necessidade de transponders, funcionando somente com a chave mecânica.`,
-`<obs>`,
-`Observação: É recomendado utilizar a carga básica de identificação de ECU Fiat Híbrida para identificar o modelo correto de ECU.`,
+`Descodificação da ECU Fiat híbrida 0 261 206 941: A descodificação da ECU consiste em desabilitar o seu sistema de imobilizador interno, de forma que a mesma funcione sem a necessidade de transponders, funcionando somente com a chave mecânica.<br/><font color="red"><obs>Observação:</font><br/>É recomendado utilizar a carga básica de identificação de ECU Fiat Híbrida para identificar o modelo correto de ECU.`,
 
 ];
 introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Fiat",
-model: "Palio 1.0 16V",
-years: "1999 a 2002"
+manufacturer: `Fiat`,
+model: `Palio 1.0 16V`,
+years: `1999 a 2002`
 },
 {
-manufacturer: "Fiat",
-model: "Siena 1.0 16V",
-years: "1999 a 2002"
+manufacturer: `Fiat`,
+model: `Siena 1.0 16V`,
+years: `1999 a 2002`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "Atenção: Antes de começar o reset ou a descodificação é preciso colocar a ECU em modo de boot, que<br />consiste em aterrar o pino 20 do bocal B da ECU, para isso siga as instruções abaixo.<br />", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+<<<<<<< .mine
+{title: `Acessórios utilizados:`, 
+description: `Atenção: Antes de começar o reset ou a descodificação é preciso colocar a ECU em modo de boot, que<br />consiste em aterrar o pino 20 do bocal B da ECU, para isso siga as instruções abaixo.<br />`, 
+ballon: `Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
+=======
+{title: `Acessórios utilizados:`, 
+description: `Atenção: Antes de começar o reset ou a descodificação é preciso colocar a ECU em modo de boot, que<br />consiste em aterrar o pino 20 do bocal B da ECU, para isso siga as instruções abaixo.<br />`, 
+ballon: `<br />Utilize o cabo universal Connect`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
+>>>>>>> .r6579
 
-{title: "", 
-description: "Atenção: Antes de começar o reset ou a descodificação é preciso colocar a ECU em modo de boot, que<br />consiste em aterrar o pino 20 do bocal B da ECU, para isso siga as instruções abaixo.<br />", 
-ballon: "Cabo C3. Necessário para colocar a ECU em modo de boot.", 
-image: "/images/Acessórios/Cabo C3.jpg"},
+{title: ``, 
+description: `Atenção: Antes de começar o reset ou a descodificação é preciso colocar a ECU em modo de boot, que<br />consiste em aterrar o pino 20 do bocal B da ECU, para isso siga as instruções abaixo.<br />`, 
+ballon: `Cabo C3. Necessário para colocar a ECU em modo de boot.`, 
+image: `/images/Acessórios/Cabo C3.jpg`},
 
-{title: "", 
-description: "Atenção: Antes de começar o reset ou a descodificação é preciso colocar a ECU em modo de boot, que<br />consiste em aterrar o pino 20 do bocal B da ECU, para isso siga as instruções abaixo.<br />", 
-ballon: "Adaptador A5. Auxilia no processo de reset e descodificação da ECU.", 
-image: "/images/Acessórios/Adaptador A5.jpg"},
+<<<<<<< .mine
+{title: ``, 
+description: `Atenção: Antes de começar o reset ou a descodificação é preciso colocar a ECU em modo de boot, que<br />consiste em aterrar o pino 20 do bocal B da ECU, para isso siga as instruções abaixo.<br />`, 
+ballon: `Adaptador A5. Auxilia no processo de reset e descodificação da ECU.`, 
+image: `/images/Acessórios/Adaptador A5.jpg`},
+=======
+{title: ``, 
+description: `Atenção: Antes de começar o reset ou a descodificação é preciso colocar a ECU em modo de boot, que<br />consiste em aterrar o pino 20 do bocal B da ECU, para isso siga as instruções abaixo.<br />`, 
+ballon: `Adaptador A5. Auxilia no processo de reset e descodificação da ECU.`, 
+image: `/images/Connect/Acessórios/Adaptador A5.jpg`},
+>>>>>>> .r6579
 
-{title: "Localizando a ECU Fiat Híbrida no veículo:", 
-description: "", 
-ballon: "ECU localizada.", 
-image: "/images/Funções Específicas/OBD0141/ECU localizada..jpg"},
+<<<<<<< .mine
+{title: `Localizando a ECU Fiat Híbrida no veículo:`, 
+description: ``, 
+ballon: `ECU localizada.`, 
+image: `/images/Funções Específicas/OBD0141/ECU localizada..jpg`},
+=======
+{title: `Localizando a ECU Fiat Híbrida no veículo:`, 
+description: ``, 
+ballon: `Com auxílio de uma chave "L 10" remova a capa que protege o motor.`, 
+image: `/images/Funções Específicas/OBD0141/Capa do motor.jpg`},
+>>>>>>> .r6579
 
-{title: "", 
-description: "", 
-ballon: "Com auxílio de uma chave "L 10" remova a capa que protege o motor.", 
-image: "/images/Funções Específicas/OBD0141/Capa do motor.jpg"},
+<<<<<<< .mine
+{title: ``, 
+description: ``, 
+ballon: `Com auxílio de uma chave "L 10" remova a capa que protege o motor.`, 
+image: `/images/Funções Específicas/OBD0141/Capa do motor.jpg`},
+=======
+{title: ``, 
+description: ``, 
+ballon: `ECU localizada.`, 
+image: `/images/Funções Específicas/OBD0141/ECU localizada..jpg`},
+>>>>>>> .r6579
 
-{title: "Identificando a ECU Fiat Híbrida através da etiqueta:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0143/idECU1 _1.jpg"},
+{title: `Identificando a ECU Fiat Híbrida através da etiqueta:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0143/idECU1 _1.jpg`},
 
-{title: "Colocando a ECU Fiat Híbrida em modo boot:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0141/modoBoot1.jpg"},
+{title: `Colocando a ECU Fiat Híbrida em modo boot:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0141/modoBoot1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0141/modoBoot2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0141/modoBoot2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Com auxílio de uma chave "Fenda pequena" remova a trava que prende a capa de proteção do soquete.", 
-image: "/images/Funções Específicas/OBD0141/Remova a trava.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Com auxílio de uma chave "Fenda pequena" remova a trava que prende a capa de proteção do soquete.`, 
+image: `/images/Funções Específicas/OBD0141/Remova a trava.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0141/Remova a trava2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0141/Remova a trava2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0141/Remova a trava3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0141/Remova a trava3.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte a agulha do cabo C3 no pino 20.", 
-image: "/images/Funções Específicas/OBD0141/Remova a trava4.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Conecte a agulha do cabo C3 no pino 20.`, 
+image: `/images/Funções Específicas/OBD0141/Remova a trava4.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "No procedimento será necessário conectar a garra do cabo C3 no pólo negativo da bateria, porém em algumas partes do procedimento será necessário que remova esta garra.", 
-image: "/images/Funções Específicas/OBD0141/Remova a trava5.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `No procedimento será necessário conectar a garra do cabo C3 no pólo negativo da bateria, porém em algumas partes do procedimento será necessário que remova esta garra.`, 
+image: `/images/Funções Específicas/OBD0141/Remova a trava5.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos está localizada na área A5.<br />", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos está localizada na área A5.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 
-{title: "Luz de code do painel:", 
-description: "Se a descodificação foi realizada com sucesso a luz do code no painel ficará constantemente acesa, porém o carro irá funcionar.<br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0141/Painel.jpg"},
+{title: `Luz de code do painel:`, 
+description: `Se a descodificação foi realizada com sucesso a luz do code no painel ficará constantemente acesa, porém o carro irá funcionar.<br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0141/Painel.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -127,8 +170,86 @@ screens: [
 {lines: [`Fiat Code 2`], help: `Tecle OK`, menu: 1000},
 {lines: [`Bosch Me7.3H4`], help: `Tecle OK`, menu: 1000},
 {lines: [`Identificação`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Realizando o reset da ECU:`,
+<<<<<<< .mine
+{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
+{lines: [
+`&nbsp;`,
+`Use`,
+`&nbsp;Adaptador&nbsp;A1!`,
+`<br />`,
+],
+help: `Use o adaptador A1 e tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`ECU:`,
+`*&nbsp;***&nbsp;***&nbsp;***`,
+`<br />`,
+],
+help: `ECU identificada.`
+},
+]
+}, {title: `Realizando o reset da ECU:`,
+=======
+{lines: [
+`&nbsp;`,
+`Use`,
+`Adaptador&nbsp;A1!`,
+`<br />`,
+],
+help: `Use o adaptador A1 e tecle OK!`
+},
+{lines: [
+`<br />`,
+`<br />`,
+`<br />`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`ECU:`,
+`*&nbsp;***&nbsp;***&nbsp;***`,
+`<br />`,
+],
+help: `ECU identificada.`
+},
+]
+}, {title: `Realizando o reset da ECU:`,
+>>>>>>> .r6579
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
 {lines: [`Fiat`], help: `Tecle OK`, menu: 1000},
@@ -138,8 +259,338 @@ screens: [
 {lines: [`Bosch Me7.3H4`], help: `Tecle OK`, menu: 1000},
 {lines: [`Final 941`], help: `Tecle OK`, menu: 1000},
 {lines: [`Reset da ECU`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Realizando a descodificação da ECU:`,
+<<<<<<< .mine
+{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
+{lines: [
+`&nbsp;`,
+`&nbsp;Use&nbsp;A1,A5&nbsp;e&nbsp;C3`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Bosch&nbsp;941`,
+`Resetar?`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Etapa&nbsp;1`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Etapa&nbsp;2`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;&nbsp;Desconecte&nbsp;o`,
+`&nbsp;&nbsp;&nbsp;cabo&nbsp;C3&nbsp;da`,
+`&nbsp;&nbsp;bateria&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Nesta etapa será necessário remover a
+garra do pólo negativo da bateria como mostra na página 9.`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;Conecte&nbsp;o&nbsp;cabo`,
+`&nbsp;C3&nbsp;na&nbsp;bateria`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Nesta etapa será necessário conectar a
+garra do cabo C3 no pólo negativo da bateria como mostra na página 8.`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Etapa&nbsp;3`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Operacao`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concluida!`,
+`<br />`,
+],
+help: `A ECU foi resetada.`
+},
+]
+}, {title: `Realizando a descodificação da ECU:`,
+=======
+{lines: [
+`&nbsp;`,
+`Use&nbsp;A1,A5&nbsp;e&nbsp;C3`,
+`&lt;OK&gt;`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`<br />`,
+`<br />`,
+`<br />`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Bosch&nbsp;941`,
+`Resetar?`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Etapa&nbsp;`,
+`**&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Etapa&nbsp;2`,
+`çç&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Desconecte&nbsp;o`,
+`cabo&nbsp;C3&nbsp;da`,
+`bateria&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Nesta etapa será necessário remover a
+garra do pólo negativo da bateria como mostra na página 9.`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Conecte&nbsp;o&nbsp;cabo`,
+`C3&nbsp;na&nbsp;bateria`,
+`&lt;OK&gt;`,
+`<br />`,
+],
+help: `Nesta etapa será necessário conectar a
+garra do cabo C3 no pólo negativo da bateria como mostra na página 8.`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Etapa&nbsp;3`,
+`**&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Operação`,
+`Concluida!`,
+`<br />`,
+],
+help: `A ECU foi resetada.`
+},
+]
+}, {title: `Realizando a descodificação da ECU:`,
+>>>>>>> .r6579
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
 {lines: [`Fiat`], help: `Tecle OK`, menu: 1000},
@@ -149,62 +600,235 @@ screens: [
 {lines: [`Bosch Me7.3H4`], help: `Tecle OK`, menu: 1000},
 {lines: [`Final 941`], help: `Tecle OK`, menu: 1000},
 {lines: [`Reset da ECU`], help: `Tecle OK`, menu: 1000},
-
-]},];
+<<<<<<< .mine
+{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
+{lines: [
+`&nbsp;`,
+`&nbsp;Use&nbsp;A1,A5&nbsp;e&nbsp;C3`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Bosch&nbsp;941`,
+`Descodificar?`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Etapa&nbsp;1`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Etapa&nbsp;2`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;70&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Operacao`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concluida!`,
+`<br />`,
+],
+help: `A ECU foi descodificada.`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
 othersMessage = [{ label: `Obs: NAO utilize cabo C3! <OK>`,
 screens: [
+=======
+{lines: [
+>>>>>>> .r6579
 `&nbsp;`,
-`Obs:&nbsp;NAO&nbsp;utilize`,
-`cabo&nbsp;C3!&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`Use&nbsp;A1,A5&nbsp;e&nbsp;C3`,
+`&lt;OK&gt;`,
 `<br />`,
 ],
-causes: [
-`A ECU está em modo de boot através do cabo C3.`,],
-solutions: [
-`Na função de identificar ECU não utilizar o cabo C3.`,]
+help: `Tecle OK!`
 },
-
-{ label: `Erro de Comunicacao!`,
-screens: [
+{lines: [
 `&nbsp;`,
-`Erro&nbsp;de&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Comunicacao!`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
-causes: [
-`Defeito no veículo, parte elétrica,`,`Software do OBDMap desatualizado,`,`Má conexão dos acessórios.`,],
-solutions: [
-`Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico, talvez esta carga tenha tido alterações.`,]
+help: `Tecle OK!`
 },
-
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Bosch&nbsp;941`,
+`Descodificar?`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Etapa&nbsp;`,
+`**&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Etapa&nbsp;2`,
+`çç&nbsp;%`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Operação`,
+`Concluida!`,
+`<br />`,
+],
+help: `A ECU foi descodificada.`
+},
+]}];
+//Outras mensagens
+othersMessageTitle = `Outras Mensagens`;
+othersMessage = [
 { label: `Erro! Verifique a conexao do adaptador A5!`,
 screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Erro!`,
-`&nbsp;&nbsp;Verifique&nbsp;a`,
-`&nbsp;&nbsp;&nbsp;conexao&nbsp;do`,
-`&nbsp;adaptador&nbsp;A5!`,
+`Erro!`,
+`Verifique&nbsp;a`,
+`conexão&nbsp;do`,
+`adaptador&nbsp;A5!`,
 ],
 causes: [
 `Mau contato do adaptador com o OBDMap,`,`Adaptador está desconfigurado.`,],
 solutions: [
 `Verificar a conexão do adaptador com o OBDMap,`,`Encaminhar o adaptador para reparo.`,]
 },
-
 { label: `Erro! Verifique a conexao do cabo C3!`,
 screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Erro!`,
-`&nbsp;&nbsp;Verifique&nbsp;a`,
-`&nbsp;&nbsp;&nbsp;conexao&nbsp;do`,
-`&nbsp;&nbsp;&nbsp;&nbsp;cabo&nbsp;C3!`,
+`Erro!`,
+`Verifique&nbsp;a`,
+`conexão&nbsp;do`,
+`cabo&nbsp;C3!`,
 ],
 causes: [
 `O cabo C3 não está devidamente conectado no pino 20 do lado B da ECU, ou a garra não está conectada no pólo negativo da bateria (não colocando a ECU em modo de boot).`,],
 solutions: [
 `Verificar a conexão do cabo C3, conectá-lo como mostra na página 9.`,]
 },
-
 { label: `ID da ECU Incorreta!`,
 screens: [
 `&nbsp;`,
@@ -217,31 +841,53 @@ causes: [
 solutions: [
 `Verificar o modelo da ECU através da função de identificar ECU.`,]
 },
-
 { label: `Arquivo da ECU corrompido! Descodificar? (X)Nao (OK)Sim`,
 screens: [
-`&nbsp;Arquivo&nbsp;da&nbsp;ECU`,
-`&nbsp;&nbsp;corrompido!`,
-`&nbsp;Descodificar?`,
-`(X)Nao&nbsp;&nbsp;(OK)Sim`,
+`Arquivo&nbsp;da&nbsp;ECU`,
+`corrompido!`,
+`Descodificar?`,
+`(X)Não&nbsp;&nbsp;(OK)Sim`,
 ],
 causes: [
 `O arquivo da ECU está corrompido.`,],
 solutions: [
 `Descodificar ECU.`,]
 },
-
+{ label: `Obs: NAO utilize cabo C3! <OK>`,
+screens: [
+`&nbsp;`,
+`Observação:&nbsp;NÃO&nbsp;utilize`,
+`cabo&nbsp;C3!&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+causes: [
+`A ECU está em modo de boot através do cabo C3.`,],
+solutions: [
+`Na função de identificar ECU não utilizar o cabo C3.`,]
+},
+{ label: `Erro de Comunicacao!`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;de`,
+`Comunicação!`,
+`<br />`,
+],
+causes: [
+`Defeito no carro, parte elétrica;`,`ECU com defeito.`,],
+solutions: [
+`Verificar parte elétrica do carro, fusíveis, etc;`,`Verificar a conexão do adaptador A1 no OBDMap e no conector OBD do veículo.`,]
+},
 { label: `Erro na Gravacao!`,
 screens: [
 `&nbsp;`,
 `Erro&nbsp;na`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Gravacao!`,
+`Gravação!`,
 `<br />`,
 ],
 causes: [
-`Falha na conexão entre o OBDMap e a tomada OBD do veículo.`,],
+`Mau contato da pinça com a memória,`,`Mau contato da pinça com o OBDMap,`,`Memória ou módulo com problema,`,`A pinça foi conectada em outro componente, (se existir outro componente SOIC8 na placa)`,`Os terminais da memória ou da própria pinça podem estar com resina ou sujeira.`,],
 solutions: [
-`Verificar a conexão entre o OBDMap e a tomada OBD do veículo.`,]
+`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`Conferir bom estado do módulo,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,]
 },
 
 ];

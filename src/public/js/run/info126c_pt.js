@@ -1,68 +1,75 @@
 //Capa
-nomeCarga = "Programação Alarme JAC ( J2 / J3 / J5 / J6 )";
-revCarga = "Rev. 3";
-dataManual = "Julho 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0126<br />Programação Alarme JAC ( J2 / J3 / J5 / J6 )`;
+revCarga = `Rev. 3`;
+dataManual = `Julho 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
 introSubtitle = `Esta carga realiza as seguintes funções:`;
 lstFunc = [
-`Programar os telecomandos dos modelos da linha JAC citados abaixo.`,
-`O número máximo de telecomandos programados por veículos são três, incluindo o telecomando existente.`,
+`Programar os telecomandos dos modelos da linha JAC citados abaixo. <br />O número máximo de telecomandos programados por veículos são três, incluindo o telecomando existente.`,
 
 ];
-introObs = createObs();
+introObs = createObs()
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "JAC",
-model: "J2 1.4",
-years: "2012 a 2013"
+manufacturer: `JAC`,
+model: `J2 1.4`,
+years: `2012 a 2013`
 },
 {
-manufacturer: "JAC",
-model: "J3 1.4",
-years: "2009 a 2012"
+manufacturer: `JAC`,
+model: `J3 1.4`,
+years: `2009 a 2012`
 },
 {
-manufacturer: "JAC",
-model: "J5 1.5",
-years: "2009 a 2012"
+manufacturer: `JAC`,
+model: `J5 1.5`,
+years: `2009 a 2012`
 },
 {
-manufacturer: "JAC",
-model: "J6 2.0",
-years: "2009 a 2012"
+manufacturer: `JAC`,
+model: `J6 2.0`,
+years: `2009 a 2012`
 },
 ];
-applicationObs = createObs("Observações:", "- Nem todos os modelos e anos dos veículos citados correspondem ao telecomando desta carga.", "- Só é possível programar os telecomandos originais, e os telecomandos existentes serão apagados automaticamente.")
+applicationObs = ``;
+applicationObs += createObs(`Observações:`, `- Nem todos os modelos e anos dos veículos citados correspondem ao telecomando desta carga. <br />- Só é possível programar os telecomandos originais, e os telecomandos existentes serão apagados automaticamente.`, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Exemplo de telecomando.", 
-image: "/images/Chaves e Telecomandos/Chaves Jac.jpg"},
+{title: `Chave utilizada:`, 
+description: ``, 
+ballon: `Exemplo de telecomando.`, 
+image: `/images/Chaves e Telecomandos/Chaves Jac.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize cabo universal Connect", 
-image: "/images/Acessórios/Cabo JC.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize cabo universal Connect`, 
+image: `/images/Acessórios/Cabo JC.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos citados acima fica localizada na área A5.<br /><br />", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos citados acima fica localizada na área A5.<br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -74,10 +81,103 @@ screens: [
 {lines: [`Telecomandos`], help: `Tecle OK`, menu: 1000},
 {lines: [`Alarme 1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Apagar e programar telecomando`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`Faça&nbsp;o`,
+`procedimento`,
+`com&nbsp;a&nbsp;chave`,
+`desligada!`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`ATENCAO!&nbsp;Fechar`,
+`todas&nbsp;as&nbsp;portas!&nbsp;`,
+`&lt;OK&gt;`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Número&nbsp;Telecomando:`,
+`<br />`,
+`<br />`,
+],
+help: `Escolha o números de telecomandos que deseja programar. Neste exemplo vamos programar 1 telecomando.`
+},
+{lines: [
+`&nbsp;`,
+`Pressione&nbsp;2x&nbsp;&nbsp;&nbsp;e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`telecomando&nbsp;&nbsp;&lt;30&gt;`,
+`<br />`,
+],
+help: `Pressione duas vezes o botão lock e duas vezes o botão unlock do telecomando no tempo de 30 segundos. Assim o telecomando será programado.`
+},
+{lines: [
+`&nbsp;`,
+`Procedimento&nbsp;Concluído!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Número&nbsp;Telecomando:`,
+`<br />`,
+`<br />`,
+],
+help: `Escolha o números de telecomandos que deseja programar. Neste exemplo vamos programar 2 telecomandos.`
+},
+{lines: [
+`Pressione&nbsp;&nbsp;&nbsp;`,
+`telecomando1&nbsp;&nbsp;&nbsp;&nbsp;`,
+`telecomando2&nbsp;&lt;30&gt;`,
+`<br />`,
+],
+help: `Pressione o botão unlock de um dos
+telecomandos e o botão lock do outro
+telecomando no tempo de 30 segundos.
+Assim os dois telecomandos serão
+programados.`
+},
+{lines: [
+`&nbsp;`,
+`Procedimento&nbsp;Concluído!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Número&nbsp;Telecomando:`,
+`<br />`,
+`<br />`,
+],
+help: `Escolha o números de telecomandos que deseja programar. Neste exemplo vamos programar 3 telecomandos.`
+},
+{lines: [
+`&nbsp;`,
+`Pressione&nbsp;&nbsp;&nbsp;&nbsp;,&nbsp;nos&nbsp;`,
+`3&nbsp;telecomandos&nbsp;&lt;30&gt;`,
+`<br />`,
+],
+help: `Pressione os botões lock e unlock de cada telecomando no tempo de 30 segundos. Assim os três telecomandos serão programados.`
+},
+{lines: [
+`&nbsp;`,
+`Procedimento&nbsp;Concluído!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [];
+othersMessage = [
+
+];
 //Last Message
 lastMsg = `Se persistirem os erros acima, ou para outras mensagens consulte o suporte técnico.`;

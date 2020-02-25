@@ -1,0 +1,510 @@
+//Capa
+nomeCarga = `Manual Carga -  OBD0207 - <br />Programação de chaves de presença Ford Pats 6`;
+revCarga = `Rev. 3`;
+dataManual = `Fevereiro 2019`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
+
+// introdução
+introTitle = `Introdução`;
+introSubtitle = `Esta carga realiza as seguintes funções:`;
+lstFunc = [
+`Apagamento com reprogramação de 2 chaves de presença para o veículo.`,
+`Programação de até 4 chaves de presença para o veículo.`,
+
+];
+introObs = createObs();
+
+
+// aplicação 
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
+models = [
+{
+manufacturer: `Ford`,
+model: `Focus 1.6`,
+years: `2008 a 2013`
+},
+{
+manufacturer: `Ford`,
+model: `Focus 2.0`,
+years: `2008 a 2013`
+},
+];
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
+
+
+
+resources = [
+{title: `Veículo referente a aplicação da carga`, 
+description: `A carga só atende ao modelo indicado abaixo. <br />(imagem meramente ilustrativa)<br /><br /><br /><br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0207- Ford Pats 6 Focus 2008 2013/Imágen-posterior-del-Ford-Focus-2010.jpg`},
+
+{title: `Chave de presença utilizada`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Chaves e Telecomandos/Chave Ford Focus keyless .jpg`},
+
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Usado para realizar o procedimento via diagnóstico.`, 
+image: `/images/Connect/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
+
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Connect/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
+
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico fica localizada na posição A4.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4.jpg`},
+
+{title: `Procedimento para programação do proximity via OBD`, 
+description: `Procedimento para a realização do passo da programação e do passo da adição de chaves de presença.<br /><br />`, 
+ballon: `Retire a lâmina do controle e a insira na ignição.`, 
+image: `/images/Chaves e Telecomandos/slot ford focus.jpg`},
+];
+instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
+obdmap = false;
+services = 
+[
+{title: `Realizando a programação das chaves de presenças`,
+description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
+screens: [
+{lines: [`Ford`], help: `Tecle OK`, menu: 1000},
+{lines: [`Focus`], help: `Tecle OK`, menu: 1000},
+{lines: [`Chaves de presença`], help: `Tecle OK`, menu: 1000},
+{lines: [`Pats 6`], help: `Tecle OK`, menu: 1000},
+{lines: [`Apagar e Programar chaves`], help: `Tecle OK`, menu: 1000},
+{lines: [
+`&nbsp;`,
+`Selecione:`,
+`Programar&nbsp;Proximity`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`Todas&nbsp;as&nbsp;chaves&nbsp;serão&nbsp;perdidas!`,
+`&lt;OK&gt;&nbsp;Continuar`,
+`&lt;VOLTA&gt;&nbsp;Sair`,
+`<br />`,
+],
+help: `As chaves de presença já programadas serão apagadas.`
+},
+{lines: [
+`São&nbsp;necessárias`,
+`2&nbsp;chaves&nbsp;para`,
+`realizar&nbsp;o`,
+`procedimento!`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Utilize&nbsp;chave&nbsp;original!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Aperte&nbsp;o&nbsp;Botão&nbsp;START/STOP`,
+`(para&nbsp;ligar&nbsp;ignição)`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Aperte&nbsp;START/STOP`,
+`(para&nbsp;desligar&nbsp;ignição)`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Insira&nbsp;a&nbsp;chave`,
+`no&nbsp;slot&nbsp;segundo`,
+`o&nbsp;manual&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Insira a primeira chave de presença a ser programada no slot segundo a página 6 e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Retire&nbsp;a&nbsp;chave`,
+`do&nbsp;veículo&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Insira&nbsp;a&nbsp;proxima&nbsp;chave&nbsp;no&nbsp;`,
+`slot&nbsp;OK`,
+`<br />`,
+],
+help: `Insira a proxima chave de presença a ser programada no slot e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Pressione&nbsp;*`,
+`do&nbsp;controle&nbsp;*`,
+`por&nbsp;1&nbsp;segundo&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Pressione o botão abrir do telecomando da primeira chave de presença e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Pressione&nbsp;*`,
+`do&nbsp;controle&nbsp;*`,
+`por&nbsp;1&nbsp;segundo&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Pressione o botão abrir do telecomando da segunda chave de presença e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Número&nbsp;de&nbsp;Chaves`,
+`Programadas:&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Número de chaves de presença atualmente programadas no veículo.`
+},
+{lines: [
+`&nbsp;`,
+`Procedimento&nbsp;Concluído!`,
+`Desconecte&nbsp;o&nbsp;OBD`,
+`<br />`,
+],
+help: `O procedimento foi concluído com
+sucesso. Desconecte o cabo da tomada
+de diagnose.`
+},
+{lines: [
+`&nbsp;`,
+`Tentativa&nbsp;**`,
+`&lt;OK&gt;`,
+`<br />`,
+],
+help: `Poderão ser feitas até 16 tentativas de
+acesso.`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde`,
+`10&nbsp;segundos!`,
+`<br />`,
+],
+help: `Aguarde 10 segundos e retorne ao passo
+10.`
+},
+]
+}, {title: `Realizando a adição de novas chaves de presença`,
+description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
+screens: [
+{lines: [`Ford`], help: `Tecle OK`, menu: 1000},
+{lines: [`Focus`], help: `Tecle OK`, menu: 1000},
+{lines: [`Chaves de presença`], help: `Tecle OK`, menu: 1000},
+{lines: [`Pats 6`], help: `Tecle OK`, menu: 1000},
+{lines: [`Apagar e Programar chaves`], help: `Tecle OK`, menu: 1000},
+{lines: [
+`&nbsp;`,
+`Selecione:`,
+`Add&nbsp;Proximity`,
+`<br />`,
+],
+help: `Tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Utilize&nbsp;chave&nbsp;original!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Aperte&nbsp;o&nbsp;Botão&nbsp;START/STOP`,
+`(para&nbsp;ligar&nbsp;ignição)`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Aperte&nbsp;START/STOP`,
+`(para&nbsp;desligar&nbsp;ignição)`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Insira&nbsp;a&nbsp;chave`,
+`no&nbsp;slot&nbsp;segundo`,
+`o&nbsp;manual&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Insira a chave de presença a ser programada no slot segundo mostrado na página 6 e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Pressione&nbsp;*`,
+`do&nbsp;controle&nbsp;*`,
+`por&nbsp;1&nbsp;segundo&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Pressione o botão abrir do telecomando da chave de presença que está sendo adicionada e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Número&nbsp;de&nbsp;Chaves`,
+`Programadas:&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Número de chaves de presença atualmente programadas no veículo.`
+},
+{lines: [
+`&nbsp;`,
+`Procedimento&nbsp;Concluído!`,
+`Desconecte&nbsp;o&nbsp;OBD`,
+`<br />`,
+],
+help: `O procedimento foi concluído com
+sucesso. Desconecte o cabo da tomada
+de diagnose.`
+},
+{lines: [
+`&nbsp;`,
+`Tentativa&nbsp;**`,
+`&lt;OK&gt;`,
+`<br />`,
+],
+help: `Poderão ser feitas até 16 tentativas de
+acesso.`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde`,
+`10&nbsp;segundos!`,
+`<br />`,
+],
+help: `Aguarde 10 segundos e retorne ao passo
+10.`
+},
+]}];
+//Outras mensagens
+othersMessageTitle = `Outras Mensagens`;
+othersMessage = [
+{ label: `Erro de Comunicacao!`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;de&nbsp;Comunicação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+causes: [
+`Defeito no veículo, parte elétrica,`,`Software do OBDMap desatualizado,`,`Má conexão dos acessórios.`,],
+solutions: [
+`Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico, talvez esta carga tenha tido alterações.`,]
+},
+{ label: `Erro na Programacao!`,
+screens: [
+`Erro&nbsp;na`,
+`Programação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+causes: [
+` O transponder utilizado não é válido.`,` O transponder pode não estar dedicado corretamente para o veículo.`,],
+solutions: [
+` Utilize um transponder compatível com o veículo.`,]
+},
+{ label: `Erro no Transponder!`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;no&nbsp;Transponder!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+causes: [
+` O transponder utilizado não é válido.`,` O transponder pode não estar dedicado corretamente para o veículo.`,``,],
+solutions: [
+` Utilize um transponder compatível com o veículo.`,``,``,]
+},
+{ label: `Desconecte o OBDMap!!`,
+screens: [
+`&nbsp;`,
+`Desconecte&nbsp;o&nbsp;OBDMap!!`,
+`<br />`,
+`<br />`,
+],
+causes: [
+`Não foi possível acessar o modo de programação do veículo.`,],
+solutions: [
+`Aguarde 5 minutos e repita o procedimento.`,]
+},
+{ label: `Incode: ****** Outcode:`,
+screens: [
+`&nbsp;`,
+`Incode:&nbsp;******&nbsp;`,
+`Outcode:`,
+`<br />`,
+],
+causes: [
+`As tentativas de acesso ao veículo falharam.`,],
+solutions: [
+`É necessário contato com o suporte para obter o Outcode. Obs: Não se deve desligar a ignição nesse processo pois o código será alterado.`,``,]
+},
+{ label: `Use cabo A9!`,
+screens: [
+`&nbsp;`,
+`Use&nbsp;cabo&nbsp;A9!`,
+`<br />`,
+`<br />`,
+],
+causes: [
+`O cabo utilizado não está correto.`,],
+solutions: [
+`Conecte o cabo A9 e repita o procedimento`,]
+},
+{ label: `Erro no acesso!`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;no&nbsp;acesso!`,
+`<br />`,
+`<br />`,
+],
+causes: [
+`Não foi possível acessar o modo de programação do veículo.`,],
+solutions: [
+`Repita o procedimento.`,]
+},
+{ label: `Veiculo fora da Aplicacao!`,
+screens: [
+`&nbsp;`,
+`Veículo&nbsp;fora&nbsp;da&nbsp;`,
+`Aplicação!`,
+`<br />`,
+],
+causes: [
+`O veículo não faz parte da aplicação da carga.`,],
+solutions: [
+`Verificar aplicação.`,]
+},
+{ label: `Acesso Negado Aguarde 5:00 min Para Repetir`,
+screens: [
+`Acesso&nbsp;&nbsp;Negado`,
+`Aguarde&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;min`,
+`Para&nbsp;Repetir`,
+`<br />`,
+],
+causes: [
+],
+solutions: [
+]
+},
+
+];
+//Last Message
+lastMsg = `Se persistirem os erros acima, ou para outras mensagens consulte o suporte técnico.`;

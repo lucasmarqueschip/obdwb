@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Reset IAW 4SF";
-revCarga = "Rev. 3";
-dataManual = "Outubro 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0056<br />Reset IAW 4SF`;
+revCarga = `Rev. 3`;
+dataManual = `Outubro 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -20,102 +20,110 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Fiat",
-model: "Linea 1.9",
-years: "2007 a 2009"
+manufacturer: `Fiat`,
+model: `Linea 1.9`,
+years: `2007 a 2009`
 },
 {
-manufacturer: "Fiat",
-model: "Palio 1.8",
-years: "2004 a 2005"
+manufacturer: `Fiat`,
+model: `Palio 1.8`,
+years: `2004 a 2005`
 },
 {
-manufacturer: "Fiat",
-model: "Siena 1.0",
-years: "2004 a 2005"
+manufacturer: `Fiat`,
+model: `Siena 1.0`,
+years: `2004 a 2005`
 },
 {
-manufacturer: "Fiat",
-model: "Siena 1.8",
-years: "2004 a 2005"
+manufacturer: `Fiat`,
+model: `Siena 1.8`,
+years: `2004 a 2005`
 },
 {
-manufacturer: "Fiat",
-model: "Punto 1.4",
-years: "2007 a 2009"
+manufacturer: `Fiat`,
+model: `Punto 1.4`,
+years: `2007 a 2009`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo Universal + adaptador A1.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Ferro de solda. Necessário para soldar os resistores.", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Ferro de Solda.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Ferro de solda. Necessário para soldar os resistores.`, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Ferro de Solda.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Utilize dois resistores, um de 100 Ohms e outro de 560 Ohms.", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/resistores.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize dois resistores, um de 100 Ohms e outro de 560 Ohms.`, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/resistores.jpg`},
 
-{title: "Identificando e desmontando a ECU", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Localizando a ECU do veículo.jpg"},
+{title: `Identificando e desmontando a ECU`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Localizando a ECU do veículo.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Utilize a chave Torque T1 para retirar os quatro parafusos fixadores.", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Desmontando a ECU IAW 4SF ou 4DF.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize a chave Torque T1 para retirar os quatro parafusos fixadores.`, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Desmontando a ECU IAW 4SF ou 4DF.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Utilize uma chave de fenda, faça uma alavanca para ter acesso à placa.", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Desmontando a ECU IAW 4SF ou 4DF 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize uma chave de fenda, faça uma alavanca para ter acesso à placa.`, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Desmontando a ECU IAW 4SF ou 4DF 2.jpg`},
 
-{title: "Localizando os pontos de soldagem dos resistores:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Localizando os pontos de soldagem dos resistores.jpg"},
+{title: `Localizando os pontos de soldagem dos resistores:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Localizando os pontos de soldagem dos resistores.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Soldado os resistores na placa da ECU.", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Soldado os resistores.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Soldado os resistores na placa da ECU.`, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Soldado os resistores.jpg`},
 
-{title: "Localizando os pontos para a pinagem da ECU", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Pinagem.jpg"},
+{title: `Localizando os pontos para a pinagem da ECU`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Pinagem.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Localizando os pinos de conexão do multigiga.", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Localizando os pinos de conexão.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Localizando os pinos de conexão do multigiga.`, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Localizando os pinos de conexão.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Multigiga conectado na ECU.", 
-image: "/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Cabo universal de leitura conectado.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Multigiga conectado na ECU.`, 
+image: `/images/Funções Específicas/OBD0056 Reset IAW 4SF ou 4DF/Cabo universal de leitura conectado.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o Reset da ECU IAW 4SF ou 4DF:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Fiat`, `>IAW 4SF`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`IAW 4SF`, `>Reset CODE 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},

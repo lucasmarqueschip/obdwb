@@ -37,7 +37,7 @@ a.menuItem:hover {
 }
 
 .my-nav2 {
-  z-index: 1;
+  z-index: 101;
   height: 100%;
   background-color: white;
   position: fixed;

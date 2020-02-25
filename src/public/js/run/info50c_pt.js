@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Descodificar ECU VW MP9.0";
-revCarga = "Rev. 1";
-dataManual = "Abril 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0050<br />Descodificar ECU VW MP9.0`;
+revCarga = `Rev. 1`;
+dataManual = `Abril 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -17,71 +17,79 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "VW",
-model: "Gol 1.0",
-years: "1999 a 2003"
+manufacturer: `VW`,
+model: `Gol 1.0`,
+years: `1999 a 2003`
 },
 {
-manufacturer: "VW",
-model: "Kombi",
-years: "1999 a 2004"
+manufacturer: `VW`,
+model: `Kombi`,
+years: `1999 a 2004`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Ferro de solda.", 
-image: "/images/Acessórios/ferro_de_Solda2.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Ferro de solda.`, 
+image: `/images/Acessórios/ferro_de_Solda2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "Identificando e desmontando a ECU MP9.0", 
-description: "Este procedimento é válido para dois modelos desta ECU, externamente elas são iguais, internamente elas diferem pela placa de circuito. Podem também ser encontrados dois modelos de memória, a 24C02 e a B58253. A posição da soic e do jumper a ser feito não muda.", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/ECU 1.jpg"},
+{title: `Identificando e desmontando a ECU MP9.0`, 
+description: `Este procedimento é válido para dois modelos desta ECU, externamente elas são iguais, internamente elas diferem pela placa de circuito. Podem também ser encontrados dois modelos de memória, a 24C02 e a B58253. A posição da soic e do jumper a ser feito não muda.`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/ECU 1.jpg`},
 
-{title: "", 
-description: "Este procedimento é válido para dois modelos desta ECU, externamente elas são iguais, internamente elas diferem pela placa de circuito. Podem também ser encontrados dois modelos de memória, a 24C02 e a B58253. A posição da soic e do jumper a ser feito não muda.", 
-ballon: "Retire a tampa de proteção da ECU para acesso ao circuito.", 
-image: "/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/ECU 2.jpg"},
+{title: ``, 
+description: `Este procedimento é válido para dois modelos desta ECU, externamente elas são iguais, internamente elas diferem pela placa de circuito. Podem também ser encontrados dois modelos de memória, a 24C02 e a B58253. A posição da soic e do jumper a ser feito não muda.`, 
+ballon: `Retire a tampa de proteção da ECU para acesso ao circuito.`, 
+image: `/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/ECU 2.jpg`},
 
-{title: "", 
-description: "Este procedimento é válido para dois modelos desta ECU, externamente elas são iguais, internamente elas diferem pela placa de circuito. Podem também ser encontrados dois modelos de memória, a 24C02 e a B58253. A posição da soic e do jumper a ser feito não muda.", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/ECU 3.jpg"},
+{title: ``, 
+description: `Este procedimento é válido para dois modelos desta ECU, externamente elas são iguais, internamente elas diferem pela placa de circuito. Podem também ser encontrados dois modelos de memória, a 24C02 e a B58253. A posição da soic e do jumper a ser feito não muda.`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/ECU 3.jpg`},
 
-{title: "Procedimento de jumper na central", 
-description: "O circuito da central provoca interferência na programação da memória, então é necessário fazer um jumper no cristal da central conforme mostrado abaixo:<br /><br />Observação: Este procedimento é válido para os dois modelos de centrais, pois a posição do jumper não muda. <br /><br /><br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/Jumper.jpg"},
+{title: `Procedimento de jumper na central`, 
+description: `O circuito da central provoca interferência na programação da memória, então é necessário fazer um jumper no cristal da central conforme mostrado abaixo:<br /><br />Observação: Este procedimento é válido para os dois modelos de centrais, pois a posição do jumper não muda. <br /><br /><br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/Jumper.jpg`},
 
-{title: "Localizando e conectando a pinça na memória :", 
-description: "Observação: Este procedimento é válido para os dois modelos de centrais, pois a posição da memória não muda. <br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/Localizando a memória.jpg"},
+{title: `Localizando e conectando a pinça na memória :`, 
+description: `Observação: Este procedimento é válido para os dois modelos de centrais, pois a posição da memória não muda. <br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/Localizando a memória.jpg`},
 
-{title: "", 
-description: "Observação: Este procedimento é válido para os dois modelos de centrais, pois a posição da memória não muda. <br />", 
-ballon: "Pinça conectada na memória.", 
-image: "/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/Pinça conectada.jpg"},
+{title: ``, 
+description: `Observação: Este procedimento é válido para os dois modelos de centrais, pois a posição da memória não muda. <br />`, 
+ballon: `Pinça conectada na memória.`, 
+image: `/images/Funções Específicas/OBD0050 -  Descodificar ECU MP9.0  VW/Pinça conectada.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -93,15 +101,31 @@ screens: [
 {lines: [`Emparelhamento`], help: `Tecle OK`, menu: 1000},
 {lines: [`Bosch MP9.0`], help: `Tecle OK`, menu: 1000},
 {lines: [`Descodificação da ECU`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Operação`,
+`Concluida!`,
+`<br />`,
+],
+help: `Operação concluída com sucesso. Não se esqueça de retirar o jumper no final do procedimento.`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Curto! Verifique...`,
+othersMessage = [
+{ label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
 `Curto!`,
-`Verifique...`,
+`<br />`,
 `<br />`,
 ],
 causes: [
@@ -109,12 +133,11 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória.`,`Conferir o bom estado da memória e central.`,]
 },
-
 { label: `Erro na Gravacao!`,
 screens: [
 `&nbsp;`,
 `Erro&nbsp;na`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Gravacao!`,
+`Gravação!`,
 `<br />`,
 ],
 causes: [
@@ -122,12 +145,11 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`Conferir bom estado da memória e central,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,]
 },
-
 { label: `Erro na leitura!`,
 screens: [
 `&nbsp;`,
 `Erro&nbsp;na`,
-`&nbsp;&nbsp;leitura!`,
+`leitura!`,
 `<br />`,
 ],
 causes: [
@@ -135,11 +157,10 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`Conferir bom estado da memória e central,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,]
 },
-
 { label: `Pinca invertida!`,
 screens: [
 `&nbsp;`,
-`Pinca&nbsp;invertida!`,
+`Pinça&nbsp;invertida!`,
 `<br />`,
 `<br />`,
 ],

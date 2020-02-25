@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Reset da ECU SIM 32 (Clio, Logan e Sandero)";
-revCarga = "Rev. 3";
-dataManual = "Novembro 2019";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0095<br />Reset da ECU SIM 32 (Clio, Logan e Sandero)`;
+revCarga = `Rev. 3`;
+dataManual = `Novembro 2019`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,92 +18,100 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Renault",
-model: "Clio II 1.0",
-years: "2005 a 2011"
+manufacturer: `Renault`,
+model: `Clio II 1.0`,
+years: `2005 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Sandero 1.0",
-years: "2008 a 2011"
+manufacturer: `Renault`,
+model: `Sandero 1.0`,
+years: `2008 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Sandero 1.6",
-years: "2008 a 2011"
+manufacturer: `Renault`,
+model: `Sandero 1.6`,
+years: `2008 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Logan 1.0",
-years: "2007 a 2011"
+manufacturer: `Renault`,
+model: `Logan 1.0`,
+years: `2007 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Logan 1.6",
-years: "2007 a 2011"
+manufacturer: `Renault`,
+model: `Logan 1.6`,
+years: `2007 a 2011`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "Identificando e desmontando a ECU SIM 32:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0095 SIM 32/Identificando e desmontando a ECU SIM 32.jpg"},
+{title: `Identificando e desmontando a ECU SIM 32:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0095 SIM 32/Identificando e desmontando a ECU SIM 32.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Utilize uma chave de fenda para soltar as travas da ECU.", 
-image: "/images/Funções Específicas/OBD0095 SIM 32/Desmontando a ECU SIM 32.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: ``},
 
-{title: "", 
-description: "", 
-ballon: "Com o auxílio de uma chave de fenda, faça uma alavanca para ter acesso à placa da ECU.", 
-image: "/images/Funções Específicas/OBD0095 SIM 32/Desmontando a ECU SIM 32 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: ``},
 
-{title: "Localizando e conectando a pinça na memória 95160:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0095 SIM 32/Localizando e conectando a pinça na memória 95160.jpg"},
+{title: `Localizando e conectando a pinça na memória 95160:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0095 SIM 32/Localizando e conectando a pinça na memória 95160.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O pino 1 da pinça deve coincidir com o pino 1 da memória.", 
-image: "/images/Funções Específicas/OBD0095 SIM 32/Localizando e conectando a pinça na memória 95160 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O pino 1 da pinça deve coincidir com o pino 1 da memória.`, 
+image: `/images/Funções Específicas/OBD0095 SIM 32/Localizando e conectando a pinça na memória 95160 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça conectada na memória.", 
-image: "/images/Funções Específicas/OBD0095 SIM 32/Conectando a pinça na memória 95160 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: ``},
 
-{title: "Todos os acessórios conectados:", 
-description: "Atenção<br />Não inverter a pinça, conecte a pinça com cuidado para não causar danos à mesma e nem a ECU.<br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0095 SIM 32/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: `Atenção<br />Não inverter a pinça, conecte a pinça com cuidado para não causar danos à mesma e nem a ECU.<br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0095 SIM 32/Todos os acessórios conectados.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o Reset da ECU:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>Renault`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Renault`, `>Sim 32`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Sim 32`, `>Resetar?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -148,7 +156,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`Conferir bom estado da ECU e da memória,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,``,]
 },
-
 { label: `Pinca invertida!`,
 screens: [
 `&nbsp;`,
@@ -161,7 +168,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória.`,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,

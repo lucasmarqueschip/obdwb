@@ -1,210 +1,215 @@
 //Capa
-nomeCarga = "Geração de Transponder GM IMMO 5";
-revCarga = "Rev. 6";
-dataManual = "Dezembro 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0134<br />Geração de Transponder GM IMMO 5`;
+revCarga = `Rev. 6`;
+dataManual = `Dezembro 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
 introSubtitle = `Esta carga realiza as seguintes funções:`;
 lstFunc = [
-`Gerar até 8 chaves para o veículos da marca GM com sistema IMMO5.`,
-`A programação de chaves é acumulativa, ou seja, a chave programada no BC não altera as já existentes ao sistema, até completar 8 chaves.`,
-`<obs>`,
-`Observação: Os veículos abaixo podem possuir três modelos diferentes de BC's (com memória 25160, 95320 e 24C16), esta carga abrange os três modelos.`,
+`Gerar até 8 chaves para o veículos da marca GM com sistema IMMO5.<br/>A programação de chaves é acumulativa, ou seja, a chave programada no BC não altera as já existentes ao sistema, até completar 8 chaves.<br/><obs><font color="red">Observação:</font><br/> - Os veículos abaixo podem possuir três modelos diferentes de BC's (com memória 25160, 95320 e 24C16), esta carga abrange os três modelos.<br/> - Para programar chave com telecomando, utilizar a carga OBD0130.`,
 
 ];
 introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Camaro 6.2 2SS Coupé V8",
-years: "2011 a 2011"
+manufacturer: `GM`,
+model: `Camaro 6.2 2SS Coupé V8`,
+years: `2011 a 2011`
 },
 {
-manufacturer: "GM",
-model: "Cobalt 1.4",
-years: "2011 a 2015"
+manufacturer: `GM`,
+model: `Cobalt 1.4`,
+years: `2011 a 2015`
 },
 {
-manufacturer: "GM",
-model: "Cobalt 1.8",
-years: "2011 a 2018"
+manufacturer: `GM`,
+model: `Cobalt 1.8`,
+years: `2011 a 2018`
 },
 {
-manufacturer: "GM",
-model: "Cruze 1.8",
-years: "2011 a 2013"
+manufacturer: `GM`,
+model: `Cruze 1.8`,
+years: `2011 a 2013`
 },
 {
-manufacturer: "GM",
-model: "Onix 1.0",
-years: "2012 a 2015"
+manufacturer: `GM`,
+model: `Onix 1.0`,
+years: `2012 a 2015`
 },
 {
-manufacturer: "GM",
-model: "Onix 1.4",
-years: "2012 a 2015"
+manufacturer: `GM`,
+model: `Onix 1.4`,
+years: `2012 a 2015`
 },
 {
-manufacturer: "GM",
-model: "Sonic 1.6",
-years: "2012 a 2013"
+manufacturer: `GM`,
+model: `Sonic 1.6`,
+years: `2012 a 2013`
 },
 {
-manufacturer: "GM",
-model: "Spin 1.8",
-years: "2012 a 2013"
+manufacturer: `GM`,
+model: `Spin 1.8`,
+years: `2012 a 2013`
 },
 {
-manufacturer: "GM",
-model: "S10 2.4 Flex",
-years: "2012 a 2013"
+manufacturer: `GM`,
+model: `S10 2.4 Flex`,
+years: `2012 a 2013`
 },
 {
-manufacturer: "GM",
-model: "S10 2.8 Diesel",
-years: "2012 a 2013"
+manufacturer: `GM`,
+model: `S10 2.8 Diesel`,
+years: `2012 a 2013`
 },
 {
-manufacturer: "GM",
-model: "Tracker 1.8",
-years: "2014 a 2014"
+manufacturer: `GM`,
+model: `Tracker 1.8`,
+years: `2014 a 2014`
 },
 {
-manufacturer: "GM",
-model: "TrailBlazer 2.8 Diesel",
-years: "2013 a 2013"
+manufacturer: `GM`,
+model: `TrailBlazer 2.8 Diesel`,
+years: `2013 a 2013`
 },
 {
-manufacturer: "GM",
-model: "TrailBlazer 3.6 Gasolina",
-years: "2013 a 2013"
+manufacturer: `GM`,
+model: `TrailBlazer 3.6 Gasolina`,
+years: `2013 a 2013`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Para os veículos Agile e Montana (Imob4) até 2012, utilize o transponder PCF7936 (ID46) (Virgem).", 
-image: "/images/Transponders/PCF7936 (ID46) Crypto 2 virgem.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Para o sistema Imob4 utilize transponder PCF7936 (ID46) virgem.`, 
+image: `/images/Transponders/PCF7936 (ID46) Crypto 2 virgem.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
-image: "/images/Acessórios/Modulo de Transponder.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.`, 
+image: `/images/Acessórios/Modulo de Transponder.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.", 
-image: "/images/Acessórios/Cabo MCU.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.`, 
+image: `/images/Acessórios/Cabo MCU.jpg`},
 
-{title: "Posicionamento do transponder no módulo de transponder:", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg"},
+{title: `Posicionamento do transponder no módulo de transponder:`, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg`},
 
-{title: "Localizando o BC do veículo:", 
-description: "O BC do veículo Onix, Spin, Sonic, Cobalt, TrailBlazer, Tracker e S10 fica localizado na área A5.<br />O BC do veículo Camaro está localizado na área C5.<br />O BC do veículo Cruze está localizado na área F6.<br /><br /><br /><br /><br /><br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A5-C5-F6.jpg"},
+{title: `Localizando o BC do veículo:`, 
+description: `O BC do veículo Onix, Spin, Sonic, Cobalt, TrailBlazer, Tracker e S10 fica localizado na área A5.<br />O BC do veículo Camaro está localizado na área C5.<br />O BC do veículo Cruze está localizado na área F6.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5-C5-F6.jpg`},
 
-{title: "Identificando o BC com memória 25160:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 25160/Identificando o BC com memória 25160.jpg"},
+{title: `Identificando o BC com memória 25160:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 25160/Identificando o BC com memória 25160.jpg`},
 
-{title: "Identificando a memória 25160:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 25160/Identificando a memória 25160.jpg"},
+{title: `Identificando a memória 25160:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 25160/Identificando a memória 25160.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "1. Conecte o módulo de transponder ao OBDMap,<br />2. Conecte a fonte de alimentação ao módulo de transponder,<br />3. Conecte a pinça ao OBDMap,<br />4. Conecte a pinça na memória.<br /><br />Após todos os acessórios conectados, siga os passos no visor do OBDMap (página 15).<br /><br /><br /><br /><br /><br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 25160/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: `1. Conecte o módulo de transponder ao OBDMap,<br />2. Conecte a fonte de alimentação ao módulo de transponder,<br />3. Conecte a pinça ao OBDMap,<br />4. Conecte a pinça na memória.<br /><br />Após todos os acessórios conectados, siga os passos no visor do OBDMap (página 15).`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 25160/Todos os acessórios conectados.jpg`},
 
-{title: "Identificando o BC com memória 24C16:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 24C16/Identificando o BC com memória 24C16.jpg"},
+{title: `Identificando o BC com memória 24C16:`, 
+description: ``, 
+ballon: ``, 
+image: ``},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 24C16/Identificando o BC com memória 24C16 - modelo 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 24C16/Identificando o BC com memória 24C16 - modelo 2.jpg`},
 
-{title: "Identificando a memória 24C16:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 24C16/Identificando a memória 24C16.jpg"},
+{title: `Identificando a memória 24C16:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 24C16/Identificando a memória 24C16.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O pino 1 da pinça deve coincidir com o pino 1 da memória.", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 24C16/Conectando a memória 24C16.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O pino 1 da pinça deve coincidir com o pino 1 da memória.`, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 24C16/Conectando a memória 24C16.jpg`},
 
-{title: "Todos os acessorios conectados:", 
-description: "1. Conecte o módulo de transponder ao OBDMap,<br />2. Conecte a fonte de alimentação ao módulo de transponder,<br />3. Conecte a pinça ao OBDMap,<br />4. Conecte a pinça na memória.<br /><br />Após todos os acessórios conectados, siga os passos no visor do OBDMap (página 15).<br /><br /><br /><br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 24C16/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessorios conectados:`, 
+description: `1. Conecte o módulo de transponder ao OBDMap,<br />2. Conecte a fonte de alimentação ao módulo de transponder,<br />3. Conecte a pinça ao OBDMap,<br />4. Conecte a pinça na memória.<br /><br />Após todos os acessórios conectados, siga os passos no visor do OBDMap (página 15).`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 24C16/Todos os acessórios conectados.jpg`},
 
-{title: "Identificando o BC com memória 95320:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando o BC 95320.jpg"},
+{title: `Identificando o BC com memória 95320:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando o BC 95320.jpg`},
 
-{title: "Identificando a memória 95320:", 
-description: "Observação: Este BC somente pode ser conectado através do cabo MCU.<br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando a memória 95320.jpg"},
+{title: `Identificando a memória 95320:`, 
+description: `Observação: Este BC somente pode ser conectado através do cabo MCU.`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando a memória 95320.jpg`},
 
-{title: "Localizando os pontos de soldagem do cabo MCU na memória 95320", 
-description: "", 
-ballon: "Visualização dos pontos a serem soldados.", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando o ponto de soldagem 95320.jpg"},
+{title: `Localizando os pontos de soldagem do cabo MCU na memória 95320`, 
+description: ``, 
+ballon: `Visualização dos pontos a serem soldados.`, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando o ponto de soldagem 95320.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Identificando os pontos a serem soldados os fios do cabo MCU:<br />1=> Fio Vermelho<br />2=> Fio Amarelo<br />3=> Fio Verde<br />4=> Fio Azul<br />5=> Fio Cinza<br />6=> Fio Preto", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando o ponto de soldagem 95320 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Identificando os pontos a serem soldados os fios do cabo MCU:<br />1=> Fio Vermelho<br />2=> Fio Amarelo<br />3=> Fio Verde<br />4=> Fio Azul<br />5=> Fio Cinza<br />6=> Fio Preto`, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando o ponto de soldagem 95320 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Soldados os fios do cabo MCU no BC.", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando o ponto de soldagem 95320 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Soldados os fios do cabo MCU no BC.`, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Identificando o ponto de soldagem 95320 3.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "1. Conecte o módulo de transponder ao OBDMap,<br />2. Conecte a fonte de alimentação ao módulo de transponder,<br />3. Conecte o cabo MCU ao OBDMap,<br />4. Conecte o cabo MCU no BC.<br /><br />Após todos os acessórios conectados, siga os passos no visor do OBDMap (Página 15).", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: `1. Conecte o módulo de transponder ao OBDMap,<br />2. Conecte a fonte de alimentação ao módulo de transponder,<br />3. Conecte o cabo MCU ao OBDMap,<br />4. Conecte o cabo MCU no BC.<br /><br />Após todos os acessórios conectados, siga os passos no visor do OBDMap (Página 15).`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0134 Geração de transponders GM IMMO5/Memória 95320/Todos os acessórios conectados.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -216,15 +221,109 @@ screens: [
 {lines: [`Chaves`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob 5`], help: `Tecle OK`, menu: 1000},
 {lines: [`Geração de transponders`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`Conecte&nbsp;a&nbsp;pinça`,
+`na&nbsp;memória&nbsp;24C16`,
+`Tecle&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`LENDO...`,
+`AGUARDE...`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`CHAVES&nbsp;`,
+`PROGRAMADAS:&nbsp;*/*`,
+`OK&nbsp;para&nbsp;prosseguir`,
+`<br />`,
+],
+help: `Mostra a quantidade de chaves programadas no BC.`
+},
+{lines: [
+`Deseja&nbsp;manter&nbsp;as`,
+`chaves&nbsp;já`,
+`programadas?`,
+`(X)NAO&nbsp;&nbsp;&nbsp;(OK)SIM`,
+],
+help: `Se desejar apagar as chaves já existentes tecle (X) NÃO e se desejar
+mantê-las funcionando no veículo tecle (OK) SIM.`
+},
+{lines: [
+`Insira&nbsp;transponder`,
+`PCF7936&nbsp;virgem`,
+`no&nbsp;módulo`,
+`e&nbsp;tecle&nbsp;&lt;OK&gt;`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...&nbsp;&nbsp;&nbsp;1/3`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...&nbsp;&nbsp;&nbsp;2/3`,
+`<br />`,
+`<br />`,
+],
+help: `A geração foi iniciada, durante as
+três etapas não retire o transponder do
+módulo. O tempo do processo é de
+aproximadamente 1 minuto.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...&nbsp;&nbsp;&nbsp;3/3`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Programacao`,
+`Concluida!`,
+`<br />`,
+],
+help: `A geração do transponder foi realizada com sucesso.`
+},
+{lines: [
+`Gerar&nbsp;outra`,
+`chave?`,
+`OK&nbsp;-&nbsp;Programar`,
+`VOLTA&nbsp;-&nbsp;Sair`,
+],
+help: `Para gerar mais transponders tecle OK
+e volte ao passo 7, ou tecle VOLTA para
+finalizar.`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Imob. Lotado! OK p/ prosseguir`,
+othersMessage = [
+{ label: `Imob. Lotado! OK p/ prosseguir`,
 screens: [
 `&nbsp;`,
-`&nbsp;Imob.&nbsp;Lotado!`,
-`OK&nbsp;p/&nbsp;prosseguir`,
+`Imobilizador&nbsp;Lotado!`,
+`OK&nbsp;para&nbsp;prosseguir`,
 `<br />`,
 ],
 causes: [
@@ -232,25 +331,23 @@ causes: [
 solutions: [
 ` `,]
 },
-
 { label: `Apagar as chaves ja programadas ao imobilizador? (X)NAO (OK)SIM`,
 screens: [
 `Apagar&nbsp;as&nbsp;chaves`,
-`&nbsp;ja&nbsp;programadas`,
+`já&nbsp;programadas`,
 `ao&nbsp;imobilizador?`,
-`(X)NAO&nbsp;&nbsp;&nbsp;(OK)SIM`,
+`(X)NÃO&nbsp;&nbsp;&nbsp;(OK)SIM`,
 ],
 causes: [
 `O imobilizador atingiu o numero máximo de 8 chaves programadas. Para apagar todas as chaves e assim permitir a adição de novas chaves tecle (OK) SIM, se deseja não apagar as chaves tecle (X) NÃO.`,],
 solutions: [
 ]
 },
-
 { label: `Quer realmente, apagar as chaves ja programadas? (X)NAO (OK)SIM`,
 screens: [
 `Quer&nbsp;realmente,`,
 `apagar&nbsp;as&nbsp;chaves`,
-`ja&nbsp;programadas?`,
+`já&nbsp;programadas?`,
 `(X)NAO&nbsp;&nbsp;(OK)SIM`,
 ],
 causes: [
@@ -258,12 +355,11 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Apagando Chaves! Aguarde...`,
 screens: [
 `&nbsp;`,
 `Apagando&nbsp;Chaves!`,
-`&nbsp;&nbsp;&nbsp;Aguarde...`,
+`Aguarde...`,
 `<br />`,
 ],
 causes: [
@@ -271,72 +367,54 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
 `Curto!`,
-`&nbsp;&nbsp;Verifique...`,
+`Verifique...`,
 `<br />`,
 ],
 causes: [
 `Mau contato na pinça com a memória,`,`Cabo MCU não soldado corretamente,`,`Curto entre os fios do cabo MCU,`,`BC com problema.`,],
 solutions: [
-`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostarse aos terminais correspondentes da memória,`,`Conferir a correta soldagem do cabo MCU.`,`Conferir bom estado do BC.`,``,]
+`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostarse aos terminais correspondentes da memória,`,`Conferir a correta soldagem do cabo MCU.`,`Conferir bom estado do BC.`,]
 },
-
 { label: `Pinca invertida! Verifique...`,
 screens: [
 `&nbsp;`,
-`Pinca&nbsp;invertida!`,
-`&nbsp;&nbsp;Verifique...`,
+`Pinça&nbsp;invertida!`,
+`Verifique...`,
 `<br />`,
 ],
 causes: [
 `A pinça realmente foi conectada invertida na memória, ou seja, o pino 1 da pinça não coincide com o pino 1 da memória (o pino 1 fica do lado vermelho do cabo).`,],
 solutions: [
-`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória.`,``,]
+`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória.`,]
 },
-
-{ label: `Transponder nao Encontrado!`,
-screens: [
-`&nbsp;`,
-`Transponder&nbsp;nao`,
-`Encontrado!`,
-`<br />`,
-],
-causes: [
-`O transponder não está posicionado corretamente no Módulo de Transponder,`,`O transponder foi retirado do Módulo de Transponder durante o procedimento de gravação,`,`Mal contato no Módulo de Transponder com o OBDMap,`,`O transponder utilizado não é o PCF7936.`,],
-solutions: [
-`Conferir a correta posição do transponder no Módulo de Transponder,`,`Conferir o transponder PCF7936. Pode-se utilizar a carga do Módulo de Transponder para identificar o transponder,`,`Conferir se os parafusos que prendem o Módulo de Transponder no OBDMap estão bem fixos.`,``,]
-},
-
 { label: `Transponder Bloqueado!`,
 screens: [
 `&nbsp;`,
-`Transponder`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bloqueado!`,
+`Transponder&nbsp;bloqueado!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+causes: [
+` `,],
+solutions: [
+` `,]
+},
+{ label: `Use transponder PCF7936 virgem!`,
+screens: [
+`&nbsp;`,
+`Use&nbsp;transponder&nbsp;PCF7936&nbsp;virgem!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [
 `O transponder já se encontra programado e travado.`,],
 solutions: [
-`Utilize um transponder PCF7936 virgem.`,]
+`Utilize o transponder PCF7936 virgem.`,]
 },
-
-{ label: `Use transponder PCF7936 virgem!`,
-screens: [
-`&nbsp;`,
-`Use&nbsp;transponder`,
-`&nbsp;PCF7936&nbsp;virgem!`,
-`<br />`,
-],
-causes: [
-],
-solutions: [
-]
-},
-
 { label: `Erro na leitura do transponder!`,
 screens: [
 `&nbsp;`,
@@ -349,25 +427,23 @@ causes: [
 solutions: [
 ``,]
 },
-
 { label: `Erro! O transp. pode estar em modo crypto ou em modo password`,
 screens: [
-`Erro!&nbsp;O&nbsp;transp.&nbsp;`,
-`pode&nbsp;estar&nbsp;em&nbsp;&nbsp;&nbsp;`,
-`modo&nbsp;crypto&nbsp;ou&nbsp;`,
+`Erro!&nbsp;O&nbsp;transponder&nbsp;pode&nbsp;`,
+`estar&nbsp;em&nbsp;modo&nbsp;crypto&nbsp;ou&nbsp;`,
 `em&nbsp;modo&nbsp;password`,
+`<br />`,
 ],
 causes: [
-`O transponder não pode ser programado, pois se encontra bloqueado ou em uma codificação diferente. `,``,``,],
+`O transponder não pode ser programado, pois se encontra bloqueado ou em uma codificação diferente. `,],
 solutions: [
 `Insira o transponder PCF7936 virgem e reinicie o procedimento.`,]
 },
-
 { label: `Erro na gravacao do transponder!`,
 screens: [
-`&nbsp;`,
 `Erro&nbsp;na&nbsp;gravacao`,
 `do&nbsp;transponder!`,
+`&lt;OK&gt;`,
 `<br />`,
 ],
 causes: [
@@ -375,12 +451,11 @@ causes: [
 solutions: [
 `Conferir a correta posição do transponder no Módulo de Transponder,`,`Conferir o transponder PCF7936. Pode-se utilizar a carga do Módulo de Transponder para identificar o transponder,`,`Conferir se os parafusos que prendem o Módulo de Transponder no OBDMap estão bem fixos.`,]
 },
-
 { label: `ERRO na leitura do BCM!`,
 screens: [
 `&nbsp;`,
 `ERRO&nbsp;na&nbsp;leitura`,
-`&nbsp;&nbsp;&nbsp;&nbsp;do&nbsp;BCM!`,
+`do&nbsp;BCM!`,
 `<br />`,
 ],
 causes: [
@@ -388,12 +463,23 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostarse aos terminais  correspondentes da memória,`,`Conferir a correta soldagem do cabo MCU.`,`Conferir se os parafusos que prendem a pinça ou o cabo MCU no OBDMap estão bem fixos,`,`Conferir bom estado do BC,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,`Verificar acessório utilizado para cada tipo de BC, pinça ou MCU.`,]
 },
-
+{ label: `Transponder nao Encontrado!`,
+screens: [
+`Transponder&nbsp;nao`,
+`Encontrado!`,
+`&lt;OK&gt;`,
+`<br />`,
+],
+causes: [
+`O transponder não está posicionado corretamente no Módulo de Transponder,`,`O transponder foi retirado do Módulo de Transponder durante o procedimento de gravação,`,`Mal contato no Módulo de Transponder com o OBDMap,`,`O transponder utilizado não é o PCF7936.`,],
+solutions: [
+`Conferir a correta posição do transponder no Módulo de Transponder,`,`Conferir o transponder PCF7936. Pode-se utilizar a carga do Módulo de Transponder para identificar o transponder,`,`Conferir se os parafusos que prendem o Módulo de Transponder no OBDMap estão bem fixos.`,]
+},
 { label: `Chave ja esta programada!`,
 screens: [
 `&nbsp;`,
-`Chave&nbsp;ja&nbsp;esta`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;programada!`,
+`Chave&nbsp;ja&nbsp;programada&nbsp;no&nbsp;veiculo&nbsp;`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [

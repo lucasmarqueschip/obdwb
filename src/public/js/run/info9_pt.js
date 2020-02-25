@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de Chaves Tracker T19";
-revCarga = "Rev. 1";
-dataManual = "Fevereiro 2011";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0009<br />Programação de Chaves Tracker T19`;
+revCarga = `Rev. 1`;
+dataManual = `Fevereiro 2011`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -20,47 +20,55 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Tracker 2.0",
-years: "2002 a 2007"
+manufacturer: `GM`,
+model: `Tracker 2.0`,
+years: `2002 a 2007`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Utilize uma chave azul, T19 (ID 46) locado, dedicado Suzuki.", 
-image: "/images/Chaves e Telecomandos/Chave azul t19 GM.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize uma chave azul, T19 (ID 46) locado, dedicado Suzuki.`, 
+image: `/images/Chaves e Telecomandos/Chave azul t19 GM.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A2.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A2 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A2.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A2 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A2 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A2 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico do veículo fica localizada na área D6.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/D6.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico do veículo fica localizada na área D6.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/D6.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>Imob Tracker`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob Tracker`, `>Tipo 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -162,7 +170,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico, talvez esta carga tenha tido alterações.`,]
 },
-
 { label: `Erro na Programacao!`,
 screens: [
 `&nbsp;`,
@@ -175,7 +182,6 @@ causes: [
 solutions: [
 `Verifique a bateria do telecomando,`,`Verifique as antenas do sistema de aproximação no teto do veículo,`,`Coloque o telecomando no interior do veículo,`,`Coloque a chave na ignição,`,`Conferir se o transponder está programado ao veículo,`,`Refazer o procedimento novamente,`,`Conferir parte elétrica do carro, fusíveis, sensores de aproximação, etc.`,]
 },
-
 { label: `Erro no Transponder!`,
 screens: [
 `&nbsp;`,

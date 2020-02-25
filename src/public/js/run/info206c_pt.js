@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Dedicação do transponder ID4D-63 e ID4D DST+ para FORD";
-revCarga = "Rev. 4";
-dataManual = "Novembro 2019";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0206<br />Dedicação do transponder ID4D-63 e ID4D DST+ para FORD`;
+revCarga = `Rev. 4`;
+dataManual = `Novembro 2019`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -21,71 +21,79 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ford",
-model: "EcoSport 1.6",
-years: "2013 a 2015"
+manufacturer: `Ford`,
+model: `EcoSport 1.6`,
+years: `2013 a 2015`
 },
 {
-manufacturer: "Ford",
-model: "EcoSport 2.0",
-years: "2013 a 2015"
+manufacturer: `Ford`,
+model: `EcoSport 2.0`,
+years: `2013 a 2015`
 },
 {
-manufacturer: "Ford",
-model: "New Fiesta 1.6",
-years: "2013 a 2014"
+manufacturer: `Ford`,
+model: `New Fiesta 1.6`,
+years: `2013 a 2014`
 },
 {
-manufacturer: "Ford",
-model: "Ranger 3.2",
-years: "2013 a 2015"
+manufacturer: `Ford`,
+model: `Ranger 3.2`,
+years: `2013 a 2015`
 },
 {
-manufacturer: "Ford",
-model: "Transit 2.2",
-years: "2009 a 2013"
+manufacturer: `Ford`,
+model: `Transit 2.2`,
+years: `2009 a 2013`
 },
 ];
-applicationObs = createObs("Observações:", "Veja abaixo quais transponders os veículos citados utilizam.", undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observações:`, `Veja abaixo quais transponders os veículos citados utilizam.`, undefined);
+
 
 
 
 resources = [
-{title: "Observações", 
-description: "Certifique, utilizando a carga básica do módulo de transponder, na função Identificar, se o transponder já está preparado com os valores selecionados, mostrados nas telas abaixo. <br /><br />Caso o transponder não esteja com os valores 03, 80 e R: 000000 conforme mostrados abaixo, prossiga com a dedicação conforme os passos mostrados na página 6 ou página 7. <br />Se o transponder já estiver preparado, continue a programação via diagnose.", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0206 - Dedicar TPD 4D FORD/Observação TPD.jpg"},
+{title: `Observações`, 
+description: `Certifique, utilizando a carga básica do módulo de transponder, na função Identificar, se o transponder já está preparado com os valores selecionados, mostrados nas telas abaixo. <br /><br />Caso o transponder não esteja com os valores 03, 80 e R: 000000 conforme mostrados abaixo, prossiga com a dedicação conforme os passos mostrados na página 6 ou página 7. <br />Se o transponder já estiver preparado, continue a programação via diagnose.`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0206 - Dedicar TPD 4D FORD/Observação TPD.jpg`},
 
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "Para os carros Ecosport e New Fiesta, poderá ser usado os transponders: ID4D-63 especial ou ID4D DST + (80 Bits) Ford. <br />Para a Transit e Ranger, utilize o transponder: ID4D DST + (80 Bits) Ford.", 
-image: "/images/Transponders/ID4D63 especial_ID4D DST Ford.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Para os carros Ecosport e New Fiesta, poderá ser usado os transponders: ID4D-63 especial ou ID4D DST + (80 Bits) Ford. <br />Para a Transit e Ranger, utilize o transponder: ID4D DST + (80 Bits) Ford.`, 
+image: `/images/Transponders/ID4D63 especial_ID4D DST Ford.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
-image: "/images/Acessórios/Modulo de Transponder.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.`, 
+image: `/images/Acessórios/Modulo de Transponder.jpg`},
 
-{title: "Posicionamento do transponder no módulo de transponder:", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg"},
+{title: `Posicionamento do transponder no módulo de transponder:`, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -97,8 +105,52 @@ screens: [
 {lines: [`Transponders`], help: `Tecle OK`, menu: 1000},
 {lines: [`ID4D 63`], help: `Tecle OK`, menu: 1000},
 {lines: [`Dedicação de transponder`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Realizando dedicação do transponder ID4D DST+ (80 Bits) para Ford:`,
+{lines: [
+`&nbsp;`,
+`Selecione:&nbsp;`,
+`ID:**&nbsp;**********`,
+`<br />`,
+],
+help: `Aperte para cima e/ou para baixo para selecionar o transponder a ser dedicado:
+Aperte OK.`
+},
+{lines: [
+`&nbsp;`,
+`Use&nbsp;transponder&nbsp;ID4D-63&nbsp;especial`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Mostra o transponder a ser dedicado:
+ID:4D-63 especial.
+Aperte OK.`
+},
+{lines: [
+`&nbsp;`,
+`Insira&nbsp;o&nbsp;transponder`,
+`no&nbsp;módulo.`,
+`<br />`,
+],
+help: `Insira o transponder no módulo
+Aperte OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`CONCLUIDO!`,
+`<br />`,
+`<br />`,
+],
+help: `Programação concluída!`
+},
+]
+}, {title: `Realizando dedicação do transponder ID4D DST+ (80 Bits) para Ford:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
 {lines: [`Ford`], help: `Tecle OK`, menu: 1000},
@@ -106,15 +158,71 @@ screens: [
 {lines: [`Transponders`], help: `Tecle OK`, menu: 1000},
 {lines: [`ID4D 63`], help: `Tecle OK`, menu: 1000},
 {lines: [`Dedicação de transponder`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`&nbsp;`,
+`Selecione:&nbsp;`,
+`ID:**&nbsp;**********`,
+`<br />`,
+],
+help: `Aperte para cima e/ou para baixo para selecionar o transponder a ser dedicado:
+Aperte OK.`
+},
+{lines: [
+`&nbsp;`,
+`Use&nbsp;transponder`,
+`ID4D&nbsp;DST+&nbsp;80Bits`,
+`<br />`,
+],
+help: `Mostra o transponder a ser dedicado:
+Aperte OK.`
+},
+{lines: [
+`&nbsp;`,
+`Insira&nbsp;o&nbsp;transponder`,
+`no&nbsp;módulo.`,
+`<br />`,
+],
+help: `Insira o transponder no módulo.
+Aperte OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`CONCLUIDO!`,
+`<br />`,
+`<br />`,
+],
+help: `Insira o transponder no módulo.
+Aperte OK.`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Transponder Bloqueado!`,
+othersMessage = [
+{ label: `Transponder Bloqueado!`,
 screens: [
 `&nbsp;`,
-`Transponder`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bloqueado!`,
+`Transponder&nbsp;bloqueado!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+causes: [
+` `,],
+solutions: [
+` `,]
+},
+{ label: `Use Transponder ID4D Blank!`,
+screens: [
+`&nbsp;`,
+`Use&nbsp;Transponder`,
+`ID4D&nbsp;Blank!`,
 `<br />`,
 ],
 causes: [
@@ -122,7 +230,6 @@ causes: [
 solutions: [
 `Utilize um transponder ID4D-63 especial ou um ID4D DST+ (80 Bits) Ford virgem. `,]
 },
-
 { label: `Erro na leitura do transponder!`,
 screens: [
 `&nbsp;`,

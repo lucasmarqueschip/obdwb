@@ -1,0 +1,34 @@
+#lang-pt img, #lang-en img, #lang-es img {
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+}
+
+#lang-pt {
+  position: fixed;
+  top: 8px;
+  left: calc(100% - (3 * 32px) - (3 * 8px));
+  width: 32px;
+  height: 32px;
+  z-index: 20;
+}
+
+#lang-en {
+  position: fixed;
+  top: 8px;
+  left: calc(100% - (2 * 32px) - (2 * 8px));
+  width: 32px;
+  height: 32px;
+  z-index: 20;
+}
+
+#lang-es {
+  position: fixed;
+  top: 8px;
+  left: calc(100% - 32px - (1 * 8px));
+  width: 32px;
+  height: 32px;
+  z-index: 20;
+}
+
+/*# sourceMappingURL=lang.css.map */

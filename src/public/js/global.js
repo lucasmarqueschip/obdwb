@@ -1,11 +1,8 @@
-// navSumary = document.getElementById('navSumary');
-// navErrors = document.getElementById('navErrors');
 navSumary = document.getElementById('collapse1');
 navErrors = document.getElementById('collapse2');
 
-
-
-
+chSumary = document.getElementById('chSumary');
+chError = document.getElementById('chError');
 
 lblNomeCarga = document.getElementById('lblNomeCarga');
 lblRevCarga = document.getElementById('lblRevCarga');
@@ -45,8 +42,21 @@ nav; //usado na navegação pelas ancoras
 $(function () {
     $('a[href*="#"]:not([href="#"])').click(function () {
         var target = $(this.hash);
+        
         if (target.length) {
             $('html, body').animate({ scrollTop: target.offset().top - 200 }, 1000);
+
+            $(target)
+                .animate({ 'opacity': '0.3' }, 250)
+                .animate({ 'opacity': '1' }, 250)
+                .animate({ 'opacity': '0.3' }, 250)
+                .animate({ 'opacity': '1' }, 250)
+                .animate({ 'opacity': '0.3' }, 250)
+                .animate({ 'opacity': '1' }, 250)
+                .animate({ 'opacity': '0.3' }, 250)
+                .animate({ 'opacity': '1' }, 250)
+                .animate({ 'opacity': '0.3' }, 250)
+                .animate({ 'opacity': '1' }, 250);
             return false;
         }
     });
@@ -61,7 +71,7 @@ function createObs(title, description, imgPath) {
             res += `<div class="row"><div class="col fz-12">${description}</div></div>`;
         if (imgPath)
             res += `<div class="row text-center mt-2"><div class="col">
-                        <img class="img-fluid imgShad" src="${imgPath}" alt="Painel Ecosport">
+                        <img class="img-fluid imgShad" src="${imgPath}" alt="Info">
                     </div></div>`;
 
         return res;

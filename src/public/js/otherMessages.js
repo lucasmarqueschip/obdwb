@@ -14,14 +14,14 @@ othersMessage.forEach((message, i) => {
         s += `</div>`;
 
         if (message.causes.length > 0) {
-            s += `Causas Prováveis`;
+            s += lblCause;
             s += `<ul>`;
             message.causes.forEach(cause => s += `<li>${cause}</li>`);
             s += `</ul>`;
         }
 
         if (message.solutions.length > 0) {
-            s += `Soluções`;
+            s += lblSolution;
             s += `<ul>`;
             message.solutions.forEach(sol => s += `<li>${sol}</li>`);
             s += `</ul>`;
@@ -34,14 +34,14 @@ othersMessage.forEach((message, i) => {
         s += `</div>`;
 
         if (message.causes.length > 0) {
-            s += `Causas Prováveis`;
+            s += lblCause;
             s += `<ul>`;
             message.causes.forEach(cause => s += `<li>${cause}</li>`);
             s += `</ul>`;
         }
 
         if (message.solutions.length > 0) {
-            s += `Soluções`;
+            s += lblSolution;
             s += `<ul>`;
             message.solutions.forEach(sol => s += `<li>${sol}</li>`);
             s += `</ul>`;
@@ -51,3 +51,5 @@ othersMessage.forEach((message, i) => {
 });
 divOthersMessage.innerHTML = s;
 divLastMsg.innerHTML = lastMsg;
+chSumary.innerHTML = lblSummary;
+chError.innerHTML = lblErrorMessage;

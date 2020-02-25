@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de chaves de presença Toyota Keyless(Corolla, Yaris, Hilux, SW4, Camry)";
-revCarga = "Rev. 1";
-dataManual = "Agosto 2018";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0263<br />Programação de chaves de presença Toyota Keyless(Corolla, Yaris, Hilux, SW4, Camry)`;
+revCarga = `Rev. 1`;
+dataManual = `Agosto 2018`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -23,82 +23,90 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Toyota",
-model: "Corola 2.0",
-years: "2017 a 2019"
+manufacturer: `Toyota`,
+model: `Corola 2.0`,
+years: `2017 a 2019`
 },
 {
-manufacturer: "Toyota",
-model: "Yaris 1.3",
-years: "2018 a 2019"
+manufacturer: `Toyota`,
+model: `Yaris 1.3`,
+years: `2018 a 2019`
 },
 {
-manufacturer: "Toyota",
-model: "Yaris 1.5",
-years: "2018 a 2019"
+manufacturer: `Toyota`,
+model: `Yaris 1.5`,
+years: `2018 a 2019`
 },
 {
-manufacturer: "Toyota",
-model: "SW4 Flex 2.7",
-years: "2016 a 2019"
+manufacturer: `Toyota`,
+model: `SW4 Flex 2.7`,
+years: `2016 a 2019`
 },
 {
-manufacturer: "Toyota",
-model: "SW4 Diesel 2.8",
-years: "2016 a 2019"
+manufacturer: `Toyota`,
+model: `SW4 Diesel 2.8`,
+years: `2016 a 2019`
 },
 {
-manufacturer: "Toyota",
-model: "Hilux Diesel SRX 2.8",
-years: "2018 a 2018"
+manufacturer: `Toyota`,
+model: `Hilux Diesel SRX 2.8`,
+years: `2018 a 2018`
 },
 {
-manufacturer: "Toyota",
-model: "Camry V6 3.5",
-years: "2010 a 2010"
+manufacturer: `Toyota`,
+model: `Camry V6 3.5`,
+years: `2010 a 2010`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "Utilize transponder PCF7936 (ID46) virgem.", 
-image: "/images/Transponders/PCF7936 Philips Virgem.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Utilize transponder PCF7936 (ID46) virgem.`, 
+image: `/images/Transponders/PCF7936 Philips Virgem.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o teste de Compatibilidade`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Compativel?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -115,7 +123,7 @@ help: ``
 }, {title: `Realizando a programação da chave de presença`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -132,7 +140,7 @@ help: ``
 }, {title: `Realizando o teste de Compatibilidade`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Compativel?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -149,7 +157,7 @@ help: ``
 }, {title: `Realizando a programação da chave de presença`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -162,19 +170,11 @@ screens: [
 ],
 help: ``
 },
-{lines: [
-`&nbsp;`,
-`Apagando&nbsp;Falhas`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Passadas`,
-`<br />`,
-],
-help: ``
-},
 ]
 }, {title: `Realizando o teste de Compatibilidade`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Compativel?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -191,16 +191,16 @@ help: ``
 }, {title: `Realizando a programação da chave de presença`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aperte`,
-`&nbsp;&nbsp;&nbsp;start/stop`,
-`&nbsp;para&nbsp;desligar`,
-`&nbsp;&nbsp;ignicao&nbsp;&lt;OK&gt;`,
+`&nbsp;`,
+`Apagando&nbsp;Falhas`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Passadas`,
+`<br />`,
 ],
 help: ``
 },
@@ -208,7 +208,7 @@ help: ``
 }, {title: `Realizando o teste de Compatibilidade`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Compativel?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -225,7 +225,7 @@ help: ``
 }, {title: `Realizando a programação da chave de presença`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -233,7 +233,7 @@ screens: [
 {lines: [
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aperte`,
 `&nbsp;&nbsp;&nbsp;start/stop`,
-`&nbsp;&nbsp;&nbsp;para&nbsp;ligar`,
+`&nbsp;para&nbsp;desligar`,
 `&nbsp;&nbsp;ignicao&nbsp;&lt;OK&gt;`,
 ],
 help: ``
@@ -242,7 +242,7 @@ help: ``
 }, {title: `Realizando o teste de Compatibilidade`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Compativel?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -259,11 +259,19 @@ help: `Veículo compativel com o software!`
 }, {title: `Realizando a programação da chave de presença`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
+{lines: [
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aperte`,
+`&nbsp;&nbsp;&nbsp;start/stop`,
+`&nbsp;&nbsp;&nbsp;para&nbsp;ligar`,
+`&nbsp;&nbsp;ignicao&nbsp;&lt;OK&gt;`,
+],
+help: ``
+},
 {lines: [
 `&nbsp;`,
 `Aguarde...`,
@@ -347,33 +355,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A3,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
-{ label: `Tempo Excedido! `,
-screens: [
-`Tempo&nbsp;Excedido!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`Indica que o tempo para ligar ou desligar a ignição foi excedido.`,``,],
-solutions: [
-`Repita o procedimento.`,]
-},
-
-{ label: `Acesso Negado! ** `,
-screens: [
-`&nbsp;Acesso&nbsp;Negado!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`Imobilizador não compatível com a aplicação.`,``,],
-solutions: [
-`Verificar aplicação.`,``,]
-},
-
 { label: `Erro na Programacao! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Erro&nbsp;na`,
@@ -386,7 +367,30 @@ causes: [
 solutions: [
 `Verifique a bateria do telecomando,`,`Verifique as antenas do sistema de aproximação no teto do veículo,`,`Conferir se o transponder está programado ao veículo,`,`Refazer o procedimento novamente,`,`Conferir parte elétrica do carro, fusíveis, sensores de aproximação, etc.`,`Utilizar um equipamento de diagnostico`,``,]
 },
-
+{ label: `Tempo Excedido! `,
+screens: [
+`Tempo&nbsp;Excedido!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`Indica que o tempo para ligar ou desligar a ignição foi excedido.`,``,],
+solutions: [
+`Repita o procedimento.`,]
+},
+{ label: `Acesso Negado! ** `,
+screens: [
+`&nbsp;Acesso&nbsp;Negado!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`Imobilizador não compatível com a aplicação.`,``,],
+solutions: [
+`Verificar aplicação.`,``,]
+},
 { label: `Veiculo incompativel! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Veiculo`,
@@ -399,20 +403,6 @@ causes: [
 solutions: [
 `Caso o veículo esteja nos anos de aplicação, contate o suporte`,`Caso não esteja, fique atento as próximas atualizações `,]
 },
-
-{ label: `Veiculo incompativel! `,
-screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;Veiculo`,
-`&nbsp;incompativel!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`O sistema do veículo está fora da aplicação, mesmo se o modelo estiver na faixa de anos`,`A função pode estar desatualizada`,],
-solutions: [
-`Caso o veículo esteja nos anos de aplicação, contate o suporte`,`Caso não esteja, fique atento as próximas atualizações `,``,]
-},
-
 { label: `Erro ao apagar chaves! `,
 screens: [
 `&nbsp;Erro&nbsp;ao&nbsp;apagar`,
@@ -425,7 +415,6 @@ causes: [
 solutions: [
 `Verifique a bateria do telecomando,`,`Verifique as antenas do sistema de aproximação no teto do veículo,`,`Conferir se o transponder está programado ao veículo,`,`Refazer o procedimento novamente,`,`Conferir parte elétrica do carro, fusíveis, sensores de aproximação, etc.`,`Utilizar um equipamento de diagnostico`,``,]
 },
-
 { label: `Erro interno codigo **`,
 screens: [
 `&nbsp;`,
@@ -438,7 +427,6 @@ causes: [
 solutions: [
 `Confira a Rede CAN do veículo`,`Confira parte elétrica, fusíveis, etc`,`Scaneie os erros apresentados no veículos, principalmente nos módulos de ECU, carroceria/conforto, ABS, airbag, painel e imobilizador, caso o veículo possua`,`Repita o procedimento`,`Caso o erro persista, informe ao suporte as questões acima, bem como o código do "Erro Interno"`,]
 },
-
 { label: `Use o cabo CAN ou adap. A3 CAN!`,
 screens: [
 `&nbsp;`,
@@ -451,7 +439,6 @@ causes: [
 solutions: [
 `Conecte o cabo universal e o adaptador A3 ou o cabo CAN e repita o procedimento`,]
 },
-
 { label: `Chaves Apagadas! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chaves`,

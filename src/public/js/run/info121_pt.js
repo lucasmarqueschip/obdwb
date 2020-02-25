@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Leitura de Senha Calculador Master 2 Criptografado";
-revCarga = "Rev. 1";
-dataManual = "Julho 2012";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0121<br />Leitura de Senha Calculador Master 2 Criptografado`;
+revCarga = `Rev. 1`;
+dataManual = `Julho 2012`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,102 +18,110 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Renault",
-model: "Master 2.5",
-years: "2010 a 2012"
+manufacturer: `Renault`,
+model: `Master 2.5`,
+years: `2010 a 2012`
 },
 ];
-applicationObs = createObs("Observações:", "- Este módulo é encontrado nos veículos Master que possuem a chave idêntica a do veículo Clio II.", "- O calculador indicado nessa carga deve ser identificado exclusivamente pela sua placa que deve ser idêntico ao mostrado nas imagens na página 6.")
+applicationObs = ``;
+applicationObs += createObs(`Observações:`, `Este módulo é encontrado nos veículos Master que possuem a chave idêntica a do veículo Clio 2. <br />O calculador indicado nessa carga deve ser identificado exclusivamente pela sua placa que deve ser idêntico ao mostrado nas imagens na página 6.`, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Chave da Renault Master.", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Chave da Renault Master.jpg"},
+{title: `Chave utilizada:`, 
+description: ``, 
+ballon: `Chave da Renault Master.`, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Chave da Renault Master.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Transponder ID46 preparado para Renault (T25).", 
-image: "/images/Transponders/ID-46 - Renault.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Transponder ID46 preparado para Renault (T25).`, 
+image: `/images/Transponders/ID-46 - Renault.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.", 
-image: "/images/Acessórios/Cabo MCU.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.`, 
+image: `/images/Acessórios/Cabo MCU.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o cabo Universal + adaptador A1.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "Identificando e desmontando o calculador Master 2 criptografado", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Identificando o calculador Master 2 criptrografado.jpg"},
+{title: `Identificando e desmontando o calculador Master 2 criptografado`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Identificando o calculador Master 2 criptrografado.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Localizando as 6 travas que prendem a tampa do módulo.", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Desmontando o módulo.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Localizando as 6 travas que prendem a tampa do módulo.`, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Desmontando o módulo.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Com o auxílio de uma chave de fenda, solte as travas da caixa.", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Desmontando o módulo 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Com o auxílio de uma chave de fenda, solte as travas da caixa.`, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Desmontando o módulo 2.jpg`},
 
-{title: "Identificando a placa do calculador:", 
-description: "", 
-ballon: "Identificando a posição da memória na placa.", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Identificando a placa do calculador.jpg"},
+{title: `Identificando a placa do calculador:`, 
+description: ``, 
+ballon: `Identificando a posição da memória na placa.`, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Identificando a placa do calculador.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Memória 93C66.", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Memória 93C66.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Memória 93C66.`, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Memória 93C66.jpg`},
 
-{title: "Localizando os pontos de soldagem do cabo MCU:", 
-description: "", 
-ballon: "Localizando área de soldagem do cabo MCU.", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Localizando os pontos de soldagem do cabo MCU.jpg"},
+{title: `Localizando os pontos de soldagem do cabo MCU:`, 
+description: ``, 
+ballon: `Localizando área de soldagem do cabo MCU.`, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Localizando os pontos de soldagem do cabo MCU.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Identificando os pontos a serem soldados os fios do cabo MCU no módulo:<br />1 => Fio Amarelo<br />2 => Fio Roxo<br />3 => Fio Preto<br />4 => Fio Azul<br />5 => Fio Vermelho<br />6 => Fio Cinza", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Localizando os pontos de soldagem do cabo MCU 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Identificando os pontos a serem soldados os fios do cabo MCU no módulo:<br />1 => Fio Amarelo<br />2 => Fio Roxo<br />3 => Fio Preto<br />4 => Fio Azul<br />5 => Fio Vermelho<br />6 => Fio Cinza`, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Localizando os pontos de soldagem do cabo MCU 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Atenção: Não trocar as posições dos fios. Primeiro solde os fios no calculador, depois ligue o cabo MCU no OBDMap.", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Não inverter os fios.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Atenção: Não trocar as posições dos fios. Primeiro solde os fios no calculador, depois ligue o cabo MCU no OBDMap.`, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Não inverter os fios.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "Atenção:<br />Os fios que não estiverem sendo usados devem ser dobrados para trás como na foto, para que não tenham contato com a placa do módulo, evitando danos ao módulo e ao OBDMap.<br /><br /><br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: `Atenção:<br />Os fios que não estiverem sendo usados devem ser dobrados para trás como na foto, para que não tenham contato com a placa do módulo, evitando danos ao módulo e ao OBDMap.<br /><br /><br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0121 Leitura de senha calculador Master 2 criptografado/Todos os acessórios conectados.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico do Renault Master fica localizada na posição A4 da foto abaixo.<br />Conecte o cabo universal + adaptador A1 na tomada de diagnóstico do veículo.<br /><br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico do Renault Master fica localizada na posição A4 da foto abaixo.<br />Conecte o cabo universal + adaptador A1 na tomada de diagnóstico do veículo.<br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a leitura senha:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>Renault`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Renault`, `>Calc 2 Master`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Calc 2 Master`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -147,7 +155,7 @@ realizar a programação de chaves.`
 }, {title: `Realizando a programação de chaves com senha`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Renault`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Renault`, `>Calc 2 Master`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Calc 2 Master`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -240,7 +248,6 @@ causes: [
 solutions: [
 `Certificar que o arquivo da memória esteja gravado em organização 16 bits.`,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -253,7 +260,6 @@ causes: [
 solutions: [
 `Verificar a correta posição dos fios no módulo.`,]
 },
-
 { label: `Erro na leitura da memoria!`,
 screens: [
 `&nbsp;`,
@@ -266,7 +272,6 @@ causes: [
 solutions: [
 `Verificar a correta posição dos fios do módulo,`,`Verificar se os parafusos que prendem o cabo MCU no OBDMap estão bem fixos.`,]
 },
-
 { label: `Arquivo Invalido!`,
 screens: [
 `&nbsp;`,
@@ -279,7 +284,6 @@ causes: [
 solutions: [
 `O arquivo pode estar corrompido.`,]
 },
-
 { label: `Calculador Incompativel!`,
 screens: [
 `&nbsp;`,
@@ -292,7 +296,6 @@ causes: [
 solutions: [
 `Verifique a correta aplicação da carga.`,]
 },
-
 { label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
@@ -305,7 +308,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
 { label: `Senha Incorreta!`,
 screens: [
 `&nbsp;`,

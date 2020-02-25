@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de chaves Ford Pats 5 (Ranger 13-15)";
-revCarga = "Rev. 5";
-dataManual = "Outubro 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0202<br />Programação de chaves Ford Pats 5 (Ranger 13-15)`;
+revCarga = `Rev. 5`;
+dataManual = `Outubro 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,51 +18,59 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ford",
-model: "Ranger 2.2",
-years: "2013 a 2013"
+manufacturer: `Ford`,
+model: `Ranger 2.2`,
+years: `2013 a 2013`
 },
 {
-manufacturer: "Ford",
-model: "Ranger 2.5",
-years: "2013 a 2016"
+manufacturer: `Ford`,
+model: `Ranger 2.5`,
+years: `2013 a 2016`
 },
 {
-manufacturer: "Ford",
-model: "Ranger 3.2",
-years: "2013 a 2015"
+manufacturer: `Ford`,
+model: `Ranger 3.2`,
+years: `2013 a 2015`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "Utilize um transponder ID 4D63 DST+ dedicado para Ford.", 
-image: "/images/Transponders/ID 4D63 DST Dedicado para Ford.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Utilize um transponder ID 4D63 DST+ dedicado para Ford.`, 
+image: `/images/Transponders/ID 4D63 DST Dedicado para Ford.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Usado para realizar o procedimento via diagnóstico.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Usado para realizar o procedimento via diagnóstico.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Connect/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico fica localizada na posição A4.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico fica localizada na posição A4.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -75,19 +83,248 @@ screens: [
 {lines: [`Pats 5`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 2`], help: `Tecle OK`, menu: 1000},
 {lines: [`Apagar e Programar chaves`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Realizando a adição de novas chaves:`,
+{lines: [
+`&nbsp;`,
+`Selecione:`,
+`Programar&nbsp;Chaves`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`Todas&nbsp;as&nbsp;chaves&nbsp;serão&nbsp;perdidas!`,
+`&lt;OK&gt;&nbsp;Continuar`,
+`&lt;VOLTA&gt;&nbsp;Sair`,
+`<br />`,
+],
+help: `As chaves já programadas serão
+apagadas.`
+},
+{lines: [
+`São&nbsp;necessárias`,
+`2&nbsp;chaves&nbsp;para`,
+`realizar&nbsp;o`,
+`procedimento!`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Use&nbsp;transponder&nbsp;`,
+`ID4D&nbsp;DST+&nbsp;Ford`,
+`<br />`,
+],
+help: `Utilize um transponder ID 4D63 DST+
+dedicado para Ford.`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: `Pode ser que não tenha sido possível o
+acesso, sendo assim serão feitas mais
+algumas tentativas (Passo 18).`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;e&nbsp;ligue&nbsp;a`,
+`chave&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Insira&nbsp;e&nbsp;ligue&nbsp;a`,
+`próxima&nbsp;chave&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Insira e ligue a próxima chave a ser programada, e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;e&nbsp;ligue&nbsp;a`,
+`chave&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Número&nbsp;de&nbsp;Chaves`,
+`Programadas:&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Número de chaves atualmente
+programadas no veículo.`
+},
+{lines: [
+`&nbsp;`,
+`Procedimento&nbsp;Concluído!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `O procedimento foi concluído com
+sucesso. Desconecte o cabo da tomada
+de diagnose.`
+},
+{lines: [
+`&nbsp;`,
+`Tentativa&nbsp;**`,
+`&lt;OK&gt;`,
+`<br />`,
+],
+help: `Poderão ser feitas até 16 tentativas de
+acesso.`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;e&nbsp;ligue&nbsp;a`,
+`chave&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde&nbsp;*&nbsp;seg...`,
+`<br />`,
+`<br />`,
+],
+help: `Aguarde 10 segundos e retorne ao passo
+10.`
+},
+]
+}, {title: `Realizando a adição de novas chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-
-]},];
+{lines: [
+`&nbsp;`,
+`Selecione:`,
+`Adicionar&nbsp;Chaves`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Use&nbsp;transponder&nbsp;`,
+`ID4D&nbsp;DST+&nbsp;Ford`,
+`<br />`,
+],
+help: `Utilize um transponder ID 4D63 DST+
+dedicado para Ford.`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: `Pode ser que não tenha sido possível o
+acesso, sendo assim serão feitas mais
+algumas tentativas (Passo 13).`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;e&nbsp;ligue&nbsp;a`,
+`chave&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Número&nbsp;de&nbsp;Chaves`,
+`Programadas:&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Número de chaves atualmente
+programadas no veículo.`
+},
+{lines: [
+`&nbsp;`,
+`Procedimento&nbsp;Concluído!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `O procedimento foi concluído com
+sucesso. Desconecte o cabo da tomada
+de diagnose.`
+},
+{lines: [
+`&nbsp;`,
+`Tentativa&nbsp;**`,
+`&lt;OK&gt;`,
+`<br />`,
+],
+help: `Poderão ser feitas até 16 tentativas de
+acesso.`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;e&nbsp;ligue&nbsp;a`,
+`chave&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde`,
+`10&nbsp;segundos!`,
+`<br />`,
+],
+help: `Aguarde 10 segundos e retorne ao passo
+8.`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro de Comunicacao!`,
+othersMessage = [
+{ label: `Incode: ****** Outcode:`,
 screens: [
 `&nbsp;`,
-`Erro&nbsp;de&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Comunicacao!`,
+`Incode:&nbsp;******&nbsp;`,
+`Outcode:`,
+`<br />`,
+],
+causes: [
+`As tentativas de acesso ao veículo falharam.`,],
+solutions: [
+`É necessário contato com o suporte para obter o Outcode. OBS: Não se deve desligar a ignição nesse processo, pois o código será alterado.`,]
+},
+{ label: `Erro de Comunicacao!`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;de&nbsp;Comunicação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [
@@ -95,7 +332,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
 { label: `Erro no acesso!`,
 screens: [
 `&nbsp;`,
@@ -108,25 +344,23 @@ causes: [
 solutions: [
 ` Repita o procedimento.`,]
 },
-
 { label: `Acesso Negado Aguarde 5:00 min Para Repetir`,
 screens: [
-`Acesso&nbsp;Negado`,
-`Aguarde&nbsp;5:00&nbsp;min`,
-`Para&nbsp;Repetir`,
+`Acesso&nbsp;Negado!`,
+`**`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [
-`Não foi possível acessar o modo de programação do veículo.`,],
+` `,],
 solutions: [
-`Aguarde 5 minutos e repita o procedimento.`,``,]
+` `,]
 },
-
 { label: `Desconecte o OBDMap!!`,
 screens: [
 `&nbsp;`,
-`Desconecte&nbsp;o&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OBDMap!!`,
+`Desconecte&nbsp;o&nbsp;OBDMap!!`,
+`<br />`,
 `<br />`,
 ],
 causes: [
@@ -134,12 +368,11 @@ causes: [
 solutions: [
 `Aguarde 5 minutos e repita o procedimento.`,]
 },
-
 { label: `Veiculo fora da Aplicacao!`,
 screens: [
 `&nbsp;`,
-`Veiculo&nbsp;fora&nbsp;da&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aplicacao!`,
+`Veículo&nbsp;fora&nbsp;da&nbsp;`,
+`Aplicação!`,
 `<br />`,
 ],
 causes: [
@@ -147,12 +380,11 @@ causes: [
 solutions: [
 `Verificar aplicação.`,]
 },
-
 { label: `Erro na Programacao!`,
 screens: [
-`&nbsp;`,
 `Erro&nbsp;na`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Programacao!`,
+`Programação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [
@@ -160,12 +392,11 @@ causes: [
 solutions: [
 `Utilize um transponder compatível com o veículo.`,]
 },
-
 { label: `Erro no Transponder!`,
 screens: [
 `&nbsp;`,
-`Erro&nbsp;no`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Transponder!`,
+`Erro&nbsp;no&nbsp;Transponder!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [

@@ -8,7 +8,7 @@ if (obdmap) {
             s += `<div class="row fz-14 mt-0 ai-left">`;
             s += `<div class="col colScreen">`;
             s += `<div class="screenHead newPage">`;
-            s += `<div class="ballon ballon-small p-1">Passo ${i + 1}</div>`;
+            s += `<div class="ballon ballon-small p-1">${lblStep} ${i + 1}</div>`;
             s += `<div class="screen p-1 mx-2 mt-1 mb-0" id="s${nService}step${i}"><div>`;
             screen.lines.forEach(line => s += `<div class="screenIn">${line}</div>`);
             s += `</div></div></div>`;
@@ -18,14 +18,21 @@ if (obdmap) {
             if (screen.help !== '') s += `<div d-block><div class="ballon ballon-auto">${screen.help}</div></div>`;
             s += `</div>`;
             s += `</div>`;
-        });
+            if (screen.resource){
+                createResource(screen.resource.res, screen.resource.i);
+            }
+            });
     });
 } else {
     
     services.forEach((service, nService) => {
         let path = '';
         s += getServiceHeader(service, nService);
-        console.log(service.screens);
+        s += `<div class="row mt-1">`;
+        s += `<div class="col"><img class="imgShad" src="images/initialScreen.jpg" /></div></div>`
+
+        // console.log(service)
+
         service.screens.forEach((screen, i) => {
             let cssMenu = '';
             let cssMenuActive = '';
@@ -39,7 +46,7 @@ if (obdmap) {
             } else s += `<div class="row fz-14 ai-left mt-3">`;
 
             s += `<div class="col step mt-1">`;
-            s += `<div class="ballon ballon-small p-1 mt-2">Passo ${i + 1}</div>`;
+            s += `<div class="ballon ballon-small p-1 mt-2">${lblStep} ${i + 1}</div>`;
             s += `</div>`;
             s += `<div class="col screenCon${cssMenu} px-0 mt-2" id="s${nService}step${i}"><div>`;
             screen.lines.forEach((line, i2) => {
@@ -54,6 +61,11 @@ if (obdmap) {
             s += `</div>`;
             s += `</div>`;
             path += `${screen.lines[0]} &gt; `;
+
+            if (screen.resource){
+                createResource(screen.resource.res, screen.resource.i);
+            }
+
         });
     });
 }

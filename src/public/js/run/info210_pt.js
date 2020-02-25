@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de chaves de presença Hyundai Keyless1";
-revCarga = "Rev. 4";
-dataManual = "Outubro 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0210<br />Programação de chaves de presença Hyundai Keyless1`;
+revCarga = `Rev. 4`;
+dataManual = `Outubro 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,67 +18,75 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Hyundai",
-model: "Ix35",
-years: "2010 a 2017"
+manufacturer: `Hyundai`,
+model: `Ix35`,
+years: `2010 a 2017`
 },
 {
-manufacturer: "Hyundai",
-model: "Veloster",
-years: "2011 a 2013"
+manufacturer: `Hyundai`,
+model: `Veloster`,
+years: `2011 a 2013`
 },
 {
-manufacturer: "Hyundai",
-model: "Sonata",
-years: "2011 a 2013"
+manufacturer: `Hyundai`,
+model: `Sonata`,
+years: `2011 a 2013`
 },
 {
-manufacturer: "Hyundai",
-model: "Elantra",
-years: "2012 a 2013"
+manufacturer: `Hyundai`,
+model: `Elantra`,
+years: `2012 a 2013`
 },
 {
-manufacturer: "KIA",
-model: "Sportage 2.0",
-years: "2012 a "
+manufacturer: `KIA`,
+model: `Sportage 2.0`,
+years: `2012 a `
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Chave de presença utilizada", 
-description: "", 
-ballon: "", 
-image: "/images/Chaves e Telecomandos/keyless kia hyundai.jpg"},
+{title: `Chave de presença utilizada`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Chaves e Telecomandos/keyless kia hyundai.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo Universal + adaptador A1.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a leitura do número de chaves de presenças`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Hyundai`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Hyundai`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Num. de chaves`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -135,25 +143,25 @@ help: ``
 }, {title: `Realizando a programação das chaves de presenças Tipo 1 (Veículos ix35 e Sonata)`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Hyundai`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Hyundai`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Tipo 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 1`, `>Prog Proximity`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
-`&nbsp;`,
-`O&nbsp;veiculo&nbsp;podera`,
-`ficar&nbsp;bloqueado!`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
 `&nbsp;&nbsp;ATENCAO:&nbsp;Nao`,
 `&nbsp;insira&nbsp;a&nbsp;senha`,
 `errada&nbsp;mais&nbsp;que`,
 `&nbsp;&nbsp;&nbsp;&nbsp;3x.&nbsp;&lt;OK&gt;`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`O&nbsp;veiculo&nbsp;podera`,
+`ficar&nbsp;bloqueado!`,
+`<br />`,
 ],
 help: ``
 },
@@ -265,7 +273,7 @@ help: ``
 }, {title: `Realizando a programação das chaves de presenças Tipo 2 (Veículos Elantra e Veloster)`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Hyundai`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Hyundai`, `>Keyless 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Keyless 1`, `>Tipo 2`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -383,20 +391,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico`,``,]
 },
-
-{ label: `Senha Incorreta!`,
-screens: [
-`&nbsp;`,
-`Senha&nbsp;`,
-`&nbsp;&nbsp;Incorreta!`,
-`<br />`,
-],
-causes: [
-`A senha inserida está incorreta,`,`Veículo está com tempo de espera devido consecutivas tentativas com senhas erradas.`,``,``,],
-solutions: [
-`Conferir a senha digitada,`,`Aguardar 1hr com a ignição ligada e tentar novamente com a senha correta.`,``,]
-},
-
 { label: `Erro na Programacao!`,
 screens: [
 `&nbsp;`,
@@ -408,6 +402,18 @@ causes: [
 `Bateria do telecomando está fraca,`,`As antenas de recepção do telecomando pode não estar em perfeito funcionamento,`,`O telecomando não está no interior do veículo,`,`A chave não está na ignição,`,`A programação não foi completada,`,`O transponder não está programado no carro,`,`Defeito no carro, parte elétrica, sensores de aproximação.`,],
 solutions: [
 `Verifique a bateria do telecomando,`,`Verifique as antenas do sistema de aproximação no teto do veículo,`,`Coloque o telecomando no interior do veículo,`,`Coloque a chave na ignição,`,`Conferir se o transponder está programado ao veículo,`,`Refazer o procedimento novamente,`,`Conferir parte elétrica do carro, fusíveis, sensores de aproximação, etc.`,]
+},
+{ label: `Senha Incorreta!`,
+screens: [
+`&nbsp;`,
+`Senha&nbsp;`,
+`&nbsp;&nbsp;Incorreta!`,
+`<br />`,
+],
+causes: [
+`A senha inserida está incorreta,`,`Veículo está com tempo de espera devido consecutivas tentativas com senhas erradas.`,``,``,],
+solutions: [
+`Conferir a senha digitada,`,`Aguardar 1hr com a ignição ligada e tentar novamente com a senha correta.`,``,]
 },
 
 ];

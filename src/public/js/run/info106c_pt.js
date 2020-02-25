@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Reset da ECU IAW 7GF";
-revCarga = "Rev. 2";
-dataManual = "Fevereiro 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Reset da ECU IAW 7GF`;
+revCarga = `Rev. 2`;
+dataManual = `Fevereiro 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,167 +18,231 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Fiat",
-model: "Bravo 1.8 16V",
-years: "2011 a 2014"
+manufacturer: `Fiat`,
+model: `Bravo 1.8 16V`,
+years: `2011 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Doblo 1.8 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Doblo 1.8 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Idea 1.6 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Idea 1.6 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Idea 1.8 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Idea 1.8 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Linea 1.8 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Linea 1.8 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Novo Uno 1.0  8V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Novo Uno 1.0  8V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Novo Uno 1.4 8V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Novo Uno 1.4 8V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Palio 1.6 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Palio 1.6 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Palio 1.8 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Palio 1.8 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Novo Palio 1.0 8V",
-years: "2012 a 2014"
+manufacturer: `Fiat`,
+model: `Novo Palio 1.0 8V`,
+years: `2012 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Novo Palio 1.4 8V",
-years: "2012 a 2014"
+manufacturer: `Fiat`,
+model: `Novo Palio 1.4 8V`,
+years: `2012 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Punto 1.6 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Punto 1.6 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Punto 1.8 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Punto 1.8 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Siena 1.6 16V",
-years: "2011 a 2012"
+manufacturer: `Fiat`,
+model: `Siena 1.6 16V`,
+years: `2011 a 2012`
 },
 {
-manufacturer: "Fiat",
-model: "Strada 1.6 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Strada 1.6 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Strada 1.8 16V",
-years: "2010 a 2014"
+manufacturer: `Fiat`,
+model: `Strada 1.8 16V`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Grand Siena 1.4",
-years: "2012 a 2014"
+manufacturer: `Fiat`,
+model: `Grand Siena 1.4`,
+years: `2012 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Grand Siena 1.6",
-years: "2012 a 2014"
+manufacturer: `Fiat`,
+model: `Grand Siena 1.6`,
+years: `2012 a 2014`
 },
 ];
-applicationObs = createObs("Observação: Nem todos os veículos relacionados aos anos citados acima possuem a ECU IAW 7GF. Verifique a etiqueta da ECU para identificá-la.", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação: Nem todos os veículos relacionados aos anos citados acima possuem a ECU IAW 7GF. Verifique a etiqueta da ECU para identificá-la.`, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Estilete. Utilizado para limpar a resina sobre os pinos da memória.", 
-image: "/images/Acessórios/Estilete.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Estilete. Utilizado para limpar a resina sobre os pinos da memória.`, 
+image: `/images/Acessórios/Estilete.jpg`},
 
-{title: "Identificando e desmontando a ECU IAW 7GF:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Identificando ECU 1.jpg"},
+{title: `Identificando e desmontando a ECU IAW 7GF:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Identificando ECU 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Utilize um estilete para retirar a borracha de vedação da ECU.", 
-image: "/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Identificando ECU 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize um estilete para retirar a borracha de vedação da ECU.`, 
+image: `/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Identificando ECU 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Com o auxílio de uma chave de fenda, faça uma alavanca para ter acesso à placa da ECU.", 
-image: "/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Identificando ECU 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Com o auxílio de uma chave de fenda, faça uma alavanca para ter acesso à placa da ECU.`, 
+image: `/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Identificando ECU 3.jpg`},
 
-{title: "Localizando e conectando a pinça na memória 95640:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Localizando e conectando a pinça na memória 1.jpg"},
+{title: `Localizando e conectando a pinça na memória 95640:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Localizando e conectando a pinça na memória 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O pino 1 da pinça deve coincidir com o pino 1 da memória.", 
-image: "/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Localizando e conectando a pinça na memória 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O pino 1 da pinça deve coincidir com o pino 1 da memória.`, 
+image: `/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Localizando e conectando a pinça na memória 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça conectada na memória.", 
-image: "/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Localizando e conectando a pinça na memória 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça conectada na memória.`, 
+image: `/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Localizando e conectando a pinça na memória 3.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "Não inverter a pinça, conecte a pinça com cuidado para não causar danos à mesma e nem a ECU.<br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: `Não inverter a pinça, conecte a pinça com cuidado para não causar danos à mesma e nem a ECU.<br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0106 - Reset da ECU IAW 7GF/Todos os acessórios conectados.jpg`},
 ];
 instruction = [];
 obdmap = false;
 services = 
 [
-];
+<<<<<<< .mine
+{title: `Resetando a ECU`,
+description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
+screens: [
+{lines: [`Fiat`], help: `Tecle OK`, menu: 1000},
+{lines: [`Palio`], help: `Tecle OK`, menu: 1000},
+{lines: [`Emparelhamento`], help: `Tecle OK`, menu: 1000},
+{lines: [`Fiat Code 2`], help: `Tecle OK`, menu: 1000},
+{lines: [`Marelli IAW 7GF`], help: `Tecle OK`, menu: 1000},
+{lines: [`Reset da ECU`], help: `Tecle OK`, menu: 1000},
+{lines: [
+`Conecte&nbsp;a&nbsp;pinça`,
+`na&nbsp;memória&nbsp;95640`,
+`segundo&nbsp;o&nbsp;manual`,
+`&lt;OK&gt;`,
+],
+help: `Tecle OK`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Operação`,
+`Concluida!`,
+`<br />`,
+],
+help: ``
+},
+]}];
+=======
+{lines: [
+`Conecte&nbsp;a&nbsp;pinca`,
+`na&nbsp;memoria&nbsp;95640`,
+`segundo&nbsp;o&nbsp;manual`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+],
+help: `Tecle OK`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Operacao`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concluida!`,
+`<br />`,
+],
+help: ``
+},
+]}];
+>>>>>>> .r6553
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro na Gravacao!`,
+othersMessage = [
+{ label: `Erro na Gravacao!`,
 screens: [
 `&nbsp;`,
 `Erro&nbsp;na`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Gravacao!`,
+`Gravação!`,
 `<br />`,
 ],
 causes: [
@@ -186,11 +250,10 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`Conferir bom estado da ECU e da memória,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,]
 },
-
 { label: `Pinca invertida!`,
 screens: [
 `&nbsp;`,
-`Pinca&nbsp;invertida!`,
+`Pinça&nbsp;invertida!`,
 `<br />`,
 `<br />`,
 ],
@@ -199,12 +262,11 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória.`,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
 `Curto!`,
-`&nbsp;&nbsp;Verifique...`,
+`Verifique...`,
 `<br />`,
 ],
 causes: [

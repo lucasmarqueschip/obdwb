@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Reset IAW 1G7";
-revCarga = "Rev. 1";
-dataManual = "Julho 2011";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0055<br />Reset IAW 1G7`;
+revCarga = `Rev. 1`;
+dataManual = `Julho 2011`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -17,91 +17,99 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Fiat",
-model: "Fiorino 1.3",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Fiorino 1.3`,
+years: `1997 a 2004`
 },
 {
-manufacturer: "Fiat",
-model: "Fiorino 1.5",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Fiorino 1.5`,
+years: `1997 a 2004`
 },
 {
-manufacturer: "Fiat",
-model: "Palio1.0",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Palio1.0`,
+years: `1997 a 2004`
 },
 {
-manufacturer: "Fiat",
-model: "Palio 1.3",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Palio 1.3`,
+years: `1997 a 2004`
 },
 {
-manufacturer: "Fiat",
-model: "Palio 1.8",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Palio 1.8`,
+years: `1997 a 2004`
 },
 {
-manufacturer: "Fiat",
-model: "Siena 1.0",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Siena 1.0`,
+years: `1997 a 2004`
 },
 {
-manufacturer: "Fiat",
-model: "Siena 1.3",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Siena 1.3`,
+years: `1997 a 2004`
 },
 {
-manufacturer: "Fiat",
-model: "Siena 1.8",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Siena 1.8`,
+years: `1997 a 2004`
 },
 {
-manufacturer: "Fiat",
-model: "Strada 1.3",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Strada 1.3`,
+years: `1997 a 2004`
 },
 {
-manufacturer: "Fiat",
-model: "Strada 1.8",
-years: "1997 a 2004"
+manufacturer: `Fiat`,
+model: `Strada 1.8`,
+years: `1997 a 2004`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo IAW 1G7. Utilizado para realizar o reset.", 
-image: "/images/Funções Específicas/OBD0055 - Reset IAW 1G7/Cabo IAW 1G7.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Cabo IAW 1G7. Utilizado para realizar o reset.`, 
+image: `/images/Funções Específicas/OBD0055 - Reset IAW 1G7/Cabo IAW 1G7.jpg`},
 
-{title: "Identificando a ECU IAW 1G7", 
-description: "Para realizar o procedimento é necessário retirar a ECU IAW 1G7 do veículo, e utilizar o cabo IAW 1G7 em bancada.<br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0055 - Reset IAW 1G7/ECU.jpg"},
+{title: `Identificando a ECU IAW 1G7`, 
+description: `Para realizar o procedimento é necessário retirar a ECU IAW 1G7 do veículo, e utilizar o cabo IAW 1G7 em bancada.<br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0055 - Reset IAW 1G7/ECU.jpg`},
 
-{title: "", 
-description: "Para realizar o procedimento é necessário retirar a ECU IAW 1G7 do veículo, e utilizar o cabo IAW 1G7 em bancada.<br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0055 - Reset IAW 1G7/Descricao.jpg"},
+{title: ``, 
+description: `Para realizar o procedimento é necessário retirar a ECU IAW 1G7 do veículo, e utilizar o cabo IAW 1G7 em bancada.<br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0055 - Reset IAW 1G7/Descricao.jpg`},
 
-{title: "", 
-description: "Para realizar o procedimento é necessário retirar a ECU IAW 1G7 do veículo, e utilizar o cabo IAW 1G7 em bancada.<br />", 
-ballon: "Conectando o cabo IAW 1G7 na ECU.", 
-image: "/images/Funções Específicas/OBD0055 - Reset IAW 1G7/Conectando cabo IAW 1G7 na ECU.jpg"},
+{title: ``, 
+description: `Para realizar o procedimento é necessário retirar a ECU IAW 1G7 do veículo, e utilizar o cabo IAW 1G7 em bancada.<br />`, 
+ballon: `Conectando o cabo IAW 1G7 na ECU.`, 
+image: `/images/Funções Específicas/OBD0055 - Reset IAW 1G7/Conectando cabo IAW 1G7 na ECU.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -114,15 +122,23 @@ screens: [
 {lines: [`Fiat Code 1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Marelli IAW 1G7`], help: `Tecle OK`, menu: 1000},
 {lines: [`Reset da ECU`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`&nbsp;`,
+`Procedimento&nbsp;Concluído!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro de Comunicacao!`,
+othersMessage = [
+{ label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
-`Erro&nbsp;de&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Comunicacao!`,
+`Erro&nbsp;de&nbsp;Comunicação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [

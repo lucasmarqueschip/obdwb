@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Renault Calculador 1 93C56 (senha e chaves)";
-revCarga = "Rev. 2";
-dataManual = "Fevereiro 2011";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0070<br />Renault Calculador 1 93C56 (senha e chaves)`;
+revCarga = `Rev. 2`;
+dataManual = `Fevereiro 2011`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -24,116 +24,124 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Renault",
-model: "Clio I 1.0",
-years: "1999 a 2002"
+manufacturer: `Renault`,
+model: `Clio I 1.0`,
+years: `1999 a 2002`
 },
 {
-manufacturer: "Renault",
-model: "Clio I 1.0 16V",
-years: "1999 a 2002"
+manufacturer: `Renault`,
+model: `Clio I 1.0 16V`,
+years: `1999 a 2002`
 },
 {
-manufacturer: "Renault",
-model: "Kangoo 1.0",
-years: "2008 a 2011"
+manufacturer: `Renault`,
+model: `Kangoo 1.0`,
+years: `2008 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Kangoo 1.6",
-years: "2008 a 2011"
+manufacturer: `Renault`,
+model: `Kangoo 1.6`,
+years: `2008 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Master 2.5",
-years: "2008 a 2011"
+manufacturer: `Renault`,
+model: `Master 2.5`,
+years: `2008 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Twingo 1.0",
-years: "1999 a 2002"
+manufacturer: `Renault`,
+model: `Twingo 1.0`,
+years: `1999 a 2002`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Utilize o transponder T33 dedicado a Renault.", 
-image: "/images/Transponders/T33 - Dedicado Renault.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o transponder T33 dedicado a Renault.`, 
+image: `/images/Transponders/T33 - Dedicado Renault.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Telecomando do calculador 93C46. Dedicado ao transponder.", 
-image: "/images/Chaves e Telecomandos/Telecomando do calculador 93C46.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Telecomando do calculador 93C46. Dedicado ao transponder.`, 
+image: `/images/Chaves e Telecomandos/Telecomando do calculador 93C46.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `<br />Utilize o cabo universal Connect`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "Identificando e desmontando o calculador 1 93C56:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Calculador 1.jpg"},
+{title: `Identificando e desmontando o calculador 1 93C56:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Calculador 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Calculador 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Calculador 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Com auxílio de uma chave de fenda remova a placa da caixa do calculador.", 
-image: "/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Removendo Placa.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Com auxílio de uma chave de fenda remova a placa da caixa do calculador.`, 
+image: `/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Removendo Placa.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Placa removida da caixa do imobilizador.", 
-image: "/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Placa fora do imobilizador.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Placa removida da caixa do imobilizador.`, 
+image: `/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Placa fora do imobilizador.jpg`},
 
-{title: "Identificando a memória 93C56:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Identificando Memoria.jpg"},
+{title: `Identificando a memória 93C56:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Identificando Memoria.jpg`},
 
-{title: "Conectando a pinça soic na memória 93C56", 
-description: "", 
-ballon: "O pino 1 da pinça deve coincidir com o pino 1 da memória.", 
-image: "/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Conectando Pinça.jpg"},
+{title: `Conectando a pinça soic na memória 93C56`, 
+description: ``, 
+ballon: `O pino 1 da pinça deve coincidir com o pino 1 da memória.`, 
+image: `/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Conectando Pinça.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça conectada.", 
-image: "/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Pinca Conectada.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça conectada.`, 
+image: `/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Pinca Conectada.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "Atenção:<br />É importante seguir rigorosamente a etapa de primeiro ler a senha do calculador e depois fazer o reset. Caso seja feito primeiro o reset do calculador, a senha será perdida não sendo possível obtê-la novamente. <br />1º => Leitura da senha, <br />2º => Reset do calculador, <br />3º => programação da chave. <br /><br /><br /><br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Todos os Equipamentos conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: `Atenção:<br />É importante seguir rigorosamente a etapa de primeiro ler a senha do calculador e depois fazer o reset. Caso seja feito primeiro o reset do calculador, a senha será perdida não sendo possível obtê-la novamente. <br />1º => Leitura da senha, <br />2º => Reset do calculador, <br />3º => programação da chave. <br /><br /><br /><br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0070 Renault calculador 1 93C56/Todos os Equipamentos conectados.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de dignóstico do veículo Master está localiza na posição A4.<br />A tomada de dignóstico dos veículos Clio, Kangoo e Twingo está localizada na posição F6.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4 - F6.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de dignóstico do veículo Master está localiza na posição A4.<br />A tomada de dignóstico dos veículos Clio, Kangoo e Twingo está localizada na posição F6.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4 - F6.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -146,8 +154,32 @@ screens: [
 {lines: [`UCH-1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 2`], help: `Tecle OK`, menu: 1000},
 {lines: [`Leitura de senha`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Realizando reset do calculador 1 93C56:`,
+{lines: [
+`Conecte&nbsp;a&nbsp;pinça&nbsp;na&nbsp;`,
+`memória&nbsp;95320`,
+`tecle&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`segundo&nbsp;o&nbsp;manual`,
+`Tecle&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Senha:&nbsp;çççç`,
+`<br />`,
+`<br />`,
+],
+help: `Anote a senha.`
+},
+]
+}, {title: `Realizando reset do calculador 1 93C56:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
 {lines: [`Renault`], help: `Tecle OK`, menu: 1000},
@@ -156,8 +188,32 @@ screens: [
 {lines: [`UCH-1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 2`], help: `Tecle OK`, menu: 1000},
 {lines: [`Reset do imobilizador`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Realizando a programação de chaves`,
+{lines: [
+`Conecte&nbsp;a&nbsp;pinça&nbsp;na&nbsp;`,
+`memória&nbsp;95320`,
+`tecle&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`segundo&nbsp;o&nbsp;manual`,
+`Tecle&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Operação`,
+`Concluida!`,
+`<br />`,
+],
+help: `Operação concluída com sucesso.`
+},
+]
+}, {title: `Realizando a programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
 {lines: [`Renault`], help: `Tecle OK`, menu: 1000},
@@ -166,15 +222,55 @@ screens: [
 {lines: [`UCH-1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Apagar e Programar chaves`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`&nbsp;`,
+`Digite&nbsp;a&nbsp;Senha:`,
+`****`,
+`<br />`,
+],
+help: `Insira a senha lida anteriormente e tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Desligue&nbsp;a&nbsp;chave&nbsp;de&nbsp;ignição`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Chave`,
+`Programada!`,
+`<br />`,
+],
+help: ``
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro na leitura!`,
+othersMessage = [
+{ label: `Erro na leitura!`,
 screens: [
 `&nbsp;`,
 `Erro&nbsp;na`,
-`&nbsp;&nbsp;leitura!`,
+`leitura!`,
 `<br />`,
 ],
 causes: [
@@ -182,7 +278,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos. `,]
 },
-
 { label: `Curto!`,
 screens: [
 `&nbsp;`,
@@ -195,12 +290,11 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Caso a memória já tenha sido ressoldada, conferir se existe excesso de solda em seus terminais. `,]
 },
-
 { label: `Pinca invertida! Verifique...`,
 screens: [
 `&nbsp;`,
-`Pinca&nbsp;invertida!`,
-`Verifique...`,
+`Pinça&nbsp;invertida!`,
+`<br />`,
 `<br />`,
 ],
 causes: [
@@ -208,12 +302,11 @@ causes: [
 solutions: [
 `Verificar a correta posição da pinça na memória. `,]
 },
-
 { label: `O calculador esta resetado!`,
 screens: [
 `&nbsp;`,
 `O&nbsp;calculador`,
-`&nbsp;&nbsp;esta&nbsp;resetado!`,
+`está&nbsp;resetado!`,
 `<br />`,
 ],
 causes: [
@@ -221,12 +314,11 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Erro na Gravacao!`,
 screens: [
 `&nbsp;`,
 `Erro&nbsp;na`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Gravacao!`,
+`Gravação!`,
 `<br />`,
 ],
 causes: [

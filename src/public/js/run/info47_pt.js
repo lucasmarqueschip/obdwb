@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Leitura Partida de Emergência, Leitura de Chave Mestra - 4AFB/59FB/4SF e Reset 4AFB";
-revCarga = "Rev. 1";
-dataManual = "Abril 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0047<br />Leitura Partida de Emergência, Leitura de Chave Mestra - 4AFB/59FB/4SF e Reset 4AFB`;
+revCarga = `Rev. 1`;
+dataManual = `Abril 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -21,124 +21,132 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Fiat",
-model: "Brava 1.6",
-years: "2001 a 2003"
+manufacturer: `Fiat`,
+model: `Brava 1.6`,
+years: `2001 a 2003`
 },
 {
-manufacturer: "Fiat",
-model: "Doblo 1.8",
-years: "2003 a 2006"
+manufacturer: `Fiat`,
+model: `Doblo 1.8`,
+years: `2003 a 2006`
 },
 {
-manufacturer: "Fiat",
-model: "Fiorino 1.3",
-years: "2003 a 2009"
+manufacturer: `Fiat`,
+model: `Fiorino 1.3`,
+years: `2003 a 2009`
 },
 {
-manufacturer: "Fiat",
-model: "Fiorino 1.5",
-years: "1997 a 2000"
+manufacturer: `Fiat`,
+model: `Fiorino 1.5`,
+years: `1997 a 2000`
 },
 {
-manufacturer: "Fiat",
-model: "Palio Fire 1.0",
-years: "2001 a 2009"
+manufacturer: `Fiat`,
+model: `Palio Fire 1.0`,
+years: `2001 a 2009`
 },
 {
-manufacturer: "Fiat",
-model: "Palio Fire 1.3 8V",
-years: "2003 a 2009"
+manufacturer: `Fiat`,
+model: `Palio Fire 1.3 8V`,
+years: `2003 a 2009`
 },
 {
-manufacturer: "Fiat",
-model: "Siena Fire 1.0",
-years: "2000 a 2005"
+manufacturer: `Fiat`,
+model: `Siena Fire 1.0`,
+years: `2000 a 2005`
 },
 {
-manufacturer: "Fiat",
-model: "Siena Fire 1.3",
-years: "2003 a 2009"
+manufacturer: `Fiat`,
+model: `Siena Fire 1.3`,
+years: `2003 a 2009`
 },
 {
-manufacturer: "Fiat",
-model: "Strada Fire 1.3",
-years: "2003 a 2009"
+manufacturer: `Fiat`,
+model: `Strada Fire 1.3`,
+years: `2003 a 2009`
 },
 {
-manufacturer: "Fiat",
-model: "Uno Fire 1.3",
-years: "2003 a 2009"
+manufacturer: `Fiat`,
+model: `Uno Fire 1.3`,
+years: `2003 a 2009`
 },
 {
-manufacturer: "Fiat",
-model: "Uno Mille Fire",
-years: "2001 a 2009"
+manufacturer: `Fiat`,
+model: `Uno Mille Fire`,
+years: `2001 a 2009`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo Universal + adaptador A1.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para<br />utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Cabo Fiat.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o cabo Fiat para alimentar o módulo de transponder.<br />Obs: A Bateria fica localizada atrás da capa plástica do degrau do lado do motorista.`, 
+image: `/images/Acessórios/Cabo Fiat.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos está localizada na área A4.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos está localizada na área A4.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4.jpg`},
 
-{title: "Identificando e desmontando a ECU IAW 4AFB", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/ECU 1.jpg"},
+{title: `Identificando e desmontando a ECU IAW 4AFB`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/ECU 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Utilize uma chave Torx para remover os parafusos da ECU.", 
-image: "/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/ECU 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize uma chave Torx para remover os parafusos da ECU.`, 
+image: `/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/ECU 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Com o auxílio de uma chave de fenda faça uma alavanca para ter acesso a placa da ECU.", 
-image: "/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/ECU 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Com o auxílio de uma chave de fenda faça uma alavanca para ter acesso a placa da ECU.`, 
+image: `/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/ECU 3.jpg`},
 
-{title: "Localizando e conectando a pinça na memória :", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/Localizando a memória.jpg"},
+{title: `Localizando e conectando a pinça na memória :`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/Localizando a memória.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça conectada na memória.", 
-image: "/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/Pinça conectada.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça conectada na memória.`, 
+image: `/images/Funções Específicas/OBD0047 - Fiat - Leit. Part. Emerg. Ch. Mestra - 4AFB59FB4SF e Reset 4AFB/Reset da ECU IAW 4AFB Fiat/Pinça conectada.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a leitura do Código Eletrônico (chave Mestra)`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fiat`, `>IAW 4AFB.P1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Fiat`, `>IAW 4AFB.P1`, `<br /><br />`], help: `Selecione IAW 4AFB.P1, IAW 4AFB.PF, IAW 4AFB.PK, IAW 4AFB.UF, IAW 4AFB.UG, IAW 4AFB.UN, IAW 4SF ou IAW 59FB.`, menu: 1000},
 {lines: [`IAW 4AFB.P1`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
@@ -174,242 +182,10 @@ help: `Tecle OK!`
 help: `Tecle OK!`
 },
 ]
-}, {title: ``,
+}, {title: `Partida de emergência`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fiat`, `>IAW 4AFB.PF`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`IAW 4AFB.PF`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
-`Chave&nbsp;Cod.&nbsp;ERA:`,
-`****************`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`COD.&nbsp;Eletronico:`,
-`*****`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
-`Chave&nbsp;Cod.&nbsp;ERA:`,
-`****************`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`COD.&nbsp;Eletronico:`,
-`*****`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
-`Chave&nbsp;Cod.&nbsp;ERA:`,
-`****************`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`COD.&nbsp;Eletronico:`,
-`*****`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
-`Chave&nbsp;Cod.&nbsp;ERA:`,
-`****************`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`COD.&nbsp;Eletronico:`,
-`*****`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
-`Chave&nbsp;Cod.&nbsp;ERA:`,
-`****************`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`COD.&nbsp;Eletronico:`,
-`*****`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
-`Chave&nbsp;Cod.&nbsp;ERA:`,
-`****************`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`COD.&nbsp;Eletronico:`,
-`*****`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
-`Chave&nbsp;Cod.&nbsp;ERA:`,
-`****************`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`COD.&nbsp;Eletronico:`,
-`*****`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-{title: `Partida de emergência`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Fiat`, `>Part. Emergen.`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
@@ -449,7 +225,7 @@ help: `Tecle OK!`
 }, {title: `Realizando o reset da ECU IAW 4AFB:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Fiat`, `>IAW 4AFB`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`IAW 4AFB`, `>Resetar?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -478,7 +254,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
 { label: `Erro na leitura!`,
 screens: [
 `&nbsp;`,
@@ -491,7 +266,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça ou o cabo MCU no OBDMap estão bem fixos,`,`Conferir bom estado da ECU,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,``,]
 },
-
 { label: `Erro na Gravacao!`,
 screens: [
 `&nbsp;`,
@@ -504,7 +278,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`Conferir bom estado da memória e da ECU,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,]
 },
-
 { label: `Pinca invertida! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -517,7 +290,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória.`,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,

@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Preparação e Programação de Chaves Fiat Code 2 Fase 3 Painel Continental";
-revCarga = "Rev. 6";
-dataManual = "Setembro 2018";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0062<br />Preparação e Programação de Chaves Fiat Code 2 Fase 3 Painel Continental`;
+revCarga = `Rev. 6`;
+dataManual = `Setembro 2018`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -20,222 +20,230 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Fiat",
-model: "Siena 1.0",
-years: "2012 a 2014"
+manufacturer: `Fiat`,
+model: `Siena 1.0`,
+years: `2012 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Siena 1.4",
-years: "2012 a 2014"
+manufacturer: `Fiat`,
+model: `Siena 1.4`,
+years: `2012 a 2014`
 },
 {
-manufacturer: "Fiat",
-model: "Uno Mille Vivace 1.0",
-years: "2010 a 2012"
+manufacturer: `Fiat`,
+model: `Uno Mille Vivace 1.0`,
+years: `2010 a 2012`
 },
 {
-manufacturer: "Fiat",
-model: "Uno EVO 1.0",
-years: "2010 a 2012"
+manufacturer: `Fiat`,
+model: `Uno EVO 1.0`,
+years: `2010 a 2012`
 },
 {
-manufacturer: "Fiat",
-model: "Uno EVO 1.4",
-years: "2010 a 2012"
+manufacturer: `Fiat`,
+model: `Uno EVO 1.4`,
+years: `2010 a 2012`
 },
 {
-manufacturer: "Fiat",
-model: "Strada Working 1.4",
-years: "2012 a 2014"
+manufacturer: `Fiat`,
+model: `Strada Working 1.4`,
+years: `2012 a 2014`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "O Transponder utilizado no sistema Code 2 é<br />o Megamos Crypto 48, tratado neste manual<br />por T48.", 
-image: "/images/Transponders/Megamos Crypto 48.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O Transponder utilizado no sistema<br />Code 2 é o Megamos Crypto 48<br />virgem, tratado neste manual por<br />ID48.`, 
+image: `/images/Transponders/Megamos Crypto 48.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
-image: "/images/Acessórios/Modulo de Transponder.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.`, 
+image: `/images/Acessórios/Modulo de Transponder.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.", 
-image: "/images/Acessórios/Cabo MCU.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.`, 
+image: `/images/Acessórios/Cabo MCU.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte o cabo universal ao adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Conecte o cabo universal ao adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "Posicionamento do transponder T48 no módulo de transponder:", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Vidro CERTO.jpg"},
+{title: `Posicionamento do transponder T48 no módulo de transponder:`, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Vidro CERTO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Vidro ERRADO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Vidro ERRADO.jpg`},
 
-{title: "Passos para desmontar o painel:", 
-description: "", 
-ballon: "Remova o rádio.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Remova o Radio.jpg"},
+{title: `Passos para desmontar o painel:`, 
+description: ``, 
+ballon: `Remova o rádio.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Remova o Radio.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova os conectores do rádio.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Remova os Conectores.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova os conectores do rádio.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Remova os Conectores.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova a gaveta do rádio.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Remova a Gaveta.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova a gaveta do rádio.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Remova a Gaveta.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova os dois parafusos fixadores.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Remova os Parafusos.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova os dois parafusos fixadores.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Remova os Parafusos.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Existem quatro travas em cada difusor de ar, as setas indicam onde fica cada trava.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Saida de ar.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Existem quatro travas em cada difusor de ar, as setas indicam onde fica cada trava.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Saida de ar.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova os dois difusores de ar do veículo.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Remova difusor de ar.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova os dois difusores de ar do veículo.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Remova difusor de ar.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Depois de removido os difusores de ar, remova os dutos de ar.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Sem Difusores de ar.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Depois de removido os difusores de ar, remova os dutos de ar.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Sem Difusores de ar.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Faça a alavanca nos pontos indicados, forçando o duto de ar para fora até que desprenda do painel.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Duto de Ar.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: ``},
 
-{title: "", 
-description: "", 
-ballon: "Atenção<br />Cuidado para não quebrar alguma trava ou riscar o console. Se necessário utilize uma flanela entre a chave, o duto de ar e o console.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Atenção.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Atenção<br />Cuidado para não quebrar alguma trava ou riscar o console. Se necessário utilize uma flanela entre a chave, o duto de ar e o console.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Atenção.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Posição dos parafusos que fixam o console.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Parafusos Fixadores Console.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Posição dos parafusos que fixam o console.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Parafusos Fixadores Console.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova os dois parafusos fixadores.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Remova os Parafusos do console.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova os dois parafusos fixadores.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Remova os Parafusos do console.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova os três parafusos fixadores.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Remova os 3  parafusos.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova os três parafusos fixadores.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Remova os 3  parafusos.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova a parte inferior da capa protetora.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Remova a parte inferior.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova a parte inferior da capa protetora.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Remova a parte inferior.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Removas os dois parafusos fixadores. Neste caso os parafusos ficam em um lugar de difícil visualização.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Parafusos Inferiores.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Removas os dois parafusos fixadores. Neste caso os parafusos ficam em um lugar de difícil visualização.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Parafusos Inferiores.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova a parte superior da capa protetora.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Parte Superior.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova a parte superior da capa protetora.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Parte Superior.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova o único parafuso que fica na parte superior do painel.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Parafuso Painel.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova o único parafuso que fica na parte superior do painel.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Parafuso Painel.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Depois de todos os parafusos fixadores já removidos, retirar a moldura do painel com as mãos, a moldura está fixa por travas.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Muldura.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Depois de todos os parafusos fixadores já removidos, retirar a moldura do painel com as mãos, a moldura está fixa por travas.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Muldura.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Moldura do painel removida.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Moldura Removida.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Moldura do painel removida.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Moldura Removida.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova os dois parafusos fixadores do painel.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Parafusos Painel.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova os dois parafusos fixadores do painel.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Parafusos Painel.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova o conector de 32 pinos (observe as travas de segurança).", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/COnector 32 Pinos.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova o conector de 32 pinos (observe as travas de segurança).`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/COnector 32 Pinos.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Remova o conector de 12 pinos (observe as travas de segurança).", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Conector 12 pinos.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Remova o conector de 12 pinos (observe as travas de segurança).`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Conector 12 pinos.jpg`},
 
-{title: "Retirando a tampa traseira para ter acesso a placa:", 
-description: "", 
-ballon: "Remova as travas da tampa traseira do painel.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Trava Tampa Traseira.jpg"},
+{title: `Retirando a tampa traseira para ter acesso a placa:`, 
+description: ``, 
+ballon: `Remova as travas da tampa traseira do painel.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Trava Tampa Traseira.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Painel removido. Pronto para soldagem dos fios do cabo MCU.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Painel removido.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Painel removido. Pronto para soldagem dos fios do cabo MCU.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Painel removido.jpg`},
 
-{title: "Localizando os pontos para soldagem:", 
-description: "", 
-ballon: "Identificando os pontos a serem soldado os fios do cabo MCU: <br />1=> Fio Verde<br />2=> Fio Preto <br />3=> Fio Vermelho <br />4=> Fio Cinza", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Pontos de Solda.jpg"},
+{title: `Localizando os pontos para soldagem:`, 
+description: ``, 
+ballon: `Identificando os pontos a serem soldado os fios do cabo MCU: <br />1=> Fio Verde<br />2=> Fio Preto <br />3=> Fio Vermelho <br />4=> Fio Cinza`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Pontos de Solda.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Atenção: Não trocar a posição dos fios. Os fios que não estiverem sendo usando devem ser dobrados para trás.", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Fios Soldados.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Atenção: Não trocar a posição dos fios. Os fios que não estiverem sendo usando devem ser dobrados para trás.`, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Fios Soldados.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "Todos os acessórios conectados, pronto para a preparação dos transponders. <br /><br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0062 Novo Uno/Todos os equipametos conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: `Todos os acessórios conectados, pronto para a preparação dos transponders. <br /><br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0062 Novo Uno/Todos os equipametos conectados.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico do veículo está localizada na área A5.", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico do veículo está localizada na área A5.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a Preparação do transponder`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Outros`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Fiat`, `>CODE 2 Fase 3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`CODE 2 Fase 3`, `>P. Continental`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -303,7 +311,7 @@ help: `Se desejar preparar outro transponder tecle OK e volte ao Passo 11, ou te
 }, {title: `Realizando a Programação de Chaves via Diagnóstico`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Fiat`, `>CODE 2`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`CODE 2`, `>BC e Painel`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -317,6 +325,55 @@ screens: [
 ],
 help: `É necessário utilizar o Cabo de diagnóstico CAN ou o
 cabo universal + adaptador A3.`
+},
+{lines: [
+`&nbsp;`,
+`Digite&nbsp;cod.elet.`,
+`*****`,
+`<br />`,
+],
+help: `Digite o código eletrônico (PIN) que foi lido no momento da preparação do transponder.`
+},
+{lines: [
+`&nbsp;`,
+`Insira&nbsp;a&nbsp;Chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;N.&nbsp;Chaves:&nbsp;*/*`,
+`Programar&nbsp;mais?`,
+`(X)NAO&nbsp;/&nbsp;SIM(OK)`,
+`<br />`,
+],
+help: `Aperte (OK) para programar mais e
+(VOLTA) para finalizar o procedimento.`
+},
+{lines: [
+`&nbsp;`,
+`Procedimento`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concluido!`,
+`<br />`,
+],
+help: `Tecle OK!`
 },
 ]}
 ];
@@ -334,7 +391,6 @@ causes: [
 solutions: [
 `Verificar a correta posição dos fios no painel,`,`Verificar se os parafusos que prendem o cabo MCU no OBDMap estão bem fixos.`,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -347,7 +403,6 @@ causes: [
 solutions: [
 `·	Conferir a correta soldagem do cabo MCU, veja Página 14,`,`·	Conferir bom estado do painel.`,]
 },
-
 { label: `Erro grav. T48 <OK> p/ repetir`,
 screens: [
 `&nbsp;`,
@@ -360,7 +415,6 @@ causes: [
 solutions: [
 `·	Conferir a correta posição do transponder no Módulo de Transponder,`,`·	Conferir o transponder ID48. Pode-se utilizar a carga básica do Módulo de Transponder para identificar o transponder,`,`·	Conferir se os parafusos que prendem o Módulo de Transponder no OBDMap estão bem fixos.`,``,]
 },
-
 { label: `FALHA AO REMOVER LOCK DO T48!`,
 screens: [
 `&nbsp;`,
@@ -372,6 +426,78 @@ causes: [
 `·	O transponder já havia sido dedicado e protegido contra gravação,`,`·	O transponder é original do veículo ou fornecido pela montadora.`,``,],
 solutions: [
 `·	Utilize um transponder ID48,`,`·	Se o transponder era válido no veículo não é necessário passa-lo pelo procedimento de geração, a chave com LOCK funcionará normalmente mesmo apresentando este erro. Será necessário apresentar a chave com LOCK por diagnóstico junto com as demais chaves depois de geradas.`,``,]
+},
+{ label: `Erro de Comunicacao!`,
+screens: [
+`<br />`,
+`Erro&nbsp;de`,
+`Comunicacao!`,
+`<br />`,
+],
+causes: [
+` Defeito no carro, parte elétrica,`,` Atualização antiga do OBDMap,`,` Má conexão dos acessórios.`,],
+solutions: [
+` Verificar parte elétrica do carro, fusíveis, etc,`,` Verificar se utiliza cabo universal e adaptador A3,`,` Verificar boa conexão do cabo no OBDMap e no conector OBD do veículo,`,` Verificar atualização mais recente com suporte técnico, talvez esta carga tenha tido`,`alterações.`,]
+},
+{ label: `BCM Cheia!`,
+screens: [
+`&nbsp;`,
+`&nbsp;&nbsp;&nbsp;BCM&nbsp;Cheia!`,
+`<br />`,
+`<br />`,
+],
+causes: [
+` O BCM ja está com 8 chaves programadas.`,],
+solutions: [
+`Apagar todas as chaves antigas, e programar novamente todas as que forem ser`,`utilizadas.`,]
+},
+{ label: `Body Computer nao suportado!`,
+screens: [
+`&nbsp;`,
+`Body&nbsp;Computer`,
+`nao&nbsp;suportado!`,
+`<br />`,
+],
+causes: [
+` BC não corresponde a aplicação.`,],
+solutions: [
+` Verifique aplicação.`,]
+},
+{ label: `Erro grav. ID48 <OK> p/ repetir`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;grav.&nbsp;ID48`,
+`&lt;OK&gt;&nbsp;p/&nbsp;repetir`,
+`<br />`,
+],
+causes: [
+` Mau contato no cabo que liga o Modulo de transponder ao OBDMap;`,` Transponder  com problema;`,` O transponder utilizado não é um ID48 virgem;`,` Transponder não esta bem posicionado no Módulo de transponder.`,],
+solutions: [
+` Conferir a correta posição do transponder no módulo de transponder;`,` Utilizar um transponder ID48 virgem;`,` Conferir a fixação do cabo que liga o módulo de transponder ao OBDMap.`,]
+},
+{ label: `ERRO! Aguarde 5 minutos e tente novamente <OK>`,
+screens: [
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ERRO!`,
+`&nbsp;&nbsp;&nbsp;Aguarde&nbsp;5`,
+`minutos&nbsp;e&nbsp;tente`,
+`&nbsp;novamente&nbsp;&lt;OK&gt;`,
+],
+causes: [
+` O BCM está com defeito.`,],
+solutions: [
+` Desligue e ligue da bateria, tente novamente depois de 5 minutos.`,]
+},
+{ label: `BC DESCONHECIDO! COD: ** ** ** ** ** ** ** **`,
+screens: [
+`BC&nbsp;DESCONHECIDO!`,
+`COD:&nbsp;**&nbsp;**&nbsp;**&nbsp;**`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**&nbsp;**&nbsp;**&nbsp;**`,
+`<br />`,
+],
+causes: [
+` Este BC não inclui em nossa tabela de aplicação.`,],
+solutions: [
+` Verificar aplicação,`,` Consulte o suporte técnico.`,]
 },
 
 ];

@@ -56,6 +56,11 @@ description: "",
 ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
 image: "/images/Acessórios/Modulo de Transponder.jpg"},
 
+{title: "", 
+description: "", 
+ballon: "Todos os acessórios conectados.", 
+image: "/images/Funções Específicas/OBD0191 Programação de chaves VW Imob 5 VDO e Marelli via OBD (fox 2013)/todos os acessórios conectados.jpg"},
+
 {title: "Posicionamento do transponder no módulo de transponder:", 
 description: "", 
 ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
@@ -114,118 +119,6 @@ screens: [
 {lines: [`Imob 5`], help: `Tecle OK`, menu: 1000},
 {lines: [`Painel Marelli`], help: `Tecle OK`, menu: 1000},
 {lines: [`Apagar e Programar chaves`], help: `Tecle OK`, menu: 1000},
-
-]},{title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a Identificação do Painel`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a Identificação do Painel`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel VDO`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a leitura de senha e preparação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-
-]},{title: `Realizando a programação de chaves painel Marelli`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
 
 ]},];
 //Outras mensagens

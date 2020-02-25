@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Workbook</title>
 
-    <link rel="stylesheet" href="/css/index/index.css">
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/css/index/index.css">
     <link rel="stylesheet" href="/css/fancybox/jquery.fancybox.min.css">
 
     <script src="/js/jquery/jquery.min.js"></script>
@@ -17,8 +18,9 @@
     <script type="text/javascript" src="/js/fancybox/jquery.fancybox.min.js"></script>
 </head>
 
-<!-- <body class="dragscroll"> -->
-<body>
+<body class="dragscroll">
+<!-- <body> -->
+
 
     <div id="loader">
         <img class="loader" src="/images/loader2.gif" alt="load">
@@ -35,10 +37,10 @@
             <a href="#" onclick="home()">Home</a>
         </div>
         <div class="accordion h-100" id="aDad">
-            <a class="tree1-item w-100 d-block fz-13" href="#" id="chSumario" data-toggle="collapse"
+            <a class="tree1-item w-100 d-block fz-13" href="#" id="chSumary" data-toggle="collapse"
                 data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">Sumario</a>
 
-            <div class="collapse hide" id="collapse1" aria-labelledby="chSumario" data-parent="#aDad">
+            <div class="collapse hide" id="collapse1" aria-labelledby="chSumary" data-parent="#aDad">
                 <!-- <a class="tree2-item w-100 d-block fz-12" href="#intro" onclick="changeMenu(true)">Introdução</a> -->
             </div>
 
@@ -115,6 +117,11 @@
     let othersMessageTitle;
     let othersMessage;
     let lastMsg;
+    let lblStep;
+    let lblCause;
+    let lblSolution;
+    let lblSumary;
+    let lblMessageError;
 
     function loadHTML(fileName) {
         try {
@@ -122,7 +129,6 @@
         } catch (err) {
             console.log('event não suportado!');
         }
-
         $.ajax({
             url: `./html/${fileName}`,
             cache: false,

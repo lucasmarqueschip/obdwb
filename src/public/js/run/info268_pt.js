@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Leitura de Senha e programação de chaves BSI-1";
-revCarga = "Rev. 3";
-dataManual = "Setembro 2019";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0268<br />Leitura de Senha e programação de chaves BSI-1`;
+revCarga = `Rev. 3`;
+dataManual = `Setembro 2019`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -22,94 +22,94 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Citroen",
-model: "C3 1.4",
-years: "2007 a 2012"
+manufacturer: `Citroen`,
+model: `C3 1.4`,
+years: `2007 a 2012`
 },
 {
-manufacturer: "Citroen",
-model: "C3 1.6",
-years: "2004 a 2012"
+manufacturer: `Citroen`,
+model: `C3 1.6`,
+years: `2004 a 2012`
 },
 {
-manufacturer: "Citroen",
-model: "Picasso",
-years: "2006 a "
+manufacturer: `Citroen`,
+model: `Picasso`,
+years: `2006 a `
 },
 {
-manufacturer: "Peugeot",
-model: "206 1.4",
-years: "2004 a 2010"
+manufacturer: `Peugeot`,
+model: `206 1.4`,
+years: `2004 a 2010`
 },
 {
-manufacturer: "Peugeot",
-model: "207 1.4",
-years: "2009 a 2015"
+manufacturer: `Peugeot`,
+model: `207 1.4`,
+years: `2009 a 2015`
 },
 {
-manufacturer: "Peugeot",
-model: "207 1.6",
-years: "2009 a 2013"
+manufacturer: `Peugeot`,
+model: `207 1.6`,
+years: `2009 a 2013`
 },
 {
-manufacturer: "Peugeot",
-model: "206 1.6",
-years: "2004 a 2008"
+manufacturer: `Peugeot`,
+model: `206 1.6`,
+years: `2004 a 2008`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "PCF7936 (ID46) com lock<br />dedicado a Jeep, este<br />transponder pode ser preparado<br />com a carga OBD0192.", 
-image: "/images/Transponders/PCF7936 (ID46) dedicado.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Utilize o transponder PCF7936 (ID46) Crypto 2 (Virgem).`, 
+image: `/images/Transponders/PCF7936 (ID46) dedicado.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Cabo universal + adaptador A2.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A2 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Cabo universal + adaptador A2.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A2 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A2 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A2 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "", 
-ballon: "Para Peugeot, a posição do conector de diagnose é A5<br />Para Citroen, a posição do conector de diagnose é F6<br />A BSI se encontra um pouco acima da posição A5", 
-image: "/images/Tomada de Diagnostico/Carro/A5-F6.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: ``, 
+ballon: `Para Peugeot, a posição do conector de diagnose é A5<br />Para Citroen, a posição do conector de diagnose é F6<br />A BSI se encontra um pouco acima da posição A5`, 
+image: `/images/Tomada de Diagnostico/Carro/A5-F6.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Peugeot`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Peugeot`, `>BSI-1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`BSI-1`, `>Siemens E0/F0`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Siemens E0/F0`, `>Ler senha OBD?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
-`Selecione:`,
-`Adicionar&nbsp;chave`,
-`Apagar&nbsp;chaves`,
-`Sair`,
-],
-help: ``
-},
-{lines: [
 `&nbsp;`,
-`Aguarde...`,
-`<br />`,
+`&nbsp;Programando..`,
+`&nbsp;&nbsp;&nbsp;Aguarde...`,
 `<br />`,
 ],
 help: ``
@@ -123,10 +123,83 @@ help: ``
 help: `Aguarde alguns instantes.`
 },
 {lines: [
-`&nbsp;`,
-`&nbsp;&nbsp;Lendo&nbsp;Senha`,
-`&nbsp;&nbsp;&nbsp;Aguarde...`,
+`&nbsp;Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+help: `   Tecle OK!`
+},
+{lines: [
+`Desligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+help: `Se for a última chave a ser gravada o
+passo seguinte será o Passo`
+},
+{lines: [
+`&nbsp;&nbsp;Servico&nbsp;nao`,
+`&nbsp;&nbsp;autorizado!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
 `<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;&nbsp;&nbsp;Testando&nbsp;a`,
+`compatibilidade`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Numero&nbsp;de&nbsp;Falhas`,
+`&nbsp;&nbsp;&nbsp;&nbsp;ECU:&nbsp;**`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Imob:&nbsp;**`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;&nbsp;&nbsp;&nbsp;Veiculo`,
+`&nbsp;&nbsp;compativel!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+help: `Veículo compativel com o software!`
+},
+{lines: [
+`Numero&nbsp;de&nbsp;chaves`,
+`&nbsp;programadas:&nbsp;*`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chaves`,
+`&nbsp;&nbsp;&nbsp;Apagadas!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+help: ``
+},
+{lines: [
+`Selecione:`,
+`Adicionar&nbsp;chave`,
+`Apagar&nbsp;chaves`,
+`Sair`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;&nbsp;Senha:&nbsp;****`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
 ],
 help: ``
 },
@@ -135,6 +208,14 @@ help: ``
 `&nbsp;&nbsp;&nbsp;**********`,
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
 `&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Apagando&nbsp;Falhas`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Passadas`,
+`<br />`,
 ],
 help: ``
 },
@@ -148,22 +229,6 @@ help: `O chassi é utilizado para confirmar se a
 ECU é original do veiculo.`
 },
 {lines: [
-`&nbsp;Insira&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;&nbsp;no&nbsp;slot`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-help: `   Tecle OK!`
-},
-{lines: [
 `Desligue&nbsp;a&nbsp;chave`,
 `aguarde&nbsp;2&nbsp;min&nbsp;e`,
 `tente&nbsp;novamente`,
@@ -172,25 +237,41 @@ help: `   Tecle OK!`
 help: ``
 },
 {lines: [
-`&nbsp;Remova&nbsp;o&nbsp;botao`,
-`&nbsp;&nbsp;&nbsp;START/STOP`,
-`(segundo&nbsp;manual)`,
+`&nbsp;&nbsp;Programando`,
+`&nbsp;&nbsp;&nbsp;Keyless&nbsp;GO`,
+`&nbsp;&nbsp;&nbsp;Aguarde..`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Chave&nbsp;programada`,
+`&nbsp;com&nbsp;sucesso!!!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
 `&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
 ],
 help: ``
 },
 {lines: [
 `&nbsp;`,
-`Apagando&nbsp;Chaves!`,
-`&nbsp;&nbsp;&nbsp;Aguarde...`,
+`Erro&nbsp;na`,
+`Programacao!(**)`,
 `<br />`,
 ],
-help: `Aguarde enquanto o OBDMap apaga as chaves antigas do veículo.`
+help: ``
 },
 {lines: [
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chaves`,
-`&nbsp;&nbsp;&nbsp;Apagadas!`,
+`&nbsp;Insira&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;no&nbsp;slot`,
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;Remova&nbsp;o&nbsp;botao`,
+`&nbsp;&nbsp;&nbsp;START/STOP`,
+`(segundo&nbsp;manual)`,
 `&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
 ],
 help: ``
@@ -206,67 +287,10 @@ help: `Erro inesperado no OBDMap
 Desconecte o equipamento e tente novamente`
 },
 {lines: [
-`Numero&nbsp;de&nbsp;Falhas`,
-`&nbsp;&nbsp;&nbsp;&nbsp;ECU:&nbsp;**`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Imob:&nbsp;**`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-help: ``
-},
-{lines: [
-`Desligue&nbsp;a&nbsp;chave`,
+`Deseja&nbsp;Programar`,
+`&nbsp;o&nbsp;Keyless&nbsp;GO?`,
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-help: `Se for a última chave a ser gravada o
-passo seguinte será o Passo`
-},
-{lines: [
-`&nbsp;&nbsp;&nbsp;&nbsp;Veiculo`,
-`&nbsp;&nbsp;compativel!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-help: `Veículo compativel com o software!`
-},
-{lines: [
-`&nbsp;`,
-`Erro&nbsp;na`,
-`Programacao!(**)`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
-`&nbsp;Programando..`,
-`&nbsp;&nbsp;&nbsp;Aguarde...`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;&nbsp;Programando`,
-`&nbsp;&nbsp;&nbsp;Keyless&nbsp;GO`,
-`&nbsp;&nbsp;&nbsp;Aguarde..`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
-`Apagando&nbsp;Falhas`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Passadas`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;&nbsp;Senha:&nbsp;****`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+`&nbsp;&lt;X&gt;NAO&nbsp;&lt;OK&gt;SIM`,
 ],
 help: ``
 },
@@ -279,50 +303,34 @@ help: ``
 help: `   Tecle OK!`
 },
 {lines: [
-`&nbsp;&nbsp;&nbsp;Testando&nbsp;a`,
-`compatibilidade`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...`,
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
 `<br />`,
 ],
 help: ``
 },
 {lines: [
-`Numero&nbsp;de&nbsp;chaves`,
-`&nbsp;programadas:&nbsp;*`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;&nbsp;Servico&nbsp;nao`,
-`&nbsp;&nbsp;autorizado!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`&nbsp;`,
+`&nbsp;&nbsp;Lendo&nbsp;Senha`,
+`&nbsp;&nbsp;&nbsp;Aguarde...`,
 `<br />`,
 ],
 help: ``
 },
 {lines: [
-`Chave&nbsp;programada`,
-`&nbsp;com&nbsp;sucesso!!!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+`&nbsp;`,
+`Apagando&nbsp;Chaves!`,
+`&nbsp;&nbsp;&nbsp;Aguarde...`,
+`<br />`,
 ],
-help: ``
-},
-{lines: [
-`Deseja&nbsp;Programar`,
-`&nbsp;o&nbsp;Keyless&nbsp;GO?`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&lt;X&gt;NAO&nbsp;&lt;OK&gt;SIM`,
-],
-help: ``
+help: `Aguarde enquanto o OBDMap apaga as chaves antigas do veículo.`
 },
 ]
 }, {title: `Realizando a leitura de senha e programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `> `, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `> `, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [` `, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Citroen`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Citroen`, `>BSI-1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -530,46 +538,6 @@ causes: [
 solutions: [
 `	Conferir se a bateria está carregada,`,`	Conferir parte elétrica do veículo, fusíveis, etc,`,`	Conferir se utiliza cabo universal e adaptador A3,`,`	Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`	Desconectar bateria, aguardar 10 segundos e conectar novamente,`,`	Scaneie os erros apresentados no veículos, principalmente nos módulos de ECU, carroceria/conforto, ABS, airbag, painel e imobilizador (o veículo pode não conter todos os módulos),`,`	Repita o procedimento,`,`	Caso o erro persista, informe ao suporte as questões acima.`,]
 },
-
-{ label: `Acesso Negado! ** `,
-screens: [
-`&nbsp;Acesso&nbsp;Negado!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`BC não compatível com a aplicação,`,`OBDMAP desatualizado`,],
-solutions: [
-`Verificar aplicação (isso implica nos modelos, anos, sistemas e hardware)`,`Verificar com suporte técnico uma possível atualização`,]
-},
-
-{ label: `Falha na rede CAN!!! `,
-screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;Falha&nbsp;na`,
-`&nbsp;&nbsp;rede&nbsp;CAN!!!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`Não foi possível estabelecer uma comunicação com o veículo, devido a falha na rede CAN;`,`O veículo apresenta defeitos elétricos;`,],
-solutions: [
-`Verificar instalação elétrica;`,`Verificar se os módulos não estão com defeito.`,]
-},
-
-{ label: `Senha Incorreta! `,
-screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senha`,
-`&nbsp;&nbsp;&nbsp;Incorreta!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`A senha inserida está incorreta,`,`Veículo está com tempo de espera devido consecutivas tentativas com senhas erradas. (dependendo do sistema)`,],
-solutions: [
-`Conferir a senha digitada,`,`Aguardar x tempo com a ignição ligada e tentar novamente com a senha correta. (dependendo do sistema)`,]
-},
-
 { label: `Erro na Programacao! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Erro&nbsp;na`,
@@ -582,7 +550,42 @@ causes: [
 solutions: [
 `Verifique a bateria do telecomando,`,`Verifique as antenas do sistema de aproximação no teto do veículo,`,`Coloque o telecomando no interior do veículo,`,`Coloque a chave na ignição,`,`Conferir se o transponder está programado ao veículo,`,`Refazer o procedimento novamente,`,`Conferir parte elétrica do carro, fusíveis, sensores de aproximação, etc.`,]
 },
-
+{ label: `Senha Incorreta! `,
+screens: [
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senha`,
+`&nbsp;&nbsp;&nbsp;Incorreta!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`A senha inserida está incorreta,`,`Veículo está com tempo de espera devido consecutivas tentativas com senhas erradas. (dependendo do sistema)`,],
+solutions: [
+`Conferir a senha digitada,`,`Aguardar x tempo com a ignição ligada e tentar novamente com a senha correta. (dependendo do sistema)`,]
+},
+{ label: `Acesso Negado! ** `,
+screens: [
+`&nbsp;Acesso&nbsp;Negado!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`BC não compatível com a aplicação,`,`OBDMAP desatualizado`,],
+solutions: [
+`Verificar aplicação (isso implica nos modelos, anos, sistemas e hardware)`,`Verificar com suporte técnico uma possível atualização`,]
+},
+{ label: `Falha na rede CAN!!! `,
+screens: [
+`&nbsp;&nbsp;&nbsp;&nbsp;Falha&nbsp;na`,
+`&nbsp;&nbsp;rede&nbsp;CAN!!!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`Não foi possível estabelecer uma comunicação com o veículo, devido a falha na rede CAN;`,`O veículo apresenta defeitos elétricos;`,],
+solutions: [
+`Verificar instalação elétrica;`,`Verificar se os módulos não estão com defeito.`,]
+},
 { label: `Veiculo incompativel! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Veiculo`,
@@ -595,20 +598,6 @@ causes: [
 solutions: [
 `Caso o veículo esteja nos anos de aplicação, contate o suporte`,`Caso não esteja, fique atento as próximas atualizações `,]
 },
-
-{ label: `Erro interno codigo: ** `,
-screens: [
-`&nbsp;&nbsp;Erro&nbsp;interno`,
-`&nbsp;&nbsp;&nbsp;codigo:&nbsp;**`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`Ocorreu um erro inesperado internamente no OBDMAP`,`O veículo pode estar com defeito`,`O OBDMAP pode estar com defeito`,`A função escolhida pode estar desatualizada`,],
-solutions: [
-`Confira a Rede CAN do veículo`,`Confira parte elétrica, fusíveis, etc`,`Scaneie os erros apresentados no veículos, principalmente nos módulos de ECU, carroceria/conforto, ABS, airbag, painel e imobilizador, caso o veículo possua`,`Repita o procedimento`,`Caso o erro persista, informe ao suporte as questões acima, bem como o código do "Erro Interno"`,]
-},
-
 { label: `Sem comunicacao com o veiculo ou veiculo incompativel!`,
 screens: [
 `Sem&nbsp;comunicacao`,
@@ -621,7 +610,18 @@ causes: [
 solutions: [
 `Verifique a aplicação (isso implica nos modelos, anos, sistemas e hardware)`,`Confira a Rede CAN do veículo`,`Confira parte elétrica, fusíveis, etc`,`Scaneie os erros apresentados no veículos, principalmente nos módulos de ECU, carroceria/conforto, ABS, airbag, painel e imobilizador, caso o veículo possua`,`Repita o procedimento`,`Caso o erro persista, informe ao suporte as questões acima`,]
 },
-
+{ label: `Erro interno codigo: ** `,
+screens: [
+`&nbsp;&nbsp;Erro&nbsp;interno`,
+`&nbsp;&nbsp;&nbsp;codigo:&nbsp;**`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`Ocorreu um erro inesperado internamente no OBDMAP`,`O veículo pode estar com defeito`,`O OBDMAP pode estar com defeito`,`A função escolhida pode estar desatualizada`,],
+solutions: [
+`Confira a Rede CAN do veículo`,`Confira parte elétrica, fusíveis, etc`,`Scaneie os erros apresentados no veículos, principalmente nos módulos de ECU, carroceria/conforto, ABS, airbag, painel e imobilizador, caso o veículo possua`,`Repita o procedimento`,`Caso o erro persista, informe ao suporte as questões acima, bem como o código do "Erro Interno"`,]
+},
 { label: `Use o cabo CAN ou adap. A3 CAN!`,
 screens: [
 `&nbsp;`,
@@ -634,7 +634,6 @@ causes: [
 solutions: [
 `Conecte o cabo universal e o adaptador A3 ou o cabo CAN e repita o procedimento`,]
 },
-
 { label: `Alerta! Nao dar partida com o OBDMAP Conectado `,
 screens: [
 `Alerta!&nbsp;Nao&nbsp;dar`,
@@ -647,33 +646,6 @@ causes: [
 solutions: [
 ]
 },
-
-{ label: `Erro de Comunicacao! `,
-screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;Erro&nbsp;de`,
-`&nbsp;&nbsp;Comunicacao!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`Defeito no veículo, parte elétrica,`,`Software do OBDMap desatualizado,`,`Má conexão dos acessórios.`,],
-solutions: [
-`Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
-},
-
-{ label: `Acesso Negado! ** `,
-screens: [
-`&nbsp;Acesso&nbsp;Negado!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`Painel não compatível com a aplicação.`,],
-solutions: [
-`Verificar aplicação.`,]
-},
-
 { label: `Erro no Transponder! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Erro&nbsp;no`,
@@ -686,20 +658,6 @@ causes: [
 solutions: [
 `Realize uma leitura do transponder e confira se é o mesmo indicado pelo manual`,`Verifique a procedência do transponder e se o mesmo é de boa qualidade`,`Tente realizar a codificação com outro transponder de lote diferente`,`Repita o procedimento`,`Em caso de dúvida, contate o suporte`,]
 },
-
-{ label: `Senha incorreta! `,
-screens: [
-`Senha&nbsp;incorreta!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`A senha foi rejeitada pelo veículo`,`A senha armazenada no OBDMap não pertence ao veículo;`,`Veículo está fora de aplicação.`,],
-solutions: [
-`Realize a Leitura de senha da BC via pinça;`,`Verifique a aplicação do veículo`,`Contate o suporte.`,]
-},
-
 { label: `Sem sinal da antena! `,
 screens: [
 `&nbsp;&nbsp;Sem&nbsp;sinal&nbsp;da`,
@@ -711,6 +669,18 @@ causes: [
 `Fusíveis queimados`,`Defeito na parte elétrica do carro`,`Circuito da antena aberto`,`Defeito no módulo da antena`,`Defeito no pino de comunicação da ECU`,],
 solutions: [
 `Conferir os fusíveis`,`Conferir parte elétrica do veículo`,`Checar alimentação e comunicação com o módulo da antena`,`Trocar módulo da antena`,`Checar comunicação do pino da ECU`,`Dica: Caso desejado e seja possível, utilize o Multigiga para auxiliar nesses casos.`,]
+},
+{ label: `Senha incorreta! `,
+screens: [
+`Senha&nbsp;incorreta!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`A senha foi rejeitada pelo veículo`,`A senha armazenada no OBDMap não pertence ao veículo;`,`Veículo está fora de aplicação.`,],
+solutions: [
+`Realize a Leitura de senha da BC via pinça;`,`Verifique a aplicação do veículo`,`Contate o suporte.`,]
 },
 
 ];

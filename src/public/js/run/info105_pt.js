@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Reset da ECU IAW 4CF";
-revCarga = "Rev. 3";
-dataManual = "Julho 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0105<br />Reset da ECU IAW 4CF`;
+revCarga = `Rev. 3`;
+dataManual = `Julho 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -19,78 +19,85 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Fiat",
-model: "Uno Fire Economy 1.0",
-years: "2010 a 2012"
+manufacturer: `Fiat`,
+model: `Uno Fire Economy 1.0`,
+years: `2010 a 2012`
 },
 {
-manufacturer: "Fiat",
-model: "Fiorino 1.3",
-years: "2010 a 2012"
+manufacturer: `Fiat`,
+model: `Fiorino 1.3`,
+years: `2010 a 2012`
 },
 ];
-applicationObs = createObs("Observação: Nem todos os veículos relacionados aos anos citados acima possuem a ECU IAW 4CF. Verifique a etiqueta da ECU para identificá-la.", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação: Nem todos os veículos relacionados aos anos citados acima possuem a ECU IAW 4CF. Verifique a etiqueta da ECU para identificá-la.`, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "Identificando e desmontando a ECU IAW 4CF:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Identificando e desmontando a ECU IAW 4CF.jpg"},
+{title: `Identificando e desmontando a ECU IAW 4CF:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Identificando e desmontando a ECU IAW 4CF.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Utilize uma chave torx para retirar os parafusos da ECU.", 
-image: "/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Desmontando a ECU IAW 4CF.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize uma chave torx para retirar os parafusos da ECU.`, 
+image: `/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Desmontando a ECU IAW 4CF.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Com o auxílio de uma chave de fenda, faça uma alavanca para ter acesso à placa da ECU.", 
-image: "/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Desmontando a ECU IAW 4CF 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Com o auxílio de uma chave de fenda, faça uma alavanca para ter acesso à placa da ECU.`, 
+image: `/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Desmontando a ECU IAW 4CF 2.jpg`},
 
-{title: "Localizando e conectando a pinça na memória 95320:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Localizando e conectando a pinça na memória 95320.jpg"},
+{title: `Localizando e conectando a pinça na memória 95320:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Localizando e conectando a pinça na memória 95320.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O pino 1 da pinça deve coincidir com o pino 1 da memória.", 
-image: "/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Conectando a pinça na memória 95320.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O pino 1 da pinça deve coincidir com o pino 1 da memória.`, 
+image: `/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Conectando a pinça na memória 95320.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça conectada na memória.", 
-image: "/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Conectando a pinça na memória 95320 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça conectada na memória.`, 
+image: `/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Conectando a pinça na memória 95320 2.jpg`},
 
-{title: "Todos os acessorios conectados:", 
-description: "Não inverter a pinça, conecte a pinça com cuidado para não causar danos à mesma e nem a ECU.", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessorios conectados:`, 
+description: `Não inverter a pinça, conecte a pinça com cuidado para não causar danos à mesma e nem a ECU.`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0105 Reset ECU IAW 4CF/Todos os acessórios conectados.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a leitura do código eletrônico`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [``, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Fiat`, `>IAW 4CF`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`IAW 4CF`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -115,7 +122,7 @@ help: ``
 }, {title: `Realizando o reset da ECU`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Fiat`, `>IAW 4CF`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`IAW 4CF`, `>Resetar?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -157,33 +164,7 @@ help: `ECU resetada.`
 ];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro na leitura!`,
-screens: [
-`&nbsp;`,
-`Erro&nbsp;na`,
-`&nbsp;&nbsp;leitura!`,
-`<br />`,
-],
-causes: [
-`Mau contato na pinça com a memória,`,`ECU ou memória com problema,`,`A pinça foi conectada em outro componente.`,],
-solutions: [
-`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar nos terminais correspondentes da memória.`,]
-},
-
-{ label: `Erro na Gravacao!`,
-screens: [
-`&nbsp;`,
-`Erro&nbsp;na`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Gravacao!`,
-`<br />`,
-],
-causes: [
-`Mau contato da pinça com a memória,`,`Mau contato da pinça com o OBDMap,`,`ECU ou memória com problema,`,`A pinça foi conectada em outro componente,`,`Os terminais da memória ou da própria pinça podem estar com resina ou sujeira.`,],
-solutions: [
-`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`Conferir bom estado da ECU e da memória,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,]
-},
-
-{ label: `Curto! Verifique...`,
+othersMessage = [{ label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
 `Curto!`,
@@ -195,7 +176,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória;`,`Conferir bom estado da ECU e da memória.`,]
 },
-
 { label: `Pinca invertida! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -208,7 +188,30 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir bom estado da ECU e da memória.`,]
 },
-
+{ label: `Erro na leitura!`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;na`,
+`&nbsp;&nbsp;leitura!`,
+`<br />`,
+],
+causes: [
+`Mau contato na pinça com a memória,`,`ECU ou memória com problema,`,`A pinça foi conectada em outro componente.`,],
+solutions: [
+`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar nos terminais correspondentes da memória.`,]
+},
+{ label: `Erro na Gravacao!`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;na`,
+`&nbsp;&nbsp;&nbsp;&nbsp;Gravacao!`,
+`<br />`,
+],
+causes: [
+`Mau contato da pinça com a memória,`,`Mau contato da pinça com o OBDMap,`,`ECU ou memória com problema,`,`A pinça foi conectada em outro componente,`,`Os terminais da memória ou da própria pinça podem estar com resina ou sujeira.`,],
+solutions: [
+`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`Conferir bom estado da ECU e da memória,`,`Conferir se os terminais da memória e da pinça estão limpos, sem resina ou sujeira.`,]
+},
 { label: `Arquivo resetado ou invalido <OK>`,
 screens: [
 `&nbsp;`,

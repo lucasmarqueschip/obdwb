@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Ford Pats Diesel (chaves)";
-revCarga = "Rev. 2";
-dataManual = "Fevereiro 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0054<br />Ford Pats Diesel (chaves)`;
+revCarga = `Rev. 2`;
+dataManual = `Fevereiro 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,52 +18,60 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ford",
-model: "F-150 4.3",
-years: "2000 a 2002"
+manufacturer: `Ford`,
+model: `F-150 4.3`,
+years: `2000 a 2002`
 },
 {
-manufacturer: "Ford",
-model: "F-250 4.2",
-years: "2000 a 2006"
+manufacturer: `Ford`,
+model: `F-250 4.2`,
+years: `2000 a 2006`
 },
 {
-manufacturer: "Ford",
-model: "F-350",
-years: "2000 a 2006"
+manufacturer: `Ford`,
+model: `F-350`,
+years: `2000 a 2006`
 },
 ];
-applicationObs = createObs("Observações: Aplica-se aos veiculos acima citados que possuem bomba elétrica.", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observações: Aplica-se aos veiculos acima citados que possuem bomba elétrica.`, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Ferramentas e acessórios utilizados neste procedimento:", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: `Ferramentas e acessórios utilizados neste procedimento:`, 
+description: ``, 
+ballon: `Utilize o cabo Universal + adaptador A1.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos citados fica localizada na área D5.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/D5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos citados fica localizada na área D5.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/D5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o apagamento de chaves via OBD`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 2`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 2`, `>DIESEL V1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},

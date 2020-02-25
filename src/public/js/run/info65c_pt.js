@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Meriva 1.7 DTI Diesel - Leitura de Senha";
-revCarga = "Rev. 2";
-dataManual = "Maio 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0065<br />Meriva 1.7 DTI Diesel - Leitura de Senha`;
+revCarga = `Rev. 2`;
+dataManual = `Maio 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,46 +18,54 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Meriva 1.7",
-years: " a "
+manufacturer: `GM`,
+model: `Meriva 1.7`,
+years: ` a `
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "<br />Utilize o cabo universal Connect", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `<br />Utilize o cabo universal Connect`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Connect/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Identificando a ECU.", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0065 Meriva DTI 1.7 diesel/ECU 1.jpg"},
+{title: `Identificando a ECU.`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0065 Meriva DTI 1.7 diesel/ECU 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0065 Meriva DTI 1.7 diesel/ECU 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0065 Meriva DTI 1.7 diesel/ECU 2.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico do veículo está localizada na posição F9.<br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/F9.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico do veículo está localizada na posição F9.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/F9.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -71,15 +79,39 @@ screens: [
 {lines: [`Delphi HSFI sem BCM`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 2`], help: `Tecle OK`, menu: 1000},
 {lines: [`Leitura de senha`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Senha:&nbsp;çççç`,
+`<br />`,
+`<br />`,
+],
+help: `Anote a senha.`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro de Comunicacao!`,
+othersMessage = [
+{ label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
-`Erro&nbsp;de&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Comunicacao!`,
+`Erro&nbsp;de&nbsp;Comunicação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [

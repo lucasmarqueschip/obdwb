@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Geração de transponder no CN3 Renault UCH3 Tipo2";
-revCarga = "Rev. 2";
-dataManual = "Novembro 2015";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0212<br />Geração de transponder no CN3 Renault UCH3 Tipo2`;
+revCarga = `Rev. 2`;
+dataManual = `Novembro 2015`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -17,67 +17,75 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Renault",
-model: "Master 2.3",
-years: "2014 a 2016"
+manufacturer: `Renault`,
+model: `Master 2.3`,
+years: `2014 a 2016`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "Utilize o Transponder CN3 Virgem.", 
-image: "/images/Transponders/CN3 Virgem.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Utilize o Transponder CN3 Virgem.`, 
+image: `/images/Transponders/CN3 Virgem.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
-image: "/images/Acessórios/Modulo de Transponder.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.`, 
+image: `/images/Acessórios/Modulo de Transponder.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para<br />utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Cabo Fiat.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o cabo Fiat para alimentar o módulo de transponder.<br />Obs: A Bateria fica localizada atrás da capa plástica do degrau do lado do motorista.`, 
+image: `/images/Acessórios/Cabo Fiat.jpg`},
 
-{title: "Posicionamento do transponder no módulo de transponder:", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg"},
+{title: `Posicionamento do transponder no módulo de transponder:`, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Se a chave já estiver montada com o transponder, ela deve ser posicionada como mostra a foto ao lado.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Chave CERTO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Se a chave já estiver montada com o transponder, ela deve ser posicionada como mostra a foto ao lado.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Chave CERTO.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "O conector de diagnostico fica localizado na área B4.<br /><br /><br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Caminhão/B4.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `O conector de diagnostico fica localizado na área B4.<br /><br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Caminhão/B4.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a geração de chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Outros`, `>Renault`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Renault`, `>Calc 3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Calc 3`, `>Master 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -147,20 +155,18 @@ causes: [
 solutions: [
 `Desconectar o OBDMap da tomada de diagnose, desligar a bateria, aguardar 10 segundos e ligar novamente,`,`Verificar parte elétrica do carro, fusíveis, etc,`,`Verificar se utiliza cabo universal e adaptador A3,`,`Verificar boa conexão do cabo no OBDMap e no conector OBD do veículo,`,`Verificar atualização mais recente com suporte técnico, talvez esta carga tenha tido alterações.`,]
 },
-
-{ label: `Transponder nao Encontrado!`,
+{ label: `Erro na leitura do transponder!`,
 screens: [
 `&nbsp;`,
-`Transponder&nbsp;nao`,
-`Encontrado!`,
+`Erro&nbsp;na&nbsp;leitura`,
+`do&nbsp;transponder!`,
 `<br />`,
 ],
 causes: [
-`O transponder não está posicionado corretamente no módulo de transponder,`,`O transponder utilizado não é um CN3 virgem.`,`O transponder pode estar defeituoso.`,],
+`O transponder não está posicionado corretamente no módulo de transponder,`,`O transponder utilizado não é um CN3 virgem.`,],
 solutions: [
-`Verificar a correta posição do transponder no módulo de transponder,`,`Verifique o transponder que está sendo utilizado.`,`Verifique a procedência do transponder.`,``,]
+`Verificar a correta posição do transponder no módulo de transponder,`,`Verifique o transponder que está sendo utilizado.`,]
 },
-
 { label: `Erro na gravacao do transponder!`,
 screens: [
 `&nbsp;`,
@@ -173,7 +179,6 @@ causes: [
 solutions: [
 `Verificar a correta posição do transponder no Módulo de Transponder.`,`Utilize o transponder correto.`,]
 },
-
 { label: `Erro! O transp. pode estar em modo crypto ou em modo password`,
 screens: [
 `Erro!&nbsp;O&nbsp;transp.&nbsp;`,
@@ -186,18 +191,17 @@ causes: [
 solutions: [
 `Verifique o transponder que está sendo utilizado.`,]
 },
-
-{ label: `Erro na leitura do transponder!`,
+{ label: `Transponder nao Encontrado!`,
 screens: [
 `&nbsp;`,
-`Erro&nbsp;na&nbsp;leitura`,
-`do&nbsp;transponder!`,
+`Transponder&nbsp;nao`,
+`Encontrado!`,
 `<br />`,
 ],
 causes: [
-`O transponder não está posicionado corretamente no módulo de transponder,`,`O transponder utilizado não é um CN3 virgem.`,],
+`O transponder não está posicionado corretamente no módulo de transponder,`,`O transponder utilizado não é um CN3 virgem.`,`O transponder pode estar defeituoso.`,],
 solutions: [
-`Verificar a correta posição do transponder no módulo de transponder,`,`Verifique o transponder que está sendo utilizado.`,]
+`Verificar a correta posição do transponder no módulo de transponder,`,`Verifique o transponder que está sendo utilizado.`,`Verifique a procedência do transponder.`,``,]
 },
 
 ];

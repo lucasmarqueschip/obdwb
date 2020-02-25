@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de Chaves e Telecomandos Nissan UCH Renault (March 1.0 2011-2015)";
-revCarga = "Rev. 6";
-dataManual = "Janeiro 2020";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0224<br />Programação de Chaves e Telecomandos Nissan UCH Renault (March 1.0 2011-2015)`;
+revCarga = `Rev. 6`;
+dataManual = `Janeiro 2020`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -22,62 +22,70 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Nissan",
-model: "March 1.0",
-years: "2011 a 2014"
+manufacturer: `Nissan`,
+model: `March 1.0`,
+years: `2011 a 2014`
 },
 ];
-applicationObs = createObs("Atenção: Esta carga aplica-se aos veículos que possuem motor Renault.", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Atenção: Esta carga aplica-se aos veículos que possuem motor Renault.`, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "Utilize transponder PCF7936 (ID46) virgem.", 
-image: "/images/Transponders/PCF7936 Philips Virgem.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Utilize transponder PCF7936 (ID46) virgem.`, 
+image: `/images/Transponders/PCF7936 Philips Virgem.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Telecomando utilizado.", 
-image: "/images/Chaves e Telecomandos/Telecomando March.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Telecomando utilizado.`, 
+image: `/images/Chaves e Telecomandos/Telecomando March.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Conecte o cabo universal ao adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Conecte o cabo universal ao adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a etiqueta:", 
-description: "A etiqueta com o código, está localizada área I4, colada dentro do porta luvas na parte superior.<br /><br /><br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/I4.jpg"},
+{title: `Localizando a etiqueta:`, 
+description: `A etiqueta com o código, está localizada área I4, colada dentro do porta luvas na parte superior.<br /><br /><br />`, 
+ballon: `A tomada de diagnóstico do veículo fica localizada na área L4.`, 
+image: `/images/Tomada de Diagnostico/Carro/I4.jpg`},
 
-{title: "", 
-description: "A etiqueta com o código, está localizada área I4, colada dentro do porta luvas na parte superior.<br /><br /><br />", 
-ballon: "Etiqueta com o código de 12 caracteres.", 
-image: "/images/Funções Específicas/OBD0224 - Leitura de Senha e Programação de Chaves NissanRenault UCH-3 (March 1.0 e Livina 1.6)/Etiqueta.jpg"},
+{title: ``, 
+description: `A etiqueta com o código, está localizada área I4, colada dentro do porta luvas na parte superior.<br /><br /><br />`, 
+ballon: `Etiqueta com o código de 12 caracteres.`, 
+image: `/images/Funções Específicas/OBD0224 - Leitura de Senha e Programação de Chaves NissanRenault UCH-3 (March 1.0 e Livina 1.6)/Etiqueta.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico do veículo está localizada na área A5. <br /><br /><br /><br /><br />", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico do veículo está localizada na área A5. <br /><br /><br /><br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Nissan`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Nissan`, `>UCH March 1.0`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`UCH March 1.0`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -262,7 +270,7 @@ help: `Desconecte o OBDMap da tomada de diagnóstico.`
 }, {title: `Realizando a programação de telecomando`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Nissan`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Nissan`, `>UCH March 1.0`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`UCH March 1.0`, `>Prog. telecmd?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -347,33 +355,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A3,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
-{ label: `Acesso Negado!`,
-screens: [
-`&nbsp;`,
-`Acesso&nbsp;Negado!`,
-`<br />`,
-`<br />`,
-],
-causes: [
-`Senha ou código da etiqueta inválido para o veículo.`,`Veículo não compatível com a aplicação.`,``,``,],
-solutions: [
-`Verificar senha/código da etiqueta.`,`Verificar aplicação.`,`Entrar em contato com o suporte.`,``,]
-},
-
-{ label: `Erro Time OUT!`,
-screens: [
-`&nbsp;`,
-`Erro`,
-`&nbsp;Time&nbsp;OUT!`,
-`<br />`,
-],
-causes: [
-`Não foi seguido as sequências descritas no manual.`,`Ocorreu um atraso para ligar a chave no tempo especificado pelo Passo 19.`,],
-solutions: [
-`Desligar o veículo e aguardar alguns minutos, tentar novamente o procedimento.`,`Ligar a chave dentro de 10 segundos como pede no Passo 19.`,`Entrar em contato com o suporte.`,]
-},
-
 { label: `Atencao! ECU Desconectada`,
 screens: [
 `&nbsp;`,
@@ -386,20 +367,30 @@ causes: [
 solutions: [
 `Verificar bom estado da ECU.`,`Verificar conexão da ECU.`,``,]
 },
-
-{ label: `Erro! Dado nao disponivel no Banco de Dados*!`,
+{ label: `Acesso Negado!`,
 screens: [
-`Erro!&nbsp;Dado&nbsp;nao`,
-`disponivel&nbsp;no&nbsp;`,
-`Banco&nbsp;de&nbsp;Dados*!`,
+`&nbsp;`,
+`Acesso&nbsp;Negado!`,
+`<br />`,
 `<br />`,
 ],
 causes: [
-`Código da etiqueta inválido.`,],
+`Senha ou código da etiqueta inválido para o veículo.`,`Veículo não compatível com a aplicação.`,``,``,],
 solutions: [
-`Verificar o código da etiqueta.`,`Realizar mais uma tentativa.`,`Entrar em contato com o suporte.`,``,]
+`Verificar senha/código da etiqueta.`,`Verificar aplicação.`,`Entrar em contato com o suporte.`,``,]
 },
-
+{ label: `Erro Time OUT!`,
+screens: [
+`&nbsp;`,
+`Erro`,
+`&nbsp;Time&nbsp;OUT!`,
+`<br />`,
+],
+causes: [
+`Não foi seguido as sequências descritas no manual.`,`Ocorreu um atraso para ligar a chave no tempo especificado pelo Passo 19.`,],
+solutions: [
+`Desligar o veículo e aguardar alguns minutos, tentar novamente o procedimento.`,`Ligar a chave dentro de 10 segundos como pede no Passo 19.`,`Entrar em contato com o suporte.`,]
+},
 { label: `Erro no Transponder!`,
 screens: [
 `&nbsp;`,
@@ -412,7 +403,18 @@ causes: [
 solutions: [
 ]
 },
-
+{ label: `Erro! Dado nao disponivel no Banco de Dados*!`,
+screens: [
+`Erro!&nbsp;Dado&nbsp;nao`,
+`disponivel&nbsp;no&nbsp;`,
+`Banco&nbsp;de&nbsp;Dados*!`,
+`<br />`,
+],
+causes: [
+`Código da etiqueta inválido.`,],
+solutions: [
+`Verificar o código da etiqueta.`,`Realizar mais uma tentativa.`,`Entrar em contato com o suporte.`,``,]
+},
 { label: `Erro no Transponder! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Erro&nbsp;no`,
@@ -425,7 +427,6 @@ causes: [
 solutions: [
 `Realize uma leitura do transponder e confira se é o mesmo indicado pelo manual`,`Verifique a procedência do transponder e se o mesmo é de boa qualidade`,`Tente realizar a codificação com outro transponder de lote diferente`,`Repita o procedimento`,`Em caso de dúvida, contate o suporte`,``,]
 },
-
 { label: `Erro ao apagar Telecomando!`,
 screens: [
 `&nbsp;`,

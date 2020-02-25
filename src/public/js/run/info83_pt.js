@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de Chaves Toyota Imob3";
-revCarga = "Rev. 3";
-dataManual = "Março 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0083<br />Programação de Chaves Toyota Imob3`;
+revCarga = `Rev. 3`;
+dataManual = `Março 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -21,82 +21,90 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Toyota",
-model: "Hilux (ID67G) 2.7",
-years: "2009 a 2015"
+manufacturer: `Toyota`,
+model: `Hilux (ID67G) 2.7`,
+years: `2009 a 2015`
 },
 {
-manufacturer: "Toyota",
-model: "Rav4 (ID67G) 2.0",
-years: "2010 a 2015"
+manufacturer: `Toyota`,
+model: `Rav4 (ID67G) 2.0`,
+years: `2010 a 2015`
 },
 {
-manufacturer: "Toyota",
-model: "Rav4 (ID67G) 2.5",
-years: "2010 a 2015"
+manufacturer: `Toyota`,
+model: `Rav4 (ID67G) 2.5`,
+years: `2010 a 2015`
 },
 {
-manufacturer: "Toyota",
-model: "Corolla (ID70) 2.0",
-years: "2012 a 2014"
+manufacturer: `Toyota`,
+model: `Corolla (ID70) 2.0`,
+years: `2012 a 2014`
 },
 {
-manufacturer: "Toyota",
-model: "Corolla (Toyota H 128-Bits) 1.8",
-years: "2015 a 2018"
+manufacturer: `Toyota`,
+model: `Corolla (Toyota H 128-Bits) 1.8`,
+years: `2015 a 2018`
 },
 {
-manufacturer: "Toyota",
-model: "Corolla (Toyota H 128-Bits) 2.0",
-years: "2015 a 2018"
+manufacturer: `Toyota`,
+model: `Corolla (Toyota H 128-Bits) 2.0`,
+years: `2015 a 2018`
 },
 {
-manufacturer: "Toyota",
-model: "Etios (ID67) 1.3",
-years: "2013 a 2018"
+manufacturer: `Toyota`,
+model: `Etios (ID67) 1.3`,
+years: `2013 a 2018`
 },
 {
-manufacturer: "Toyota",
-model: "Etios (ID67) 1.5",
-years: "2013 a 2018"
+manufacturer: `Toyota`,
+model: `Etios (ID67) 1.5`,
+years: `2013 a 2018`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "Utilize o transponder ID4D dedicado como:<br />- ID67G para Hilux, RAV4 e SW4.<br />- ID70 para Corolla 2012-2014<br />- ID67 para Etios.<br />Utilize o transponder Toyota H 128-Bits para Corolla 2015-2016.", 
-image: "/images/Transponders/ID4D TOYOTA.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Utilize o transponder ID4D dedicado como:<br />- ID67G para Hilux, RAV4 e SW4.<br />- ID70 para Corolla 2012-2014<br />- ID67 para Etios.<br />Utilize o transponder Toyota H 128-Bits para Corolla 2015-2016.`, 
+image: `/images/Transponders/ID4D TOYOTA.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Conecte o cabo universal junto ao adaptador A1.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Cabo universal + adaptador A1.<br />Para realizar o emparelhamento<br />da BSI.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos fica localizada na área B5 ou A5.<br /><br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A5-B5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos fica localizada na área B5 ou A5.<br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5-B5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o apagamento de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Imob3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob3`, `>Apagar chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -153,7 +161,7 @@ help: ``
 }, {title: `Realizando a programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Imob3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob3`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -248,7 +256,6 @@ causes: [
 solutions: [
 `Verifique transponder correto segundo aplicação na Pagina 3.`,]
 },
-
 { label: `Tempo Excedido!`,
 screens: [
 `&nbsp;`,
@@ -261,7 +268,6 @@ causes: [
 solutions: [
 `Repita o procedimento.`,]
 },
-
 { label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,

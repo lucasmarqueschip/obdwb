@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de chaves Ford Pats 4 Tipo 4 (New Fiesta 14-16)";
-revCarga = "Rev. 2";
-dataManual = "Fevereiro 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0220<br />Programação de chaves Ford Pats 4 Tipo 4 (New Fiesta 14-16)`;
+revCarga = `Rev. 2`;
+dataManual = `Fevereiro 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,52 +18,60 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ford",
-model: "New Fiesta 1.5",
-years: "2014 a 2016"
+manufacturer: `Ford`,
+model: `New Fiesta 1.5`,
+years: `2014 a 2016`
 },
 {
-manufacturer: "Ford",
-model: "New Fiesta 1.6",
-years: "2014 a 2016"
+manufacturer: `Ford`,
+model: `New Fiesta 1.6`,
+years: `2014 a 2016`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "Observação: O transponder deve estar dedicado de acordo com o manual da carga OBD0206.", 
-ballon: "Utilize um transponder ID 4D63 ou ID 4D63 DST+.", 
-image: "/images/Transponders/ID 4D63.jpg"},
+{title: `Transponder utilizado:`, 
+description: `Observação: O transponder deve estar dedicado de acordo com o manual da carga OBD0206.`, 
+ballon: `Utilize um transponder ID 4D63 ou ID 4D63 DST+.`, 
+image: `/images/Transponders/ID 4D63.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico fica localizada na posição A4 ou A5.<br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4 - A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico fica localizada na posição A4 ou A5.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4 - A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -77,11 +85,92 @@ screens: [
 ],
 help: `Tecle OK!`
 },
+{lines: [
+`&nbsp;`,
+`Todas&nbsp;as&nbsp;chaves`,
+`serao&nbsp;perdidas!`,
+`<br />`,
+],
+help: `As chaves já programadas serão apagadas.`
+},
+{lines: [
+`Sao&nbsp;necessarias`,
+`&nbsp;2&nbsp;chaves&nbsp;para`,
+`&nbsp;&nbsp;&nbsp;realizar&nbsp;o`,
+`&nbsp;procedimento!`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Use&nbsp;transp.`,
+`4D63&nbsp;/&nbsp;4D63&nbsp;DST+`,
+`<br />`,
+],
+help: `Utilize um transponder ID 4D63 DST+ dedicado para Ford.
+`
+},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;chave`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Desl.&nbsp;e&nbsp;ligue&nbsp;a`,
+`chave&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`&nbsp;Insira&nbsp;e&nbsp;ligue`,
+`prox.&nbsp;chave&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Insira e ligue a próxima chave a ser programada, e tecle OK.`
+},
+{lines: [
+`&nbsp;`,
+`Numero&nbsp;de&nbsp;Chaves`,
+`Prog.:&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+help: `Número de chaves atualmente programadas no veículo.`
+},
+{lines: [
+`&nbsp;`,
+`Proc.&nbsp;Concluido!`,
+`Desconecte&nbsp;o&nbsp;OBD`,
+`<br />`,
+],
+help: `O procedimento foi concluído com sucesso. Desconecte o cabo da tomada de diagnose.`
+},
 ]
 }, {title: `Realizando a adição de novas chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -103,34 +192,6 @@ help: `Tecle OK!`
 ],
 help: ``
 },
-]
-}, {title: `Realizando a programação de chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Todas&nbsp;as&nbsp;chaves`,
-`serao&nbsp;perdidas!`,
-`<br />`,
-],
-help: `As chaves já programadas serão apagadas.`
-},
-]
-}, {title: `Realizando a adição de novas chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `Ligue&nbsp;a&nbsp;chave`,
@@ -139,34 +200,6 @@ screens: [
 ],
 help: `Tecle OK!`
 },
-]
-}, {title: `Realizando a programação de chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`Sao&nbsp;necessarias`,
-`&nbsp;2&nbsp;chaves&nbsp;para`,
-`&nbsp;&nbsp;&nbsp;realizar&nbsp;o`,
-`&nbsp;procedimento!`,
-],
-help: ``
-},
-]
-}, {title: `Realizando a adição de novas chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `Aguarde...`,
@@ -175,35 +208,6 @@ screens: [
 ],
 help: ``
 },
-]
-}, {title: `Realizando a programação de chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Use&nbsp;transp.`,
-`4D63&nbsp;/&nbsp;4D63&nbsp;DST+`,
-`<br />`,
-],
-help: `Utilize um transponder ID 4D63 DST+ dedicado para Ford.
-`
-},
-]
-}, {title: `Realizando a adição de novas chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
 `Desligue&nbsp;e&nbsp;`,
@@ -212,24 +216,6 @@ screens: [
 ],
 help: ``
 },
-]
-}, {title: `Realizando a programação de chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
 {lines: [
 `&nbsp;`,
 `Aguarde...`,
@@ -237,114 +223,6 @@ help: `Tecle OK!`
 `<br />`,
 ],
 help: ``
-},
-]
-}, {title: `Realizando a adição de novas chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-]
-}, {title: `Realizando a programação de chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Desl.&nbsp;e&nbsp;ligue&nbsp;a`,
-`chave&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
-},
-]
-}, {title: `Realizando a adição de novas chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Numero&nbsp;de&nbsp;Chaves`,
-`Prog.:&nbsp;*&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
-`<br />`,
-],
-help: `Número de chaves atualmente programadas no veículo.`
-},
-]
-}, {title: `Realizando a programação de chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-]
-}, {title: `Realizando a adição de novas chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`Proc.&nbsp;Concluido!`,
-`Desconecte&nbsp;o&nbsp;OBD`,
-`<br />`,
-],
-help: `O procedimento foi concluído com sucesso. Desconecte o cabo da tomada de diagnose.`
-},
-]
-}, {title: `Realizando a programação de chaves`,
-description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
-screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Ford`, `>PATS 4`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`PATS 4`, `>N FIESTA 14-16`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`N FIESTA 14-16`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
-{lines: [
-`&nbsp;`,
-`&nbsp;Insira&nbsp;e&nbsp;ligue`,
-`prox.&nbsp;chave&nbsp;&lt;OK&gt;`,
-`<br />`,
-],
-help: `Insira e ligue a próxima chave a ser programada, e tecle OK.`
 },
 {lines: [
 `&nbsp;`,
@@ -378,7 +256,6 @@ causes: [
 solutions: [
 `Repita o procedimento.`,]
 },
-
 { label: `Tempo Excedido!`,
 screens: [
 `&nbsp;`,
@@ -391,7 +268,6 @@ causes: [
 solutions: [
 `Repita o procedimento.`,]
 },
-
 { label: `Erro na verificacao!`,
 screens: [
 `&nbsp;`,
@@ -404,7 +280,6 @@ causes: [
 solutions: [
 `Repita o procedimento.`,]
 },
-
 { label: `Erro de Operacao`,
 screens: [
 `&nbsp;`,
@@ -417,7 +292,6 @@ causes: [
 solutions: [
 `Repita o procedimento.`,]
 },
-
 { label: `Falha no Procedimento!`,
 screens: [
 `&nbsp;`,
@@ -430,7 +304,6 @@ causes: [
 solutions: [
 `Verifique o transponder utilizado e as condições do veículo.`,``,``,]
 },
-
 { label: `Erro no codigo de seguranca. Repetir? <X>NAO / <OK>SIM`,
 screens: [
 `&nbsp;Erro&nbsp;no&nbsp;codigo`,
@@ -443,7 +316,6 @@ causes: [
 solutions: [
 `Repita o procedimento.`,`      Se escolhido "SIM" durante a Programação de Chaves, volte ao passo 12.`,`      Se escolhido "SIM" durante a Adição de Chaves, volta ao passo 10.`,`      Se escolhido "NAO" para qualquer um dos procedimentos (Programação de Chaves ou Adição de Chaves), o procedimento será finalizado.`,]
 },
-
 { label: `Erro na Programacao! Repetir? (X)NAO / <OK>SIM`,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Erro&nbsp;na`,
@@ -456,7 +328,6 @@ causes: [
 solutions: [
 `Utilize um transponder compatível com o veículo.`,`Utilize outro transponder que não esteja programado, de acordo com a aplicação.`,`      Se escolhido "SIM" durante a Programação de Chaves, volte ao passo 12.`,`      Se escolhido "SIM" durante a Adição de Chaves, volta ao passo 10.`,`      Se escolhido "NAO" para qualquer um dos procedimentos (Programação de Chaves ou Adição de Chaves), o procedimento será finalizado.`,``,]
 },
-
 { label: `Chave nao programada! Repetir? (X)NAO / <OK>SIM`,
 screens: [
 `&nbsp;&nbsp;&nbsp;Chave&nbsp;nao`,
@@ -469,7 +340,6 @@ causes: [
 solutions: [
 `Verificar detalhes no manual de dedicação OBD0206 - Dedicação do transponder ID4D-63 e ID4D DST+ para Ford.`,`Utilize um transponder compatível com o veículo.`,`Utilize outro transponder de acordo com a aplicação`,`      Se escolhido "SIM" durante a Programação de Chaves, volte ao passo 13.`,`      Se escolhido "SIM" durante a Adição de Chaves, volta ao passo 11.`,`      Se escolhido "NAO" para qualquer um dos procedimentos (Programação de Chaves ou Adição de Chaves), o procedimento será finalizado.`,]
 },
-
 { label: `Veiculo fora da Aplicacao!`,
 screens: [
 `&nbsp;`,
@@ -482,7 +352,6 @@ causes: [
 solutions: [
 `Verificar aplicação.`,]
 },
-
 { label: `Desconecte o OBDMap!!`,
 screens: [
 `&nbsp;`,
@@ -495,7 +364,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,

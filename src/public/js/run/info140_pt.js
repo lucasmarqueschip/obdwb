@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Reset ECU Bosch ME7.4.9";
-revCarga = "Rev. 2";
-dataManual = "Março 2013";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0140<br />Reset ECU Bosch ME7.4.9`;
+revCarga = `Rev. 2`;
+dataManual = `Março 2013`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -17,82 +17,90 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Peugeot",
-model: "206 1.4 16V",
-years: "2008 a 2012"
+manufacturer: `Peugeot`,
+model: `206 1.4 16V`,
+years: `2008 a 2012`
 },
 {
-manufacturer: "Peugeot",
-model: "206 1.6 16V",
-years: "2008 a 2012"
+manufacturer: `Peugeot`,
+model: `206 1.6 16V`,
+years: `2008 a 2012`
 },
 {
-manufacturer: "Peugeot",
-model: "207 1.4 16V",
-years: "2008 a 2012"
+manufacturer: `Peugeot`,
+model: `207 1.4 16V`,
+years: `2008 a 2012`
 },
 {
-manufacturer: "Peugeot",
-model: "207 1.6 16V",
-years: "2008 a 2012"
+manufacturer: `Peugeot`,
+model: `207 1.6 16V`,
+years: `2008 a 2012`
 },
 ];
-applicationObs = createObs("Observação: Esta carga somente realiza o reset da ECU ME7.4.9. Para adaptá-la é necessário utilizar outro equipamento.", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação:`, `Esta carga somente realiza o reset da ECU ME7.4.9. Para adaptá-la é necessário utilizar outro equipamento.`, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "Identificando a ECU ME7.4.9:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Identificando a ECU ME7.4.91.jpg"},
+{title: `Identificando a ECU ME7.4.9:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Identificando a ECU ME7.4.91.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Identificando a ECU ME7.4.92.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Identificando a ECU ME7.4.92.jpg`},
 
-{title: "Localizando e conectando a pinça na memória 95320:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Localizando e conectando a pinça na memória 953201.jpg"},
+{title: `Localizando e conectando a pinça na memória 95320:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Localizando e conectando a pinça na memória 953201.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Localizando e conectando a pinça na memória 953202.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Localizando e conectando a pinça na memória 953202.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O pino 1 da pinça deve coincidir com o pino 1 da memória.", 
-image: "/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Localizando e conectando a pinça na memória 953203.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O pino 1 da pinça deve coincidir com o pino 1 da memória.`, 
+image: `/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Localizando e conectando a pinça na memória 953203.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Todos os acessorios.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0140 - Reset ECU Bosch ME7.4.9/Todos os acessorios.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o reset da ECU ME7.4.9:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>Peugeot`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Peugeot`, `>Bosch Me7.4.9`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Bosch Me7.4.9`, `>Resetar?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -137,7 +145,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos.`,``,]
 },
-
 { label: `Pinca invertida!`,
 screens: [
 `&nbsp;`,
@@ -150,7 +157,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória.`,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,

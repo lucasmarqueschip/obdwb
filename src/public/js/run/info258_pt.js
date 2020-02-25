@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de chaves Ford KA (15-18)";
-revCarga = "Rev. 5";
-dataManual = "Julho 2018";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0258<br />Programação de chaves Ford KA (15-18)`;
+revCarga = `Rev. 5`;
+dataManual = `Julho 2018`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -24,57 +24,65 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ford",
-model: "KA 1.0",
-years: "2015 a 2018"
+manufacturer: `Ford`,
+model: `KA 1.0`,
+years: `2015 a 2018`
 },
 {
-manufacturer: "Ford",
-model: "Ranger 2.5",
-years: "2016 a 2017"
+manufacturer: `Ford`,
+model: `Ranger 2.5`,
+years: `2016 a 2017`
 },
 {
-manufacturer: "Ford",
-model: "KA 1.5",
-years: "2015 a 2018"
+manufacturer: `Ford`,
+model: `KA 1.5`,
+years: `2015 a 2018`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Chaves e Telecomandos/Ford KA.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Chaves e Telecomandos/Ford KA.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o Teste de Compatibilidade`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>KA 2015-2018`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`KA 2015-2018`, `>Compativel?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -107,7 +115,7 @@ help: `Veículo compativel com o software!`
 }, {title: `Realizando o apagamento e programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>KA 2015-2018`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`KA 2015-2018`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -269,7 +277,7 @@ help: `   Tecle OK!`
 }, {title: `Realizando a adição de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>KA 2015-2018`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`KA 2015-2018`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -396,7 +404,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A3,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
 { label: `Acesso Negado! <OK>`,
 screens: [
 `&nbsp;`,
@@ -409,33 +416,6 @@ causes: [
 solutions: [
 `Verificar aplicação.`,]
 },
-
-{ label: `Erro ao apagar chaves!`,
-screens: [
-`&nbsp;`,
-`&nbsp;Erro&nbsp;ao&nbsp;apagar`,
-`&nbsp;&nbsp;&nbsp;&nbsp;chaves!`,
-`<br />`,
-],
-causes: [
-`Condições incorretas do veiculo`,``,],
-solutions: [
-`Realize a função novamente`,`Caso o erro persista contate o suporte tecnico`,]
-},
-
-{ label: `Acesso Negado! * <OK>`,
-screens: [
-`&nbsp;`,
-`Acesso&nbsp;Negado!&nbsp;*`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
-`<br />`,
-],
-causes: [
-`BCM não compatível com a aplicação.`,],
-solutions: [
-`Verificar aplicação.`,``,``,]
-},
-
 { label: `Chave nao programada!`,
 screens: [
 `&nbsp;`,
@@ -448,7 +428,6 @@ causes: [
 solutions: [
 `Utilize um transponder ID48 virgem,`,`Verifique a antena do veículo.`,]
 },
-
 { label: `Veiculo incompativel!`,
 screens: [
 `&nbsp;`,
@@ -460,6 +439,30 @@ causes: [
 `O veiculo não é compaivel com a aplicação`,],
 solutions: [
 `Verifique a tabela de aplicação`,]
+},
+{ label: `Erro ao apagar chaves!`,
+screens: [
+`&nbsp;`,
+`&nbsp;Erro&nbsp;ao&nbsp;apagar`,
+`&nbsp;&nbsp;&nbsp;&nbsp;chaves!`,
+`<br />`,
+],
+causes: [
+`Condições incorretas do veiculo`,``,],
+solutions: [
+`Realize a função novamente`,`Caso o erro persista contate o suporte tecnico`,]
+},
+{ label: `Acesso Negado! * <OK>`,
+screens: [
+`&nbsp;`,
+`Acesso&nbsp;Negado!&nbsp;*`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+causes: [
+`BCM não compatível com a aplicação.`,],
+solutions: [
+`Verificar aplicação.`,``,``,]
 },
 
 ];

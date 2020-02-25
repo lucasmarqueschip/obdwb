@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Leitura da Senha da UCH Tipo 2 ( 93C66 ) - Clio II, Logan e Sandero via OBD";
-revCarga = "Rev. 2";
-dataManual = "Maio 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/conEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0093<br />Leitura da Senha da UCH Tipo 2 ( 93C66 ) - Clio II, Logan e Sandero via OBD`;
+revCarga = `Rev. 2`;
+dataManual = `Maio 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/conEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -17,56 +17,64 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Renault",
-model: "Clio ll 1.0 16V",
-years: "2004 a 2011"
+manufacturer: `Renault`,
+model: `Clio ll 1.0 16V`,
+years: `2004 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Clio II 1.6 16V",
-years: "2004 a 2011"
+manufacturer: `Renault`,
+model: `Clio II 1.6 16V`,
+years: `2004 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Logan 1.0 16V",
-years: "2007 a 2011"
+manufacturer: `Renault`,
+model: `Logan 1.0 16V`,
+years: `2007 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Logan 1.6 16V",
-years: "2007 a 2011"
+manufacturer: `Renault`,
+model: `Logan 1.6 16V`,
+years: `2007 a 2011`
 },
 {
-manufacturer: "Renault",
-model: "Sandero 1.6",
-years: "2007 a 2011"
+manufacturer: `Renault`,
+model: `Sandero 1.6`,
+years: `2007 a 2011`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "<br />Utilize o cabo universal Connect", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `<br />Utilize o cabo universal Connect`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Connect/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos Clio II está localizada na posição F6.<br />A tomada de diagnóstico dos veículos Logan e Sandero está localizada na área I5.<br /><br /><br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/E5-F5-L5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos Clio II está localizada na posição F6.<br />A tomada de diagnóstico dos veículos Logan e Sandero está localizada na área I5.<br /><br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/E5-F5-L5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = false;
 services = 
 [
@@ -79,15 +87,47 @@ screens: [
 {lines: [`UCH-2`], help: `Tecle OK`, menu: 1000},
 {lines: [`Tipo 1`], help: `Tecle OK`, menu: 1000},
 {lines: [`Leitura de senha`], help: `Tecle OK`, menu: 1000},
-
-]},];
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`Faça&nbsp;o`,
+`procedimento`,
+`com&nbsp;a&nbsp;chave`,
+`desligada!`,
+],
+help: `Tecle OK!`
+},
+{lines: [
+`&nbsp;`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
+{lines: [
+`&nbsp;`,
+`Senha:`,
+`************`,
+`<br />`,
+],
+help: `Anote a senha.`
+},
+]}];
 //Outras mensagens
 othersMessageTitle = `Outras Mensagens`;
-othersMessage = [{ label: `Erro de Comunicacao!`,
+othersMessage = [
+{ label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
-`Erro&nbsp;de&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Comunicacao!`,
+`Erro&nbsp;de&nbsp;Comunicação!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [
@@ -95,12 +135,11 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico, talvez esta carga tenha tido alterações.`,]
 },
-
 { label: `Senha nao Encontrada!`,
 screens: [
 `&nbsp;`,
-`Senha&nbsp;nao`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Encontrada!`,
+`Senha&nbsp;não&nbsp;encontrada!`,
+`Tecle&nbsp;&lt;OK&gt;&nbsp;para&nbsp;continuar`,
 `<br />`,
 ],
 causes: [

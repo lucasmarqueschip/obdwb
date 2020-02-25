@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "VAG Group 1 - Golf 2008 (senha, chaves e telecomandos)";
-revCarga = "Rev. 0";
-dataManual = "Maio 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0033<br />VAG Group 1 - Golf 2008 (senha, chaves e telecomandos)`;
+revCarga = `Rev. 0`;
+dataManual = `Maio 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -20,62 +20,70 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "VW",
-model: "Golf 1.6",
-years: "2001 a 2008"
+manufacturer: `VW`,
+model: `Golf 1.6`,
+years: `2001 a 2008`
 },
 {
-manufacturer: "VW",
-model: "Golf 1.6 Flex",
-years: "2005 a 2008"
+manufacturer: `VW`,
+model: `Golf 1.6 Flex`,
+years: `2005 a 2008`
 },
 {
-manufacturer: "VW",
-model: "Golf 1.8 turbo",
-years: "2002 a 2004"
+manufacturer: `VW`,
+model: `Golf 1.8 turbo`,
+years: `2002 a 2004`
 },
 {
-manufacturer: "VW",
-model: "Golf 1.8",
-years: "2000 a 2008"
+manufacturer: `VW`,
+model: `Golf 1.8`,
+years: `2000 a 2008`
 },
 {
-manufacturer: "VW",
-model: "Golf 2.0",
-years: "2000 a 2008"
+manufacturer: `VW`,
+model: `Golf 2.0`,
+years: `2000 a 2008`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo Universal + adaptador A1.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico do veículo fica localizada na área E5.<br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/E5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico do veículo fica localizada na área E5.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/E5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a leitura de senha de ECU ME7.5.20`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`VW`, `>Me7.5.20`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Me7.5.20`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -108,7 +116,7 @@ help: ``
 }, {title: `Realizando a leitura do número de chaves Pats 3 CAN`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`VW`, `>Golf 2008`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Golf 2008`, `>Num. de chaves`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -141,7 +149,7 @@ help: ``
 }, {title: `Realizando a programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`VW`, `>Golf 2008`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Golf 2008`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -206,7 +214,7 @@ help: `Tecle OK!`
 }, {title: `Realizando a programação de telecomando:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>VW`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`VW`, `>Golf 2008`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Golf 2008`, `>Prog. telecmd?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -260,7 +268,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
@@ -273,7 +280,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico, talvez esta carga tenha tido alterações.`,]
 },
-
 { label: `Senha Incorreta!`,
 screens: [
 `&nbsp;`,

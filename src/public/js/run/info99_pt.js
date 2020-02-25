@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Reset da ECU Sagem 3000 (Megane 2005-2010) com Memória 95160 via Pinça";
-revCarga = "Rev. 3";
-dataManual = "Janeiro 2020";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0099<br />Reset da ECU Sagem 3000 (Megane 2005-2010) com Memória 95160 via Pinça`;
+revCarga = `Rev. 3`;
+dataManual = `Janeiro 2020`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,52 +18,60 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Renault",
-model: "Megane 1.6",
-years: "2005 a 2010"
+manufacturer: `Renault`,
+model: `Megane 1.6`,
+years: `2005 a 2010`
 },
 {
-manufacturer: "Renault",
-model: "Megane 2.0",
-years: "2005 a 2010"
+manufacturer: `Renault`,
+model: `Megane 2.0`,
+years: `2005 a 2010`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "Identificando e desmontando a ECU S3000:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0099 Reset da ECU Sagem 3000 (Megane 2005-2010)/Identificando a ECU.jpg"},
+{title: `Identificando e desmontando a ECU S3000:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0099 Reset da ECU Sagem 3000 (Megane 2005-2010)/Identificando a ECU.jpg`},
 
-{title: "Localizando a memória 95160:", 
-description: "Conecte a pinça na memória 95160 e realize a função abaixo:", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0099 Reset da ECU Sagem 3000 (Megane 2005-2010)/Localizando a memória 95160.jpg"},
+{title: `Localizando a memória 95160:`, 
+description: `Conecte a pinça na memória 95160 e realize a função abaixo:`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0099 Reset da ECU Sagem 3000 (Megane 2005-2010)/Localizando a memória 95160.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Reset da ECU:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>Renault`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Renault`, `>Sagem 3000`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Sagem 3000`, `>Resetar?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -108,7 +116,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir se os parafusos que prendem a pinça no OBDMap estão bem fixos,`,`Conferir se a pinça apresenta algum defeito visível, se apresentar algum defeito encaminhar para reparo.`,]
 },
-
 { label: `Pinca invertida!`,
 screens: [
 `&nbsp;`,
@@ -121,7 +128,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória.`,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,

@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4";
-revCarga = "Rev. 1";
-dataManual = "Fevereiro 2019";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0276<br />Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4`;
+revCarga = `Rev. 1`;
+dataManual = `Fevereiro 2019`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -23,312 +23,320 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Agile 1.4",
-years: "2010 a 2014"
+manufacturer: `GM`,
+model: `Agile 1.4`,
+years: `2010 a 2014`
 },
 {
-manufacturer: "GM",
-model: "Cobalt 1.4",
-years: "2011 a 2015"
+manufacturer: `GM`,
+model: `Cobalt 1.4`,
+years: `2011 a 2015`
 },
 {
-manufacturer: "GM",
-model: "Cobalt 1.8",
-years: "2011 a 2015"
+manufacturer: `GM`,
+model: `Cobalt 1.8`,
+years: `2011 a 2015`
 },
 {
-manufacturer: "GM",
-model: "Cruze 1.8",
-years: "2011 a 2015"
+manufacturer: `GM`,
+model: `Cruze 1.8`,
+years: `2011 a 2015`
 },
 {
-manufacturer: "GM",
-model: "Montana 1.4",
-years: "2011 a 2015"
+manufacturer: `GM`,
+model: `Montana 1.4`,
+years: `2011 a 2015`
 },
 {
-manufacturer: "GM",
-model: "Onix 1.0",
-years: "2012 a 2016"
+manufacturer: `GM`,
+model: `Onix 1.0`,
+years: `2012 a 2016`
 },
 {
-manufacturer: "GM",
-model: "Onix 1.4",
-years: "2012 a 2016"
+manufacturer: `GM`,
+model: `Onix 1.4`,
+years: `2012 a 2016`
 },
 {
-manufacturer: "GM",
-model: "Prisma 1.0",
-years: "2013 a 2016"
+manufacturer: `GM`,
+model: `Prisma 1.0`,
+years: `2013 a 2016`
 },
 {
-manufacturer: "GM",
-model: "Prisma 1.4",
-years: "2013 a 2016"
+manufacturer: `GM`,
+model: `Prisma 1.4`,
+years: `2013 a 2016`
 },
 {
-manufacturer: "GM",
-model: "S10 2.4 Flex",
-years: "2012 a 2015"
+manufacturer: `GM`,
+model: `S10 2.4 Flex`,
+years: `2012 a 2015`
 },
 {
-manufacturer: "GM",
-model: "Sonic 1.6",
-years: "2012 a 2014"
+manufacturer: `GM`,
+model: `Sonic 1.6`,
+years: `2012 a 2014`
 },
 {
-manufacturer: "GM",
-model: "Spin 1.8",
-years: "2012 a 2016"
+manufacturer: `GM`,
+model: `Spin 1.8`,
+years: `2012 a 2016`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Programador JTAG01. Necessário para realizar a<br />leitura e gravação do arquivo<br />na ECU", 
-image: "/images/Acessórios/Jtag.JPG"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Programador JTAG01. Necessário para realizar a<br />leitura e gravação do arquivo<br />na ECU`, 
+image: `/images/Acessórios/Jtag.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo USB. Necessário para<br />realizar o backup do<br />arquivo", 
-image: "/images/Acessórios/Cabo USB.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: ``},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.", 
-image: "/images/Acessórios/Cabo MCU.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Cabo MCU. Necessário para conectar o painel ao OBDMap em bancada.`, 
+image: `/images/Acessórios/Cabo MCU.jpg`},
 
-{title: "Software utilizado", 
-description: "", 
-ballon: "Software OBDMap Suite", 
-image: "/images/Funções Específicas/OBD0273 - Leitura e gravação ECU GM Delco E83/AtalhoOBDMapSuite.jpg"},
+{title: `Software utilizado`, 
+description: ``, 
+ballon: `Software OBDMap Suite`, 
+image: `/images/Funções Específicas/OBD0273 - Leitura e gravação ECU GM Delco E83/AtalhoOBDMapSuite.jpg`},
 
-{title: "Identificando a ECU.", 
-description: "", 
-ballon: "Identificando na<br />etiqueta que a ECU<br />é uma E83 ACDelco", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/ECU Delco E83 costas.jpg"},
+{title: `Identificando a ECU.`, 
+description: ``, 
+ballon: `Identificando na<br />etiqueta que a ECU<br />é uma E83 ACDelco`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/ECU Delco E83 costas.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/ECU Delco E83 frente.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/ECU Delco E83 frente.jpg`},
 
-{title: "Localização dos pontos de solda da ECU", 
-description: "", 
-ballon: "Região A<br />Região B<br />Região C", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Placa ECU Delco E83.jpg"},
+{title: `Localização dos pontos de solda da ECU`, 
+description: ``, 
+ballon: `Região A<br />Região B<br />Região C`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Placa ECU Delco E83.jpg`},
 
-{title: "Localizando os pontos de soldagem do cabo MCU Modelo A:", 
-description: "", 
-ballon: "Solde os fios do<br />Programador<br />JTAG01 na ordem<br />indicada na<br />Região A", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pontos de Soldagem A - ECU Delco E83.jpg"},
+{title: `Localizando os pontos de soldagem do cabo MCU Modelo A:`, 
+description: ``, 
+ballon: `Solde os fios do<br />Programador<br />JTAG01 na ordem<br />indicada na<br />Região A`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pontos de Soldagem A - ECU Delco E83.jpg`},
 
-{title: "Localizando os pontos de soldagem do cabo MCU Modelo B:", 
-description: "", 
-ballon: "Solde os fios do<br />Programador<br />JTAG01 na ordem<br />indicada na<br />Região B", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pontos de Soldagem B - ECU Delco E83.jpg"},
+{title: `Localizando os pontos de soldagem do cabo MCU Modelo B:`, 
+description: ``, 
+ballon: `Solde os fios do<br />Programador<br />JTAG01 na ordem<br />indicada na<br />Região B`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pontos de Soldagem B - ECU Delco E83.jpg`},
 
-{title: "Localizando os pontos de soldagem do cabo MCU Modelo C:", 
-description: "", 
-ballon: "Solde os fios do<br />Programador<br />JTAG01 na<br />ordem indicada<br />na<br />Região C", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pontos de Soldagem C - ECU Delco E83.jpg"},
+{title: `Localizando os pontos de soldagem do cabo MCU Modelo C:`, 
+description: ``, 
+ballon: `Solde os fios do<br />Programador<br />JTAG01 na<br />ordem indicada<br />na<br />Região C`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pontos de Soldagem C - ECU Delco E83.jpg`},
 
-{title: "Todos os fios soldados", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0273 - Leitura e gravação ECU GM Delco E83/Todos os fios soldados.jpg"},
+{title: `Todos os fios soldados`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0273 - Leitura e gravação ECU GM Delco E83/Todos os fios soldados.jpg`},
 
-{title: "Identificando a memória 24C16:", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: `Identificando a memória 24C16:`, 
+description: ``, 
+ballon: `Identificando o<br />BC com a<br />memória 24C16`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/BC com memória 24C16.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Identificando o<br />BC com a<br />memória 24C16`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/BC com memória 24C16 2.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Localizando a<br />memória<br />24C16`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Memória 24C16.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Memória 24C16 2.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Posicionando a pinça na memória`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pinça conectada.JPG`},
 
-{title: "Identificando o BC com memória 25160:", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: `Identificando o BC com memória 25160:`, 
+description: ``, 
+ballon: `Identificando<br />o BC com a<br />memória<br />25160`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/BC com memória 25160.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/BC com memória 25160 2.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Identificando<br />o pino 1 da<br />memória<br />25160`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pino 1 memória 25160.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Posicionando a pinça<br />na memoria`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pinça conectada memória 25160.JPG`},
 
-{title: "Identificando o BC com memória 95320:", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: `Identificando o BC com memória 95320:`, 
+description: ``, 
+ballon: `Identificando<br />o BC com a<br />memória<br />95320`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/BC com memória 95320.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Localizando a memória 95320`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Localizando memória 95320.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Localizando a<br />memória<br />95320`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Localizando memória 95320 2.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "Indicando a área para soldar o cabo MCU", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Área para se soldar o cabo MCU.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Indicando a área para soldar o cabo MCU`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Área para se soldar o cabo MCU.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Identificando pontos de soldagem do cabo MCU.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os fios soldados", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Fios do cabo MCU já soldados.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os fios soldados`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Fios do cabo MCU já soldados.jpg`},
 
-{title: "Identificando BC com memória 24C32", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: `Identificando BC com memória 24C32`, 
+description: ``, 
+ballon: `Identificação do BC`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/BC com memória 24C32.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Localização da memória 24C32`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Localização da memória 24C32.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Localização da memória 24C32 2 .JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Posicionado a pinça<br />na memoria`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Pinça conectada memória 24C32.JPG`},
 
-{title: "Identificando e desmontando o painel:", 
-description: "Retire o painel do veículo e leve-o para bancada.<br />", 
-ballon: "Painel retirado do veículo.", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Painel retirado do veículo.jpg"},
+{title: `Identificando e desmontando o painel:`, 
+description: `Retire o painel do veículo e leve-o para bancada.<br />`, 
+ballon: `Painel retirado do veículo.`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Painel retirado do veículo.jpg`},
 
-{title: "", 
-description: "Retire o painel do veículo e leve-o para bancada.<br />", 
-ballon: "Localizando as 8 travas que<br />prendem a tampa do<br />painel.", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Localizando travas do painel.jpg"},
+{title: ``, 
+description: `Retire o painel do veículo e leve-o para bancada.<br />`, 
+ballon: `Localizando as 8 travas que<br />prendem a tampa do<br />painel.`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Localizando travas do painel.jpg`},
 
-{title: "", 
-description: "Retire o painel do veículo e leve-o para bancada.<br />", 
-ballon: "Com o auxílio de uma<br />chave de fenda, solte as<br />travas do painel.", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Soltando travas do painel.jpg"},
+{title: ``, 
+description: `Retire o painel do veículo e leve-o para bancada.<br />`, 
+ballon: `Com o auxílio de uma<br />chave de fenda, solte as<br />travas do painel.`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Soltando travas do painel.jpg`},
 
-{title: "Localizando os pontos de soldagem do cabo MCU Modelo A:", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: `Localizando os pontos de soldagem do cabo MCU Modelo A:`, 
+description: ``, 
+ballon: `Identificando os<br />pontos a serem<br />soldado os fios do<br />cabo MCU:<br />1=> Fio Vermelho<br />2=> Fio Amarelo<br />3=> Fio Azul<br />4=> Fio Verde<br />5=> Fio Cinza<br />6=> Fio Preto<br />7=> Fio Roxo`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Localizando pontos de soldagem modelo A.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os fios do cabo MCU soldados, coloque para atrás os fios não utilizados para evitar problemas", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Fios do cabo MCU soldados no painel modelo A.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os fios do cabo MCU soldados, coloque para atrás os fios não utilizados para evitar problemas`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Fios do cabo MCU soldados no painel modelo A.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: ""},
+{title: ``, 
+description: ``, 
+ballon: `Identificando os<br />pontos a serem<br />soldado os fios do<br />cabo MCU:<br />1=> Fio Vermelho<br />2=> Fio Amarelo<br />3=> Fio Azul<br />4=> Fio Verde<br />5=> Fio Cinza<br />6=> Fio Preto<br />7=> Fio Roxo`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Localizando pontos de soldagem modelo B.JPG`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Fios do cabo MCU soldados no painel modelo B.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Fios do cabo MCU soldados no painel modelo B.jpg`},
 
-{title: "Realizando a leitura da central Imob 4 OBD Suite", 
-description: "", 
-ballon: "Após abrir o software clique<br />sobre ler para que seja feito o<br />backup do arquivo da ECU", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 1 - OBDMapSuite.jpg"},
+{title: `Realizando a leitura da central Imob 4 OBD Suite`, 
+description: ``, 
+ballon: `Após abrir o software clique<br />sobre ler para que seja feito o<br />backup do arquivo da ECU`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 1 - OBDMapSuite.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Aguarde até o Software<br />comunicar com o OBDMap", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 2 - OBDMapSuite.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Aguarde até o Software<br />comunicar com o OBDMap`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 2 - OBDMapSuite.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Siga os passos na tela do<br />OBDMap", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 3 - OBDMapSuite.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Siga os passos na tela do<br />OBDMap`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 3 - OBDMapSuite.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Aguarde até a conclusão<br />da transferência do<br />arquivo", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 4 - OBDMapSuite.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Aguarde até a conclusão<br />da transferência do<br />arquivo`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 4 - OBDMapSuite.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Salve o arquivo lido com<br />um nome de fácil<br />identificação e em um<br />lugar de sua preferência e<br />onde não possa ser<br />apagado com facilidade.", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 5 - OBDMapSuite.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Salve o arquivo lido com<br />um nome de fácil<br />identificação e em um<br />lugar de sua preferência e<br />onde não possa ser<br />apagado com facilidade.`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 5 - OBDMapSuite.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Procedimento<br />concluído com<br />sucesso, siga as<br />mensagens na<br />tela do OBDMap", 
-image: "/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 6 - OBDMapSuite.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Procedimento<br />concluído com<br />sucesso, siga as<br />mensagens na<br />tela do OBDMap`, 
+image: `/images/Funções Específicas/OBD0276 - Correção de Chassi ECU GM Delco E83, BC imob5 GM e Painel Imob 4/Passo 6 - OBDMapSuite.jpg`},
 
-{title: "Salvando o arquivo da ECU no computador", 
-description: "Algumas observações são importantes no momento de salvar o arquivo da ECU no computador.<br />• A realização do Backup do arquivo da ECU é de inteira responsabilidade do cliente. (Utilize<br />a função de leitura para realizar o backup)<br />• Portanto certifique-se de nomear o arquivo de maneira coerente e de fácil identificação,<br />pois o mesmo poderá ser usado para futura restauração da ECU.<br />• Como sugestão, indicamos nomear os arquivos com o modelo/ano, placa do carro e/ ou<br />chassi.<br />• Salve o arquivo em uma pasta conhecida, e mantenha backup desses arquivos para evitar<br />transtornos.<br />• Não nos responsabilizamos por qualquer condição de erro causada pelo mau uso da carga<br />e/ou software.<br />Ao término da leitura da ECU uma janela para salvar o arquivo é aberta no software<br />Digite o nome do arquivo e clique em salvar.Algumas observações são importantes no momento de salvar o arquivo da ECU no computador.<br />• A realização do Backup do arquivo da ECU é de inteira responsabi", 
-ballon: "lidade do cliente. (Utilize<br />a função de leitura para realizar o backup)<br />• Portanto certifique-se de nomear o arquivo de maneira coerente e de fácil identificação,<br />pois o mesmo poderá ser usado para futura restauração da ECU.<br />• Como sugestão, indicamos nomear os arquivos com o modelo/ano, placa do carro e/ ou<br />chassi.<br />• Salve o arquivo em uma pasta conhecida, e mantenha backup desses arquivos para evitar<br />transtornos.<br />• Não nos responsabilizamos por qualquer condição de erro causada pelo mau uso da carga<br />e/ou software.<br />Ao término da leitura da ECU uma janela para salvar o arquivo é aberta no software<br />Digite o nome do arquivo e clique em salvar.<br />", 
-
+{title: `Salvando o arquivo da ECU no computador`, 
+description: `Algumas observações são importantes no momento de salvar o arquivo da ECU no computador.<br />• A realização do Backup do arquivo da ECU é de inteira responsabilidade do cliente. (Utilize<br />a função de leitura para realizar o backup)<br />• Portanto certifique-se de nomear o arquivo de maneira coerente e de fácil identificação,<br />pois o mesmo poderá ser usado para futura restauração da ECU.<br />• Como sugestão, indicamos nomear os arquivos com o modelo/ano, placa do carro e/ ou<br />chassi.<br />• Salve o arquivo em uma pasta conhecida, e mantenha backup desses arquivos para evitar<br />transtornos.<br />• Não nos responsabilizamos por qualquer condição de erro causada pelo mau uso da carga<br />e/ou software.<br />Ao término da leitura da ECU uma janela para salvar o arquivo é aberta no software<br />Digite o nome do arquivo e clique em salvar.Algumas observações são importantes no momento de salvar o arquivo da ECU no computador.<br />• A realização do Backup do arquivo da ECU é de inteira responsabi`, 
+ballon: `lidade do cliente. (Utilize<br />a função de leitura para realizar o backup)<br />• Portanto certifique-se de nomear o arquivo de maneira coerente e de fácil identificação,<br />pois o mesmo poderá ser usado para futura restauração da ECU.<br />• Como sugestão, indicamos nomear os arquivos com o modelo/ano, placa do carro e/ ou<br />chassi.<br />• Salve o arquivo em uma pasta conhecida, e mantenha backup desses arquivos para evitar<br />transtornos.<br />• Não nos responsabilizamos por qualquer condição de erro causada pelo mau uso da carga<br />e/ou software.<br />Ao término da leitura da ECU uma janela para salvar o arquivo é aberta no software<br />Digite o nome do arquivo e clique em salvar.<br />`, 
+image: `• Salve o arquivo de backup em um lugar de sua preferência e onde não possa ser apagado com<br />facilidade`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Correção de chassi da ECU GM Delco E83 imob 4:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>Imob 4 Agile`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob 4 Agile`, `>Delco E83`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -370,14 +378,6 @@ help: `Tecle OK para aceitar
 Tecle VOLTA para negar`
 },
 {lines: [
-`&nbsp;`,
-`Conecte&nbsp;cabo&nbsp;USB`,
-`&nbsp;&nbsp;&nbsp;no&nbsp;OBDMap`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
 `Abra&nbsp;o&nbsp;software`,
 `&nbsp;&nbsp;OBDMapSuite`,
 `&nbsp;&nbsp;e&nbsp;clique&nbsp;no`,
@@ -385,6 +385,14 @@ help: ``
 ],
 help: `Siga os passos na tela do
 OBDMap Suite`
+},
+{lines: [
+`&nbsp;`,
+`Conecte&nbsp;cabo&nbsp;USB`,
+`&nbsp;&nbsp;&nbsp;no&nbsp;OBDMap`,
+`<br />`,
+],
+help: ``
 },
 {lines: [
 `Conecte&nbsp;o&nbsp;Prog.`,
@@ -451,7 +459,7 @@ help: `Operação concluída com sucesso.`
 }, {title: `Realizando correção de chassi da ECU GM Delco E83 imob 5:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>Imob 5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob 5`, `>Delco E83`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -573,7 +581,7 @@ help: `Tecle OK!`
 }, {title: `Realizando correção do chassi do painel imob 4:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>Imob 4 Agile`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob 4 Agile`, `>Painel`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -650,7 +658,7 @@ help: `Tecle OK!`
 }, {title: `Realizando correção de chassi do BC imob 5:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Pinca`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Pinca`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>Imob 5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob 5`, `>BCM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -758,7 +766,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `ATENCAO! Arquivo da BC corrompido! Aperte <OK>`,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;ATENCAO!`,
@@ -771,7 +778,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `ATENCAO! Arq. do Painel Corrompido! <OK>`,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;ATENCAO!`,
@@ -784,7 +790,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -797,7 +802,6 @@ causes: [
 solutions: [
 `Conferir correta ligação do cabo MCU`,`Conferir correta ligação do programador JTAG01.`,`Conferir correta conexão da pinça`,`Conferir bom estado do módulo.`,]
 },
-
 { label: `Pinca invertida! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -810,7 +814,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória.`,]
 },
-
 { label: `Erro grav. ECU! <OK> p/ repetir`,
 screens: [
 `&nbsp;`,

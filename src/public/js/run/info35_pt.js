@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Leitura de Senha e Gravação de Chassi - S10 2010 ME7.9.9";
-revCarga = "Rev. 2";
-dataManual = "Maio 2017";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0035<br />Leitura de Senha e Gravação de Chassi - S10 2010 ME7.9.9`;
+revCarga = `Rev. 2`;
+dataManual = `Maio 2017`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -20,47 +20,55 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Blazer 2.4",
-years: "2010 a 2010"
+manufacturer: `GM`,
+model: `Blazer 2.4`,
+years: `2010 a 2010`
 },
 {
-manufacturer: "GM",
-model: "S10 2.4",
-years: "2010 a 2010"
+manufacturer: `GM`,
+model: `S10 2.4`,
+years: `2010 a 2010`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Conecte o cabo universal junto ao adaptador A1.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Cabo universal + adaptador A1.<br />Para realizar o emparelhamento<br />da BSI.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos fica localizada na área A5.<br />", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos fica localizada na área A5.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a leitura de senha`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>Me799 V4S10 10`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Me799 V4S10 10`, `>Leitura?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -102,12 +110,19 @@ help: `Chassi lido da ECU.`
 }, {title: `Realizando a Gravação de chassi`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [``, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>Me799 V4S10 10`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Me799 V4S10 10`, `>Gravar chassi`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
+{lines: [
+`&nbsp;`,
+`Ligue&nbsp;a&nbsp;ignicao`,
+`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
+`<br />`,
+],
+help: `Tecle OK!`
+},
 {lines: [
 `&nbsp;`,
 `Digite:*********`,
@@ -117,20 +132,12 @@ screens: [
 help: `Utilize as teclas para cima e para baixo para inserir o chassi que será gravado no veículo.`
 },
 {lines: [
-`Confirma?`,
-`****************`,
-`*`,
+`&nbsp;`,
+`Confirma?******`,
+`***********`,
 `<br />`,
 ],
 help: `Certifique-se de que o chassi correto foi inserido e então Tecle OK, ou tecle VOLTA para corrigir.`
-},
-{lines: [
-`&nbsp;`,
-`Ligue&nbsp;a&nbsp;ignicao`,
-`&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK`,
-`<br />`,
-],
-help: `Tecle OK!`
 },
 {lines: [
 `&nbsp;`,
@@ -142,8 +149,8 @@ help: ``
 },
 {lines: [
 `&nbsp;`,
-`&nbsp;&nbsp;Chassi`,
-`&nbsp;&nbsp;&nbsp;Programado!`,
+`&nbsp;Procedimento`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Concluido!`,
 `<br />`,
 ],
 help: ``

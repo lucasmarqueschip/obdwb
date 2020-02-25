@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de chaves Renault UCH Continental (14-18)";
-revCarga = "Rev. 0";
-dataManual = "Março 2018";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0259<br />Programação de chaves Renault UCH Continental (14-18)`;
+revCarga = `Rev. 0`;
+dataManual = `Março 2018`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -19,92 +19,100 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Renault",
-model: "Duster 1.6",
-years: "2014 a 2019"
+manufacturer: `Renault`,
+model: `Duster 1.6`,
+years: `2014 a 2019`
 },
 {
-manufacturer: "Renault",
-model: "Duster 2.0",
-years: "2014 a 2019"
+manufacturer: `Renault`,
+model: `Duster 2.0`,
+years: `2014 a 2019`
 },
 {
-manufacturer: "Renault",
-model: "Duster Oroch 1.6",
-years: "2016 a 2019"
+manufacturer: `Renault`,
+model: `Duster Oroch 1.6`,
+years: `2016 a 2019`
 },
 {
-manufacturer: "Renault",
-model: "Duster Oroch 2.0",
-years: "2016 a 2019"
+manufacturer: `Renault`,
+model: `Duster Oroch 2.0`,
+years: `2016 a 2019`
 },
 {
-manufacturer: "Renault",
-model: "Logan 1.0",
-years: "2014 a 2019"
+manufacturer: `Renault`,
+model: `Logan 1.0`,
+years: `2014 a 2019`
 },
 {
-manufacturer: "Renault",
-model: "Logan 1.6",
-years: "2014 a 2019"
+manufacturer: `Renault`,
+model: `Logan 1.6`,
+years: `2014 a 2019`
 },
 {
-manufacturer: "Renault",
-model: "Sandero 1.0",
-years: "2014 a 2019"
+manufacturer: `Renault`,
+model: `Sandero 1.0`,
+years: `2014 a 2019`
 },
 {
-manufacturer: "Renault",
-model: "Sandero 1.6",
-years: "2014 a 2019"
+manufacturer: `Renault`,
+model: `Sandero 1.6`,
+years: `2014 a 2019`
 },
 {
-manufacturer: "Renault",
-model: "Sandero RS 2.0",
-years: "2015 a 2019"
+manufacturer: `Renault`,
+model: `Sandero RS 2.0`,
+years: `2015 a 2019`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Telecomando utilizado:", 
-description: "", 
-ballon: "", 
-image: "/images/Chaves e Telecomandos/Chave Reanult UCH.jpg"},
+{title: `Telecomando utilizado:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Chaves e Telecomandos/Chave Reanult UCH.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/I4.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: ``, 
+ballon: `A tomada de diagnóstico do veículo fica localizada na área L4.`, 
+image: `/images/Tomada de Diagnostico/Carro/I4.jpg`},
 
-{title: "Instruções de como retirar o fusível B 5 amperes:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0259/FUSIVEL.jpg"},
+{title: `Instruções de como retirar o fusível B 5 amperes:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0259/FUSIVEL.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Renault`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Renault`, `>UCH Cont 14-18`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`UCH Cont 14-18`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -232,14 +240,6 @@ help: `Se for a última chave a ser gravada o
 passo seguinte será o Passo`
 },
 {lines: [
-`<br />`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
 `&nbsp;&nbsp;Procedimento`,
 `&nbsp;&nbsp;&nbsp;Concluido!`,
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
@@ -247,11 +247,19 @@ help: ``
 ],
 help: `   Tecle OK!`
 },
+{lines: [
+`<br />`,
+`Aguarde...`,
+`<br />`,
+`<br />`,
+],
+help: ``
+},
 ]
 }, {title: `Realizando o teste de compatibilidade`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Renault`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Renault`, `>UCH Cont 14-18`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`UCH Cont 14-18`, `>Compativel?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -296,20 +304,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
-{ label: `Senha Incorreta! <OK>`,
-screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senha`,
-`&nbsp;&nbsp;&nbsp;Incorreta!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
-`<br />`,
-],
-causes: [
-`A senha inserida está incorreta,`,`Veículo está com tempo de espera devido consecutivas tentativas com senhas erradas. (dependendo do sistema)`,],
-solutions: [
-`Conferir a senha digitada,`,`Aguardar x tempo com a ignição ligada e tentar novamente com a senha correta. (dependendo do sistema)`,]
-},
-
 { label: `Erro na Programacao! <OK>`,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Erro&nbsp;na`,
@@ -322,7 +316,18 @@ causes: [
 solutions: [
 `Verifique a bateria do telecomando,`,`Verifique as antenas do sistema de aproximação no teto do veículo,`,`Coloque o telecomando no interior do veículo,`,`Coloque a chave na ignição,`,`Conferir se o transponder está programado ao veículo,`,`Refazer o procedimento novamente,`,`Conferir parte elétrica do carro, fusíveis, sensores de aproximação, etc.`,]
 },
-
+{ label: `Senha Incorreta! <OK>`,
+screens: [
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senha`,
+`&nbsp;&nbsp;&nbsp;Incorreta!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OK&gt;`,
+`<br />`,
+],
+causes: [
+`A senha inserida está incorreta,`,`Veículo está com tempo de espera devido consecutivas tentativas com senhas erradas. (dependendo do sistema)`,],
+solutions: [
+`Conferir a senha digitada,`,`Aguardar x tempo com a ignição ligada e tentar novamente com a senha correta. (dependendo do sistema)`,]
+},
 { label: `Saldo Web Service Insuficiente!`,
 screens: [
 `&nbsp;&nbsp;&nbsp;Saldo&nbsp;Web`,
@@ -335,20 +340,6 @@ causes: [
 solutions: [
 `Entrar em contato com o comercial, ou com o suporte.`,]
 },
-
-{ label: `Use o cabo CAN ou adap. A3 CAN!`,
-screens: [
-`&nbsp;`,
-`Use&nbsp;o&nbsp;cabo&nbsp;CAN`,
-`ou&nbsp;adap.&nbsp;A3&nbsp;CAN!`,
-`<br />`,
-],
-causes: [
-],
-solutions: [
-]
-},
-
 { label: `Transponder Rejeitado! <OK>`,
 screens: [
 `&nbsp;&nbsp;Transponder`,
@@ -361,7 +352,18 @@ causes: [
 solutions: [
 ]
 },
-
+{ label: `Use o cabo CAN ou adap. A3 CAN!`,
+screens: [
+`&nbsp;`,
+`Use&nbsp;o&nbsp;cabo&nbsp;CAN`,
+`ou&nbsp;adap.&nbsp;A3&nbsp;CAN!`,
+`<br />`,
+],
+causes: [
+],
+solutions: [
+]
+},
 { label: `Veiculo incompativel!`,
 screens: [
 `&nbsp;`,

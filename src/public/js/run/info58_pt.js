@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de Chaves Honda Imob1 (Tipo1, Tipo2, Tipo3)";
-revCarga = "Rev. 6";
-dataManual = "Outubro 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0058<br />Programação de Chaves Honda Imob1 (Tipo1, Tipo2, Tipo3)`;
+revCarga = `Rev. 6`;
+dataManual = `Outubro 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -21,77 +21,85 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Honda",
-model: "Civic 1.8",
-years: "2006 a 2011"
+manufacturer: `Honda`,
+model: `Civic 1.8`,
+years: `2006 a 2011`
 },
 {
-manufacturer: "Honda",
-model: "Civic 2.0",
-years: "2006 a 2011"
+manufacturer: `Honda`,
+model: `Civic 2.0`,
+years: `2006 a 2011`
 },
 {
-manufacturer: "Honda",
-model: "City 1.5",
-years: "2006 a 2013"
+manufacturer: `Honda`,
+model: `City 1.5`,
+years: `2006 a 2013`
 },
 {
-manufacturer: "Honda",
-model: "CR-V 2.0",
-years: "2008 a 2008"
+manufacturer: `Honda`,
+model: `CR-V 2.0`,
+years: `2008 a 2008`
 },
 {
-manufacturer: "Honda",
-model: "Fit 1.4",
-years: "2006 a 2014"
+manufacturer: `Honda`,
+model: `Fit 1.4`,
+years: `2006 a 2014`
 },
 {
-manufacturer: "Honda",
-model: "Fit 1.5",
-years: "2006 a 2014"
+manufacturer: `Honda`,
+model: `Fit 1.5`,
+years: `2006 a 2014`
 },
 ];
-applicationObs = createObs("Observação: Nem todos os veículos acima correspondem a aplicação dessa carga. É necessário conferir a chave original do veículo.", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação: Nem todos os veículos acima correspondem a aplicação dessa carga. É necessário conferir a chave original do veículo.`, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "O Transponder usado é o T-19 ou ID 46 Crypto sem lock.", 
-image: "/images/Transponders/ID46 SEM LOCK FIT.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O Transponder usado é o T-19 ou ID 46 Crypto sem lock.`, 
+image: `/images/Transponders/ID46 SEM LOCK FIT.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Chave original, compatível com esta carga.", 
-image: "/images/Chaves e Telecomandos/Chave Honda Antiga.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Chave original, compatível com esta carga.`, 
+image: `/images/Chaves e Telecomandos/Chave Honda Antiga.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Cabo universal + adaptador A1. Usado para conectar o OBDMap ao veículo para procedimento via diagnose.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo Universal + adaptador A1.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos citados fica localizada na área D6.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/D6.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos citados fica localizada na área D6.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/D6.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a programação de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Honda`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Honda`, `>Imob1 T1 T2 T3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob1 T1 T2 T3`, `>Prog. chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -228,7 +236,7 @@ help: `Tecle OK!`
 }, {title: `Realizando a leitura de número de chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Honda`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Honda`, `>Imob1 T1 T2 T3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob1 T1 T2 T3`, `>Num.de chaves?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -274,7 +282,6 @@ causes: [
 solutions: [
 `Verificar aplicação.`,`Inserir versão correta.`,]
 },
-
 { label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,

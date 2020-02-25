@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de chaves Fiat BC Delphi 500 2010-2012";
-revCarga = "Rev. 0";
-dataManual = "Maio 2019";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0278<br />Programação de chaves Fiat BC Delphi 500 2010-2012`;
+revCarga = `Rev. 0`;
+dataManual = `Maio 2019`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -25,62 +25,70 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Fiat",
-model: "500 1.4",
-years: "2010 a 2012"
+manufacturer: `Fiat`,
+model: `500 1.4`,
+years: `2010 a 2012`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "Para os veículos Agile e Montana (Imob4) até 2012, utilize o transponder PCF7936 (ID46) (Virgem).", 
-image: "/images/Transponders/PCF7936 (ID46) Crypto 2 virgem.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Para o sistema Imob4 utilize transponder PCF7936 (ID46) virgem.`, 
+image: `/images/Transponders/PCF7936 (ID46) Crypto 2 virgem.jpg`},
 
-{title: "Telecomando utilizado:", 
-description: "", 
-ballon: "Chave com telecomando montada.", 
-image: "/images/Chaves e Telecomandos/Chave Bravo.jpg"},
+{title: `Telecomando utilizado:`, 
+description: ``, 
+ballon: `Chave com telecomando montada.`, 
+image: `/images/Chaves e Telecomandos/Chave Bravo.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Cabo universal + adaptador A8. Necessário para realizar a programação de chaves e telecomando.", 
-image: "/images/Acessórios/Adaptador A8.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Cabo universal + adaptador A8. Necessário para realizar a programação de chaves e telecomando.`, 
+image: `/images/Acessórios/Adaptador A8.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "Todos os acessórios conectados.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A8 CONECTADOS.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: `Todos os acessórios conectados.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A8 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 
-{title: "Posicionamento do transponder no módulo de transponder:", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg"},
+{title: `Posicionamento do transponder no módulo de transponder:`, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando o teste de compatibilidade`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Fiat`, `>CODE 2`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`CODE 2`, `>BC Delphi 500`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -114,7 +122,7 @@ help: `Veículo compativel com o software!`
 }, {title: `Realizando a programação de Chaves`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Fiat`, `>CODE 2`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`CODE 2`, `>BC Delphi 500`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -359,59 +367,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A3,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,``,]
 },
-
-{ label: `Acesso Negado! ** `,
-screens: [
-`&nbsp;Acesso&nbsp;Negado!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`BC não compatível com a aplicação.`,],
-solutions: [
-`Verificar aplicação.`,]
-},
-
-{ label: `Falha na rede CAN!!! `,
-screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;Falha&nbsp;na`,
-`&nbsp;&nbsp;rede&nbsp;CAN!!!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`Não foi possível estabelecer uma comunicação com o veículo, devido a falha na rede CAN;`,`O veículo apresenta defeitos elétricos;`,``,``,],
-solutions: [
-`Verificar instalação elétrica;`,`Verificar se os módulos não estão com defeito.`,``,``,``,]
-},
-
-{ label: `Erro grav. TPD <OK> p/ repetir`,
-screens: [
-`&nbsp;`,
-`Erro&nbsp;grav.&nbsp;TPD`,
-`&lt;OK&gt;&nbsp;p/&nbsp;repetir`,
-`<br />`,
-],
-causes: [
-`O transponder não foi inserido corretamente no módulo,`,`O transponder não é um PCF7936 Virgem.`,],
-solutions: [
-`Verifique a correta posição do transponder no módulo,`,`Para verificar o tipo de transponder, utilize a carga básica do módulo de transponder na função IDENTIFICAR.`,]
-},
-
-{ label: `Senha Incorreta! `,
-screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senha`,
-`&nbsp;&nbsp;&nbsp;Incorreta!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`A senha inserida está incorreta,`,`Veículo está com tempo de espera devido consecutivas tentativas com senhas erradas. (dependendo do sistema)`,],
-solutions: [
-`Aguardar 1 hora com a ignição ligada e tentar novamente`,]
-},
-
 { label: `Erro na Programacao! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Erro&nbsp;na`,
@@ -424,7 +379,18 @@ causes: [
 solutions: [
 `Refazer o procedimento novamente,`,`Conferir parte elétrica do carro, fusíveis, sensores de aproximação, etc.`,]
 },
-
+{ label: `Senha Incorreta! `,
+screens: [
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Senha`,
+`&nbsp;&nbsp;&nbsp;Incorreta!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`A senha inserida está incorreta,`,`Veículo está com tempo de espera devido consecutivas tentativas com senhas erradas. (dependendo do sistema)`,],
+solutions: [
+`Aguardar 1 hora com a ignição ligada e tentar novamente`,]
+},
 { label: `Erro no Transponder! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Erro&nbsp;no`,
@@ -437,20 +403,30 @@ causes: [
 solutions: [
 `Aborte o procedimento e reinicie precodificando o transponder`,`Realize uma leitura do transponder e confira se é o mesmo indicado pelo manual`,`Verifique a procedência do transponder e se o mesmo é de boa qualidade`,`Tente realizar a codificação com outro transponder de lote diferente`,`Repita o procedimento`,`Em caso de dúvida, contate o suporte`,``,``,]
 },
-
-{ label: `Transponder nao Encontrado!`,
+{ label: `Acesso Negado! ** `,
 screens: [
-`&nbsp;`,
-`Transponder&nbsp;`,
-`&nbsp;nao&nbsp;Encontrado!`,
-`<br />`,
+`&nbsp;Acesso&nbsp;Negado!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
 ],
 causes: [
-`O transponder não está posicionado corretamente no Módulo de Transponder,`,`O transponder foi retirado do Módulo de Transponder durante o procedimento de gravação,`,`Mau contato no Módulo de Transponder com o OBDMap,`,`O transponder utilizado não é o PCF7936.`,],
+`BC não compatível com a aplicação.`,],
 solutions: [
-`Conferir a correta posição do transponder no Módulo de Transponder,`,`Conferir o transponder PCF7936. Pode-se utilizar a carga básica do Módulo de Transponder para identificar o transponder,`,`Conferir se os parafusos que prendem o Módulo de Transponder no OBDMap estão bem fixos.`,]
+`Verificar aplicação.`,]
 },
-
+{ label: `Falha na rede CAN!!! `,
+screens: [
+`&nbsp;&nbsp;&nbsp;&nbsp;Falha&nbsp;na`,
+`&nbsp;&nbsp;rede&nbsp;CAN!!!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`Não foi possível estabelecer uma comunicação com o veículo, devido a falha na rede CAN;`,`O veículo apresenta defeitos elétricos;`,``,``,],
+solutions: [
+`Verificar instalação elétrica;`,`Verificar se os módulos não estão com defeito.`,``,``,``,]
+},
 { label: `Transponder Bloqueado! `,
 screens: [
 `&nbsp;&nbsp;Transponder`,
@@ -463,7 +439,18 @@ causes: [
 solutions: [
 `Utilize um transponder ID46 virgem.`,]
 },
-
+{ label: `Transponder nao Encontrado!`,
+screens: [
+`&nbsp;`,
+`Transponder&nbsp;`,
+`&nbsp;nao&nbsp;Encontrado!`,
+`<br />`,
+],
+causes: [
+`O transponder não está posicionado corretamente no Módulo de Transponder,`,`O transponder foi retirado do Módulo de Transponder durante o procedimento de gravação,`,`Mau contato no Módulo de Transponder com o OBDMap,`,`O transponder utilizado não é o PCF7936.`,],
+solutions: [
+`Conferir a correta posição do transponder no Módulo de Transponder,`,`Conferir o transponder PCF7936. Pode-se utilizar a carga básica do Módulo de Transponder para identificar o transponder,`,`Conferir se os parafusos que prendem o Módulo de Transponder no OBDMap estão bem fixos.`,]
+},
 { label: `Erro na leitura do transponder!`,
 screens: [
 `&nbsp;`,
@@ -476,7 +463,18 @@ causes: [
 solutions: [
 `Conferir a correta posição do transponder no Módulo de Transponder,`,`Conferir o transponder PCF7936. Pode-se utilizar a carga básica do Módulo de Transponder para identificar o transponder,`,`Conferir se os parafusos que prendem o Módulo de Transponder no OBDMap estão bem fixos.`,]
 },
-
+{ label: `Erro grav. TPD <OK> p/ repetir`,
+screens: [
+`&nbsp;`,
+`Erro&nbsp;grav.&nbsp;TPD`,
+`&lt;OK&gt;&nbsp;p/&nbsp;repetir`,
+`<br />`,
+],
+causes: [
+`O transponder não foi inserido corretamente no módulo,`,`O transponder não é um PCF7936 Virgem.`,],
+solutions: [
+`Verifique a correta posição do transponder no módulo,`,`Para verificar o tipo de transponder, utilize a carga básica do módulo de transponder na função IDENTIFICAR.`,]
+},
 { label: `Transponder Incorreto!`,
 screens: [
 `&nbsp;`,
@@ -489,20 +487,6 @@ causes: [
 solutions: [
 `Selecione a opção referente ao telecomando integrado`,]
 },
-
-{ label: `Transponder Rejeitado ou nao encontrado! `,
-screens: [
-`&nbsp;&nbsp;Transponder`,
-`&nbsp;&nbsp;Rejeitado&nbsp;ou`,
-`nao&nbsp;encontrado!`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`O transponder inserido não é válido`,`Não existe transponder dentro da chave`,`Transponder de má qualidade`,],
-solutions: [
-`Verifique o tranponder que está na chave`,`Use um transponder confiável e repita o procedimento`,]
-},
-
 { label: `Veiculo incompativel! `,
 screens: [
 `&nbsp;&nbsp;&nbsp;&nbsp;Veiculo`,
@@ -515,59 +499,18 @@ causes: [
 solutions: [
 `Caso o veículo esteja nos anos de aplicação, contate o suporte`,`Caso não esteja, fique atento as próximas atualizações `,]
 },
-
-{ label: `Utilize cabo A8! `,
+{ label: `Transponder Rejeitado ou nao encontrado! `,
 screens: [
-`Utilize&nbsp;cabo&nbsp;A8!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;Transponder`,
+`&nbsp;&nbsp;Rejeitado&nbsp;ou`,
+`nao&nbsp;encontrado!`,
 `&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
 ],
 causes: [
-`O acessório conectado não é o adaptador A8`,`O acessório adaptador A8 ou cabo universal  ou obdmap podem estar com defeito`,],
+`O transponder inserido não é válido`,`Não existe transponder dentro da chave`,`Transponder de má qualidade`,],
 solutions: [
-`Conecte o adaptador correto`,`Acione o suporte técnico informando possível defeito de hardware`,``,]
+`Verifique o tranponder que está na chave`,`Use um transponder confiável e repita o procedimento`,]
 },
-
-{ label: `Erro interno codigo E*`,
-screens: [
-`&nbsp;`,
-`&nbsp;Erro&nbsp;interno&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;codigo&nbsp;E*`,
-`<br />`,
-],
-causes: [
-`Ocorreu uma falha interna no OBDMAP`,],
-solutions: [
-`Desligue e ligue o OBDMAP e repita o procedimento`,`Caso continue, contate o suporte técnico`,]
-},
-
-{ label: `Erro interno codigo: ** `,
-screens: [
-`&nbsp;&nbsp;Erro&nbsp;interno`,
-`&nbsp;&nbsp;&nbsp;codigo:&nbsp;**`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`Ocorreu um erro inesperado internamente no OBDMAP`,`O veículo pode estar com defeito`,`O OBDMAP pode estar com defeito`,`A função escolhida pode estar desatualizada`,],
-solutions: [
-`Confira a Rede CAN do veículo`,`Confira parte elétrica, fusíveis, etc`,`Scaneie os erros apresentados no veículos, principalmente nos módulos de ECU, carroceria/conforto, ABS, airbag, painel e imobilizador, caso o veículo possua`,`Repita o procedimento`,`Caso o erro persista, informe ao suporte as questões acima, bem como o código do "Erro Interno"`,]
-},
-
-{ label: `Erro na gravacao do transponder! <OK> p/ repetir`,
-screens: [
-`Erro&nbsp;na&nbsp;gravacao`,
-`do&nbsp;transponder!`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
-`&lt;OK&gt;&nbsp;p/&nbsp;repetir`,
-],
-causes: [
-`O transponder pode não estar na posição indicada`,],
-solutions: [
-`Insira o transponder no módulo de transponder e procure não movimentá-lo durante a gravação`,]
-},
-
 { label: `Sem comunicacao com o veiculo ou veiculo incompativel!`,
 screens: [
 `Sem&nbsp;comunicacao`,
@@ -580,46 +523,6 @@ causes: [
 solutions: [
 `Confira a Rede CAN do veículo`,`Confira parte elétrica, fusíveis, etc`,`Scaneie os erros apresentados no veículos, principalmente nos módulos de ECU, carroceria/conforto, ABS, airbag, painel e imobilizador, caso o veículo possua`,`Repita o procedimento`,`Caso o erro persista, informe ao suporte as questões acima`,]
 },
-
-{ label: `Conecte o Cabo Fiat com Modulo de Transponder! Aguardando...`,
-screens: [
-`&nbsp;Conecte&nbsp;o&nbsp;Cabo`,
-`Fiat&nbsp;com&nbsp;Modulo`,
-`de&nbsp;Transponder!`,
-`&nbsp;Aguardando...`,
-],
-causes: [
-`O módulo de transponder não está conectado no OBDMAP`,`O cabo Fiat não está conectado no módulo de transponder (carro)`,`O cabo Fiat não está conectado na bateria (carro)`,`A fonte não está conectada no módulo de transponder (bancada)`,`A fonte não está conectada na energia elétrica (bancada)`,`O OBDMAP pode estar com defeito`,`O módulo de transponder pode estar com defeito`,`O cabo fiat pode estar com defeito`,`A fonte pode estar com defeito`,`A bateria do carro pode estar descarregada`,],
-solutions: [
-`Verifique todas as conexões`,`Verifique a bateria do carro`,`Caso suspeite de problemas no hardware entre em contato com o suporte técnico`,]
-},
-
-{ label: `Erro Desconhecido (**) `,
-screens: [
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Erro`,
-`&nbsp;&nbsp;Desconhecido`,
-`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(**)`,
-`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
-],
-causes: [
-`Ocorreu uma falha não esperada`,],
-solutions: [
-`Repita o procedimento e se atente as mensagens do OBDMAP`,`Caso persista, contate o suporte técnico`,``,]
-},
-
-{ label: `Erro! O transp. pode estar em modo crypto ou em modo password`,
-screens: [
-`Erro!&nbsp;O&nbsp;transp.&nbsp;`,
-`pode&nbsp;estar&nbsp;em&nbsp;&nbsp;&nbsp;`,
-`modo&nbsp;crypto&nbsp;ou&nbsp;`,
-`em&nbsp;modo&nbsp;password`,
-],
-causes: [
-`Transponder já codificado em outro veículo`,],
-solutions: [
-`Utilize outro um transponder virgem`,]
-},
-
 { label: `Transponder ja Programado! `,
 screens: [
 `&nbsp;&nbsp;Transponder`,
@@ -632,7 +535,90 @@ causes: [
 solutions: [
 `Organize os transponders e repita o procedimento`,]
 },
-
+{ label: `Erro Desconhecido (**) `,
+screens: [
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Erro`,
+`&nbsp;&nbsp;Desconhecido`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(**)`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`Ocorreu uma falha não esperada`,],
+solutions: [
+`Repita o procedimento e se atente as mensagens do OBDMAP`,`Caso persista, contate o suporte técnico`,``,]
+},
+{ label: `Erro interno codigo: ** `,
+screens: [
+`&nbsp;&nbsp;Erro&nbsp;interno`,
+`&nbsp;&nbsp;&nbsp;codigo:&nbsp;**`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`Ocorreu um erro inesperado internamente no OBDMAP`,`O veículo pode estar com defeito`,`O OBDMAP pode estar com defeito`,`A função escolhida pode estar desatualizada`,],
+solutions: [
+`Confira a Rede CAN do veículo`,`Confira parte elétrica, fusíveis, etc`,`Scaneie os erros apresentados no veículos, principalmente nos módulos de ECU, carroceria/conforto, ABS, airbag, painel e imobilizador, caso o veículo possua`,`Repita o procedimento`,`Caso o erro persista, informe ao suporte as questões acima, bem como o código do "Erro Interno"`,]
+},
+{ label: `Utilize cabo A8! `,
+screens: [
+`Utilize&nbsp;cabo&nbsp;A8!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;Tecle&nbsp;&lt;OK&gt;`,
+],
+causes: [
+`O acessório conectado não é o adaptador A8`,`O acessório adaptador A8 ou cabo universal  ou obdmap podem estar com defeito`,],
+solutions: [
+`Conecte o adaptador correto`,`Acione o suporte técnico informando possível defeito de hardware`,``,]
+},
+{ label: `Conecte o Cabo Fiat com Modulo de Transponder! Aguardando...`,
+screens: [
+`&nbsp;Conecte&nbsp;o&nbsp;Cabo`,
+`Fiat&nbsp;com&nbsp;Modulo`,
+`de&nbsp;Transponder!`,
+`&nbsp;Aguardando...`,
+],
+causes: [
+`O módulo de transponder não está conectado no OBDMAP`,`O cabo Fiat não está conectado no módulo de transponder (carro)`,`O cabo Fiat não está conectado na bateria (carro)`,`A fonte não está conectada no módulo de transponder (bancada)`,`A fonte não está conectada na energia elétrica (bancada)`,`O OBDMAP pode estar com defeito`,`O módulo de transponder pode estar com defeito`,`O cabo fiat pode estar com defeito`,`A fonte pode estar com defeito`,`A bateria do carro pode estar descarregada`,],
+solutions: [
+`Verifique todas as conexões`,`Verifique a bateria do carro`,`Caso suspeite de problemas no hardware entre em contato com o suporte técnico`,]
+},
+{ label: `Erro na gravacao do transponder! <OK> p/ repetir`,
+screens: [
+`Erro&nbsp;na&nbsp;gravacao`,
+`do&nbsp;transponder!`,
+`&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&lt;OK&gt;&nbsp;p/&nbsp;repetir`,
+],
+causes: [
+`O transponder pode não estar na posição indicada`,],
+solutions: [
+`Insira o transponder no módulo de transponder e procure não movimentá-lo durante a gravação`,]
+},
+{ label: `Erro interno codigo E*`,
+screens: [
+`&nbsp;`,
+`&nbsp;Erro&nbsp;interno&nbsp;&nbsp;&nbsp;&nbsp;`,
+`&nbsp;&nbsp;&nbsp;codigo&nbsp;E*`,
+`<br />`,
+],
+causes: [
+`Ocorreu uma falha interna no OBDMAP`,],
+solutions: [
+`Desligue e ligue o OBDMAP e repita o procedimento`,`Caso continue, contate o suporte técnico`,]
+},
+{ label: `Erro! O transp. pode estar em modo crypto ou em modo password`,
+screens: [
+`Erro!&nbsp;O&nbsp;transp.&nbsp;`,
+`pode&nbsp;estar&nbsp;em&nbsp;&nbsp;&nbsp;`,
+`modo&nbsp;crypto&nbsp;ou&nbsp;`,
+`em&nbsp;modo&nbsp;password`,
+],
+causes: [
+`Transponder já codificado em outro veículo`,],
+solutions: [
+`Utilize outro um transponder virgem`,]
+},
 { label: `Alerta! Nao dar partida com o OBDMAP Conectado `,
 screens: [
 `Alerta!&nbsp;Nao&nbsp;dar`,
@@ -645,7 +631,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Procedimento Abortado! `,
 screens: [
 `&nbsp;&nbsp;Procedimento`,

@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação de chaves Ford Pats 5 (Transit 09-13)";
-revCarga = "Rev. 4";
-dataManual = "Fevereiro 2016";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0205<br />Programação de chaves Ford Pats 5 (Transit 09-13)`;
+revCarga = `Rev. 4`;
+dataManual = `Fevereiro 2016`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,52 +18,60 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Ford",
-model: "Transit 2.4",
-years: "2009 a 2011"
+manufacturer: `Ford`,
+model: `Transit 2.4`,
+years: `2009 a 2011`
 },
 {
-manufacturer: "Ford",
-model: "Transit 2.2",
-years: "2012 a 2013"
+manufacturer: `Ford`,
+model: `Transit 2.2`,
+years: `2012 a 2013`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "Transponder utilizado:", 
-description: "", 
-ballon: "Utilize um transponder ID 4D63 DST+ dedicado para Ford.", 
-image: "/images/Transponders/ID 4D63 DST Dedicado para Ford.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Utilize um transponder ID 4D63 DST+ dedicado para Ford.`, 
+image: `/images/Transponders/ID 4D63 DST Dedicado para Ford.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "", 
-ballon: "Todos os acessórios conectados para procedimento via diagnose.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: ``, 
+ballon: `Todos os acessórios conectados para procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A3 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico fica localizada na posição A4.<br />", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico fica localizada na posição A4.<br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a programação de chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 5`, `>TRANSIT 09-13`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -200,7 +208,7 @@ help: `Aguarde 10 segundos e retorne ao passo
 }, {title: `Realizando a adição de novas chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Ford`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Ford`, `>PATS 5`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`PATS 5`, `>TRANSIT 09-13`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -317,7 +325,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A3,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
 { label: `Erro no acesso!`,
 screens: [
 `&nbsp;`,
@@ -330,7 +337,6 @@ causes: [
 solutions: [
 ` Repita o procedimento.`,]
 },
-
 { label: `Acesso Negado Aguarde 5:00 min Para Repetir`,
 screens: [
 `&nbsp;Acesso&nbsp;&nbsp;Negado`,
@@ -343,7 +349,6 @@ causes: [
 solutions: [
 `Aguarde 5 minutos e repita o procedimento.`,]
 },
-
 { label: `Desconecte o OBDMap!!`,
 screens: [
 `&nbsp;`,
@@ -356,7 +361,6 @@ causes: [
 solutions: [
 `Aguarde 5 minutos e repita o procedimento.`,]
 },
-
 { label: `Veiculo fora da Aplicacao!`,
 screens: [
 `&nbsp;`,
@@ -369,7 +373,6 @@ causes: [
 solutions: [
 `Verificar aplicação.`,]
 },
-
 { label: `Erro na Programacao!`,
 screens: [
 `&nbsp;`,
@@ -382,7 +385,6 @@ causes: [
 solutions: [
 `Utilize um transponder compatível com o veículo.`,]
 },
-
 { label: `Erro no Transponder!`,
 screens: [
 `&nbsp;`,

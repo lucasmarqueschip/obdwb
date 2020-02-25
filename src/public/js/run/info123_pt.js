@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Geração de transponders Captiva";
-revCarga = "Rev. 1";
-dataManual = "Agosto 2012";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0123<br />Geração de transponders Captiva`;
+revCarga = `Rev. 1`;
+dataManual = `Agosto 2012`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -17,82 +17,90 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "GM",
-model: "Captiva (Brasil) 3.6",
-years: "2005 a 2010"
+manufacturer: `GM`,
+model: `Captiva (Brasil) 3.6`,
+years: `2005 a 2010`
 },
 {
-manufacturer: "GM",
-model: "Captiva (Brasil) 2.4",
-years: "2005 a 2010"
+manufacturer: `GM`,
+model: `Captiva (Brasil) 2.4`,
+years: `2005 a 2010`
 },
 {
-manufacturer: "Opel",
-model: "Antara (Europa)",
-years: "2005 a 2010"
+manufacturer: `Opel`,
+model: `Antara (Europa)`,
+years: `2005 a 2010`
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Utilize o Transponder PCF7936 - ID46 - Virgem!", 
-image: "/images/Transponders/Transponder PCF7936 Carvão.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Para o sistema Imob4 utilize transponder PCF7936 (ID46) virgem.`, 
+image: `/images/Transponders/PCF7936 (ID46) Crypto 2 virgem.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
-image: "/images/Acessórios/Modulo de Transponder.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.`, 
+image: `/images/Acessórios/Modulo de Transponder.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "Posicionamento do transponder no módulo de transponder:", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg"},
+{title: `Posicionamento do transponder no módulo de transponder:`, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg`},
 
-{title: "Identificando o imobilizador:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0123 Geração de transponders Captiva/Identificando o imobilizador.jpg"},
+{title: `Identificando o imobilizador:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0123 Geração de transponders Captiva/Identificando o imobilizador.jpg`},
 
-{title: "Identificando a memória 95040:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0123 Geração de transponders Captiva/Identificando a memória 95040.jpg"},
+{title: `Identificando a memória 95040:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0123 Geração de transponders Captiva/Identificando a memória 95040.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte a pinça na memória 95040.", 
-image: "/images/Funções Específicas/OBD0123 Geração de transponders Captiva/Identificando a memória 95040 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Conecte a pinça na memória 95040.`, 
+image: `/images/Funções Específicas/OBD0123 Geração de transponders Captiva/Identificando a memória 95040 2.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a geração de transponders:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Outros`, `>GM`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`GM`, `>Captiva`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Captiva`, `>Gerar TPD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -197,7 +205,6 @@ causes: [
 solutions: [
 ` `,]
 },
-
 { label: `Apagar as chaves ja programadas ao imobilizador? (X)NAO (OK)SIM`,
 screens: [
 `Apagar&nbsp;as&nbsp;chaves`,
@@ -210,7 +217,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Quer realmente apagar as chaves ja programadas? (X)NAO (OK)SIM`,
 screens: [
 `&nbsp;Quer&nbsp;realmente`,
@@ -223,7 +229,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Apagando Chaves! Aguarde...`,
 screens: [
 `&nbsp;`,
@@ -236,7 +241,6 @@ causes: [
 solutions: [
 ]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -249,7 +253,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória;`,`Conferir bom estado da memória.`,]
 },
-
 { label: `Pinca invertida! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -262,7 +265,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória,`,`Conferir bom estado da memória.`,]
 },
-
 { label: `Erro na leitura do Imobilizador`,
 screens: [
 `&nbsp;`,
@@ -275,7 +277,6 @@ causes: [
 solutions: [
 `Verifique a conexão da pinça com a memória,`,`Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar nos terminais correspondentes da memória.`,]
 },
-
 { label: `Chave ja esta programada!`,
 screens: [
 `&nbsp;`,
@@ -288,7 +289,6 @@ causes: [
 solutions: [
 `Utilize um transponder PCF7936 virgem.`,]
 },
-
 { label: `Erro na leitura do transponder!`,
 screens: [
 `&nbsp;`,
@@ -301,7 +301,6 @@ causes: [
 solutions: [
 ` `,]
 },
-
 { label: `Erro! O transp. pode estar em modo crypto ou em modo password`,
 screens: [
 `Erro!&nbsp;O&nbsp;transp.&nbsp;`,
@@ -314,7 +313,6 @@ causes: [
 solutions: [
 `Insira o transponder PCF7936 virgem e reinicie o procedimento.`,]
 },
-
 { label: `Transponder nao Encontrado!`,
 screens: [
 `&nbsp;`,
@@ -327,7 +325,6 @@ causes: [
 solutions: [
 `Insira o transponder na posição correta no módulo e repita a operação. Caso tenha alguma dúvida, vá ao tópico: Posicionamento do transponder no módulo de transponder na página 5.`,]
 },
-
 { label: `Erro na gravacao do transponder!`,
 screens: [
 `&nbsp;`,

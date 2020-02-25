@@ -1,10 +1,10 @@
 //Capa
-nomeCarga = "Programação Alarme Hyundai / Kia ( Tucson / I-30 / Soul / Sorento )";
-revCarga = "Rev. 7";
-dataManual = "Julho 2019";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0125<br />Programação Alarme Hyundai / Kia ( Tucson / I-30 / Soul / Sorento )`;
+revCarga = `Rev. 7`;
+dataManual = `Julho 2019`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
@@ -18,91 +18,104 @@ introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Hyundai",
-model: "I-30 2.0",
-years: "2008 a 2014"
+manufacturer: `Hyundai`,
+model: `Tucson`,
+years: `2008 a 2014`
 },
 {
-manufacturer: "Hyundai",
-model: "Tucson 2.0",
-years: "2008 a 2011"
+manufacturer: `Hyundai`,
+model: `I-30`,
+years: `2008 a 2011`
 },
 {
-manufacturer: "KIA",
-model: "Sorento",
-years: "2009 a 2012"
+manufacturer: `Hyundai`,
+model: `HB20`,
+years: `2013 a 2017`
 },
 {
-manufacturer: "KIA",
-model: "Soul 1.6",
-years: "2010 a 2012"
+manufacturer: `Hyundai`,
+model: `Azera`,
+years: `2009 a 2009`
 },
 {
-manufacturer: "Hyundai",
-model: "HB-20",
-years: "2013 a 2017"
+manufacturer: `Hyundai`,
+model: `Elantra 5L 1999CC Automático`,
+years: `2016 a 2016`
 },
 {
-manufacturer: "Hyundai",
-model: "Azera",
-years: "2009 a "
+manufacturer: `KIA`,
+model: `Cerato`,
+years: `2013 a 2013`
 },
 {
-manufacturer: "KIA",
-model: "Cerato",
-years: "2013 a "
+manufacturer: `KIA`,
+model: `Soul`,
+years: `2010 a 2012`
 },
 {
-manufacturer: "Hyundai",
-model: "Elantra 5L 1999CC Auto.",
-years: "2016 a "
+manufacturer: `KIA`,
+model: `Sorento`,
+years: `2009 a 2012`
 },
 ];
-applicationObs = createObs("Observações:", "- Para programar o I-30, é necessário retirar a chave da ignição antes de pressionar o botão do telecomando.", "- Nem todos os modelos e anos dos veículos citados correspondem ao telecomando desta carga.")createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação:`, `Para programar o I-30, é necessário retirar a chave da ignição antes de pressionar o botão do telecomando. <br />Nem todos os modelos e anos dos veículos citados correspondem ao telecomando desta carga. <br /> <font color="red"><b>Atenção:</b></font> <br />Só é possível programar os telecomandos originais, e os telecomandos existentes serão apagados automaticamente.`, undefined);
+
 
 
 
 resources = [
-{title: "Exemplos de telecomandos", 
-description: "", 
-ballon: "Utilize a chave original do HB20 e transponder ID60 dedicado Hyundai.", 
-image: "/images/Chaves e Telecomandos/Telecomando Hyundai.jpg"},
+{title: `Exemplos de telecomandos`, 
+description: ``, 
+ballon: `Utilize a chave original do HB20 e transponder ID60 dedicado Hyundai.`, 
+image: `/images/Chaves e Telecomandos/Telecomando Hyundai.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "", 
-image: "/images/Chaves e Telecomandos/Telecomando Kia.jpg"},
+{title: ``, 
+description: ``, 
+ballon: ``, 
+image: `/images/Chaves e Telecomandos/Telecomando Kia.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Conecte o cabo universal junto ao adaptador A1.", 
-image: "/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo Universal + adaptador A1.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados no OBDMap.", 
-image: "/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Cabo universal + adaptador A1.<br />Para realizar o emparelhamento<br />da BSI.`, 
+image: `/images/Acessórios/Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "A tomada de diagnóstico dos veículos citados acima fica localizada na área A5.<br /> <br /><br />", 
-ballon: "• O BC dos veículos citados na página 3 fica localizada na posição A5 da foto.", 
-image: "/images/Tomada de Diagnostico/Carro/A5.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados no OBDMap para o procedimento via diagnose.`, 
+image: `/images/Acessórios/Obdmap mais Cabo Universal mais Adaptador A1 CONECTADOS.jpg`},
+
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: `A tomada de diagnóstico dos veículos citados acima fica localizada na área A5.<br /> <br /><br />`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A5.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a Programação dos telecomandos:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Diagnostico`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Diagnostico`, `>Hyundai`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Hyundai`, `>Telecomando 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Telecomando 1`, `>Versao 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Versao 1`, `>Prog. telecmd?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Hyundai`, `>Alarme 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Alarme 1`, `>Tipo 1`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Tipo 1`, `>Prog. telecmd?`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
 `&nbsp;`,
@@ -176,7 +189,6 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A1,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico, talvez esta carga tenha tido alterações.`,]
 },
-
 { label: `Pressione o Telecomando`,
 screens: [
 `&nbsp;`,

@@ -1,128 +1,139 @@
 //Capa
-nomeCarga = "Preparação e Apresentação de Chaves Fiat Code 2 Fase 3 Painel Continental via OBD";
-revCarga = "Rev. 4";
-dataManual = "Agosto 2018";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0144<br />Preparação e Apresentação de Chaves Fiat Code 2 Fase 3 Painel Continental via OBD`;
+revCarga = `Rev. 4`;
+dataManual = `Agosto 2018`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
 introSubtitle = `Esta carga realiza as seguintes funções:`;
 lstFunc = [
-`Geração e programação de transponders em veículos que utilizam o sistema CODE 2 FASE 3 com painel Continental via OBD (é possível programar até 8 chaves).`,
-`<obs>`,
-`Observação: As chaves que não forem apresentadas e já estavam programadas, ficarão bloqueados para funcionar no veículo, portanto é necessário passar pela apresentação todas as chaves que se deseja manter funcionando.`,
+`Geração e programação de transponders em veículos que utilizam o sistema CODE 2 FASE 3 com painel Continental via OBD (é possível programar até 8 chaves).<br/><font color="red"><obs>Observação:</font><br/>As chaves que não forem apresentadas e já estavam programadas, ficarão bloqueados para funcionar no veículo, portanto é necessário passar pela apresentação todas as chaves que se deseja manter funcionando.`,
 
 ];
 introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Fiat",
-model: "Uno EVO 1.0",
-years: "2010 a 2012"
+manufacturer: `Fiat`,
+model: `Uno EVO 1.0`,
+years: `2010 a 2012`
 },
 {
-manufacturer: "Fiat",
-model: "Uno EVO 1.4",
-years: "2010 a 2012"
+manufacturer: `Fiat`,
+model: `Uno EVO 1.4`,
+years: `2010 a 2012`
 },
 {
-manufacturer: "Fiat",
-model: "Strada Working",
-years: "2013 a "
+manufacturer: `Fiat`,
+model: `Strada Working`,
+years: `2013 a `
 },
 ];
-applicationObs = createObs(undefined, undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(undefined, undefined, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Utilize o transponder Megamos ID48 NOVO! <br />Se não for utilizado um<br />transponder novo o<br />procedimento pode não ser<br />bem sucedido!", 
-image: "/images/Transponders/ID 48 NOVO.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Utilize o transponder Megamos ID48 virgem! <br />Se não for utilizado um transponder novo o procedimento pode não ser bem sucedido!`, 
+image: `/images/Transponders/ID 48 NOVO.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Utilize o cabo universal + adaptador A3.", 
-image: "/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Utilize o cabo universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo Universal Mais Adaptador A3 DESCONECTADOS.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para<br />utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Cabo Fiat.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o cabo CAN ou cabo Universal + adaptador A3.`, 
+image: `/images/Acessórios/Cabo CAN.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
-image: "/images/Acessórios/Modulo de Transponder.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Utilize o cabo Fiat para alimentar o módulo de transponder.<br />Obs: A Bateria fica localizada atrás da capa plástica do degrau do lado do motorista.`, 
+image: `/images/Acessórios/Cabo Fiat.jpg`},
 
-{title: "Posicionamento do transponder no módulo de transponder:", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Vidro CERTO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.`, 
+image: `/images/Acessórios/Modulo de Transponder.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Vidro ERRADO.jpg"},
+{title: `Posicionamento do transponder no módulo de transponder:`, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Vidro CERTO.jpg`},
 
-{title: "Localizando a tomada de diagnóstico no veículo:", 
-description: "", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/A4.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Vidro ERRADO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Retire o porta objetos do veículo.", 
-image: "/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/1.jpg"},
+{title: `Localizando a tomada de diagnóstico no veículo:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/A4.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte o cabo universal + adaptador A3 ou cabo CAN na tomada de diagnose do veículo.", 
-image: "/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Retire o porta objetos do veículo.`, 
+image: `/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte o cabo universal + daptador A3 ou cabo CAN no OBDMap.", 
-image: "/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Conecte Cabo Universal + A3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Conecte o cabo universal + adaptador A3 ou cabo CAN na tomada de diagnose do veículo.`, 
+image: `/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte o módulo de transponder no OBDMap.", 
-image: "/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Conecte Módulo de transponder.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Conecte o cabo universal + daptador A3 ou cabo CAN no OBDMap.`, 
+image: `/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Conecte Cabo Universal + A3.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Conecte o cabo Fiat ou a fonte de alimentação no módulo de transponder.", 
-image: "/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Conecte Módulo de transponder 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Conecte o módulo de transponder no OBDMap.`, 
+image: `/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Conecte Módulo de transponder.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Caso utilize o cabo Fiat, conecte o jacaré vermelho no pólo positivo da bateria.", 
-image: "/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Conecte o Cabo Fiat.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Conecte o cabo Fiat ou a fonte de alimentação no módulo de transponder.`, 
+image: `/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Conecte Módulo de transponder 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Todos os acessórios conectados.", 
-image: "/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Todos os acessórios conectados.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Caso utilize o cabo Fiat, conecte o jacaré vermelho no pólo positivo da bateria.`, 
+image: `/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Conecte o Cabo Fiat.jpg`},
+
+{title: ``, 
+description: ``, 
+ballon: `Todos os acessórios conectados.`, 
+image: `/images/Funções Específicas/OBD0144 Preparação e apresentação de chaves painel Continental/Todos os acessórios conectados.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a geração e a programação de chaves:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Outros`, `>Fiat`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`Fiat`, `>CODE 2 Fase 3`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
-{lines: [`CODE 2 Fase 3`, `>P. Continental`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Fiat`, `>CODE 2 - Painel`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`CODE 2 - Painel`, `>P. Continental`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`P. Continental`, `>Gerar TPD OBD`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`<br />Carregando...<br />Aguarde<br /><br />`], help: ``},
 {lines: [
@@ -143,59 +154,11 @@ help: `Tecle OK!`
 },
 {lines: [
 `&nbsp;`,
-`&nbsp;&nbsp;&nbsp;Conecte&nbsp;o`,
-`&nbsp;&nbsp;&nbsp;&nbsp;mobile!`,
-`<br />`,
-],
-help: `Inicialize o aplicativo no dispositivo móvel.`
-},
-{lines: [
-`&nbsp;`,
-`Selecione:`,
-`Gerar&nbsp;TPD&nbsp;OBD`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`&nbsp;`,
 `Ligue&nbsp;a&nbsp;chave`,
 `&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;OK!`,
 `<br />`,
 ],
 help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
-},
-{lines: [
-`Aguarde&nbsp;enquanto`,
-`&nbsp;nosso&nbsp;servidor`,
-`WEB&nbsp;trabalha&nbsp;no`,
-`&nbsp;seu&nbsp;veiculo...`,
-],
-help: `Aguarde alguns instantes.`
-},
-{lines: [
-`&nbsp;Saldo:***.***c`,
-`&nbsp;Parcelas:**/**`,
-`Valor&nbsp;do&nbsp;servico`,
-`&nbsp;&nbsp;&nbsp;***c&nbsp;&nbsp;&lt;OK&gt;`,
-],
-help: `Saldo total disponível, número de parcelas do serviço, valor a ser cobrado pelo serviço.`
-},
-{lines: [
-`&nbsp;Saldo:***.***c`,
-`&nbsp;&nbsp;Servico&nbsp;Web`,
-`&nbsp;Liberado!&nbsp;&lt;OK&gt;`,
-`<br />`,
-],
-help: `O serviço está liberado, e não será cobrado créditos.`
 },
 {lines: [
 `&nbsp;`,
@@ -232,14 +195,6 @@ help: `Posicione o transponder no módulo de transponder e tecle OK.`
 },
 {lines: [
 `&nbsp;`,
-`&nbsp;Gravando&nbsp;ID48`,
-`&nbsp;&nbsp;&nbsp;Aguarde...`,
-`<br />`,
-],
-help: `Aguarde enquanto o OBDMap realiza a gravação do transponder`
-},
-{lines: [
-`&nbsp;`,
 `&nbsp;&nbsp;&nbsp;CONCLUIDO!`,
 `<br />`,
 `<br />`,
@@ -264,27 +219,11 @@ help: `Selecione (X) NÃO para cancelar o procedimento, ou (OK) SIM para iniciar
 },
 {lines: [
 `&nbsp;`,
-`Ligue&nbsp;a&nbsp;chave`,
-`&nbsp;&nbsp;&nbsp;&nbsp;e&nbsp;tecle&nbsp;&lt;OK&gt;`,
-`<br />`,
-],
-help: `   Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
 `Insira&nbsp;chave`,
 `na&nbsp;IGNICAO,&nbsp;OK`,
 `<br />`,
 ],
 help: `Tecle OK!`
-},
-{lines: [
-`&nbsp;`,
-`Aguarde...`,
-`<br />`,
-`<br />`,
-],
-help: ``
 },
 {lines: [
 `&nbsp;`,
@@ -334,7 +273,6 @@ causes: [
 solutions: [
 `Para realizar o procedimento de programação, é necessário realizar a dedicação de transponders.`,]
 },
-
 { label: `Transponder Bloqueado!`,
 screens: [
 `&nbsp;`,
@@ -347,20 +285,6 @@ causes: [
 solutions: [
 `Utilize um transponder ID46 virgem.`,]
 },
-
-{ label: `Transponder nao Encontrado!`,
-screens: [
-`&nbsp;`,
-`Transponder&nbsp;nao`,
-`Encontrado!`,
-`<br />`,
-],
-causes: [
-`O transponder não foi encontrado ou não está inserido corretamente no módulo,`,`O transponder utilizado não é ID48,`,`Mau contato no cabo Fiat com o módulo de transponder ou do jacaré vermelho com a bateria.`,],
-solutions: [
-`Insira o transponder na posição correta no módulo e repita a operação,`,`Conferir conexão do cabo Fiat com o módulo de transponder e do jacaré vermelho com a bateria.`,]
-},
-
 { label: `Erro de Comunicacao!`,
 screens: [
 `&nbsp;`,
@@ -373,7 +297,18 @@ causes: [
 solutions: [
 `Conferir se a bateria está carregada,`,`Conferir parte elétrica do veículo, fusíveis, etc,`,`Conferir se utiliza cabo universal e adaptador A3,`,`Conferir boa conexão do cabo no OBDMap, na tomada de diagnose do veículo e demais conexões,`,`Desconectar todos os cabos, aguardar 10 segundos e conectar novamente,`,`Conferir atualização mais recente com suporte técnico.`,]
 },
-
+{ label: `Transponder nao Encontrado!`,
+screens: [
+`&nbsp;`,
+`Transponder&nbsp;nao`,
+`Encontrado!`,
+`<br />`,
+],
+causes: [
+`O transponder não foi encontrado ou não está inserido corretamente no módulo,`,`O transponder utilizado não é ID48,`,`Mau contato no cabo Fiat com o módulo de transponder ou do jacaré vermelho com a bateria.`,],
+solutions: [
+`Insira o transponder na posição correta no módulo e repita a operação,`,`Conferir conexão do cabo Fiat com o módulo de transponder e do jacaré vermelho com a bateria.`,]
+},
 { label: `Painel Invalido!`,
 screens: [
 `&nbsp;`,
@@ -385,19 +320,6 @@ causes: [
 `O painel não é o mesmo da aplicação.`,],
 solutions: [
 `Verificar o modelo do painel.`,]
-},
-
-{ label: `Saldo Web Service Insuficiente!`,
-screens: [
-`&nbsp;&nbsp;&nbsp;Saldo&nbsp;Web`,
-`&nbsp;&nbsp;&nbsp;&nbsp;Service`,
-`&nbsp;Insuficiente!`,
-`<br />`,
-],
-causes: [
-`O crédito total disponível se esgotou.`,],
-solutions: [
-`Entrar em contato com o comercial, ou com o suporte.`,]
 },
 
 ];

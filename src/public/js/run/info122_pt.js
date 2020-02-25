@@ -1,114 +1,121 @@
 //Capa
-nomeCarga = "Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça";
-revCarga = "Rev. 2";
-dataManual = "Julho 2012";
-imgTopPath = "/images/obd.png";
-imgObdPath = "/images/obdEquip.png";
-imgChipPath = "/images/chip.png";
+nomeCarga = `Manual Carga -  OBD0122<br />Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça`;
+revCarga = `Rev. 2`;
+dataManual = `Julho 2012`;
+imgTopPath = `/images/obd.png`;
+imgObdPath = `/images/obdEquip.png`;
+imgChipPath = `/images/chip.png`;
 
 // introdução
 introTitle = `Introdução`;
 introSubtitle = `Esta carga realiza as seguintes funções:`;
 lstFunc = [
-`Programação da 1ª chave do Corolla em bancada. `,
-`Para realizar a programação será necessário retirar o imobilizador do veículo.`,
+`Programação da 1ª chave do Corolla em bancada.  Para realizar a programação será necessário retirar o imobilizador do veículo.`,
 
 ];
 introObs = createObs();
 
 
 // aplicação 
-applicationTitle = "Aplicação";
-applicationTable = "<th>Marca</th><th>Modelo</th><th>Ano</th>";
+applicationTitle = `Aplicação`;
+applicationTable = `<th>Marca</th><th>Modelo</th><th>Ano</th>`;
 models = [
 {
-manufacturer: "Toyota",
-model: "Corolla 1.8",
-years: "1998 a 2002"
+manufacturer: `Toyota`,
+model: `Corolla 1.8`,
+years: `1998 a 2002`
 },
 ];
-applicationObs = createObs("Observação: Com está carga será possível gerar apenas uma chave ao veículo.", undefined, undefined)
+applicationObs = ``;
+applicationObs += createObs(`Observação:`, `Com está carga será possível gerar apenas uma chave ao veículo.`, undefined);
+
 
 
 
 resources = [
-{title: "", 
-description: "", 
-ballon: "Transponder TEXAS ID4C com ID fixo. O transponder será dedicado ao veículo.", 
-image: "/images/Transponders/ID4C - Epoxi.jpg"},
+{title: `Transponder utilizado:`, 
+description: ``, 
+ballon: `Transponder TEXAS ID4C com ID fixo. O transponder será dedicado ao veículo.`, 
+image: `/images/Transponders/ID4C - Epoxi.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Chave do Corolla já montada com o transponder.", 
-image: "/images/Chaves e Telecomandos/Chave Corolla antigo.jpg"},
+{title: `Chave utilizada:`, 
+description: ``, 
+ballon: `Chave do Corolla já montada com o transponder.`, 
+image: `/images/Chaves e Telecomandos/Chave Corolla antigo.jpg`},
 
-{title: "Acessórios utilizados:", 
-description: "", 
-ballon: "Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.", 
-image: "/images/Acessórios/Fonte de Alimentacao.jpg"},
+{title: `Acessórios utilizados:`, 
+description: ``, 
+ballon: `Fonte de alimentação. Necessária para utilizar o OBDMap em bancada.`, 
+image: `/images/Acessórios/Fonte de Alimentacao.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça soic 8. Conecta a memória ao<br />OBDMap.", 
-image: "/images/Acessórios/Pinça SOIC8.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça soic 8`, 
+image: `/images/Acessórios/Pinça SOIC8.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.", 
-image: "/images/Acessórios/Modulo de Transponder.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Módulo de transponder. Realiza<br />operações com transponders<br />junto ao OBDMap.`, 
+image: `/images/Acessórios/Modulo de Transponder.jpg`},
 
-{title: "Posicionamento do transponder no módulo de transponder:", 
-description: "", 
-ballon: "O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi CERTO.jpg"},
+{title: `Posicionamento do transponder no módulo de transponder:`, 
+description: ``, 
+ballon: `O transponder deve ser posicionado dentro da antena (copo branco) do módulo de transponder na posição vertical e no centro como mostra a foto.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Vidro CERTO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.", 
-image: "/images/Instrucao Modulo de Transponder/MT-Epoxi ERRADO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O transponder não deve ficar inclinado na antena do módulo, isto pode causar erro na operação. Procure deixá-lo na vertical.`, 
+image: `/images/Instrucao Modulo de Transponder/MT-Vidro ERRADO.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Se a chave já estiver montada com o transponder, ela deve ser posicionada como mostra a foto ao lado.", 
-image: "/images/Instrucao Modulo de Transponder/MT - Chave Toyota CERTO.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Se a chave já estiver montada com o transponder, ela deve ser posicionada como mostra a foto ao lado.`, 
+image: `/images/Instrucao Modulo de Transponder/MT - Chave Toyota CERTO.jpg`},
 
-{title: "Localizando o imobilizador no veículo:", 
-description: "O imobilizador do veículo fica localizado na área B4 , na caixa de fusíveis do veículo.", 
-ballon: "", 
-image: "/images/Tomada de Diagnostico/Carro/B4.jpg"},
+{title: `Localizando o imobilizador no veículo:`, 
+description: `O imobilizador do veículo fica localizado na área B4 , na caixa de fusíveis do veículo.`, 
+ballon: ``, 
+image: `/images/Tomada de Diagnostico/Carro/B4.jpg`},
 
-{title: "Identificando o imobilizador:", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/ID imobilizador.jpg"},
+{title: `Identificando o imobilizador:`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/ID imobilizador.jpg`},
 
-{title: "Localizando e conectando a pinça na memória 93LC66", 
-description: "", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/ID memória 1.jpg"},
+{title: `Localizando e conectando a pinça na memória 93LC66`, 
+description: ``, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/ID memória 1.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "O pino 1 da pinça deve coincidir com o pino 1 da memória.", 
-image: "/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/ID memória 2.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `O pino 1 da pinça deve coincidir com o pino 1 da memória.`, 
+image: `/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/ID memória 2.jpg`},
 
-{title: "", 
-description: "", 
-ballon: "Pinça conectada na memória 93LC66.", 
-image: "/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/ID memória 3.jpg"},
+{title: ``, 
+description: ``, 
+ballon: `Pinça conectada na memória 93LC66.`, 
+image: `/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/ID memória 3.jpg`},
 
-{title: "Todos os acessórios conectados:", 
-description: "1. Conecte o módulo de transponder ao OBDMap,<br />2. Conecte a fonte de alimentação ao módulo de transponder,<br />3. Conecte a pinça na memória do módulo,<br />4. Conecte a pinça ao OBDMap.<br />", 
-ballon: "", 
-image: "/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/Todos os acessórios conectados.jpg"},
+{title: `Todos os acessórios conectados:`, 
+description: `1. Conecte o módulo de transponder ao OBDMap,<br />2. Conecte a fonte de alimentação ao módulo de transponder,<br />3. Conecte a pinça na memória do módulo,<br />4. Conecte a pinça ao OBDMap.<br />`, 
+ballon: ``, 
+image: `/images/Funções Específicas/OBD0122 Geração da 1ª Chave Corolla 98-02 (antigo) via Pinça/Todos os acessórios conectados.jpg`},
 ];
 instruction = [];
+lblStep = "Passo";
+lblCause = "Causas Prováveis:";
+lblSolution = "Soluções:";
+lblSummary = "Sumário";
+lblErrorMessage = "Mensagens de erros";
+
 obdmap = true;
 services = 
 [{title: `Realizando a programação da 1ª chave:`,
 description: `Após todos os acessórios conectados, seguir os seguintes passos no visor do OBDMap:`,
 screens: [
-{lines: [`Selecione`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
+{lines: [`Selecione:`, `>Outros`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Outros`, `>Toyota`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Toyota`, `>Imob Corolla98`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
 {lines: [`Imob Corolla98`, `>Gerar 1a chave`, `<br /><br />`], help: `Tecle OK`, menu: 1000},
@@ -177,7 +184,6 @@ causes: [
 solutions: [
 `Verificar a correta posição do transponder no módulo de transponder,`,`Pode-se utilizar a carga do módulo de transponder para identificar o transponder.`,]
 },
-
 { label: `Curto! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -190,7 +196,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória.`,]
 },
-
 { label: `Pinca invertida! Verifique...`,
 screens: [
 `&nbsp;`,
@@ -203,7 +208,6 @@ causes: [
 solutions: [
 `Conferir a correta posição da pinça na memória, todos os terminais da pinça devem encostar-se aos terminais correspondentes da memória.`,]
 },
-
 { label: `Erro na Gravacao!`,
 screens: [
 `&nbsp;`,
